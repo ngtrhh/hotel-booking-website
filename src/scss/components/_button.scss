@@ -1,0 +1,15 @@
+@use "../asbtract/" as *;
+
+.button {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 20px;
+
+  &.cyan {
+    background-color: $cyan;
+    color: $white;
+  }
+}

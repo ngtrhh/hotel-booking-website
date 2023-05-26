@@ -1,0 +1,53 @@
+@use "../asbtract/" as *;
+
+.header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: $header-height;
+  border-bottom: 1px solid #dbe1ee;
+
+  .container {
+    width: 68%;
+    height: 100%;
+    margin: auto;
+    @include flex(none, none);
+  }
+
+  &__logo {
+    flex: 1;
+    @include flex(center, left);
+  }
+  &__menu {
+    flex: 2;
+    @include flex(center, center);
+
+    &__item {
+      padding: 12px;
+      color: $dark-grey;
+
+      cursor: pointer;
+
+      &.active {
+        font-weight: 700;
+        color: $dark-blue;
+
+        .line {
+          width: 30px;
+          height: 1.5px;
+          margin: auto;
+          background-color: $cyan;
+        }
+      }
+    }
+  }
+  &__login-signup {
+    flex: 1;
+    @include flex(center, right);
+
+    .login {
+      background-color: transparent;
+      color: $cyan;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+@use "../asbtract/" as *;
+
+.footer {
+  width: 100%;
+  background-color: $light-blue-1;
+  border-top: 1px solid $dove;
+
+  .container {
+    @include flex(none, none);
+    flex-direction: column;
+  }
+  &__top {
+    width: 68%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+    &__left {
+      margin-top: 120px;
+      flex: 1;
+
+      &__item {
+        margin-bottom: 12px;
+        @include flex(center, flex-start);
+
+        &__icon {
+          margin-right: 12px;
+        }
+
+        &__infor {
+          font-family: $inter;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &__center {
+      margin-top: 80px;
+      flex: 1;
+
+      &__row {
+        @include flex(center, center);
+        margin-bottom: 20px;
+
+        &__media {
+          margin-right: 12px;
+          width: 32px;
+          height: 32px;
+          @include flex(center, center);
+          color: $dark-blue;
+          border-radius: 50px;
+
+          &.white {
+            background-color: $dark-blue;
+            color: $white;
+          }
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+
+        &__input {
+          padding: 20px 60px 20px 24px;
+          width: 100%;
+          border: 1px solid $dark-grey;
+          border-radius: 30px;
+          background-color: $white;
+          @include flex(center, center);
+        }
+
+        &__button {
+          position: absolute;
+          right: 4px;
+          top: 6px;
+          color: $white;
+          background-color: $cyan;
+          width: 48px;
+          height: 48px;
+          border-radius: 50px;
+          cursor: pointer;
+          @include flex(center, center);
+        }
+
+        &:last-child {
+          position: relative;
+          width: 70%;
+          height: 60px;
+          border-radius: 50px;
+          background-color: $white;
+          margin: auto;
+        }
+      }
+    }
+
+    &__right {
+      flex: 1;
+      flex-direction: row;
+      margin-top: 100px;
+      margin-bottom: 80px;
+      @include flex(none, none);
+
+      &__column {
+        flex-direction: row;
+        margin-right: 20px;
+
+        &__title {
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 28px;
+        }
+
+        &__link {
+          color: $dark-grey;
+          font-family: $inter;
+          margin-bottom: 12px;
+          font-weight: 500;
+          font-size: 13px;
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $dove;
+    @include flex(center, center);
+    font-family: $inter;
+    font-size: 12px;
+    font-weight: 600;
+    height: 80px;
+  }
+}
