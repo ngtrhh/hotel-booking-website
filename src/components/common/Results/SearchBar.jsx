@@ -10,7 +10,7 @@ import {
   BsLinkedin,
   BsInstagram,
   BsSendFill,
-  BsCalendar2Date
+  BsCalendar2
 } from "react-icons/bs";
 
 const SearchBar = () => {
@@ -28,7 +28,7 @@ const SearchBar = () => {
           <div className="line"></div>
 
           <div className="item">
-            <BsCalendar2Date size={24} className="icon"/>
+            <BsCalendar2 size={24} className="icon"/>
             <div className="content">
               <div className="field">Nhận phòng</div>
               <div className="value">T7, 8 tháng 4</div>

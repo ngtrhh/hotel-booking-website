@@ -1,6 +1,7 @@
 @use "../../asbtract/" as *;
 
 .results{
-
-    
+    &__body{
+        display: flex;
+    }
 }
