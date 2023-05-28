@@ -3,7 +3,10 @@ import SearchBar from '../components/common/Results/SearchBar'
 
 const Results = () => {
   return (
-    <SearchBar/>
+    <div className="results">
+      <SearchBar/>
+      
+    </div>
   )
 }
 
