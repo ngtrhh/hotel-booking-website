@@ -11,5 +11,6 @@
 // export default index;
 
 import Home from "../pages/Home";
-const publicRoutes = [{ path: "/", component: Home }];
+import Results from "../pages/Results";
+const publicRoutes = [{ path: "/", component: Home }, { path: "/results", component: Results }];
 export { publicRoutes };
