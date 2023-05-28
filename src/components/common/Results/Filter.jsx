@@ -13,6 +13,7 @@ import {
   BsCalendar2
 } from "react-icons/bs";
 import PriceFilter from "./PriceFilter";
+import CommonFilter from "./CommonFilter";
 
 const Filter = () => {
   return (
@@ -22,13 +23,13 @@ const Filter = () => {
                 <div className="results__filter__header__title">
                     Kết quả bộ lọc
                 </div>
-                <div className="results__filter__header__reset">
+                <a herf=""className="results__filter__header__reset">
                   Đặt lại
-                </div>
+                </a>
             </div>
             <div className="results__filter__content">
                 <PriceFilter/>
-                
+                <CommonFilter/>
             </div>
         </div>
     </div>
