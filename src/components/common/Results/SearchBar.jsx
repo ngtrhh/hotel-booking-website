@@ -15,7 +15,7 @@ import {
 
 const SearchBar = () => {
   return (
-    <div className="search-bar">
+    <div className="results__search-bar">
       <div className="container">
         <div className="items">
           <div className="item">

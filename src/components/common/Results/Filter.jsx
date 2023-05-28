@@ -12,17 +12,24 @@ import {
   BsSendFill,
   BsCalendar2
 } from "react-icons/bs";
+import PriceFilter from "./PriceFilter";
 
 const Filter = () => {
   return (
-    <div className="filter">
+    <div className="results__filter">
         <div className="container">
-            <div className="filter__header">
-                <div className="filter__header__title">
+            <div className="results__filter__header">
+                <div className="results__filter__header__title">
                     Kết quả bộ lọc
                 </div>
+                <div className="results__filter__header__reset">
+                  Đặt lại
+                </div>
             </div>
-            <div className="filter__content"></div>
+            <div className="results__filter__content">
+                <PriceFilter/>
+                
+            </div>
         </div>
     </div>
   );

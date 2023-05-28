@@ -5,10 +5,17 @@ import Filter from '../components/common/Results/Filter'
 const Results = () => {
   return (
     <div className="results">
-      <SearchBar/>
+      <div className="results__search-bar-container">
+        <SearchBar/>
+      </div>
+
       <div className="results__body">
-        container
-        <Filter/>
+        <div className="results__body__container">
+          <div className="filter-container">
+            <Filter/>
+          </div>
+        </div>
+        
       </div>
     </div>
   )

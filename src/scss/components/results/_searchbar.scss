@@ -1,7 +1,7 @@
 @use "../../asbtract/" as *;
 
 .results{
-    .search-bar{
+    &__search-bar{
         position: relative;
         z-index: 100;
         width: 100%;
@@ -9,7 +9,7 @@
         .container{
             width: 68%;
             height: 100%;
-            margin: 20px auto;
+            margin: auto;
             
             background: #FFFFFF;
             /* Differ */
@@ -21,7 +21,6 @@
             flex-wrap: wrap;
             .items{
                 display: flex;
-                flex-direction: row;
                 align-items: center;
                 padding: 0px;
                 height: 72px;
@@ -34,13 +33,7 @@
         
                     border: 1px solid #DBE1EE;
                     transform: rotate(-90deg);
-        
-                    /* Inside auto layout */
-        
-                    flex: none;
-                    flex-grow: 0;
                 }
-        
                 .item{
                     display: flex;
                     flex-direction: row;
@@ -51,20 +44,10 @@
         
                     border-radius: 8px;
         
-                    /* Inside auto layout */
-                    flex: none;
-                    flex-grow: 0;
-        
                     .icon{
                         width: 36px;
                         height: 36px;
-        
-        
-                        /* Inside auto layout */
-        
-                        flex: none;
                         order: 0;
-                        flex-grow: 0;
                         color: #787878;
                     }
         
@@ -76,38 +59,16 @@
                         padding: 0px;
                         gap: 2px;
         
-        
-                        /* Inside auto layout */
-        
-                        flex: none;
-                        order: 1;
-                        flex-grow: 0;
-        
                         .field{
-        
-                            /* Caption */
-        
                             font-family: 'Quicksand';
                             font-style: normal;
                             font-weight: 500;
                             font-size: 13px;
                             line-height: 14px;
-                            /* identical to box height, or 108% */
-        
-                            display: flex;
-                            align-items: center;
-        
-                            /* Dark Grey */
-        
+                            
                             color: #595B5E;
         
                             opacity: 0.8;
-        
-                            /* Inside auto layout */
-        
-                            flex: none;
-                            order: 0;
-                            flex-grow: 0;
                         }
         
                         .value{
@@ -117,43 +78,21 @@
                             font-weight: 700;
                             font-size: 16px;
                             line-height: 20px;
-                            /* identical to box height, or 125% */
-        
-                            display: flex;
-                            align-items: center;
-                            text-transform: uppercase;
-        
-                            /* Dark Blue */
-        
-                            color: #272B4E;
+
+                            color: $dark-blue;
         
                             opacity: 0.8;
-        
-                            /* Inside auto layout */
-        
-                            flex: none;
-                            order: 1;
-                            flex-grow: 0;
                         }
                     }
                 }
             }
         
             .btn-search{
-    
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                padding: 16px;
-                gap: 12px;
-                position: relative;
                 width: 140px;
                 height: 56px;
-                /* Cyan */
-                
-                background: #00C1FD;
-                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
         

@@ -1,7 +1,16 @@
 @use "../../asbtract/" as *;
 
 .results{
+    &__search-bar-container{
+        margin: 20px 0;
+    }
     &__body{
-        display: flex;
+        width: 100%;
+
+        &__container{
+            width: fit-content;
+            margin: auto;
+            display: flex;
+        }
     }
 }
