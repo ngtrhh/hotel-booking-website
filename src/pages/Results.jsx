@@ -14,6 +14,7 @@ const Results = () => {
           <div className="filter-container">
             <Filter/>
           </div>
+          {/* <div>Danh sách các phòng</div> */}
         </div>
         
       </div>
