@@ -4,8 +4,10 @@
   width: 100%;
   background-color: $light-blue-1;
   border-top: 1px solid $dove;
+  display: block;
+  margin-top: 100px;
 
-  .container {
+  &__container {
     @include flex(none, none);
     flex-direction: column;
   }
@@ -87,8 +89,6 @@
           position: relative;
           width: 70%;
           height: 60px;
-          border-radius: 50px;
-          background-color: $white;
           margin: auto;
         }
       }

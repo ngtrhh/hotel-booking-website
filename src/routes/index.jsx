@@ -1,16 +1,9 @@
-// import React from "react";
-// import { Route } from "react-router-dom";
-
-// const generateRoute = ({ routes }) => {
-//   return routes.map((route, index) => {
-//     const Element = route.element;
-//     <Route key={index} path={route.path}></Route>;
-//   });
-// };
-
-// export default index;
-
+import { HomeLayout } from "../components/layout";
 import Home from "../pages/Home";
 import Results from "../pages/Results";
-const publicRoutes = [{ path: "/", component: Home }, { path: "/results", component: Results }];
+
+const publicRoutes = [
+  { path: "/", element: Home, layout: HomeLayout },
+  { path: "/results", element: Results },
+];
 export { publicRoutes };

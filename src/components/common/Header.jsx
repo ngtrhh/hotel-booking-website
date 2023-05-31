@@ -5,9 +5,9 @@ import Button from "./Button";
 const Header = () => {
   return (
     <div className="header">
-      <div className="container">
+      <div className="header__container">
         <div className="header__logo">
-          <Logo />
+          <Logo small />
         </div>
         <div className="header__menu">
           <div className="header__menu__item active">
@@ -32,8 +32,8 @@ const Header = () => {
           </div>
         </div>
         <div className="header__login-signup">
-          <Button text="Đăng nhập" className="login" />
-          <Button text="Đăng ký" className="signup cyan" />
+          <Button className="no-background">Đăng nhập</Button>
+          <Button className="cyan">Đăng ký</Button>
         </div>
       </div>
     </div>

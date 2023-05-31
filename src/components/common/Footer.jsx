@@ -14,7 +14,7 @@ import Logo from "./Logo";
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="container">
+      <div className="footer__container">
         <div className="footer__top">
           <div className="footer__top__left">
             <div className="footer__top__left__item">
