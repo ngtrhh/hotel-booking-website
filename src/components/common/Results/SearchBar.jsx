@@ -25,7 +25,6 @@ const SearchBar = () => {
               <div className="value">HCM</div>
             </div>
           </div>
-          <div className="line"></div>
 
           <div className="item">
             <BsCalendar2 size={24} className="icon"/>
@@ -34,7 +33,6 @@ const SearchBar = () => {
               <div className="value">T7, 8 tháng 4</div>
             </div>
           </div>
-          <div className="line"></div>
 
           <div className="item">
             <BsGeoAlt size={24} className="icon"/>
@@ -43,7 +41,6 @@ const SearchBar = () => {
               <div className="value">CN, 9 tháng 4</div>
             </div>
           </div>
-          <div className="line"></div>
 
           <div className="item">
             <BsGeoAlt size={24} className="icon"/>
