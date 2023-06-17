@@ -1,10 +1,28 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/Logo.png";
 
-const Logo = () => {
+const Logo = (props) => {
   return (
     <Link to="/">
-      <img src={logo} alt="Logo" />
+      {props.small ? (
+        <img
+          src={logo}
+          alt="Logo"
+          style={{
+            width: "auto",
+            height: "32px",
+          }}
+        />
+      ) : (
+        <img
+          src={logo}
+          alt="Logo"
+          style={{
+            width: "auto",
+            height: "56px",
+          }}
+        />
+      )}
     </Link>
   );
 };

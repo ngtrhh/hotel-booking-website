@@ -34,3 +34,21 @@ a {
   text-decoration: none;
   color: unset;
 }
+
+.main-layout {
+  flex-direction: column;
+  display: flex;
+}
+
+.home-layout {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+
+  &__content {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

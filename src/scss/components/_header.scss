@@ -1,17 +1,17 @@
 @use "../asbtract/" as *;
 
 .header {
-  position: relative;
   z-index: 100;
   width: 100%;
   height: $header-height;
   border-bottom: 1px solid #dbe1ee;
+  background-color: transparent;
 
-  .container {
+  &__container {
     width: 68%;
     height: 100%;
     margin: auto;
-    @include flex(none, none);
+    @include flex(unset, unset);
   }
 
   &__logo {
@@ -25,7 +25,6 @@
     &__item {
       padding: 12px;
       color: $dark-grey;
-
       cursor: pointer;
 
       &.active {
@@ -41,13 +40,10 @@
       }
     }
   }
+
   &__login-signup {
     flex: 1;
     @include flex(center, right);
-
-    .login {
-      background-color: transparent;
-      color: $cyan;
-    }
+    gap: 20px;
   }
 }
