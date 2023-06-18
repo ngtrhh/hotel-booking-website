@@ -9,7 +9,17 @@ $red: #d23434;
 $light-blue: #f8efe8;
 $white: #ffffff;
 
-$inter: "Inter", sans-serif;
+$inter-font: "Inter", sans-serif;
+$quicksan-font: "Quicksand", sans-serif;
+
+$heading-1: bold 40px $inter-font;
+$heading-2: bold 36px $inter-font;
+$heading-3: bold 28px $inter-font;
+$heading-4: bold 24px $inter-font;
+$heading-5: bold 20px $inter-font;
+$body-1: normal 15px $quicksan-font;
+$body-2: normal 16px $inter-font;
+$body-2-bold: bold 16px $inter-font;
 
 $header-height: 80px;
 

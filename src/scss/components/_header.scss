@@ -4,7 +4,7 @@
   z-index: 100;
   width: 100%;
   height: $header-height;
-  border-bottom: 1px solid #dbe1ee;
+  border-bottom: 1px solid $dove;
   background-color: transparent;
 
   &__container {
@@ -20,12 +20,19 @@
   }
   &__menu {
     flex: 2;
+    gap: 4px;
     @include flex(center, center);
 
     &__item {
       padding: 12px;
       color: $dark-grey;
       cursor: pointer;
+      background: aliceblue;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s linear;
+      }
 
       &.active {
         font-weight: 700;

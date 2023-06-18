@@ -38,16 +38,12 @@
           flex-direction: column;
 
           .label {
-            font-family: $inter;
-            font-size: 13px;
-            font-weight: 500;
+            font: $body-2;
             color: $dark-grey;
           }
 
           .value {
-            font-family: $inter;
-            font-size: 16px;
-            font-weight: 700;
+            font: $body-2-bold;
             border: none;
             color: $dark-blue;
             padding: 4px;
@@ -72,9 +68,7 @@
       @include flex(flex-start, flex-start);
 
       &__title {
-        font-family: $inter;
-        font-size: 44px;
-        font-weight: 700;
+        font: $heading-1;
         flex: 1;
 
         span {
@@ -119,9 +113,7 @@
     }
 
     &__title {
-      font-family: $inter;
-      font-size: 44px;
-      font-weight: 700;
+      font: $heading-1;
     }
 
     &__content {
@@ -139,7 +131,7 @@
         gap: 0;
 
         .input {
-          font-family: $inter;
+          font-family: $inter-font;
           font-size: 15px;
           font-weight: 400;
           padding: 20px 60px 20px 12px;
@@ -168,8 +160,6 @@
   padding-bottom: 24px;
   margin-top: 32px;
   border-radius: 12px;
-  font-family: $inter;
-  font-weight: 700;
   cursor: pointer;
   box-shadow: 0px 1px 3px 1px rgba(60, 64, 67, 0.15),
     0px 1px 2px rgba(60, 64, 67, 0.3);
@@ -182,12 +172,13 @@
     width: auto;
     height: 300px;
     border-radius: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   &__title {
-    font-size: 36px;
+    font: $heading-3;
     text-align: center;
+    margin-bottom: 4px;
   }
 
   &__number {
@@ -196,6 +187,8 @@
     flex-direction: row;
 
     &__text {
+      font-family: $inter-font;
+      font-weight: 700;
       font-size: 15px;
       margin-left: 8px;
     }
@@ -224,16 +217,13 @@
     width: 100%;
 
     &__name {
-      font-family: $inter;
-      font-size: 24px;
-      font-weight: 700;
+      font: $heading-4;
     }
 
     &__address {
       @include flex(center, flex-start);
       gap: 8px;
-      font-size: 15px;
-      font-weight: 500;
+      font: $body-1;
       color: $dark-grey;
     }
 
@@ -250,25 +240,20 @@
         color: $white;
         border-radius: 12px;
         @include flex(center, center);
-        font-family: $inter;
-        font-size: 20px;
-        font-weight: 700;
+        font: $heading-5;
       }
     }
 
     &__price {
       color: $cyan;
-      font-family: $inter;
-      font-size: 28px;
-      font-weight: 700;
+      font: $heading-3;
       @include flex(center, flex-end);
       flex-direction: row;
       margin-top: 24px;
 
       span {
         color: $dark-grey;
-        font-size: 20px;
-        font-weight: 700;
+        font: $heading-5;
       }
     }
   }
@@ -288,9 +273,7 @@
   }
 
   &__title {
-    font-family: $inter;
-    font-weight: 700;
-    font-size: 24px;
+    font: $heading-4;
     margin-top: 12px;
   }
 

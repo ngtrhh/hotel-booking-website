@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,10 +11,12 @@ const Header = () => {
           <Logo small />
         </div>
         <div className="header__menu">
-          <div className="header__menu__item active">
-            <span>Trang chủ</span>
-            <div className="line" />
-          </div>
+          <Link to="/">
+            <div className="header__menu__item active">
+              <span>Trang chủ</span>
+              <div className="line" />
+            </div>
+          </Link>
           <div className="header__menu__item">
             <span>Yêu thích</span>
             <div className="line" />

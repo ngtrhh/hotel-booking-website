@@ -10,7 +10,7 @@ import image1 from "../../src/assets/images/advantage-01.png";
 import image2 from "../../src/assets/images/advantage-02.png";
 import image3 from "../../src/assets/images/advantage-03.png";
 
-const Home = () => {
+export const Home = () => {
   return (
     <div className="home">
       <div className="home__top-banner">
@@ -151,5 +151,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

@@ -1,9 +1,9 @@
 import { HomeLayout } from "../components/layout";
-import Home from "../pages/Home";
-import Results from "../pages/Results";
+import { Home, Results, Detail } from "../pages/";
 
 const publicRoutes = [
   { path: "/", element: Home, layout: HomeLayout },
   { path: "/results", element: Results },
+  { path: "/detail", element: Detail },
 ];
 export { publicRoutes };
