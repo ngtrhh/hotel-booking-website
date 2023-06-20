@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../Logo";
 import Button from "../Button";
 import {
-  BsGeoAlt,
+  BsGeoAltFill,
   BsMailbox,
   BsTelephone,
   BsFacebook,
@@ -11,7 +11,9 @@ import {
   BsInstagram,
   BsSendFill,
   BsCalendar2,
-  BsSearch
+  BsSearch,
+  BsCalendar2MinusFill,
+  BsPeopleFill
 } from "react-icons/bs";
 
 const SearchBar = () => {
@@ -20,7 +22,7 @@ const SearchBar = () => {
       <div className="container">
         <div className="items">
           <div className="item">
-            <BsGeoAlt size={24} className="icon"/>
+            <BsGeoAltFill size={24} className="icon"/>
             <div className="content">
               <div className="field">Địa điểm</div>
               <div className="value">HCM</div>
@@ -28,7 +30,7 @@ const SearchBar = () => {
           </div>
 
           <div className="item">
-            <BsCalendar2 size={24} className="icon"/>
+            <BsCalendar2MinusFill size={24} className="icon"/>
             <div className="content">
               <div className="field">Nhận phòng</div>
               <div className="value">T7, 8 tháng 4</div>
@@ -36,7 +38,7 @@ const SearchBar = () => {
           </div>
 
           <div className="item">
-            <BsGeoAlt size={24} className="icon"/>
+            <BsCalendar2MinusFill size={24} className="icon"/>
             <div className="content">
               <div className="field">Trả phòng</div>
               <div className="value">CN, 9 tháng 4</div>
@@ -44,7 +46,7 @@ const SearchBar = () => {
           </div>
 
           <div className="item">
-            <BsGeoAlt size={24} className="icon"/>
+            <BsPeopleFill size={24} className="icon"/>
             <div className="content">
               <div className="field">Khách và phòng</div>
               <div className="value">2 người - 1 phòng</div>

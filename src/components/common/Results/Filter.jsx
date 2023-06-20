@@ -14,6 +14,8 @@ import {
 } from "react-icons/bs";
 import PriceFilter from "./PriceFilter";
 import CommonFilter from "./CommonFilter";
+import AccommodationTypeFilter from "./AccommodationTypeFilter";
+import Facility from "./Facility";
 
 const Filter = () => {
   return (
@@ -30,6 +32,9 @@ const Filter = () => {
             <div className="results__filter__content">
                 <PriceFilter/>
                 <CommonFilter/>
+                <AccommodationTypeFilter/>
+                <Facility/>
+                
             </div>
         </div>
     </div>

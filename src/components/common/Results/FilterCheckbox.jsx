@@ -1,10 +1,14 @@
 import React from 'react'
+import { Checkbox } from 'antd';
 
 const FilterCheckbox = (props) => {
   return (
     <div className="filter-checkbox">
-      {/* checkbox */}
-	  <p>{props.text}</p>
+      <Checkbox checked={props.checked}
+        onChange={props.onChange}
+        defaultChecked={false}>
+          {props.text}
+      </Checkbox>
     </div>
   )
 }

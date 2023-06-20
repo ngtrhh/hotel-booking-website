@@ -2,14 +2,16 @@ import React, { useState, useEffect } from 'react';
 import FilterCheckbox from './FilterCheckbox'
 
 
-const CommonFilter = () => {
+const AccommodationTypeFilter = () => {
   
-  const [checkboxValues, setCheckboxValues] = useState([
-    { name: 'includeBreakfast', label: 'Bao gồm bữa sáng', checked: false },
-    { name: 'freeCancellation', label: 'Hủy phòng miễn phí', checked: false },
-    { name: 'payLater', label: 'Đặt trước, trả tiền sau', checked: false },
-    { name: 'singleBed', label: 'Giường đơn', checked: false }
-  ]);
+	const [checkboxValues, setCheckboxValues] = useState([
+		{ name: 'hotel', label: 'Khách sạn', checked: false },
+		{ name: 'apartment', label: 'Căn hộ', checked: false },
+		{ name: 'homestay', label: 'Homestay', checked: false },
+		{ name: 'resort', label: 'Resort', checked: false },
+		{ name: 'guesthouse', label: 'Nhà nghỉ', checked: false },
+		{ name: 'villa', label: 'Biệt thự', checked: false }
+	]);
 
   const handleCheckboxChange = (name) => {
     setCheckboxValues(prevValues => {
@@ -24,13 +26,14 @@ const CommonFilter = () => {
       });
     });
   };
+  
 
 
   return (
-    <div className="results__filter__commonfilter">
+    <div className="results__filter__accommodationtypefilter">
       <div className="results__filter__checkbox-filter">
         <div className="results__filter__checkbox-filter__header">
-          Bộ lọc phổ biến
+          Loại hình lưu trú
         </div>
         <div className="results__filter__checkbox-filter__content">
           {checkboxValues.map(checkbox => (
@@ -47,4 +50,4 @@ const CommonFilter = () => {
   )
 }
 
-export default CommonFilter
+export default AccommodationTypeFilter
