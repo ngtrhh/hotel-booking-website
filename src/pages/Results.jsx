@@ -5,10 +5,12 @@ import Filter from "../components/common/Results/Filter";
 export const Results = () => {
   return (
     <div className="results">
-      <div className="results__search-bar-container">
+      {/* Thanh searchbar */}
+      <div className="results__search-bar-container"> 
         <SearchBar />
       </div>
 
+      {/* Body */}
       <div className="results__body">
         <div className="results__body__container">
           <div className="filter-container">

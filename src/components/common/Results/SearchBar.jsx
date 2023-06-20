@@ -10,7 +10,8 @@ import {
   BsLinkedin,
   BsInstagram,
   BsSendFill,
-  BsCalendar2
+  BsCalendar2,
+  BsSearch
 } from "react-icons/bs";
 
 const SearchBar = () => {
@@ -50,7 +51,7 @@ const SearchBar = () => {
             </div>
           </div>
         </div>
-        <Button text="Tìm ngay" className="btn-search cyan" />
+        <Button preIcon={BsSearch} className="btn-search cyan">Tìm ngay</Button>
       </div>
     </div>
   );
