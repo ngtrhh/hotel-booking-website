@@ -4,7 +4,8 @@
 	color: $dark-blue;
 	width: 100%;
 
-	margin-bottom: 20px;
+	margin-bottom: 40px;
+	
 	&__header{
 		font-weight: 700;
 		font-size: 20px;
@@ -15,18 +16,6 @@
 		width: 100%;
 		&__text{
 			width: 100%;
-		}
-		.remove-choice-btn{
-			width: 35px;
-			height: 10px;
-			font-style: normal;
-			font-weight: 400;
-			font-size: 13px;
-			line-height: 16px;
-			color: $cyan;
-			align-self: center;
-
-			cursor: pointer;
 		}
 	}
 
@@ -50,7 +39,7 @@
 		
 	}
 	.btn-hide-content-filter{
-		width: 57px;
+		width: fit-content;
 		height: 18px;
 		font-family: 'Inter';
 		font-style: normal;
@@ -66,4 +55,17 @@
 
 		cursor: pointer;
 	}
+}
+
+.filter-remove-choice-btn{
+	width: 35px;
+	height: 10px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 16px;
+	color: $cyan;
+	align-self: center;
+
+	cursor: pointer;
 }

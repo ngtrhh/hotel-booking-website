@@ -69,7 +69,7 @@ const Facility = () => {
       	<div className="results__filter__checkbox-filter">
 			<div className="results__filter__checkbox-filter__header">
 				<div className='results__filter__checkbox-filter__header__text'>Tiện nghi</div>
-				<div className='remove-choice-btn' onClick={handleClearAll}>Xóa</div>
+				<div className='filter-remove-choice-btn' onClick={handleClearAll}>Xóa</div>
         	</div>
 			<div className={`results__filter__checkbox-filter__content ${isContentExpanded ? 'expanded' : ''}`}>
 				{checkboxValues.map(checkbox => (
