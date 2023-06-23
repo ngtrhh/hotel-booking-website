@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import FilterCheckbox from './FilterCheckbox'
 
 
-const Facility = () => {
+const FacilityFilter = () => {
   
 	const [checkboxValues, setCheckboxValues] = useState([
 		{ name: 'wifi', label: 'Wifi', checked: false },
@@ -87,4 +87,4 @@ const Facility = () => {
   )
 }
 
-export default Facility
+export default FacilityFilter

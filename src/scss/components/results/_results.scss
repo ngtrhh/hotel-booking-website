@@ -12,7 +12,12 @@
             width: fit-content;
             margin: auto;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            gap: 20px;
+
+            .results-roomlist-container{
+                width: 956px;
+            }
         }
     }
 }

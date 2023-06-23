@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "../Logo";
-import Button from "../Button";
+import Logo from "../../Logo";
+import Button from "../../Button";
 import {
 	BsStarFill
 } from "react-icons/bs";

@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "../Logo";
-import Button from "../Button";
+import Logo from "../../Logo";
+import Button from "../../Button";
 import {
   BsGeoAlt,
   BsMailbox,
@@ -15,7 +15,7 @@ import {
 import PriceFilter from "./PriceFilter";
 import CommonFilter from "./CommonFilter";
 import AccommodationTypeFilter from "./AccommodationTypeFilter";
-import Facility from "./Facility";
+import FacilityFilter from "./FacilityFilter";
 import PaymentFilter from "./PaymentFilter";
 import BedTypeFilter from "./BedTypeFilter";
 import StarFilter from "./StarFilter";
@@ -43,7 +43,7 @@ const Filter = () => {
                 <StarFilter/>
                 <RatingFilter/>
                 <AccommodationTypeFilter/>
-                <Facility/>
+                <FacilityFilter/>
                 <PaymentFilter/>
                 <BedTypeFilter/>
             </div>

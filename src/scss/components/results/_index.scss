@@ -1,10 +1,3 @@
-@forward "./searchbar";
-@forward "./filter";
 @forward "./results";
-@forward "./pricefilter";
-@forward  "./checkboxfilter";
-@forward  "./filtercheckbox";
-@forward  "./starfilter";
-@forward  "./staritem";
-@forward  "./ratingfilter";
-@forward  "./ratingitem";
+@forward "./filterbar/";
+@forward "./roomlist/" ;

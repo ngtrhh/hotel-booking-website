@@ -1,6 +1,7 @@
 import React from "react";
-import SearchBar from "../components/common/Results/SearchBar";
-import Filter from "../components/common/Results/Filter";
+import SearchBar from "../components/common/Results/SearchBar/SearchBar";
+import Filter from "../components/common/Results/FilterBar/Filter";
+import RoomList from "../components/common/Results/RoomList/RoomList";
 
 export const Results = () => {
   return (
@@ -13,10 +14,12 @@ export const Results = () => {
       {/* Body */}
       <div className="results__body">
         <div className="results__body__container">
-          <div className="filter-container">
+          <div className="results-filter-container">
             <Filter />
           </div>
-          {/* <div>Danh sách các phòng</div> */}
+          <div className="results-roomlist-container">
+            <RoomList/>
+          </div>
         </div>
       </div>
     </div>
