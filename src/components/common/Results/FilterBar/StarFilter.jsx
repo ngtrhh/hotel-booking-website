@@ -20,8 +20,8 @@ const StarFilter = () => {
 		const updatedFilterChoices = starFilterChoices.map((filter) => {
 		  	if (filter.name === name) {
 				return {
-				...filter,
-				checked: !filter.checked
+					...filter,
+					checked: !filter.checked
 				};
 			}
 		  	return filter;

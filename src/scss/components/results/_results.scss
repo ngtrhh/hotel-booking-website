@@ -13,8 +13,9 @@
             margin: auto;
             display: flex;
             flex-direction: row;
+            flex: 1 1;
             gap: 20px;
-
+            margin-top: 82px;
             .results-roomlist-container{
                 width: 956px;
             }

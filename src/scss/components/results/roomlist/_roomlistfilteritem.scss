@@ -1,0 +1,28 @@
+@use "../../../asbtract/" as *;
+
+.results-roomlist-sort-item{
+    width: fit-content;
+    height: 34px;
+    padding: 20px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    color: $dark-grey;
+    font-size: 15px;
+    font-family: Roboto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    &.selected
+{
+        background-color: $dark-blue;
+        color: $white;
+    }
+}
