@@ -1,0 +1,279 @@
+@use "../../../asbtract/" as *;
+
+.results-card-roomitem{
+    width: 25%;
+    display: flex;
+    padding: 4px 4px 20px 4px;
+    flex-direction: column;
+    gap: 20px;
+    flex-basis: calc(25% - 20px);
+
+    border-radius: 12px;
+    background: var(--white, #FFF);
+
+    /* Shadow */
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+
+    &__room-img{
+        height: 160px;
+
+        border-radius: 10px;
+        background: url("../../../../assets/images/result_room_img.png") lightgray 50% / cover no-repeat;
+
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 6px;
+
+            &__left{
+                display: flex;
+
+                align-items: center;
+                align-items: flex-start;
+                gap: 4px;
+                flex: 1 0 0;
+
+                color: $white;
+                font-size: 13px;
+                font-family: Inter;
+            }
+
+            &__right{
+                display: flex;
+                
+                align-items: center;
+
+                color: $white;
+
+                &__love{
+                    width: 28px;
+                    height: 28px;
+                    flex-shrink: 0;
+
+                    & *{
+                        position: absolute;
+                    }
+                    &__background{
+                        color: #272B4E52;
+                        z-index: 0;
+                    }
+                }
+            }
+
+            &__accommodation-type{
+                display: flex;
+                height: 21px;
+                padding: 3px 12px;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+
+                border-radius: 50px;
+                background: var(--dark-blue-80, rgba(39, 43, 78, 0.80));
+            }
+            &__num-of-star{
+                display: flex;
+                height: 21px;
+                padding: 3px 12px;
+                align-items: center;
+                gap: 2px;
+                line-height: 21px;    
+
+                border-radius: 50px;
+                background: var(--dark-blue-80, rgba(39, 43, 78, 0.80));
+
+                &__icon-container{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    &__detail{
+        display: flex;
+        padding: 0px 4px;
+        flex-direction: column;
+        gap: 20px;
+        align-self: stretch;
+
+        &__info{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-self: stretch;
+
+            &__basic-info{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                align-self: stretch;
+
+                &__name-address{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 2px;
+                    align-self: stretch;
+
+                    &__accom-name{
+                        display: flex;
+                        align-self: stretch;
+
+                        color: $dark-blue;
+                        font-size: 20px;
+                        font-family: Inter;
+                        font-weight: 700;
+                    }
+
+                    &__accom-address{
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                        align-self: stretch;
+
+                        color: $dark-grey;
+                        font-size: 13px;
+                        font-family: Inter;
+                    }
+                }
+
+                &__review{
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    align-self: stretch;
+                    &__rating{
+                        display: flex;
+                        width: 52px;
+                        padding: 4px 12px;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+
+                        border-radius: 4px;
+                        background: $dark-blue;
+
+                        color: $white;
+                        font-size: 16px;
+                        font-family: Inter;
+                        font-weight: 700;
+                        line-height: 20px;
+                    }
+                    &__rating__count{
+                        display: flex;
+                        height: 24.68px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex: 1 0 0;
+                    }
+                }
+            }
+
+            &__facility{
+                display: flex;
+                padding: 8px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2px;
+                align-self: stretch;
+
+                border-radius: 8px;
+                background: var(--light-blue-2, #F0F6FF);
+
+                &__hotest{
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    align-self: stretch;
+                    justify-content: space-between;
+
+                    color: $dark-blue;
+                    font-size: 15px;
+                    font-family: Inter;
+                    font-weight: 700;
+                }
+
+                &__second{
+                    color: $green;
+                    font-size: 15px;
+                    font-family: Quicksand;
+                    font-weight: 500;
+                }
+                &__last{
+                    color: $blue;
+                    font-size: 15px;
+                    font-family: Quicksand;
+                    font-weight: 500;
+                }
+                &__others{
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 4px;
+
+                    &__item{
+                        color: $dark-grey;
+                        font-size: 13px;
+                        font-family: Inter;
+
+                        display: flex;
+                        padding: 2px 4px;
+                        align-items: flex-start;
+
+                        border-radius: 4px;
+                        background: $white;
+
+                        &.more{
+                            color: $cyan;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__price{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+
+            &__original-price{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-self: stretch;
+                color: $red;
+                text-align: right;
+                font-size: 13px;
+                font-family: Inter;
+                text-decoration-line: line-through;
+                -moz-text-decoration-line: line-through;
+}
+            &__sale-price{
+                display: flex;
+                padding: 0px 4px;
+                justify-content: flex-end;
+                align-items: flex-end;
+                gap: 1px;
+                align-self: stretch;
+
+                &__value{
+                    color: $cyan;
+                    text-align: right;
+
+                    font-size: 24px;
+                    font-family: Inter;
+                    font-weight: 700;
+                }
+                &__per-unit{
+                    color: $dark-grey;
+                    text-align: right;
+
+                    font-size: 15px;
+                    font-family: Inter;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

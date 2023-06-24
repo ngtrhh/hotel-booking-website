@@ -3,6 +3,7 @@ import Button from "../../Button"
 import { BsMap } from "react-icons/bs";
 import RoomListSortItem from "./RoomListSortItem";
 import StarItem from "../FilterBar/StarItem";
+import CardRoomItem from "./CardRoomItem";
 
 export const RoomList = (data) => {
     const [sortOpitons, setSortOpitons] = useState([
@@ -42,21 +43,43 @@ export const RoomList = (data) => {
                     <span> Phú Quốc</span>
                 </p>
             </div>
-            <div className="results-roomlist__sort">
-                <div className="results-roomlist__sort__header">
-                    Sắp xếp theo
+            <div className="results-roomlist__content">
+                <div className="results-roomlist__content__sort">
+                    <div className="results-roomlist__content__sort__header">
+                        Sắp xếp theo
+                    </div>
+                    <div className="results-roomlist__content__sort__items">
+                    {sortOpitons.map(data => (
+                        <RoomListSortItem
+                            key={data.name}
+                            text={data.label}
+                            selected={data.selected}
+                            onClick = {() => HandleSortChange(data.name)}
+                        />
+                    ))}
+                    </div>
                 </div>
-                <div className="results-roomlist__sort__items">
-                {sortOpitons.map(data => (
-					<RoomListSortItem
-                        key={data.name}
-                        text={data.label}
-                        selected={data.selected}
-                        onClick = {() => HandleSortChange(data.name)}
-                    />
-				))}
+                <div className="results-roomlist__content__roomitems">
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    <CardRoomItem/>
+                    
                 </div>
             </div>
+            
         </div>
     );
     
