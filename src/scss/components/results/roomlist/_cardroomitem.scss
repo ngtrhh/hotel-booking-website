@@ -50,7 +50,10 @@
                     width: 28px;
                     height: 28px;
                     flex-shrink: 0;
-
+                    
+                    &.loved{
+                        color: $red;
+                    }
                     & *{
                         position: absolute;
                     }
@@ -181,7 +184,7 @@
                 border-radius: 8px;
                 background: var(--light-blue-2, #F0F6FF);
 
-                &__hotest{
+                &__signature{
                     display: flex;
                     align-items: center;
                     gap: 4px;

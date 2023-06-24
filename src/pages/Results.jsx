@@ -18,7 +18,7 @@ export const Results = () => {
             <Filter />
           </div>
           <div className="results-roomlist-container">
-            <RoomList/>
+            <RoomList />
           </div>
         </div>
       </div>

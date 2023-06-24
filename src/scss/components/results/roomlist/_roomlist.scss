@@ -1,7 +1,6 @@
 @use "../../../asbtract/" as *;
 
 .results-roomlist{
-    
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -87,14 +86,22 @@
                 gap: 20px;
             }
         }
-        &__roomitems{
+        &__rooms{
             display: flex;
             padding: 0px 0px 20px 0px;
-            flex-direction: row;
-            column-gap: 20px;
-            row-gap: 40px;
+            flex-direction: column;
+            gap: 60px;
             align-self: stretch;
-            flex-wrap: wrap;
+
+            &__roomitems{
+                display: flex;
+                padding: 0px 0px 20px 0px;
+                flex-direction: row;
+                column-gap: 20px;
+                row-gap: 40px;
+                align-self: stretch;
+                flex-wrap: wrap;
+            }
         }
     }
     
