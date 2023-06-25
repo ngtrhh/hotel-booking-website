@@ -26,6 +26,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -47,6 +49,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -68,6 +72,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -89,6 +95,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -110,6 +118,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -131,6 +141,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -152,6 +164,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -173,6 +187,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -194,6 +210,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -215,6 +233,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -236,6 +256,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -257,6 +279,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -278,6 +302,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -299,6 +325,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -320,6 +348,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -341,6 +371,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -362,6 +394,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -383,6 +417,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -404,6 +440,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -425,6 +463,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -446,6 +486,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -467,6 +509,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -488,6 +532,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -509,6 +555,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -530,6 +578,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -551,6 +601,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -572,6 +624,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -593,6 +647,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -614,6 +670,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -635,6 +693,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -656,6 +716,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -677,6 +739,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -698,6 +762,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -719,6 +785,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -740,6 +808,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -761,6 +831,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -782,6 +854,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -803,6 +877,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -824,6 +900,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -845,6 +923,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -866,6 +946,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -887,6 +969,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -908,6 +992,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -929,6 +1015,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -950,6 +1038,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -971,6 +1061,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -992,6 +1084,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1013,6 +1107,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1034,6 +1130,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1055,6 +1153,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1076,6 +1176,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1097,6 +1199,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1118,6 +1222,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1139,6 +1245,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1160,6 +1268,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1181,6 +1291,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1202,6 +1314,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1223,6 +1337,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1244,6 +1360,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1265,6 +1383,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1286,6 +1406,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1307,6 +1429,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1328,6 +1452,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1349,6 +1475,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1370,6 +1498,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1391,6 +1521,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1412,6 +1544,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1433,6 +1567,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1454,6 +1590,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1475,6 +1613,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1496,6 +1636,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1517,6 +1659,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1538,6 +1682,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1559,6 +1705,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1580,6 +1728,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1601,6 +1751,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1622,6 +1774,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1643,6 +1797,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1664,6 +1820,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1685,6 +1843,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1706,6 +1866,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1727,6 +1889,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1748,6 +1912,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1769,6 +1935,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1790,6 +1958,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1811,6 +1981,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1832,6 +2004,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1853,6 +2027,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1874,6 +2050,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1895,6 +2073,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1916,6 +2096,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1937,6 +2119,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1958,6 +2142,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -1979,6 +2165,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2000,6 +2188,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2021,6 +2211,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2042,6 +2234,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2063,6 +2257,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2084,6 +2280,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2105,6 +2303,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2126,6 +2326,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2147,6 +2349,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2168,6 +2372,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2189,6 +2395,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2210,6 +2418,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2231,6 +2441,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2252,6 +2464,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2273,6 +2487,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2294,6 +2510,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2315,6 +2533,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2336,6 +2556,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2357,6 +2579,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2378,6 +2602,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2399,6 +2625,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2420,6 +2648,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2441,6 +2671,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2462,6 +2694,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2483,6 +2717,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2504,6 +2740,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2525,6 +2763,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2546,6 +2786,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2567,6 +2809,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2588,6 +2832,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2609,6 +2855,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2630,6 +2878,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2651,6 +2901,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2672,6 +2924,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2693,6 +2947,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2714,6 +2970,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2735,6 +2993,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2756,6 +3016,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2777,6 +3039,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2798,6 +3062,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2819,6 +3085,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2840,6 +3108,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2861,6 +3131,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2882,6 +3154,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2903,6 +3177,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2924,6 +3200,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2945,6 +3223,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2966,6 +3246,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -2987,6 +3269,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3008,6 +3292,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3029,6 +3315,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3050,6 +3338,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3071,6 +3361,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3092,6 +3384,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3113,6 +3407,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3134,6 +3430,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3155,6 +3453,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3176,6 +3476,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3197,6 +3499,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3218,6 +3522,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3239,6 +3545,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3260,6 +3568,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3281,6 +3591,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3302,6 +3614,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3323,6 +3637,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3344,6 +3660,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3365,6 +3683,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3386,6 +3706,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3407,6 +3729,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3428,6 +3752,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3449,6 +3775,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3470,6 +3798,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3491,6 +3821,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3512,6 +3844,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3533,6 +3867,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3554,6 +3890,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3575,6 +3913,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3596,6 +3936,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3617,6 +3959,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3638,6 +3982,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3659,6 +4005,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3680,6 +4028,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3701,6 +4051,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3722,6 +4074,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3743,6 +4097,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3764,6 +4120,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3785,6 +4143,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3806,6 +4166,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3827,6 +4189,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3848,6 +4212,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3869,6 +4235,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3890,6 +4258,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3911,6 +4281,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3932,6 +4304,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3953,6 +4327,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3974,6 +4350,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -3995,6 +4373,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4016,6 +4396,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4037,6 +4419,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4058,6 +4442,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4079,6 +4465,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4100,6 +4488,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4121,6 +4511,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4142,6 +4534,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4163,6 +4557,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4184,6 +4580,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4205,6 +4603,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4226,6 +4626,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4247,6 +4649,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4268,6 +4672,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4289,6 +4695,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4310,6 +4718,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4331,6 +4741,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4352,6 +4764,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4373,6 +4787,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4394,6 +4810,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4415,6 +4833,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4436,6 +4856,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4457,6 +4879,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4478,6 +4902,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4499,6 +4925,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4520,6 +4948,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4541,6 +4971,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4562,6 +4994,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4583,6 +5017,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4604,6 +5040,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4625,6 +5063,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4646,6 +5086,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4667,6 +5109,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4688,6 +5132,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4709,6 +5155,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4730,6 +5178,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4751,6 +5201,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4772,6 +5224,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4793,6 +5247,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4814,6 +5270,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4835,6 +5293,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4856,6 +5316,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4877,6 +5339,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4898,6 +5362,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4919,6 +5385,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4940,6 +5408,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4961,6 +5431,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -4982,6 +5454,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5003,6 +5477,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5024,6 +5500,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5045,6 +5523,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5066,6 +5546,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5087,6 +5569,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5108,6 +5592,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5129,6 +5615,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5150,6 +5638,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5171,6 +5661,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5192,6 +5684,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5213,6 +5707,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5234,6 +5730,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5255,6 +5753,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5276,6 +5776,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5297,6 +5799,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5318,6 +5822,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5339,6 +5845,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5360,6 +5868,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5381,6 +5891,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5402,6 +5914,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5423,6 +5937,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5444,6 +5960,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5465,6 +5983,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5486,6 +6006,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5507,6 +6029,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5528,6 +6052,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5549,6 +6075,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5570,6 +6098,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5591,6 +6121,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5612,6 +6144,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5633,6 +6167,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5654,6 +6190,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5675,6 +6213,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5696,6 +6236,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5717,6 +6259,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5738,6 +6282,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5759,6 +6305,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5780,6 +6328,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5801,6 +6351,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5822,6 +6374,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5843,6 +6397,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5864,6 +6420,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5885,6 +6443,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5906,6 +6466,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5927,6 +6489,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5948,6 +6512,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5969,6 +6535,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -5990,6 +6558,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6011,6 +6581,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6032,6 +6604,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6053,6 +6627,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6074,6 +6650,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6095,6 +6673,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6116,6 +6696,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6137,6 +6719,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6158,6 +6742,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6179,6 +6765,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6200,6 +6788,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6221,6 +6811,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6242,6 +6834,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6263,6 +6857,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6284,6 +6880,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6305,6 +6903,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6326,6 +6926,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6347,6 +6949,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6368,6 +6972,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6389,6 +6995,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6410,6 +7018,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6431,6 +7041,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6452,6 +7064,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6473,6 +7087,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6494,6 +7110,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6515,6 +7133,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6536,6 +7156,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6557,6 +7179,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6578,6 +7202,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6599,6 +7225,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6620,6 +7248,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6641,6 +7271,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6662,6 +7294,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6683,6 +7317,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6704,6 +7340,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6725,6 +7363,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6746,6 +7386,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6767,6 +7409,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6788,6 +7432,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6809,6 +7455,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6830,6 +7478,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6851,6 +7501,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6872,6 +7524,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6893,6 +7547,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6914,6 +7570,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6935,6 +7593,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6956,6 +7616,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6977,6 +7639,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -6998,6 +7662,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7019,6 +7685,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7040,6 +7708,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7061,6 +7731,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7082,6 +7754,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7103,6 +7777,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7124,6 +7800,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7145,6 +7823,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://s3-alpha-sig.figma.com/img/6568/0aa1/2110b9ee0298ee15be0b83db0994f6ee?Expires=1688342400&Signature=j21MJ0db1bKtgcBYtPEGQ4ubYFToXUuLXCXkxCpOcviZC3gh~s6B1XRJge0D5rB5O46otDjHa3kmFS8QDo29XQNGHMY~TVK9bSakNKqIVdJTY8TANV6xdf3aXQZv3Ogt0d-7EMSohfTa3W5-jUUxtdDCE744wZZTmrfLhHVeZHCRZXh96~lVOegvHLLukSKKIe3-SZqaJ2a~5SpjhpP7BlEaDa1COx6zK2rhlePz3hag-0qL4xYDBFUEqPp1a0raKaxXSTK~U058CBy20V2Me1a35sHROQwJTE0MnUfsJq0NF4qpUuCvoTRSbrivRsb~xlnWP99DP0t3P7zMBQjo~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7166,6 +7846,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7187,6 +7869,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7208,6 +7892,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7229,6 +7915,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7250,6 +7938,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7271,6 +7961,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7292,6 +7984,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7313,6 +8007,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7334,6 +8030,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7355,6 +8053,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7376,6 +8076,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7397,6 +8099,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7418,6 +8122,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7439,6 +8145,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7460,6 +8168,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7481,6 +8191,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7502,6 +8214,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7523,6 +8237,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7544,6 +8260,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
@@ -7565,6 +8283,8 @@ export const RoomList = (roomsData) => {
             roomImg: 'https://thecancunsun.com/wp-content/uploads/2021/12/Top-5-Star-all-inclusive-Resorts-in-Cancun-for-2022-SQUARE.jpg',
             accomName: 'Khách sạn NewWorld',
             accomAddress: 'Võ Thị Sáu, Vũng Tàu',
+            rating: '9.0',
+            ratingCount: '200 đánh giá',
             facility: [
                 'Bungalow nhìn ra vườn',
                 'Miễn phí hủy phòng',
