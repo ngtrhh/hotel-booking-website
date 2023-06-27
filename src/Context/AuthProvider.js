@@ -18,11 +18,11 @@ export default function AuthProvider ({children}) {
 					displayName, email, uid, photoURL
 				});
 				setIsLoading(false);
-				navigate('/');
+				//navigate('/');
 			}
 			else{
 				setIsLoading(false);
-				navigate('/login');
+				//navigate('/login');
 			}
 		});
 		
