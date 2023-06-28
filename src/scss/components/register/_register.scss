@@ -1,0 +1,26 @@
+@use "../../asbtract/" as *;
+
+.register-container {
+	width: 100wh;
+	height: 100vh;
+	max-height: 100vh;
+
+	display: flex;
+	.register-content {
+		width: 50%;
+		height: 100%;
+		padding-top: 60px;
+		padding-left: 18.75%;
+
+		.register-content-container{
+			width: 480px;
+		}
+	}
+	.banner-right {
+		width: 50%;
+		height: 100%;
+		background: url('https://s3-alpha-sig.figma.com/img/391b/39ab/a4e8d5a370667350ff785843fd317545?Expires=1688947200&Signature=gBq0uxhgTFPhjbhyuSG~cs0YEMvG3GwI-o3MASLB-DLgCeFANffF7WDo3FiDYmcwzenJzoGMpL2IWI8zxk9afIs5XUWNlUKlVvE9vA2Q~h8Wf37kzoLsEs2tKzAkZzmdZvuX~ecyL9HGkY9sdLAGJzai~g7y3G207fZaeE9WrWGHIrByHMOqQQn4zyapwcqX-VDoMw47d-wFw8qXJ2d8mnLAyfmw3OJFGuXc6VxP8Ki9JaNRaq-5f~BnEkIA-1iaXBBVx~MQLfnXNEoE4AMuqdvfxezJ8sTAPPJlv7YYl1vUiTDHMt9L99yuVXO3CxVUlKcwpR0lRPDpRfHqMSiPew__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+  }
