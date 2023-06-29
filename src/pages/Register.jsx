@@ -3,7 +3,7 @@ import { auth } from "../firebase/config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ReactComponentElement as BackBtn } from "../assets/images/back-btn.svg";
 import { Input } from 'antd';
-import Button from "../components/common/Button";
+import {Button} from "antd";
 import { BsFacebook, BsGoogle } from "react-icons/bs";
 import { ReactComponent as FbIcon } from '../assets/images/fb_icon.svg';
 import { ReactComponent as GgIcon } from '../assets/images/gg_icon.svg';
@@ -33,7 +33,7 @@ export const Register = () => {
                 <div className="register-input-txb__title">
                     Mật khẩu
                 </div>
-                <Input placeholder="Mật khẩu" />
+                <Input.Password placeholder="Mật khẩu" />
                 <div className="register-input-txb__more-infor">
                   Mật khẩu bao gồm 8 ký tự, trong đó có chữ hoa, chữ thường và số.
                 </div>
@@ -42,16 +42,16 @@ export const Register = () => {
                 <div className="register-input-txb__title">
                   Nhập lại mật khẩu
                 </div>
-                <Input placeholder="Nhập lại mật khẩu" />
+                <Input.Password placeholder="Nhập lại mật khẩu" />
               </div>
             </div>
             <div className="register-content__register-form__footer">
-              <Button className='cyan' id='register-btn'>Đăng ký</Button>
+              <Button type="primary" id='register-btn' className="ant-primary-btn">Đăng ký</Button>
               <div className="register-term-and-con">
                 <p>
-                  Bằng việc đăng ký, tôi đồng ý với 
+                  Bằng việc đăng ký, tôi đồng ý với&nbsp;
                   <span className="span-blue underline">
-                  &nbsp;Điều khoản & Điều kiện
+                    Điều khoản & Điều kiện
                   </span>
                     &nbsp;và 
                   <span className="span-blue">
@@ -66,19 +66,19 @@ export const Register = () => {
                 <div className="register-content__devider__line"></div>
               </div>
               <div className="register-content__other-signup-methods">
-                <div className="register-content__facebook-signup-btn">
+                <div className="register-content__signup-btn">
                   <FbIcon/>
                   <p>Facebook</p>
                 </div>
-                <div className="register-content__google-signup-btn">
+                <div className="register-content__signup-btn">
                   <GgIcon/>
                   <p>Google</p>
                 </div>
               </div>
-              <div className="register-content__devider__line"></div>
-              <div className="register-content__goto-login-btn">
+              <div className="register-content__devider__line outside"></div>
+              <Button className="ant-default-btn">
                 Bạn đã có tài khoản? Đăng nhập
-              </div>
+              </Button>
             </div>
 
           </div>
