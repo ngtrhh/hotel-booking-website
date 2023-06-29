@@ -1,5 +1,6 @@
 import firebase, { db } from "./config";
-import { doc, setDoc, addDoc, collection  } from "firebase/firestore"; 
+import { doc, setDoc, addDoc, collection  } from "firebase/firestore";
+import { auth } from "./config";
 
 export const addDocument = async (collectionName, data) => {
 	const docRef = await addDoc(collection(db, collectionName), {

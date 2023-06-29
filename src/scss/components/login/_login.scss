@@ -1,7 +1,7 @@
 @use "../../asbtract/" as *;
 
 .login-container {
-	width: 100wh;
+	width: 100%;
 	height: 100vh;
 	max-height: 100vh;
 
@@ -9,11 +9,201 @@
 	.login-content {
 		width: 50%;
 		height: 100%;
-		padding-top: 60px;
+		padding-top: 5vh;
 		padding-left: 18.75%;
 
 		.login-content-container{
-			width: 480px;
+			width: 25vw;
+
+			.login-content__back-btn{
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				gap: 12px;
+
+				color: $dark-blue;
+				font-size: 24px;
+				font-family: Inter;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+
+				margin-bottom: 4vh;
+
+				cursor: pointer;
+			}
+
+			.login-content__login-form{
+				&__title{
+					color: dark-blue;
+					font-size: 40px;
+					font-family: Inter;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+
+					margin-bottom: 5.5vh;
+				}
+				&__input-fields{
+					margin-bottom: 3vh;
+
+					.login-input-txb{
+						display: flex;
+						flex-direction: column;
+						gap: 1vh;
+
+						margin-bottom: 3.5vh;
+
+						&__title{
+							color: dark-blue;
+							font-size: 16px;
+							font-family: Quicksand;
+							font-style: normal;
+							font-weight: 700;
+							line-height: 16px;
+							
+							padding-left: 4px;
+						}
+
+						.ant-input{
+							width: 100%;
+							height: 4vh;
+							font-size: 16px;
+							font-weight: 400;
+						}
+
+						&__more-infor{
+							color: dark-grey;
+							font-size: 14px;
+							font-family: Inter;
+							font-style: normal;
+							font-weight: 600;
+							line-height: 24px;
+
+							
+							padding-left: 4px;
+						}
+
+						.login-forgot-password-btn{
+							color: $cyan;
+							text-align: right;
+							font-size: 14px;
+							font-family: Inter;
+							font-style: normal;
+							font-weight: 600;
+							line-height: 24px;
+
+							cursor: pointer;
+						}
+					}
+				}
+				&__footer{
+					.ant-btn{
+						width: 100%;
+						height: 4.25vh;
+						border-radius: 8px;
+						
+						box-shadow: 1px 1px 6px 0px rgba(0, 193, 253, 0.32);
+
+						font-size: 20px;
+						font-family: Inter;
+						font-style: normal;
+						font-weight: 700;
+						line-height: 24px;
+
+						margin-bottom: 1vh;
+
+						&.ant-primary-btn{
+							background: $cyan;
+						}
+						&.ant-default-btn{
+							color: $cyan;
+							font-size: 16px;
+							font-family: Inter;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 24px;
+						}
+					}
+					.login-term-and-con{
+						color: $dark-blue;
+						font-size: 12px;
+						font-family: Inter;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 16px;
+
+						margin-bottom: 2vh;
+
+						.span-blue{
+							color: $blue;
+							cursor: pointer;
+
+							&.underline{
+								text-decoration: underline;
+							}
+						}
+					}
+					.login-content__devider{
+						display: flex;
+						width: 100%;
+						justify-content: center;
+						align-items: center;
+						gap: 6px;
+
+						color: $dark-grey;
+						font-size: 14px;
+						font-family: Quicksand;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 16px;
+
+						margin-bottom: 2vh;
+
+						&__line{
+							width: 100%;
+							height: 1px;
+							background: #DBE1EE;
+
+							&.outside{
+								margin-bottom: 2vh;
+							}
+						}
+					}
+					.login-content__other-signup-methods{
+						display: flex;
+						width: 100%;
+						align-items: center;
+						justify-content: space-between;
+						gap: 1.5vw;
+						
+						cursor: pointer;
+
+						margin-bottom: 2vh;
+
+						.login-content__signup-btn{
+							width: 1.5vw;
+							display: flex;
+							padding: 12px 16px;
+							justify-content: center;
+							align-items: flex-start;
+							gap: 16px;
+							flex: 1 0 0;
+
+							border-radius: 8px;
+							border: 1px solid $cyan;
+
+							color: var(--blue, #1726AC);
+
+							font-size: 16px;
+							font-family: Inter;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 24px;
+						}
+					}
+				}
+			}
 		}
 	}
 	.banner-right {
@@ -23,4 +213,33 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
-  }
+}
+
+@media only screen and (max-width: 1281px) {
+	.login-container{
+		width: 100%;
+		height: 100%;
+			
+		display: block;
+
+		.login-content {
+			width: 80%;
+			height: 100%;
+			padding: 0;
+			padding-top: 5vh;
+			margin: 0 auto;
+			overflow-y: auto;
+
+			.login-content-container{
+				width: 100%;
+			}
+		}
+
+		.banner-right{
+			display: none !important;
+		}
+	}
+}
+
+
+
