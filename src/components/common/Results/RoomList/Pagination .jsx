@@ -4,32 +4,32 @@ import { BsChevronDown } from "react-icons/bs";
 
 const Pagination = ({ roomsPerPage, totalRooms, currentPage, paginate }) => {
   	const [pageNumbers, setPageNumbers] = useState([]);
-	const maxPageNumbersShow = 6;
-	const [startPageNumber, setStartPageNumber] = useState(1);
+	const maxPageNumbersShow = 4;
+	const [startPageNumber, setStartPageNumber] = useState(2);
 	const totalPage = Math.ceil(totalRooms / roomsPerPage);
-
 	useEffect(() => {
 		const LoadPageNumbers = () => {
 			setPageNumbers([]);
 			let pageNumbersData = [];
-			if (totalPage <= 6) {
-				for (let i = 1; i <= totalPage; i++) {
-					pageNumbersData.push(i);
-				}
-			} else if(startPageNumber + maxPageNumbersShow - 1 === totalPage){
-				for (let i = startPageNumber; i <= totalPage; i++) {
+			if(totalPage <= 6){
+				for(let i = 1; i <= totalPage; i++){
 					pageNumbersData.push(i);
 				}
 			}
-			else {
-				for (let i = startPageNumber; i <= startPageNumber + 2; i++) {
+			else{
+				pageNumbersData.push(1);
+				if(startPageNumber - 1 != 1){
+					pageNumbersData.push('...')
+				}
+				for(let i = startPageNumber; i < startPageNumber + maxPageNumbersShow; i++){
 					pageNumbersData.push(i);
 				}
-				pageNumbersData.push("...");
-				for (let i = totalPage - 2; i <= totalPage; i++) {
-					pageNumbersData.push(i);
+				if(startPageNumber + maxPageNumbersShow != totalPage){
+					pageNumbersData.push('...')
 				}
+				pageNumbersData.push(totalPage);
 			}
+			console.log(pageNumbersData);
 			setPageNumbers(pageNumbersData);
 		};
 		
@@ -40,21 +40,34 @@ const Pagination = ({ roomsPerPage, totalRooms, currentPage, paginate }) => {
 		if(option == 'next' && startPageNumber + maxPageNumbersShow - 1 !== totalPage){
 			setStartPageNumber(startPageNumber + 1);
 		}
-		if(option == 'prev' && startPageNumber > 1){
+		if(option == 'prev' && startPageNumber > 2){
 			setStartPageNumber(startPageNumber - 1);
 		}
 	}
   	return (
 		<div className="results-roomlist-pagination">
-		<BsChevronDown onClick={() => ChangePageNumbers('prev')} className="results-roomlist-pagination__show-prev-btn"/>
-		{pageNumbers.map((number) => (
-			<div className={`results-roomlist-pagination__item ${
+			<BsChevronDown onClick={() => ChangePageNumbers('prev')} className="results-roomlist-pagination__show-prev-btn"/>
+			{pageNumbers.map((number, index) => (
+				<div className={`results-roomlist-pagination__item ${
 				number === currentPage ? "selected" : ""
-			}`} key={number} onClick={() => paginate(number)}>
-			{number}
-			</div>
-		))}
-		<BsChevronDown onClick={() => ChangePageNumbers('next')} className="results-roomlist-pagination__show-next-btn"/>
+				}`} key={index} onClick={() => {
+						paginate(number);
+						if(number > 2 && (number <= totalPage - 4)){
+							setStartPageNumber(number-1);
+						}
+						else{
+							if(number < (totalPage/2)){
+								setStartPageNumber(2);
+							}
+							else{
+								setStartPageNumber(totalPage - 4);
+							}
+						}
+					}}>
+					{number}
+				</div>
+			))}
+			<BsChevronDown onClick={() => ChangePageNumbers('next')} className="results-roomlist-pagination__show-next-btn"/>
 		</div>
   	);
 };
