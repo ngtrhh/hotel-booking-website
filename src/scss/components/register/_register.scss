@@ -1,7 +1,7 @@
 @use "../../asbtract/" as *;
 
 .register-container {
-	width: 100wh;
+	width: 100%;
 	height: 100vh;
 	max-height: 100vh;
 
@@ -11,8 +11,6 @@
 		height: 100%;
 		padding-top: 5vh;
 		padding-left: 18.75%;
-
-		overflow-y: auto;
 
 		.register-content-container{
 			width: 25vw;
@@ -31,6 +29,8 @@
 				line-height: normal;
 
 				margin-bottom: 4vh;
+
+				cursor: pointer;
 			}
 
 			.register-content__register-form{
@@ -201,4 +201,33 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
-  }
+}
+
+@media only screen and (max-width: 1281px) {
+	.register-container{
+		width: 100%;
+		height: 100%;
+			
+		display: block;
+
+		.register-content {
+			width: 80%;
+			height: 100%;
+			padding: 0;
+			padding-top: 5vh;
+			margin: 0 auto;
+			overflow-y: auto;
+
+			.register-content-container{
+				width: 100%;
+			}
+		}
+
+		.banner-right{
+			display: none !important;
+		}
+	}
+}
+
+
+
