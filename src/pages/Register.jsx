@@ -9,6 +9,7 @@ import { ReactComponent as FbIcon } from '../assets/images/fb_icon.svg';
 import { ReactComponent as GgIcon } from '../assets/images/gg_icon.svg';
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
+import { LoginWithGgFb } from "../firebase/services";
 
 
 export const Register = () => {
@@ -169,11 +170,11 @@ export const Register = () => {
                 <div className="register-content__devider__line"></div>
               </div>
               <div className="register-content__other-signup-methods">
-                <div className="register-content__signup-btn">
+                <div className="register-content__signup-btn" onClick={() => {LoginWithGgFb('Facebook')}}>
                   <FbIcon/>
                   <p>Facebook</p>
                 </div>
-                <div className="register-content__signup-btn">
+                <div className="register-content__signup-btn" onClick={() => {LoginWithGgFb('Google')}}>
                   <GgIcon/>
                   <p>Google</p>
                 </div>

@@ -26,6 +26,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 const auth = getAuth();
+auth.languageCode = 'vi';
 const db = getFirestore(app);
 
 // connectAuthEmulator(auth, "http://localhost:9099");
