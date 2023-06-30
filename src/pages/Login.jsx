@@ -27,6 +27,9 @@ export const Login = () => {
         // Signed in 
         const user = userCredential.user;
         ShowMessage('Success');
+        setTimeout(() => {
+          navigate('/');
+        }, 3500);
         // ...
       })
       .catch((error) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { auth } from "../firebase/config";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAdditionalUserInfo } from "firebase/auth";
 import { ReactComponentElement as BackBtn } from "../assets/images/back-btn.svg";
 import { Input } from 'antd';
 import {Button} from "antd";
@@ -10,6 +10,7 @@ import { ReactComponent as GgIcon } from '../assets/images/gg_icon.svg';
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
 import { LoginWithGgFb } from "../firebase/services";
+import { generateKeywords, addDocument } from "../firebase/services";
 
 
 export const Register = () => {
@@ -27,6 +28,22 @@ export const Register = () => {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        if(getAdditionalUserInfo(userCredential).isNewUser){
+          console.log(generateKeywords(user.displayName));
+					const data = {
+						uid: user.uid,
+						displayName: user.displayName,
+						email: user.email,
+						photoURL: user.photoURL,
+						providerId: user.providerId,
+						createdAt: user.metadata.createdAt,
+						keywords: generateKeywords(user.displayName)
+					}
+					addDocument("users", data);
+				}
+        setTimeout(() => {
+          navigate('/');
+        }, 3500);
         ShowMessage('Success');
         // ...
       })
@@ -34,6 +51,7 @@ export const Register = () => {
         const errorCode = error.code;
         const errorMessage = error.message;
         ShowMessage('AccountExisted');
+        console.log(error);
         // ..
       });
     }

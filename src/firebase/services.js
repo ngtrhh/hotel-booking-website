@@ -1,10 +1,12 @@
 import firebase, { db } from "./config";
 import { doc, setDoc, addDoc, collection  } from "firebase/firestore";
 import { auth } from "./config";
-import { signInWithPopup, FacebookAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { signInWithPopup, FacebookAuthProvider, GoogleAuthProvider, getAdditionalUserInfo } from "firebase/auth";
 
 const fbProvider = new FacebookAuthProvider();
 const ggProvider = new GoogleAuthProvider();
+
 
 export const LoginWithGgFb = (methodType) => {
 	auth.signOut();
@@ -28,7 +30,18 @@ export const LoginWithGgFb = (methodType) => {
 
 		// IdP data available using getAdditionalUserInfo(result)
 		// ...
-		console.log(user);
+		if(getAdditionalUserInfo(result).isNewUser){
+			const data = {
+				uid: user.uid,
+				displayName: user.displayName,
+				email: user.email,
+				photoURL: user.photoURL,
+				providerId: user.providerId,
+				createdAt: user.metadata.createdAt,
+				keywords: generateKeywords(user.displayName)
+			}
+			addDocument("users", data);
+		}
 	})
 	.catch((error) => {
 		// Handle Errors here.
@@ -53,6 +66,7 @@ export const addDocument = async (collectionName, data) => {
 export const generateKeywords = (displayName) => {
 	// liet ke tat cac hoan vi. vd: name = ["David", "Van", "Teo"]
 	// => ["David", "Van", "Teo"], ["David", "Teo", "Van"], ["Teo", "David", "Van"],...
+	if(displayName == null) {return null;}
 	const name = displayName.toLowerCase().split(' ').filter((word) => word);
   
 	const length = name.length;
