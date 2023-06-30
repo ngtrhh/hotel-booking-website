@@ -10,14 +10,14 @@ import { ReactComponent as GgIcon } from '../assets/images/gg_icon.svg';
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
 import { signInWithEmailAndPassword } from "firebase/auth";
-
+import { LoginWithGgFb } from "../firebase/services";
 
 export const Login = () => {
   let navigate = useNavigate();
   const [messageApi, contextHolder] = message.useMessage();
   const key = 'updatable';
 
-  const SignUp = () => {
+  const LoginWithEmailPassword = () => {
     const email = document.querySelector('#login-email-input').value;
     const password = document.querySelector('#login-password-input').value;
 
@@ -115,7 +115,7 @@ export const Login = () => {
             </div>
             <div className="login-content__login-form__footer">
               {contextHolder}
-              <Button type="primary" id='login-btn' className="ant-primary-btn" onClick={SignUp}>
+              <Button type="primary" id='login-btn' className="ant-primary-btn" onClick={LoginWithEmailPassword}>
                 Đăng nhập
               </Button>
               <div className="login-term-and-con">
@@ -137,11 +137,11 @@ export const Login = () => {
                 <div className="login-content__devider__line"></div>
               </div>
               <div className="login-content__other-signup-methods">
-                <div className="login-content__signup-btn">
+                <div className="login-content__signup-btn" onClick={() => {LoginWithGgFb('Facebook')}}>
                   <FbIcon/>
                   <p>Facebook</p>
                 </div>
-                <div className="login-content__signup-btn">
+                <div className="login-content__signup-btn" onClick={() => {LoginWithGgFb('Google')}}>
                   <GgIcon/>
                   <p>Google</p>
                 </div>
