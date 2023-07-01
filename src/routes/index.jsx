@@ -18,6 +18,7 @@ const publicRoutes = [
   { path: "/booking", element: Booking },
   { path: "/booking-history", element: BookingHistory },
   { path: "/favourite", element: Favourite },
+  { path: "/profile", element: Profile },
   { path: "/login", element: Login, layout: null },
   { path: "/register", element: Register, layout: null },
   { path: "/forgot", element: ForgotPassword, layout: null },
