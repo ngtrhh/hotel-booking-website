@@ -1,12 +1,15 @@
 import React, { useState, useCallback, useEffect, useRef } from "react";
+import { useContext } from "react";
 import { BsPeople } from "react-icons/bs";
+import { AppContext } from "../../../Context/AppProvider";
 import ItemOfGuest from "./ItemOfGuest";
 
 const NumberOfGuestSearch = (props) => {
+  const dataProvided = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
-  const [rooms, setRooms] = useState(1);
-  const [guest, setGuest] = useState(2);
-  const [child, setChild] = useState(0);
+  const [rooms, setRooms] = [dataProvided.seacrchNumOfRooms, dataProvided.setSeacrchNumOfRooms];
+  const [guest, setGuest] = [dataProvided.seacrchNumOfGuest, dataProvided.setSeacrchNumOfGuest];
+  const [child, setChild] = [dataProvided.seacrchNumOfChild, dataProvided.setSeacrchNumOfChild];
 
   const ref = useRef();
 

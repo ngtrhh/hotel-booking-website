@@ -13,6 +13,7 @@ import { useState } from "react";
 const Header = () => {
   const data = useContext(AppContext);
   const isLoggedIn = (data.isLoggedIn) ? data.isLoggedIn : false;
+  const user = data.user;
   const [isUserDropdown, setIsUserDropdown] = useState(false);
   
   const LogOut = () => {
@@ -71,8 +72,8 @@ const Header = () => {
           (
             <div className="header__user-dropdown" id="header__user-dropdown">
               <div className="header__user-dropdown__main" onClick={ToggleDropdown}>
-                <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=1" />
-                <p>Trung</p>
+                <Avatar src={user ? user.photoURL : ''}></Avatar>
+                <p>{user.displayName}</p>
                 {(isUserDropdown) ? 
                   (
                     <BiChevronDown className="header__user-dropdown__arrow"/>
@@ -86,7 +87,7 @@ const Header = () => {
               <div className="header__user-dropdown__content" id="header-user-dropdown-items">
                 <div className="header__user-dropdown__content__item">
                   <BiBookBookmark className="header__user-dropdown__content__item__icon"/>
-                  <p>Phòng</p>
+                  <p>Phòng đã đặt</p>
                 </div>
                 <div className="header__user-dropdown__content__item">
                   <BiUser className="header__user-dropdown__content__item__icon"/>

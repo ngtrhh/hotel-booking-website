@@ -5,10 +5,11 @@ import Calendar from "./Calendar";
 import DestinationSearch from "./DestinationSearch";
 import Button from "../Button";
 import { BsSearch } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = (props) => {
+  const navigate = useNavigate();
   const type = props.type ? props.type : "home";
-  console.log(type);
   return (
     <div className="search-bar">
       <div className="container">
@@ -20,10 +21,10 @@ const SearchBar = (props) => {
         <Calendar type={type} />
         <hr className="line" />
         <NumberOfGuestSearch type={type} />
-        {type !== "detail" && <SearchButton onClick={null} />}
+        {type !== "detail" && <SearchButton onClick={navigate('/results')} />}
       </div>
       {type === "detail" && (
-        <Button className="cyan" preIcon={() => <BsSearch size={20} />}>
+        <Button onClick={navigate('/results')} className="cyan" preIcon={() => <BsSearch size={20} />}>
           Cập nhật
         </Button>
       )}
