@@ -11,6 +11,12 @@ import { useNavigate } from "react-router-dom";
 import { message } from "antd";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { LoginWithGgFb } from "../firebase/services";
+import { useState, useEffect } from "react";
+import { signInWithPopup, FacebookAuthProvider, GoogleAuthProvider, getAdditionalUserInfo } from "firebase/auth";
+import { addDocument, generateKeywords } from "../firebase/services";
+
+const fbProvider = new FacebookAuthProvider();
+const ggProvider = new GoogleAuthProvider();
 
 export const Login = () => {
   let navigate = useNavigate();
@@ -26,10 +32,10 @@ export const Login = () => {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        ShowMessage('Success');
         setTimeout(() => {
           navigate('/');
         }, 3500);
+        ShowMessage('Success');
         // ...
       })
       .catch((error) => {
@@ -39,6 +45,58 @@ export const Login = () => {
       });
     }
   }
+
+  const LoginWithOtherMethod = (methodType) => {
+    auth.signOut();
+    let provider = '';
+    if(methodType == 'Google'){
+      provider = ggProvider;
+    }
+    if(methodType == 'Facebook'){
+      provider = fbProvider;
+    }
+  
+    signInWithPopup(auth, provider)
+    .then((result) => {
+      // The signed-in user info.
+      const user = result.user;
+      console.log(user);
+      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+      const credential = FacebookAuthProvider.credentialFromResult(result);
+      const accessToken = credential.accessToken;
+  
+      // IdP data available using getAdditionalUserInfo(result)
+      // ...
+      if(getAdditionalUserInfo(result).isNewUser){
+        const data = {
+          uid: user.uid,
+          displayName: user.displayName,
+          email: user.email,
+          photoURL: user.photoURL,
+          providerId: user.providerId,
+          createdAt: user.metadata.createdAt,
+          keywords: generateKeywords(user.displayName)
+        }
+        addDocument("users", data);
+      }
+      setTimeout(() => {
+        navigate('/');
+      }, 3500);
+      ShowMessage('Success');
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = FacebookAuthProvider.credentialFromError(error);
+  
+      // ...
+    });
+  }
+  
 
   const CheckInput = (email, password) => {
     const gmailRegex = /^[^\s@]+@gmail\.com$/;;
@@ -140,11 +198,11 @@ export const Login = () => {
                 <div className="login-content__devider__line"></div>
               </div>
               <div className="login-content__other-signup-methods">
-                <div className="login-content__signup-btn" onClick={() => {LoginWithGgFb('Facebook')}}>
+                <div className="login-content__signup-btn" onClick={() => {LoginWithOtherMethod('Facebook')}}>
                   <FbIcon/>
                   <p>Facebook</p>
                 </div>
-                <div className="login-content__signup-btn" onClick={() => {LoginWithGgFb('Google')}}>
+                <div className="login-content__signup-btn" onClick={() => {LoginWithOtherMethod('Google')}}>
                   <GgIcon/>
                   <p>Google</p>
                 </div>

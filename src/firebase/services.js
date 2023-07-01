@@ -8,7 +8,8 @@ const fbProvider = new FacebookAuthProvider();
 const ggProvider = new GoogleAuthProvider();
 
 
-export const LoginWithGgFb = (methodType) => {
+
+export const LoginWithGgFb = (methodType, setIsSuccess) => {
 	auth.signOut();
 	let provider = '';
 	if(methodType == 'Google'){
@@ -17,13 +18,13 @@ export const LoginWithGgFb = (methodType) => {
 	if(methodType == 'Facebook'){
 		provider = fbProvider;
 	}
-
+	let isSuccess = false;
 
 	signInWithPopup(auth, provider)
 	.then((result) => {
 		// The signed-in user info.
 		const user = result.user;
-
+		console.log(user);
 		// This gives you a Facebook Access Token. You can use it to access the Facebook API.
 		const credential = FacebookAuthProvider.credentialFromResult(result);
 		const accessToken = credential.accessToken;
@@ -42,6 +43,7 @@ export const LoginWithGgFb = (methodType) => {
 			}
 			addDocument("users", data);
 		}
+		isSuccess = true;
 	})
 	.catch((error) => {
 		// Handle Errors here.
@@ -54,6 +56,7 @@ export const LoginWithGgFb = (methodType) => {
 
 		// ...
 	});
+	setIsSuccess(isSuccess);
 }
 
 export const addDocument = async (collectionName, data) => {
