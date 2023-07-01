@@ -17,7 +17,7 @@ const RatingItem = (props) => {
 	return (
 		<div onClick={props.onClick} className={itemClasses}>
 			<div className="filter-rating-item">
-				<div className="filter-rating-item__value">{props.label}</div>
+				<div className="filter-rating-item__value">{props.label + "+"}</div>
 			</div>
 		</div>
 	);

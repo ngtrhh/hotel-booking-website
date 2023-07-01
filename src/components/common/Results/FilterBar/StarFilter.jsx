@@ -7,15 +7,13 @@ import {
 import { Input, Slider } from "antd";
 import { useState, useEffect } from "react";
 import StarItem from "./StarItem";
+import { useContext } from "react";
+import { AppContext } from "../../../../Context/AppProvider";
 
 const StarFilter = () => {
+	const dataProvided = useContext(AppContext);
+	const [starFilterChoices, setStarFilterChoices] = [dataProvided.starFilterChoices ,dataProvided.setStarFilterChoices];
 	
-	const [starFilterChoices, setStarFilterChoices] = useState([
-		{ name: '_2star', label: '2', checked: false },
-		{ name: '_3star', label: '3', checked: false },
-		{ name: '_4star', label: '4', checked: false },
-		{ name: '_5star', label: '5', checked: false }
-	]);
 	const handleFilterChange = (name) => {
 		const updatedFilterChoices = starFilterChoices.map((filter) => {
 		  	if (filter.name === name) {

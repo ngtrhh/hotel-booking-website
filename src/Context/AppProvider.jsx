@@ -10,7 +10,7 @@ import { AuthContext } from './AuthProvider';
 import { HomeContext } from './HomeContext';
 import { connectFirestoreEmulator } from 'firebase/firestore';
 import { doc, onSnapshot } from "firebase/firestore";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query } from "firebase/firestore";
 import { db } from '../firebase/config';
 
 export const AppContext = React.createContext();
@@ -24,6 +24,7 @@ export default function AppProvider ({children}) {
 		if(user){
 			setIsLoggedIn(!(Object.keys(user).length === 0));
 		}
+		console.log(user);
 	}, [user]);
 	
 
@@ -43,16 +44,103 @@ export default function AppProvider ({children}) {
 
 	//Data Acccomodation
 	const [accoms, setAccoms] = useState([]);
+	React.useEffect(() => {
 
-	const querySnapshot = getDocs(collection(db, "cities"));
-	querySnapshot.forEach((doc) => {
-	// doc.data() is never undefined for query doc snapshots
-	console.log(doc.id, " => ", doc.data());
-	});
+		const collectionRef = collection(db, 'accoms');
 
-	useEffect(() =>{
-		console.log(seacrchNumOfRooms);
-	}, [seacrchNumOfRooms]);
+		const q = query(collectionRef);
+
+		const unsubscribe = onSnapshot(q, (querySnapshot) => {
+			const accomsData = [];
+			querySnapshot.forEach((doc) => {
+				accomsData.push({
+					...doc.data()
+				});
+			});
+			setAccoms(accomsData);
+		});
+
+		return unsubscribe;
+	}, []);
+
+	//Result Filterbar
+	const [priceInput, setPriceInput] = useState([0, 20000000]);
+
+	const [accommodationTypeFilter, setAccommodationTypeFilter] = useState([
+		{ name: 'hotel', label: 'Khách sạn', checked: false },
+		{ name: 'apartment', label: 'Căn hộ', checked: false },
+		{ name: 'homestay', label: 'Homestay', checked: false },
+		{ name: 'resort', label: 'Resort', checked: false },
+		{ name: 'guesthouse', label: 'Nhà nghỉ', checked: false },
+		{ name: 'villa', label: 'Biệt thự', checked: false }
+	]);
+
+	const [commonFilter, setCommonFilter] = useState([
+		{ name: 'includeBreakfast', label: 'Bao gồm bữa sáng', checked: false },
+		{ name: 'freeCancellation', label: 'Hủy phòng miễn phí', checked: false },
+		{ name: 'payLater', label: 'Đặt trước, trả tiền sau', checked: false },
+		{ name: 'singleBed', label: 'Giường đơn', checked: false }
+	]);
+
+	const [starFilterChoices, setStarFilterChoices] = useState([
+		{ name: '_2star', label: '2', checked: false },
+		{ name: '_3star', label: '3', checked: false },
+		{ name: '_4star', label: '4', checked: false },
+		{ name: '_5star', label: '5', checked: false }
+	]);
+
+	const [ratingFilterChoices, setRatingFilterChoices] = useState([
+		{ name: 'rating3', label: '3', checked: false },
+		{ name: 'rating3_5', label: '3.5', checked: false },
+		{ name: 'rating4', label: '4', checked: false },
+		{ name: 'rating4_5', label: '4.5', checked: false },
+		{ name: 'rating5', label: '5', checked: false }
+	]);
+
+	const [facilityFilter, setFacilityFilter] = useState([
+		{ name: 'wifi', label: 'Wifi', checked: false },
+		{ name: 'freeBreakfast', label: 'Bữa sáng miễn phí', checked: false },
+		{ name: 'pool', label: 'Hồ bơi', checked: false },
+		{ name: 'parking', label: 'Chỗ đậu xe', checked: false },
+		{ name: 'restaurant', label: 'Nhà hàng', checked: false },
+		{ name: '24hReception', label: 'Lễ tân 24h', checked: false },
+		{ name: 'elevator', label: 'Thang máy', checked: false },
+		{ name: 'airportShuttle', label: 'Đưa đón sân bay', checked: false },
+		{ name: 'gym', label: 'Trung tâm thể dục', checked: false },
+		{ name: 'dailyCleaning', label: 'Dọn phòng hằng ngày', checked: false },
+		{ name: 'meetingRoom', label: 'Phòng họp', checked: false },
+		{ name: 'petFriendly', label: 'Cho phép thú cưng', checked: false },
+		{ name: 'wheelchairAccessible', label: 'Lối đi cho xe lăn', checked: false },
+		{ name: 'bar', label: 'Quầy bar', checked: false },
+		{ name: 'gymFacilities', label: 'Phòng tập gym', checked: false },
+		{ name: 'bbqFacilities', label: 'Tiệc BBQ', checked: false },
+		{ name: 'babysittingServices', label: 'Dịch vụ trông trẻ', checked: false },
+		{ name: 'familyFriendly', label: 'Thích hợp cho gia đình/trẻ em', checked: false },
+		{ name: 'golfCourse', label: 'Sân golf', checked: false },
+		{ name: 'smokingArea', label: 'Khu vực hút thuốc', checked: false },
+		{ name: 'massageSpa', label: 'Massage & Spa', checked: false }
+	]);
+
+	const [paymentFilter, setPaymentFilter] = useState([
+		{ name: 'freeCancellation', label: 'Hủy phòng miễn phí', checked: false },
+		{ name: 'payLater', label: 'Đặt trước, trả tiền sau', checked: false },
+		{ name: 'payAtProperty', label: 'Thanh toán tại nơi ở', checked: false },
+		{ name: 'payNow', label: 'Trả tiền ngay', checked: false },
+		{ name: 'creditCardNotRequired', label: 'Đặt không cần thẻ tín dụng', checked: false },
+		{ name: 'noDepositRequired', label: 'Đặt phòng không cần đặt cọc', checked: false },
+		{ name: 'ewalletPayment', label: 'Thanh toán bằng ví điện tử', checked: false },
+	]);
+
+	const [bedTypeFilter, setBedTypeFilter] = useState([
+		{ name: 'singleBed', label: 'Giường đơn', checked: false },
+		{ name: 'twinBeds', label: 'Hai giường đơn', checked: false },
+		{ name: 'doubleBed', label: 'Giường đôi', checked: false },
+		{ name: 'kingBed', label: 'Giường đôi lớn', checked: false }
+	]);
+
+	// useEffect(() =>{
+	// 	console.log(searchDateRange);
+	// }, [searchDateRange]);
 	
 	// const [isAddRoomVisible, setIsAddRoomVisible] = useState(false);
 	// const [isInviteVisible, setIsInviteVisible] = useState(false);
@@ -69,29 +157,6 @@ export default function AppProvider ({children}) {
 	// }, [user.uid]);
 	// const rooms= useFireStore('rooms', roomCondition);
 	
-	
-	// const selectedRoom = React.useMemo(
-	// 	() => rooms.find((room) => room.id === selectedRoomId), 
-	// 	[rooms, selectedRoomId]
-	// );
-	
-	// React.useEffect(() => {
-	// 	if(rooms.length && firstLoaded){
-	// 		setSelectedRoomId(rooms[0].id);
-	// 		setFirstLoaded(false);
-	// 	}
-	// }, [rooms]);
-	// const selectedRoomDepen= selectedRoom ? selectedRoom.members : [];
-
-	// const userCondition = React.useMemo(() => {
-	// 	return {
-	// 		fieldName: 'uid',
-	// 		operator: 'in',
-	// 		comparedValue: selectedRoom ? selectedRoom.members : [''] 
-	// 	}
-	// }, [selectedRoom]);
-	// const members = useFireStore('users', userCondition);
-	
 	return (
 		<AppContext.Provider value={{
 			user,
@@ -101,7 +166,18 @@ export default function AppProvider ({children}) {
 			searchDateRange, setSearchDateRange,
 			seacrchNumOfRooms, setSeacrchNumOfRooms,
 			seacrchNumOfGuest, setSeacrchNumOfGuest,
-			seacrchNumOfChild, setSeacrchNumOfChild
+			seacrchNumOfChild, setSeacrchNumOfChild,
+			//Accoms
+			accoms,
+			//Result Filterbar
+			accommodationTypeFilter, setAccommodationTypeFilter,
+			priceInput, setPriceInput,
+			commonFilter, setCommonFilter,
+			starFilterChoices, setStarFilterChoices,
+			ratingFilterChoices, setRatingFilterChoices,
+			facilityFilter, setFacilityFilter,
+			paymentFilter, setPaymentFilter,
+			bedTypeFilter, setBedTypeFilter
 		}}>
 			{children}
 		</AppContext.Provider>

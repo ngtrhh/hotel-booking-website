@@ -9,6 +9,7 @@ import AdvantageItem from "../components/common/Home/AdvantageItem";
 import image1 from "../../src/assets/images/advantage-01.png";
 import image2 from "../../src/assets/images/advantage-02.png";
 import image3 from "../../src/assets/images/advantage-03.png";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
@@ -49,12 +50,15 @@ export const Home = () => {
           <div className="home__section__header__title">
             <span>Chỗ nghỉ</span> được đánh giá cao
           </div>
-          <Button
-            className="no-background"
-            postIcon={() => <BsArrowRight size={20} />}
-          >
-            Nhiều hơn
-          </Button>
+          <Link to="/results">
+            <Button
+              className="no-background"
+              postIcon={() => <BsArrowRight size={20} />}
+            >
+              Nhiều hơn
+            </Button>
+          </Link>
+          
         </div>
         <div className="four-cols wrap">
           <RecommendedStay

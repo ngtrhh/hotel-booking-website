@@ -7,22 +7,26 @@ import {
 import { Input, Slider } from "antd";
 import { useState, useEffect } from "react";
 import RatingItem from "./RatingItem";
+import { useContext } from "react";
+import { AppContext } from "../../../../Context/AppProvider";
 
 
 const RatingFilter = () => {
-	const [ratingFilterChoices, setRatingFilterChoices] = useState([
-		{ name: 'rating3', label: '3+', checked: false },
-		{ name: 'rating3_5', label: '3.5+', checked: false },
-		{ name: 'rating4', label: '4', checked: false },
-		{ name: 'rating4_5', label: '4.5+', checked: false },
-		{ name: 'rating5', label: '5+', checked: false }
-	]);
+	const dataProvided = useContext(AppContext);
+	const [ratingFilterChoices, setRatingFilterChoices] = [dataProvided.ratingFilterChoices, dataProvided.setRatingFilterChoices];
+
 	const handleFilterChange = (name) => {
 		const updatedFilterChoices = ratingFilterChoices.map((filter) => {
 		  	if (filter.name === name) {
 				return {
 				...filter,
 				checked: !filter.checked
+				};
+			}
+			else{
+				return {
+				...filter,
+				checked: false
 				};
 			}
 		  	return filter;
@@ -37,10 +41,6 @@ const RatingFilter = () => {
 		}));
 		setRatingFilterChoices(updatedFilterChoices);
 	};
-
-	useEffect(() => {
-		console.log(ratingFilterChoices);
-	}, [ratingFilterChoices]);
 
   	return (
     	<div className="results__filter__ratingfilter">

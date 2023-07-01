@@ -1,29 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { AppContext } from '../../../../Context/AppProvider';
 import FilterCheckbox from './FilterCheckbox'
 
 
 const BedTypeFilter = () => {
-  
-	const [checkboxValues, setCheckboxValues] = useState([
-		{ name: 'singleBed', label: 'Giường đơn', checked: false },
-		{ name: 'twinBeds', label: 'Hai giường đơn', checked: false },
-		{ name: 'doubleBed', label: 'Giường đôi', checked: false },
-		{ name: 'kingBed', label: 'Giường đôi lớn', checked: false }
-	]);
+	const dataProvided = useContext(AppContext);
+	const [checkboxValues, setCheckboxValues] = [dataProvided.bedTypeFilter, dataProvided.setBedTypeFilter];
 
-  const handleCheckboxChange = (name) => {
-    setCheckboxValues(prevValues => {
-      return prevValues.map(checkbox => {
-        if (checkbox.name === name) {
-          return {
-            ...checkbox,
-            checked: !checkbox.checked
-          };
-        }
-        return checkbox;
-      });
-    });
-  };
+	const handleCheckboxChange = (name) => {
+		setCheckboxValues(prevValues => {
+		return prevValues.map(checkbox => {
+			if (checkbox.name === name) {
+				return {
+					...checkbox,
+					checked: !checkbox.checked
+				};
+			}
+			return checkbox;
+		});
+		});
+	};
 
 
   return (

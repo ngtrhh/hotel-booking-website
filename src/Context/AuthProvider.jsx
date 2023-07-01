@@ -33,7 +33,9 @@ export default function AuthProvider ({children}) {
 		return unsubscribe;
 	}, [uid]);
 	
-	
+	React.useEffect(() => {
+		console.log(user);
+	}, [user]);
 
 	React.useEffect(() => {
 		const unsubscribed = auth.onAuthStateChanged((user) => {

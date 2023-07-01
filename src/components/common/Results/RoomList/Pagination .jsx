@@ -29,7 +29,6 @@ const Pagination = ({ roomsPerPage, totalRooms, currentPage, paginate }) => {
 				}
 				pageNumbersData.push(totalPage);
 			}
-			console.log(pageNumbersData);
 			setPageNumbers(pageNumbersData);
 		};
 		
