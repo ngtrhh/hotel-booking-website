@@ -59,9 +59,7 @@
     max-width: 160px;
     height: fit-content;
     z-index: 999;
-    box-shadow: 1px 1px 1px $light-blue-2;
-    border: 1px solid $light-blue-2;
-    background-color: $white;
+    background-color: transparent;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -72,6 +70,7 @@
     -moz-transform: translateY(16px);
     -ms-transform: translateY(16px);
     -o-transform: translateY(16px);
+    
     &__main{
       display: flex;
       height: fit-content;
@@ -79,7 +78,7 @@
       gap: 12px;
       padding: 8px 20px;
       align-self: center;
-      background: $light-blue-2;
+      background: $light-blue-3;
       border-radius: 12px;
       -webkit-border-radius: 12px;
       -moz-border-radius: 12px;
@@ -98,7 +97,7 @@
       transition: all ease 0.3s;
   
       &:hover{
-        background: $dove;
+        background: $light-blue-2;
         transition: all ease 0.3s;
         -webkit-transition: all ease 0.3s;
         -moz-transition: all ease 0.3s;

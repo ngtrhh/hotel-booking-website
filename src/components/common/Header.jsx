@@ -12,9 +12,9 @@ import { useState } from "react";
 
 const Header = () => {
   const data = useContext(AppContext);
-  const isLoggedIn = data.isLoggedIn;
+  const isLoggedIn = (data.isLoggedIn) ? data.isLoggedIn : false;
   const [isUserDropdown, setIsUserDropdown] = useState(false);
-
+  
   const LogOut = () => {
     auth.signOut();
   }
@@ -22,11 +22,23 @@ const Header = () => {
     setIsUserDropdown(!isUserDropdown);
   }
   useEffect(() => {
-    const dropdownMenu = document.querySelector('#header-user-dropdown-items');
-    dropdownMenu.style.display = (isUserDropdown) ? 'flex' : 'none';
-    dropdownMenu.style.animation = (isUserDropdown) ? 'fadeIn 0.3s' : 'fadeOut 0.3s';
+    const dropdownMenu = document.querySelector('#header__user-dropdown');
+    const dropdownMenuItems = document.querySelector('#header-user-dropdown-items');
+    
+    if(dropdownMenu){
+      dropdownMenu.style.backgroundColor = (isUserDropdown) ? 'white' : 'transparent';
+      dropdownMenuItems.style.display = (isUserDropdown) ? 'flex' : 'none';
+      dropdownMenuItems.style.animation = (isUserDropdown) ? 'fadeIn 0.3s' : 'fadeOut 0.3s';
+    }
   }, [isUserDropdown]);
-  
+
+  useEffect(() => {
+    if(!isLoggedIn){
+      const dropdownMenu = document.querySelector('#header__login-signup');
+      dropdownMenu.style.backgroundColor = 'transparent';
+    }
+    
+  }, [isLoggedIn]);
 
   return (
     <div className="header">
@@ -61,7 +73,7 @@ const Header = () => {
         {
           (isLoggedIn) ? 
           (
-            <div className="header__user-dropdown">
+            <div className="header__user-dropdown" id="header__user-dropdown">
               <div className="header__user-dropdown__main" onClick={ToggleDropdown}>
                 <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=1" />
                 <p>Trung</p>
@@ -101,7 +113,7 @@ const Header = () => {
             </div>
           ) : 
           (
-            <div className="header__login-signup">
+            <div className="header__login-signup" id="header__login-signup">
               <Button className="no-background">Đăng nhập</Button>
               <Button className="cyan">Đăng ký</Button>
             </div>
