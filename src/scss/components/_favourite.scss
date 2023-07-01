@@ -1,0 +1,14 @@
+@use "../asbtract/" as *;
+
+.favourite {
+  width: $width-percent;
+  margin: auto;
+
+  .title {
+    margin-top: 40px;
+    font: $heading-1;
+  }
+
+  .content {
+  }
+}

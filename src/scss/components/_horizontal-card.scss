@@ -68,6 +68,10 @@
       gap: 4px;
       align-self: stretch;
 
+      &.large-gap {
+        gap: 12px;
+      }
+
       .name {
         @include flex(center, space-between);
         flex-direction: row;
@@ -103,6 +107,29 @@
 
         &__reviews {
           color: $dark-grey;
+        }
+      }
+
+      .flex-end {
+        @include flex(center, flex-end);
+        gap: 4px;
+        align-self: stretch;
+
+        .new-price {
+          font: $heading-4;
+
+          span {
+            color: $cyan;
+          }
+        }
+
+        .sub {
+          color: $dark-grey;
+        }
+
+        &.old-price {
+          color: $red;
+          text-decoration: line-through;
         }
       }
 

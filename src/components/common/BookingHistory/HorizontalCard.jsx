@@ -16,13 +16,14 @@ export const HorizontalCard = (props) => {
             4 <BsStarFill size={12} />
           </div>
         </div>
-        {props.state === state[2] ? (
-          <div className="date canceled">Đã hủy ngày 09/02/2023</div>
-        ) : (
+        {props.type === "history" && props.state === state[0] && (
           <div className="date">Đã đặt ngày 09/02/2023</div>
         )}
-        {props.state === state[1] && (
+        {props.type === "history" && props.state === state[1] && (
           <div className="remind">Còn 2 ngày nữa nhận phòng!</div>
+        )}
+        {props.type === "history" && props.state === state[2] && (
+          <div className="date canceled">Đã hủy ngày 09/02/2023</div>
         )}
       </div>
       <div className="description">
@@ -39,38 +40,54 @@ export const HorizontalCard = (props) => {
             <div className="rating__score">8,4</div>
             <div className="rating__reviews">231 lượt đánh giá</div>
           </div>
+          {props.type === "favourite" && (
+            <>
+              <div className="flex-end old-price">2.110.000 đ</div>
+              <div className="flex-end">
+                <div className="new-price">
+                  Từ: <span>844.000 đ</span>
+                </div>
+                <div className="sub">/đêm</div>
+              </div>
+            </>
+          )}
         </div>
-        <div className="wrapper">
-          <div className="wrapper__row">
-            <div className="wrapper__row__item">
-              <div className="wrapper__row__item__title">Ngày nhận phòng:</div>
-              <span>12/02/2023</span>
+        {props.type === "history" && (
+          <div className="wrapper">
+            <div className="wrapper__row">
+              <div className="wrapper__row__item">
+                <div className="wrapper__row__item__title">
+                  Ngày nhận phòng:
+                </div>
+                <span>12/02/2023</span>
+              </div>
+              <div className="wrapper__row__item">
+                <div className="wrapper__row__item__title">Ngày trả phòng:</div>
+                <span>14/02/2023</span>
+              </div>
             </div>
-            <div className="wrapper__row__item">
-              <div className="wrapper__row__item__title">Ngày trả phòng:</div>
-              <span>14/02/2023</span>
+            <div className="wrapper__row">
+              <div className="wrapper__row__item">
+                <div className="wrapper__row__item__title">Số đêm:</div>
+                <span>2</span>
+              </div>
+              <div className="wrapper__row__item">
+                <div className="wrapper__row__item__title">Số người:</div>
+                <span>2</span>
+              </div>
+            </div>
+            <div className="wrapper__room">
+              <div className="wrapper__room__name">
+                Phòng 2 giường đơn nhìn ra vườn
+              </div>
+              <span> 936.000 đ</span>
+            </div>
+            <div className="wrapper__total">
+              Tổng cộng: <span>1.872.000đ</span>
             </div>
           </div>
-          <div className="wrapper__row">
-            <div className="wrapper__row__item">
-              <div className="wrapper__row__item__title">Số đêm:</div>
-              <span>2</span>
-            </div>
-            <div className="wrapper__row__item">
-              <div className="wrapper__row__item__title">Số người:</div>
-              <span>2</span>
-            </div>
-          </div>
-          <div className="wrapper__room">
-            <div className="wrapper__room__name">
-              Phòng 2 giường đơn nhìn ra vườn
-            </div>
-            <span> 936.000 đ</span>
-          </div>
-          <div className="wrapper__total">
-            Tổng cộng: <span>1.872.000đ</span>
-          </div>
-        </div>
+        )}
+
         <div className="button-wrapper">
           <Button className="outline">Xem chi tiết</Button>
         </div>

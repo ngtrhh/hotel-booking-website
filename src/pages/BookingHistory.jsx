@@ -61,10 +61,9 @@ export const BookingHistory = () => {
             </div>
           </div>
           <div className="list">
-            <HorizontalCard state="passed" />
-            <HorizontalCard state="coming" />
-            <HorizontalCard state="canceled" />
-            <HorizontalCard />
+            <HorizontalCard type="history" state="passed" />
+            <HorizontalCard type="history" state="coming" />
+            <HorizontalCard type="history" state="canceled" />
           </div>
         </div>
       </div>
