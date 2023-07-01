@@ -114,8 +114,13 @@ const Header = () => {
           ) : 
           (
             <div className="header__login-signup" id="header__login-signup">
-              <Button className="no-background">Đăng nhập</Button>
-              <Button className="cyan">Đăng ký</Button>
+              <Link to="/login">
+                <Button className="no-background">Đăng nhập</Button>
+              </Link>
+              <Link to="/register">
+                <Button className="cyan">Đăng ký</Button>
+              </Link>
+              
             </div>
           )
         }
