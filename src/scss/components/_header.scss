@@ -28,9 +28,11 @@
       color: $dark-grey;
       cursor: pointer;
 
-      &:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s linear;
+      .line {
+        width: 40px;
+        height: 1.5px;
+        margin: 12px auto 0;
+        background-color: transparent;
       }
 
       &.active {
@@ -38,10 +40,17 @@
         color: $dark-blue;
 
         .line {
-          width: 30px;
-          height: 1.5px;
-          margin: auto;
           background-color: $cyan;
+        }
+      }
+
+      &:not(.active):hover {
+        transition: transform 0.3s linear;
+
+        .line {
+          width: 20px;
+          background-color: $dark-grey;
+          opacity: 0.4;
         }
       }
     }

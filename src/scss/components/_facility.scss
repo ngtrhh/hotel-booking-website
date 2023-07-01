@@ -1,0 +1,12 @@
+@use "../asbtract/" as *;
+
+.facility {
+  @include flex(center, flex-start);
+  gap: 4px;
+  color: $cyan;
+  flex: 1 0 32%;
+
+  span {
+    color: $dark-blue;
+  }
+}
