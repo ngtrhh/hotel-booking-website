@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
           <div className="footer__top__center">
             <div className="footer__top__center__row">
-              <Logo />
+              <Logo small />
             </div>
             <div className="footer__top__center__row">
               <div className="footer__top__center__row__media">

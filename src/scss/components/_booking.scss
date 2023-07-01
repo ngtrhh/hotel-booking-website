@@ -1,0 +1,525 @@
+@use "../asbtract/" as *;
+
+.booking {
+  width: $width-percent;
+  margin: auto;
+
+  .steps {
+    margin-top: 40px;
+  }
+
+  &__content {
+    @include flex(flex-start, flex-start);
+    flex-direction: row;
+    margin-top: 32px;
+    gap: 20px;
+
+    &__left {
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      gap: 20px;
+      flex: 4;
+    }
+
+    &__right {
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      flex: 2;
+      gap: 32px;
+      align-self: stretch;
+    }
+
+    .wrapper {
+      @include flex(flex-start, flex-start);
+      padding: 20px 24px 32px 24px;
+      flex-direction: column;
+      gap: 32px;
+      align-self: stretch;
+      border-radius: 20px;
+      border: 1px solid $dove;
+      background: $white;
+      position: relative;
+
+      &__title {
+        font: $heading-3;
+      }
+
+      .infor {
+        @include flex(flex-start, flex-start);
+        gap: 20px;
+        align-self: stretch;
+
+        &__image {
+          width: 345px;
+          height: 205px;
+          border-radius: 20px;
+        }
+
+        &__content {
+          @include flex(flex-start, flex-start);
+          flex-direction: column;
+          gap: 12px;
+          flex: 1 0 0;
+
+          &__accomodation-name {
+            font: $heading-4;
+          }
+
+          &__room-name {
+            color: $blue;
+            font: $heading-5;
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+
+          &__address {
+            @include flex(center, center);
+            gap: 4px;
+
+            span {
+              color: $dark-grey;
+              font: $caption;
+            }
+          }
+
+          &__tag-rating {
+            @include flex(flex-end, flex-start);
+            flex-direction: row;
+            gap: 28px;
+            align-self: stretch;
+
+            &__tag {
+              @include flex(flex-end, flex-start);
+              flex-direction: row;
+              gap: 4px;
+
+              &__item {
+                @include flex(center, center);
+                padding: 4px 16px;
+                gap: 2px;
+                border-radius: 50px;
+                background: $dark-blue;
+                color: $white;
+                font: $caption;
+              }
+            }
+
+            &__rating {
+              @include flex(center, flex-start);
+              flex-direction: row;
+              gap: 12px;
+
+              &__score {
+                @include flex(center, center);
+                padding: 4px 12px;
+                border-radius: 8px;
+                color: $white;
+                background: $dark-blue;
+                font-size: 18px;
+                font-family: $inter-font;
+                font-weight: 500;
+              }
+
+              &__reviews {
+                color: $dark-grey;
+                font: $caption;
+              }
+            }
+          }
+
+          &__facilities {
+            @include flex(flex-start, flex-start);
+            gap: 8px;
+            align-self: stretch;
+            flex-wrap: wrap;
+
+            &__item {
+              @include flex(center, flex-start);
+              gap: 4px;
+              align-self: stretch;
+              color: $dark-grey;
+            }
+          }
+        }
+      }
+
+      .detail-room {
+        @include flex(flex-start, flex-start);
+        gap: 12px;
+        align-self: stretch;
+
+        &__item {
+          @include flex(flex-start, flex-start);
+          flex-direction: column;
+          gap: -6px;
+          flex: 1 0 0;
+
+          &__label {
+            color: $dark-grey;
+            font-size: 13px;
+            font-family: $quicksand-font;
+            font-style: normal;
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+
+          &__input {
+            font: $body-2;
+            text-transform: uppercase;
+          }
+          &__description {
+            color: $dark-grey;
+            font: $caption;
+          }
+        }
+      }
+
+      .input-column {
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        gap: 28px;
+        align-self: stretch;
+
+        .input-row {
+          @include flex(flex-start, flex-start);
+          flex-direction: row;
+          gap: 20px;
+          align-self: stretch;
+        }
+
+        .input {
+          @include flex(flex-start, flex-start);
+          flex-direction: column;
+          gap: 8px;
+          align-self: stretch;
+
+          &__label {
+            @include flex(center, flex-start);
+            flex-direction: row;
+            padding: 0px 4px;
+            gap: 4px;
+            align-self: stretch;
+
+            &__require {
+              color: $red;
+            }
+          }
+
+          input {
+            align-items: center;
+            padding: 12px 16px;
+            border-radius: 4px;
+            border: 1px solid rgba(120, 120, 120, 0.5);
+            width: 100%;
+            background: $white;
+            font: $body-2;
+          }
+
+          &__description {
+            color: $dark-grey;
+            font: $caption;
+          }
+        }
+      }
+
+      &__row {
+        @include flex(center, space-between);
+        gap: 20px;
+        font-family: $inter-font;
+        align-self: stretch;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $dove;
+
+        &__price-room {
+          @include flex(flex-end, center);
+          flex-direction: column;
+          gap: 4px;
+
+          &__old {
+            color: $dark-grey;
+            text-align: right;
+            font: $caption;
+            text-decoration: line-through;
+            text-decoration-line: strikethrough;
+          }
+
+          &__new {
+            font-weight: 600;
+          }
+        }
+      }
+
+      .total-price {
+        @include flex(center, space-between);
+        align-self: stretch;
+
+        &__title {
+          @include flex(center, flex-start);
+          font: $heading-4;
+          flex: 1 0 0;
+        }
+
+        &__column {
+          @include flex(flex-end, center);
+          flex-direction: column;
+          gap: 4px;
+
+          &__price {
+            font: $heading-3;
+          }
+
+          &__sub {
+            color: $dark-grey;
+            font: $caption;
+          }
+        }
+      }
+
+      .sale-label {
+        background-color: $cyan;
+        position: absolute;
+        top: 12px;
+        right: -2px;
+        color: $white;
+        font: $body-2;
+        padding: 10px 8px 10px 0px;
+        text-transform: uppercase;
+        z-index: 1;
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          width: 50%;
+          height: 100%;
+          left: -10%;
+          top: 0;
+          background-color: $cyan;
+          transform: skewX(35deg);
+          z-index: -1;
+        }
+
+        &::after {
+          transform: skewX(-35deg);
+        }
+      }
+
+      .payment-wrapper {
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        gap: 20px;
+        align-self: stretch;
+
+        &__item {
+          @include flex(flex-start, flex-start);
+          flex-direction: column;
+          gap: 32px;
+          padding: 20px 20px;
+          align-self: stretch;
+          border-radius: 12px;
+          background: $light-blue-2;
+
+          &__title {
+            @include flex(center, space-between);
+            gap: 10px;
+            font: $heading-5;
+            align-self: stretch;
+          }
+
+          .bank-wrapper {
+            @include flex(flex-start, flex-start);
+            flex-direction: column;
+            gap: 12px;
+            align-self: stretch;
+
+            &__item {
+              @include flex(center, space-between);
+              padding: 12px 20px;
+              align-self: stretch;
+              border-radius: 8px;
+              background: $white;
+              box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.32);
+
+              img {
+                height: 32px;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+
+      &__small-row {
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        gap: 12px;
+        align-self: stretch;
+
+        &__column {
+          @include flex(flex-start, flex-start);
+          flex-direction: column;
+          gap: 4px;
+
+          &__name {
+            align-self: stretch;
+            font: $body-2-bold;
+          }
+
+          &__accomodation {
+            text-transform: uppercase;
+            color: $dark-grey;
+          }
+        }
+
+        &__grid {
+          @include flex(flex-start, flex-start);
+          flex-direction: column;
+          align-self: stretch;
+
+          &__row {
+            @include flex(flex-start, flex-start);
+            flex-direction: row;
+            align-self: stretch;
+
+            &__item {
+              @include flex(flex-start, flex-start);
+              flex-direction: column;
+              padding: 12px 16px;
+              text-transform: uppercase;
+              flex: 1 0 0;
+              border: 1px solid $dove;
+              gap: 2px;
+
+              &__label {
+                font-family: $quicksand-font;
+                color: $dark-grey;
+              }
+
+              &__content {
+                font: $body-2-bold;
+              }
+
+              &.top-left {
+                border-radius: 8px 0px 0px 0px;
+              }
+
+              &.top-right {
+                border-radius: 0px 8px 0px 0px;
+              }
+
+              &.bottom-left {
+                border-radius: 0px 0px 0px 8px;
+              }
+
+              &.bottom-right {
+                border-radius: 0px 0px 8px 0px;
+              }
+            }
+          }
+        }
+
+        &__title {
+          align-self: stretch;
+          font: $body-2-bold;
+        }
+
+        &__detail {
+          @include flex(center, space-between);
+          gap: 20px;
+          font-family: $inter-font;
+          align-self: stretch;
+          padding-bottom: 12px;
+          border-bottom: 1px solid $dove;
+
+          &__price-room {
+            @include flex(flex-end, center);
+            flex-direction: column;
+            gap: 4px;
+
+            &__old {
+              color: $dark-grey;
+              text-align: right;
+              font: $caption;
+              text-decoration-line: strikethrough;
+              text-decoration: line-through;
+            }
+
+            &__new {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-steps-item-process .ant-steps-item-icon {
+  background: $cyan !important;
+  border: none;
+}
+
+.ant-steps-item-process
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-title,
+.ant-steps-item-wait,
+.ant-steps
+  .ant-steps-item-wait
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-title,
+.ant-steps .ant-steps-item-title {
+  font: $heading-3;
+}
+
+.ant-steps-item-process
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-title {
+  color: $cyan !important;
+}
+
+.ant-steps .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon {
+  color: #00000073;
+}
+
+.ant-steps .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon,
+.ant-steps .ant-steps-item-icon {
+  font-size: 16px;
+}
+.ant-steps
+  .ant-steps-item-finish
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-title {
+  color: $dark-blue;
+}
+
+.policy-before-submit {
+  color: #272b4e;
+  font-size: 14px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+
+  u {
+    color: $blue;
+  }
+}
+
+.ant-breadcrumb ol,
+.ant-breadcrumb,
+.ant-breadcrumb-link {
+  @include flex(center, flex-start);
+  font: $body-2;
+  gap: 2px;
+}
+
+.breadcrumb {
+  margin-top: 40px;
+}
+
+.pointer {
+  cursor: pointer;
+}

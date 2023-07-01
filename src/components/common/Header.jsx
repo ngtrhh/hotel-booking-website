@@ -22,10 +22,6 @@ const Header = () => {
             <div className="line" />
           </div>
           <div className="header__menu__item">
-            <span>Đặt chỗ của tôi</span>
-            <div className="line" />
-          </div>
-          <div className="header__menu__item">
             <span>Về Lokastay</span>
             <div className="line" />
           </div>

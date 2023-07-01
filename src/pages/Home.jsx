@@ -28,7 +28,7 @@ export const Home = () => {
             Nhiều hơn
           </Button>
         </div>
-        <div className="home__section__content">
+        <div className="four-cols">
           <DestinationItem title="Ninh Bình" number="900" />
           <DestinationItem title="Ninh Bình" number="900" />
           <DestinationItem title="Ninh Bình" number="900" />
@@ -56,7 +56,7 @@ export const Home = () => {
             Nhiều hơn
           </Button>
         </div>
-        <div className="home__section__content wrap">
+        <div className="four-cols wrap">
           <RecommendedStay
             name="Tên chỗ nghỉ"
             adrress="Địa chỉ Phường, TP"

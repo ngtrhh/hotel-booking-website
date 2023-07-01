@@ -9,6 +9,7 @@ const Button = (props) => {
       className={`button ${props.className}`}
       onClick={props.onClick ? () => props.onClick() : null}
     >
+      {props.preIcon && <PreIcon />}
       <span>{props.children}</span>
       {props.postIcon && <PostIcon />}
     </div>

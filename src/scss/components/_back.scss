@@ -1,0 +1,17 @@
+@use "../asbtract/" as *;
+
+.back {
+  @include flex(flex-end, flex-start);
+  color: $dark-blue;
+  cursor: pointer;
+  margin: 20px 0;
+
+  &__icon {
+    margin-bottom: 4px;
+  }
+
+  span {
+    font: $heading-3;
+    margin-left: 8px;
+  }
+}

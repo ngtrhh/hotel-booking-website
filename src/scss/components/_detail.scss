@@ -1,0 +1,783 @@
+@use "../asbtract/" as *;
+
+.detail {
+  width: $width-percent;
+  margin: auto;
+
+  .image-list {
+    @include flex(unset, unset);
+    flex-direction: row;
+    gap: 20px;
+
+    &__main-image {
+      width: 60%;
+      height: 500px;
+      border-radius: 20px 0px 0px 20px;
+    }
+
+    &__column {
+      @include flex(unset, unset);
+      flex-direction: column;
+      gap: 20px;
+
+      &__item {
+        width: 224px;
+        height: 240px;
+
+        &.top {
+          border-radius: 0px 20px 0px 0px;
+        }
+        &.bottom {
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 0px 20px 0px;
+          }
+
+          .blur {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 0px 0px 20px 0px;
+            @include flex(center, center);
+            color: $white;
+
+            .number {
+              font: $heading-5;
+              @include flex(center, center);
+              gap: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    margin-top: 32px;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+
+    .overview {
+      @include flex(flex-start, flex-start);
+      flex-direction: row;
+      gap: 20px;
+      .infor {
+        flex: 2;
+        padding: 12px 0;
+
+        &__title {
+          @include flex(flex-start, flex-start);
+          flex-direction: row;
+
+          &__content {
+            @include flex(center, flex-start);
+            flex-direction: row;
+            gap: 20px;
+            flex: 1;
+
+            &__name {
+              font: $heading-3;
+            }
+
+            &__type {
+              @include flex(center, center);
+              padding: 8px 16px;
+              background: $dark-blue;
+              color: $white;
+              border-radius: 50px;
+            }
+
+            &__stars {
+              @include flex(center, center);
+              gap: 2px;
+              color: $dark-blue;
+            }
+          }
+        }
+
+        &__address {
+          margin: 12px 0 20px;
+          @include flex(center, flex-start);
+          flex-direction: row;
+          flex: 1;
+          gap: 4px;
+
+          &__content {
+            color: $dark-grey;
+            font: $body-2;
+          }
+        }
+      }
+
+      .side {
+        flex: 1;
+        padding: 32px;
+        border: 1px solid $dove;
+        border-radius: 20px;
+
+        .rating-price {
+          @include flex(center, flex-start);
+          margin-bottom: 16px;
+
+          &__rating {
+            @include flex(flex-start, flex-start);
+            flex-direction: column;
+
+            &__number {
+              @include flex(center, center);
+              padding: 6px 20px;
+              gap: 4px;
+              width: 96px;
+              height: 410x;
+              background: $dark-blue;
+              border-radius: 8px;
+              font: $heading-4;
+              color: $white;
+            }
+
+            &__number-2 {
+              font: $body-2-bold;
+              text-align: center;
+              color: $cyan;
+              margin-top: 8px;
+            }
+          }
+
+          &__price {
+            font: $heading-3;
+            @include flex(center, flex-end);
+            flex: 1;
+          }
+        }
+
+        .map {
+          flex: 1;
+          height: 112px;
+          font: $heading-5;
+          text-transform: uppercase;
+          @include flex(center, center);
+          flex-direction: column;
+          gap: 12px;
+          background-color: $light-blue-2;
+          border-radius: 12px;
+        }
+
+        .places {
+          margin-top: 32px;
+          flex-direction: column;
+          @include flex(flex-start, flex-start);
+          gap: 8px;
+
+          &__title {
+            font: $heading-5;
+          }
+
+          &__item {
+            @include flex(flex-start, space-between);
+            flex-direction: row;
+            font: $body-1;
+            width: 100%;
+
+            &__left {
+              flex: 1 0 80%;
+            }
+
+            &__right {
+              flex: 1 0 20%;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section {
+    padding-top: 32px;
+    @include flex(unset, unset);
+    flex-direction: column;
+    align-self: stretch;
+
+    &__title {
+      font: $heading-4;
+      margin-bottom: 28px;
+    }
+
+    &__content {
+      margin-bottom: 32px;
+      flex: 1;
+
+      .description {
+        color: $dark-grey;
+      }
+
+      .more {
+        font: $caption;
+        color: $cyan;
+        cursor: pointer;
+      }
+    }
+
+    #facilities {
+      @include flex(center, flex-start);
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 12px;
+    }
+
+    #rooms {
+      @include flex(center, flex-start);
+      flex-direction: column;
+
+      .search-bar {
+        margin: 0 auto 60px;
+        gap: 20px;
+        @include flex(center, flex-start);
+        flex-direction: row;
+
+        .container {
+          border-radius: 12px;
+          border: 1px solid $dove;
+          background: $light-blue-1;
+          @include flex(center, flex-start);
+          flex-direction: row;
+          gap: 4px;
+
+          .input {
+            width: 240px;
+            padding: 12px 16px;
+            @include flex(flex-start, center);
+            flex-direction: column;
+            position: relative;
+            border: 1px solid transparent;
+            cursor: pointer;
+
+            &:focus-within:not(hover) {
+              background: $light-blue-1;
+            }
+
+            &:first-child {
+              border-radius: 12px 0px 0px 12px;
+            }
+            &:last-child {
+              border-radius: 0px 12px 12px 0px;
+            }
+
+            &:hover {
+              background-image: linear-gradient(rgb(0 0 0/0.05) 0 0);
+            }
+
+            &__content {
+              @include flex(flex-start, center);
+              flex-direction: column;
+
+              .label {
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-bottom: 2px;
+              }
+
+              input {
+                text-transform: uppercase;
+                border: none;
+                color: $dark-grey;
+                padding: 4px;
+                padding-left: 0;
+                background-color: transparent;
+                font: $body-2;
+
+                &:focus {
+                  outline: none;
+                }
+              }
+            }
+
+            .delete {
+              color: $dark-grey;
+            }
+          }
+
+          .line {
+            background-color: $dove;
+            align-self: stretch;
+          }
+        }
+      }
+    }
+
+    #compare {
+      @include flex(flex-end, flex-start);
+      flex-direction: row;
+      flex: 1;
+
+      .col-2 {
+        flex: 2;
+        border-left: 1px solid $dove;
+        align-self: stretch;
+
+        &:last-child {
+          border-right: 1px solid $dove;
+        }
+
+        .image {
+          @include flex(center, center);
+          position: relative;
+
+          img {
+            @include flex(center, center);
+            flex: 1;
+            flex-shrink: 0;
+            align-items: stretch;
+            height: auto;
+            border-radius: 12px;
+          }
+
+          .tag {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            color: $white;
+            @include flex(center, flex-end);
+            flex-direction: row;
+            font: 12px $inter-font;
+            gap: 4px;
+
+            span {
+              padding: 2px 12px;
+              background: rgba(39, 43, 78, 0.8);
+              border-radius: 50px;
+            }
+          }
+
+          .heart {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            color: $white;
+
+            svg:last-child {
+              position: absolute;
+              top: 0px;
+              right: 0px;
+            }
+          }
+        }
+
+        .title {
+          font: $heading-5;
+          align-self: stretch;
+          margin: 12px 0 20px;
+        }
+
+        .price-infor {
+          @include flex(center, center);
+          flex-direction: row;
+          height: 72px;
+
+          &__percent-sale {
+            @include flex(center, center);
+            padding: 8px 16px;
+            gap: 10px;
+            border-radius: 8px;
+            background: $cyan;
+            color: $white;
+            font: $heading-5;
+          }
+
+          &__price {
+            @include flex(flex-end, center);
+            flex-direction: column;
+            gap: 8px;
+            flex: 1 0 0;
+
+            &__old {
+              color: $red;
+              text-decoration: line-through;
+              font: $caption;
+            }
+
+            &__new {
+              font: $heading-4;
+            }
+          }
+        }
+
+        .facilities {
+          @include flex(center, flex-start);
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 4px;
+          height: 100px;
+
+          &__item {
+            @include flex(center, flex-start);
+            flex-direction: row;
+            gap: 4px;
+          }
+
+          &__more {
+            color: $cyan;
+            font: $caption;
+          }
+        }
+
+        .rating {
+          @include flex(center, flex-start);
+          flex-direction: row;
+          gap: 20px;
+          height: 80px;
+
+          &__score {
+            background-color: $dark-blue;
+            color: $white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font: $heading-5;
+          }
+
+          &__reviews {
+            font: $body-2;
+            color: $dark-grey;
+          }
+        }
+
+        .button-wrapper {
+          margin: 16px 92px;
+          height: 44px;
+        }
+
+        .margin {
+          margin-left: 12px;
+          margin-right: 12px;
+        }
+      }
+
+      .col-1 {
+        @include flex(center, flex-end);
+        flex-direction: column;
+        flex: 1;
+        margin-bottom: 76px;
+
+        &__item {
+          @include flex(center, flex-start);
+          align-self: stretch;
+          font: $body-2-bold;
+          height: 100px;
+          // border-bottom: 1px solid $dove;
+
+          &:first-of-type {
+            //  border-top: 1px solid $dove;
+            height: 72px;
+          }
+
+          &:last-of-type {
+            height: 80px;
+          }
+        }
+      }
+    }
+
+    #rating {
+      @include flex(center, flex-start);
+      flex-direction: column;
+      margin-top: 40px;
+
+      .score {
+        @include flex(center, flex-start);
+        flex-direction: column;
+
+        .total-score {
+          @include flex(center, center);
+          padding: 12px 32px;
+          gap: 10px;
+          border-radius: 8px;
+          background: $dark-blue;
+          color: $white;
+          font: $heading-1;
+          margin-bottom: 12px;
+        }
+
+        .total-reviews {
+        }
+      }
+
+      .filter {
+        @include flex(center, flex-start);
+        flex-direction: row;
+        margin-bottom: 40px;
+        gap: 20px;
+
+        &__item {
+          font: $body-2;
+          color: $dark-grey;
+          @include flex(center, center);
+          padding: 8px 16px;
+          gap: 12px;
+          border-radius: 8px;
+          border: 1px solid $dove;
+          background: $white;
+        }
+
+        .dropdown {
+        }
+      }
+
+      .wrapper {
+        @include flex(center, flex-start);
+        flex-direction: column;
+        padding: 32px;
+        gap: 16px;
+        background: $white;
+        box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.32);
+        width: 84%;
+        margin-bottom: 28px;
+
+        .row {
+          @include flex(flex-start, flex-start);
+          flex-direction: row;
+          align-self: stretch;
+          margin-bottom: 20px;
+          gap: 20px;
+
+          &__title {
+            font: $heading-4;
+            flex: 1;
+          }
+
+          &__score {
+            font: $heading-3;
+            color: $cyan;
+          }
+
+          &__content {
+            flex: 1;
+          }
+
+          &__date {
+            font: $caption;
+            color: $dark-grey;
+          }
+
+          &.not-margin {
+            margin-bottom: 0;
+          }
+        }
+
+        .user {
+          @include flex(center, flex-end);
+          font: $heading-5;
+          align-self: stretch;
+          margin-top: 8px;
+        }
+
+        .infor-reserve {
+          @include flex(center, flex-end);
+          align-self: stretch;
+          font: $body-2;
+          color: $dark-grey;
+        }
+      }
+    }
+
+    #policies {
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      gap: 20px;
+
+      .policy-item {
+        @include flex(flex-start, flex-start);
+        flex-direction: row;
+        gap: 12px;
+        align-self: stretch;
+
+        &__title {
+          @include flex(flex-start, flex-start);
+          gap: 8px;
+          flex-direction: row;
+          color: $dark-grey;
+          flex: 1;
+        }
+
+        &__infor {
+          @include flex(unset, unset);
+          flex: 3;
+        }
+      }
+    }
+  }
+
+  .accommodation-around {
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    gap: 40px;
+    align-self: stretch;
+
+    &__header {
+      font: $heading-1;
+
+      span {
+        color: $blue;
+      }
+    }
+
+    &__content {
+      width: 90%;
+      margin: auto;
+      position: relative;
+
+      &__next,
+      &__prev {
+      }
+    }
+  }
+}
+
+.line {
+  border: 1px solid $dove;
+}
+
+.available-room {
+  @include flex(flex-start, flex-start);
+  flex-direction: column;
+  flex: 1 0 0;
+  background-color: $white;
+  padding-bottom: 28px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  position: relative;
+
+  .image {
+    width: auto;
+    height: 200px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 20px;
+  }
+
+  .more-images {
+    display: inline-flex;
+    padding: 4px 8px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    color: $white;
+    border-radius: 4px;
+    background: $dark-grey;
+    position: absolute;
+    right: 8px;
+    top: 160px;
+    font: $body-2-bold;
+  }
+
+  .wrapper {
+    margin: 0 8px;
+
+    .title {
+      font: $heading-4;
+      align-self: stretch;
+    }
+
+    .infor-room {
+      @include flex(center, flex-start);
+      flex-direction: row;
+      gap: 4px;
+      margin: 12px 0px 20px;
+
+      &__item {
+        font: $caption;
+        @include flex(center, flex-start);
+        flex-direction: row;
+        gap: 4px;
+      }
+    }
+
+    .facilities {
+      @include flex(center, flex-start);
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 4px;
+
+      span {
+        display: flex;
+        flex-direction: column;
+
+        &:last-child {
+          font: $caption;
+          color: $cyan;
+          text-decoration: underline;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .offer {
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      align-self: stretch;
+      gap: 12px;
+      margin-top: 20px;
+
+      span {
+        display: flex;
+        padding: 2px 14px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: 50px;
+        background: $light-blue-2;
+        color: $blue;
+
+        &:first-child {
+          background: $light-red;
+          color: $red;
+        }
+      }
+    }
+
+    .price-wrapper {
+      @include flex(center, flex-start);
+      flex-direction: row;
+      align-self: stretch;
+      margin: 0px 4px;
+      gap: 20px;
+
+      &__column {
+        @include flex(flex-start, center);
+        flex-direction: column;
+        flex: 1 0 0;
+
+        &:last-child {
+          @include flex(center, flex-start);
+        }
+
+        .price-old {
+          color: $red;
+          text-decoration: line-through;
+        }
+
+        .price-new {
+          font: $heading-4;
+        }
+
+        .price-detail {
+          font: $caption;
+          color: $dark-grey;
+          align-self: stretch;
+        }
+
+        .percent-sale {
+          font: $body-2-bold;
+          color: $cyan;
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+}

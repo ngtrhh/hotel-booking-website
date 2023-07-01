@@ -8,7 +8,7 @@
   margin-top: 100px;
 
   &__container {
-    @include flex(none, none);
+    @include flex(unset, unset);
     flex-direction: column;
   }
   &__top {
@@ -31,8 +31,7 @@
         }
 
         &__infor {
-          font-family: $inter-font;
-          font-weight: 500;
+          font: $caption;
         }
       }
     }
@@ -99,7 +98,7 @@
       flex-direction: row;
       margin-top: 100px;
       margin-bottom: 80px;
-      @include flex(none, none);
+      @include flex(unset, unset);
 
       &__column {
         flex-direction: row;
@@ -108,15 +107,13 @@
         &__title {
           font-size: 20px;
           font-weight: 700;
-          margin-bottom: 28px;
+          margin-bottom: 20px;
         }
 
         &__link {
           color: $dark-grey;
-          font-family: $inter-font;
+          font: $caption;
           margin-bottom: 12px;
-          font-weight: 500;
-          font-size: 13px;
 
           &:last-child {
             margin: 0;
