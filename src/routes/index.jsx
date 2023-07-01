@@ -9,6 +9,7 @@ import {
   Booking,
   BookingHistory,
   Favourite,
+  Profile,
 } from "../pages/";
 
 const publicRoutes = [
