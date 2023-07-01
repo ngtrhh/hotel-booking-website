@@ -1,6 +1,57 @@
 @use "../asbtract/" as *;
 
-.profile{
-    width: $width-percent;
-    margin: auto;
+.profile {
+  width: $width-percent;
+  margin: auto;
+
+  .title {
+    @include flex(flex-start, space-between);
+    align-self: stretch;
+    font: $heading-2;
+  }
+
+  .avatar {
+    position: relative;
+    $var: 80px;
+    height: $var;
+
+    img {
+      border-radius: 100px;
+      height: $var;
+      width: $var;
+    }
+
+    .blur {
+      @include flex(center, center);
+      width: 100%;
+      height: calc($var / 2);
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: $white;
+      border-radius: 0px 0px 100px 100px;
+      cursor: pointer;
+    }
+  }
+
+  .row {
+    @include flex(center, flex-start);
+    align-self: stretch;
+    padding: 20px 12px;
+    gap: 20px;
+    border-top: solid 1px $dove;
+
+    &__title {
+      font-size: 18px;
+      font-family: $inter-font;
+      font-weight: 600;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+
+    &__content {
+      color: $dark-grey;
+      flex: 5;
+    }
+  }
 }

@@ -47,91 +47,91 @@
     }
   }
 
-  .content {
-    @include flex(flex-start, flex-start);
-    gap: 32px;
-    margin-top: 60px;
+  .sort {
+    @include flex(center, center);
+    align-self: stretch;
+    position: relative;
 
-    .menu {
-      @include flex(flex-start, flex-start);
-      flex-direction: column;
-      flex: 1;
-      padding: 4px;
-      border-radius: 20px;
-      border: 1px solid $dove;
-      background: $white;
-
-      &__item {
-        display: flex;
-        padding: 16px;
-        align-items: flex-start;
-        align-self: stretch;
-        font: $heading-5;
-        cursor: pointer;
-
-        &:first-of-type {
-          border-radius: 12px 12px 0px 0px;
-        }
-
-        &:last-of-type {
-          border-radius: 0px 0px 12px 12px;
-        }
-
-        &:hover {
-          color: $blue;
-        }
-
-        &.selected {
-          color: $blue;
-          background: $light-grey;
-        }
-      }
+    &__title {
+      font: $heading-5;
+      position: absolute;
+      left: 0;
     }
 
-    .main {
-      @include flex(flex-start, flex-start);
-      flex-direction: column;
-      gap: 32px;
-      flex: 4;
+    &__wrapper {
+      @include flex(center, center);
+      gap: 20px;
 
-      .sort {
+      &__item {
         @include flex(center, center);
-        align-self: stretch;
-        position: relative;
+        padding: 8px 20px;
+        background-color: transparent;
+        color: $dark-grey;
+        font: $body-2;
+        border-radius: 50px;
 
-        &__title {
-          font: $heading-5;
-          position: absolute;
-          left: 0;
+        &.selected,
+        &:hover {
+          background-color: $dark-blue;
+          color: $white;
         }
-
-        &__wrapper {
-          @include flex(center, center);
-          gap: 20px;
-
-          &__item {
-            @include flex(center, center);
-            padding: 8px 20px;
-            background-color: transparent;
-            color: $dark-grey;
-            font: $body-2;
-            border-radius: 50px;
-
-            &.selected,
-            &:hover {
-              background-color: $dark-blue;
-              color: $white;
-            }
-          }
-        }
-      }
-
-      .list {
-        @include flex(flex-start, flex-start);
-        flex-direction: column;
-        gap: 20px;
-        align-self: stretch;
       }
     }
   }
+
+  .list {
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    gap: 20px;
+    align-self: stretch;
+  }
+}
+
+.side-menu {
+  @include flex(flex-start, flex-start);
+  flex-direction: column;
+  flex: 1;
+  padding: 4px;
+  border-radius: 20px;
+  border: 1px solid $dove;
+  background: $white;
+
+  .item {
+    display: flex;
+    padding: 16px;
+    align-items: flex-start;
+    align-self: stretch;
+    font: $heading-5;
+    cursor: pointer;
+
+    &:first-of-type {
+      border-radius: 12px 12px 0px 0px;
+    }
+
+    &:last-of-type {
+      border-radius: 0px 0px 12px 12px;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+
+    &.selected {
+      color: $blue;
+      background: $light-grey;
+    }
+  }
+}
+
+.two-contents {
+  @include flex(flex-start, flex-start);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.side-main {
+  @include flex(flex-start, flex-start);
+  flex-direction: column;
+  gap: 32px;
+  flex: 4;
 }

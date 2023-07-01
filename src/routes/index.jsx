@@ -10,6 +10,7 @@ import {
   BookingHistory,
   Favourite,
   Profile,
+  EditProfile,
 } from "../pages/";
 
 const publicRoutes = [
@@ -20,6 +21,7 @@ const publicRoutes = [
   { path: "/booking-history", element: BookingHistory },
   { path: "/favourite", element: Favourite },
   { path: "/profile", element: Profile },
+  { path: "/edit-profile", element: EditProfile },
   { path: "/login", element: Login, layout: null },
   { path: "/register", element: Register, layout: null },
   { path: "/forgot", element: ForgotPassword, layout: null },

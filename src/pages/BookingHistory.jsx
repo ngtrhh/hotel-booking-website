@@ -12,9 +12,6 @@ export const BookingHistory = () => {
         <Breadcrumb.Item>
           <Link to="/">Trang chủ</Link>
         </Breadcrumb.Item>
-        <Breadcrumb.Item>
-          <Link to="/result">Tài khoản</Link>
-        </Breadcrumb.Item>
         <Breadcrumb.Item>Lịch sử đặt phòng</Breadcrumb.Item>
       </Breadcrumb>
       <div className="search-bar">
@@ -43,14 +40,14 @@ export const BookingHistory = () => {
         </Button>
       </div>
 
-      <div className="content">
-        <div className="menu">
-          <div className="menu__item selected">Đặt phòng sắp đến</div>
-          <div className="menu__item">Đặt phòng đã qua</div>
-          <div className="menu__item">Đặt phòng đã hủy</div>
+      <div className="two-contents">
+        <div className="side-menu">
+          <div className="item selected">Đặt phòng sắp đến</div>
+          <div className="item">Đặt phòng đã qua</div>
+          <div className="item">Đặt phòng đã hủy</div>
         </div>
 
-        <div className="main">
+        <div className="side-main">
           <div className="sort">
             <div className="sort__title">Sắp xếp theo</div>
             <div className="sort__wrapper">
