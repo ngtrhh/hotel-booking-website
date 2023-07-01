@@ -2,8 +2,44 @@ import React from "react";
 import Logo from "./Logo";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { AppContext } from "../../Context/AppProvider";
+import { auth } from "../../firebase/config";
+import { UserOutlined, SettingOutlined } from '@ant-design/icons';
+import { Menu, Avatar, Popconfirm } from 'antd';
+import { BiChevronDown, BiChevronRight, BiBookBookmark, BiUser, BiLogOut } from "react-icons/bi";
+import { useState } from "react";
 
 const Header = () => {
+  const data = useContext(AppContext);
+  const isLoggedIn = (data.isLoggedIn) ? data.isLoggedIn : false;
+  const [isUserDropdown, setIsUserDropdown] = useState(false);
+  
+  const LogOut = () => {
+    auth.signOut();
+  }
+  const ToggleDropdown = () => {
+    setIsUserDropdown(!isUserDropdown);
+  }
+  useEffect(() => {
+    const dropdownMenu = document.querySelector('#header__user-dropdown');
+    const dropdownMenuItems = document.querySelector('#header-user-dropdown-items');
+    
+    if(dropdownMenu){
+      dropdownMenu.style.backgroundColor = (isUserDropdown) ? 'white' : 'transparent';
+      dropdownMenuItems.style.display = (isUserDropdown) ? 'flex' : 'none';
+      dropdownMenuItems.style.animation = (isUserDropdown) ? 'fadeIn 0.3s' : 'fadeOut 0.3s';
+    }
+  }, [isUserDropdown]);
+
+  useEffect(() => {
+    if(!isLoggedIn){
+      const dropdownMenu = document.querySelector('#header__login-signup');
+      dropdownMenu.style.backgroundColor = 'transparent';
+    }
+    
+  }, [isLoggedIn]);
+
   return (
     <div className="header">
       <div className="header__container">
@@ -30,10 +66,60 @@ const Header = () => {
             <div className="line" />
           </div>
         </div>
-        <div className="header__login-signup">
-          <Button className="no-background">Đăng nhập</Button>
-          <Button className="cyan">Đăng ký</Button>
-        </div>
+        {
+          (isLoggedIn) ? 
+          (
+            <div className="header__user-dropdown" id="header__user-dropdown">
+              <div className="header__user-dropdown__main" onClick={ToggleDropdown}>
+                <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=1" />
+                <p>Trung</p>
+                {(isUserDropdown) ? 
+                  (
+                    <BiChevronDown className="header__user-dropdown__arrow"/>
+                  ) :
+                  (
+                    <BiChevronRight className="header__user-dropdown__arrow"/>
+                  )
+                }
+              </div>
+              
+              <div className="header__user-dropdown__content" id="header-user-dropdown-items">
+                <div className="header__user-dropdown__content__item">
+                  <BiBookBookmark className="header__user-dropdown__content__item__icon"/>
+                  <p>Phòng</p>
+                </div>
+                <div className="header__user-dropdown__content__item">
+                  <BiUser className="header__user-dropdown__content__item__icon"/>
+                  <p>Tài khoản</p>
+                </div>
+                <Popconfirm
+                  title="Thông báo"
+                  description="Bạn có muốn đăng xuất?"
+                  onConfirm={LogOut}
+                  okText="Có"
+                  cancelText="Không"
+                >
+                  <div className="header__user-dropdown__content__item log-out">
+                    <BiLogOut className="header__user-dropdown__content__item__icon"/>
+                    <p>Đăng xuất</p>
+                  </div>
+                </Popconfirm>
+                
+              </div>
+            </div>
+          ) : 
+          (
+            <div className="header__login-signup" id="header__login-signup">
+              <Link to="/login">
+                <Button className="no-background">Đăng nhập</Button>
+              </Link>
+              <Link to="/register">
+                <Button className="cyan">Đăng ký</Button>
+              </Link>
+              
+            </div>
+          )
+        }
       </div>
     </div>
   );

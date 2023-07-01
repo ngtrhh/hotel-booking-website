@@ -1,0 +1,23 @@
+@use "../../../asbtract/" as *;
+
+.filter-checkbox{
+	font-size: 15px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-weight: 500;
+	width: 100%;
+	margin-bottom: 4px;
+
+	input{
+		width: 18px;
+		height: 18px;
+	}
+
+	span{
+		font-family: 'Quicksand';
+		font-style: normal;
+		font-size: 15px;
+		font-weight: 500;
+	}
+}

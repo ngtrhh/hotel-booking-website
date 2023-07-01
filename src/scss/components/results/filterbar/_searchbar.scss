@@ -1,4 +1,4 @@
-@use "../../asbtract/" as *;
+@use "../../../asbtract/" as *;
 
 .results{
     &__search-bar{
@@ -18,7 +18,6 @@
             border-radius: 16px;
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
             .items{
                 display: flex;
                 align-items: center;
@@ -26,7 +25,6 @@
                 height: 72px;
                 flex: 1 1;
                 justify-content: flex-start;
-                flex-wrap: wrap;
                 .line{
                     width: 60px;
                     height: 0px;
@@ -50,7 +48,7 @@
                         width: 36px;
                         height: 36px;
                         order: 0;
-                        color: #787878;
+                        color: $dark-blue;
                     }
         
                     .content{
@@ -90,11 +88,13 @@
             }
         
             .btn-search{
-                width: 140px;
-                height: 56px;
+                width: 136px;
+                height: 48px;
+
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                margin: 0 20px;
             }
         }
         
