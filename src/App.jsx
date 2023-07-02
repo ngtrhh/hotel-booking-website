@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { publicRoutes } from "./routes";
+import PublicRoutes, {publicRoutes} from "./routes";
 import { MainLayout } from "./components/layout";
 import { Fragment } from "react";
 import AuthProvider from "./Context/AuthProvider";
@@ -7,12 +7,13 @@ import AppProvider from "./Context/AppProvider";
 import { FloatButton } from 'antd';
 
 function App() {
+  const meow = PublicRoutes();
   return (
     <Router>
       <AuthProvider>
         <AppProvider>
           <Routes>
-            {publicRoutes.map((route, index) => {
+            {meow.map((route, index) => {
               const Page = route.element;
               let Layout = MainLayout;
 

@@ -1,38 +1,82 @@
 import React from "react";
 import Button from "../../Button"
+import {Button as AntdButton} from "antd";
 import { BsMap } from "react-icons/bs";
 import classNames from "classnames";
 import { 
     BsStarFill, BsHeart, BsGeoAlt, BsPeopleFill, BsHeartFill
 } from "react-icons/bs";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { AppContext } from "../../../../Context/AppProvider";
 import { doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
 import { db } from "../../../../firebase/config";
+import { Modal } from "antd";
+import { useNavigate } from "react-router-dom";
 
 export const CardRoomItem = (props) => {
     const dataProvided = useContext(AppContext);
-    const {user} = dataProvided;
+    const {user, selectedAccomId, setSelectedAccomId,
+        setAccomData} = dataProvided;
     const roomData = props.roomData;
-    const loved = (user) ? (((user.lovedRoomsId).includes(roomData.accomId)) ? true : false) : false;
+    let loved = false;
+    try{
+        loved = (user) ? (((user.lovedRoomsId).includes(roomData.accomId)) ? true : false) : false;
+    }
+    catch{
+        loved = false;
+    }
+    
     const ClassName = classNames('');
+    const [openAskLoggedIn, setOpenAskLoggedIn] = useState(false);
+    const navigate = useNavigate();
 
     const HandleChangeLovedState = () => {
-        const lovedRoomsRef = doc(db, "users", user.uid);
-        if(loved){
-            updateDoc(lovedRoomsRef, {
-                lovedRoomsId: arrayRemove(roomData.accomId)
-            });
+        if(user){
+            const lovedRoomsRef = doc(db, "users", user.uid);
+            if(loved){
+                updateDoc(lovedRoomsRef, {
+                    lovedRoomsId: arrayRemove(roomData.accomId)
+                });
+            }
+            else{
+                updateDoc(lovedRoomsRef, {
+                    lovedRoomsId: arrayUnion(roomData.accomId)
+                });
+            }
         }
         else{
-            updateDoc(lovedRoomsRef, {
-                lovedRoomsId: arrayUnion(roomData.accomId)
-            });
-            
+            AskLoggedIn();
         }
     }
+
+    const AskLoggedIn = () => {
+        setOpenAskLoggedIn(!openAskLoggedIn);
+        // setTimeout(() => {
+        //     setOpenAskLoggedIn(false);
+        // }, 5000);
+    };
+
+    const handleGoBack = () => {
+        setOpenAskLoggedIn(false);
+    };
+    
+
+    const handleGoLogin = () => {
+        navigate('/login');
+    };
+
+    
+    const ViewAccomDetail = () => {
+        setSelectedAccomId(roomData.accomId);
+        setAccomData(roomData);
+        window.scrollTo(0, 0);
+        navigate('/detail');
+
+    }
+
+
     return(
-        <div className="results-card-roomitem">
+        <div className="results-card-roomitem" onClick={ViewAccomDetail}>
             <div className="results-card-roomitem__room-img" style={{ 
                 backgroundImage: `url("${roomData.images[0]}")` 
             }}>
@@ -62,6 +106,25 @@ export const CardRoomItem = (props) => {
                                 </div>
                             )
                         }
+                         <Modal
+                            open={openAskLoggedIn}
+                            title="Thông báo"
+                            onCancel={handleGoBack}
+                            footer={[
+                            <AntdButton key="back" onClick={handleGoBack}>
+                                Trở về
+                            </AntdButton>,
+                            <AntdButton
+                                key="goLogin"
+                                type="primary"
+                                onClick={handleGoLogin}
+                            >
+                                Đăng nhập
+                            </AntdButton>,
+                            ]}
+                        >
+                            <p>Vui lòng đăng nhập để sử dụng tính năng này!</p>
+                        </Modal>
                     </div>
                 </div>
             </div>

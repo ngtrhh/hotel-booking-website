@@ -30,30 +30,43 @@ import {
 import SearchBar from "../components/common/Home/SearchBar";
 import AvailableRoom from "../components/common/Detail/AvailableRoom";
 import RecommendedStay from "../components/common/Home/RecommendedStay";
+import { useContext } from "react";
+import { AppContext } from "../Context/AppProvider";
 
-export const Detail = () => {
+export const Detail = (props) => {
   const ref = useRef(null);
+  const dataProvided = useContext(AppContext);
+  const {accomData} = props;
 
   return (
     <div className="detail">
       <Back />
       <div className="image-list">
-        <img className="image-list__main-image" src={image} />
+        <img className="image-list__main-image" src={accomData.images[0]} />
         <div className="image-list__column">
-          <img className="image-list__column__item" src={image} />
-          <img className="image-list__column__item" src={image} />
+          <img className="image-list__column__item" src={accomData.images[1]} />
+          <img className="image-list__column__item" src={accomData.images[2]} />
         </div>
         <div className="image-list__column">
-          <img className="image-list__column__item top" src={image} />
+          <img className="image-list__column__item top" src={accomData.images[3]} />
           <div className="image-list__column__item bottom">
-            <img src={image} />
-            <div className="blur">
-              <div className="number">
-                +5
-                <BsImages size={24} />
-              </div>
-            </div>
-            <Button className="view-all">Xem tất cả hình ảnh</Button>
+            <img src={accomData.images[4]} />
+            {
+              (accomData.images.length - 4 > 0) ?? 
+              (
+                <>
+                  <div className="blur">
+                    <div className="number">
+                      +5
+                      <BsImages size={24} />
+                    </div>
+                  </div>
+                  <Button className="view-all">Xem tất cả hình ảnh</Button>
+                </>
+              )
+            }
+            
+            
           </div>
         </div>
       </div>
@@ -62,8 +75,8 @@ export const Detail = () => {
           <div className="infor">
             <div className="infor__title">
               <div className="infor__title__content">
-                <div className="infor__title__content__name">TÊN CHỖ NGHỈ</div>
-                <div className="infor__title__content__type">Resort</div>
+                <div className="infor__title__content__name">{accomData.name}</div>
+                <div className="infor__title__content__type">{accomData.type}</div>
                 <div className="infor__title__content__stars">
                   <BsStarFill size={28} />
                   <BsStarFill size={28} />

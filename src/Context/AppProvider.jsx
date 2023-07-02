@@ -8,12 +8,33 @@ import vi from "date-fns/locale/vi";
 
 import { AuthContext } from './AuthProvider';
 import { HomeContext } from './HomeContext';
-import { connectFirestoreEmulator } from 'firebase/firestore';
+import { connectFirestoreEmulator, limit } from 'firebase/firestore';
 import { doc, onSnapshot } from "firebase/firestore";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db } from '../firebase/config';
 
 export const AppContext = React.createContext();
+
+export const GetAcooms = (setAccoms) => {
+	React.useEffect(() => {
+
+		const collectionRef = collection(db, 'accoms');
+
+		const q = query(collectionRef, limit(40));
+
+		const unsubscribe = onSnapshot(q, (querySnapshot) => {
+			const accomsData = [];
+			querySnapshot.forEach((doc) => {
+				accomsData.push({
+					...doc.data()
+				});
+			});
+			setAccoms(accomsData);
+		});
+
+		return unsubscribe;
+	}, []);
+}
 
 export default function AppProvider ({children}) {
 
@@ -24,7 +45,6 @@ export default function AppProvider ({children}) {
 		if(user){
 			setIsLoggedIn(!(Object.keys(user).length === 0));
 		}
-		console.log(user);
 	}, [user]);
 	
 
@@ -44,24 +64,7 @@ export default function AppProvider ({children}) {
 
 	//Data Acccomodation
 	const [accoms, setAccoms] = useState([]);
-	React.useEffect(() => {
-
-		const collectionRef = collection(db, 'accoms');
-
-		const q = query(collectionRef);
-
-		const unsubscribe = onSnapshot(q, (querySnapshot) => {
-			const accomsData = [];
-			querySnapshot.forEach((doc) => {
-				accomsData.push({
-					...doc.data()
-				});
-			});
-			setAccoms(accomsData);
-		});
-
-		return unsubscribe;
-	}, []);
+	GetAcooms(setAccoms);
 
 	//Result Filterbar
 	const [priceInput, setPriceInput] = useState([0, 20000000]);
@@ -138,9 +141,13 @@ export default function AppProvider ({children}) {
 		{ name: 'kingBed', label: 'Giường đôi lớn', checked: false }
 	]);
 
+	//Details
+	const [selectedAccomId, setSelectedAccomId] = useState('');
+	const [accomData, setAccomData] = useState({});
+	
 	// useEffect(() =>{
-	// 	console.log(searchDateRange);
-	// }, [searchDateRange]);
+	// 	console.log(accoms);
+	// }, [accoms]);
 	
 	// const [isAddRoomVisible, setIsAddRoomVisible] = useState(false);
 	// const [isInviteVisible, setIsInviteVisible] = useState(false);
@@ -177,7 +184,10 @@ export default function AppProvider ({children}) {
 			ratingFilterChoices, setRatingFilterChoices,
 			facilityFilter, setFacilityFilter,
 			paymentFilter, setPaymentFilter,
-			bedTypeFilter, setBedTypeFilter
+			bedTypeFilter, setBedTypeFilter,
+			//Detail
+			selectedAccomId, setSelectedAccomId,
+			accomData, setAccomData
 		}}>
 			{children}
 		</AppContext.Provider>
