@@ -1,0 +1,17 @@
+@use "../asbtract/" as *;
+
+.favourite {
+  width: $width-percent;
+  margin: auto;
+
+  .title {
+    margin-top: 40px;
+    font: $heading-1;
+  }
+
+  .content {
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    gap: 20px;
+  }
+}

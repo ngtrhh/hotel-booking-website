@@ -1,0 +1,194 @@
+@use "../asbtract/" as *;
+
+.profile {
+  width: $width-percent;
+  margin: auto;
+
+  .title {
+    @include flex(flex-start, space-between);
+    align-self: stretch;
+    font: $heading-2;
+  }
+
+  .avatar {
+    position: relative;
+    $var: 80px;
+    height: $var;
+
+    img {
+      border-radius: 100px;
+      height: $var;
+      width: $var;
+    }
+
+    .blur {
+      @include flex(center, center);
+      width: 100%;
+      height: calc($var / 2);
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: $white;
+      border-radius: 0px 0px 100px 100px;
+      cursor: pointer;
+    }
+  }
+
+  .wrapper {
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    align-self: stretch;
+    gap: 12px;
+
+    .row {
+      @include flex(center, flex-start);
+      align-self: stretch;
+      padding: 20px 12px;
+      gap: 20px;
+      border-top: solid 1px $dove;
+
+      &__title {
+        font: $body-2-bold;
+        flex: 1;
+        flex-wrap: wrap;
+      }
+
+      &__content {
+        @include flex(center, flex-start);
+        color: $dark-grey;
+        padding-right: 20%;
+        flex: 4;
+
+        &.two-inputs {
+          flex-direction: row;
+          gap: 20px;
+        }
+
+        &.one-input {
+          align-self: stretch;
+        }
+
+        &.half {
+          width: 50%;
+        }
+      }
+
+      .item {
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+
+        &.half {
+          width: 50%;
+          flex: 0;
+        }
+
+        &__label {
+          @include flex(center, flex-start);
+          flex-direction: row;
+          padding: 0px 4px;
+          gap: 4px;
+          align-self: stretch;
+          color: $dark-blue;
+
+          .require {
+            color: $red;
+          }
+        }
+
+        input {
+          align-items: center;
+          padding: 12px 16px;
+          border-radius: 4px;
+          border: 1px solid rgba(120, 120, 120, 0.5);
+          align-self: stretch;
+          background: $white;
+          font: $body-2;
+        }
+
+        &__description {
+          color: $dark-grey;
+          font: $caption;
+          margin-left: 2px;
+
+          &.error {
+            color: $red;
+          }
+        }
+
+        .dropdown {
+          @include flex(center, space-between);
+          align-items: center;
+          padding: 2px;
+          padding-right: 16px;
+          border-radius: 4px;
+          border: 1px solid rgba(120, 120, 120, 0.5);
+          align-self: stretch;
+          background: $white;
+          font: $body-2;
+          cursor: pointer;
+          position: relative;
+
+          &:focus-within {
+            box-shadow: inset 0px 0px 0px 2px black;
+          }
+
+          input {
+            font: $body-2;
+            flex-direction: row;
+            position: relative;
+            border-color: transparent;
+            padding: 0px;
+            cursor: pointer;
+            padding: 10px 0px 10px 14px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .flex-end {
+    @include flex(center, flex-end);
+    align-self: stretch;
+  }
+}
+
+// .ant-select-single {
+//   @include flex(center, space-between);
+//   border-radius: 4px;
+//   border: 1px solid rgba(120, 120, 120, 0.5);
+//   align-self: stretch;
+// }
+
+// .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+//   @include flex(center, space-between);
+//   padding: 12px 16px;
+//   background: $white;
+//   font: $body-2;
+//   height: fit-content;
+// }
+
+// .ant-select-dropdown .ant-select-item {
+//   font: $body-2;
+//   padding: 8px;
+//   border-radius: 0px;
+
+//   &:first-of-type {
+//     border-radius: 8px 8px 0px 0px;
+//   }
+//   &:last-of-type {
+//     border-radius: 0px 0px 8px 8px;
+//   }
+// }
+// .ant-select-dropdown
+//   .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+//   background-color: $light-blue-2;
+// }
+// .ant-select-selection-search {
+//   height: fit-content;
+// }
