@@ -18,7 +18,7 @@ import { useState } from "react";
 
 const Header = () => {
   const data = useContext(AppContext);
-  const isLoggedIn = (data.isLoggedIn) ? data.isLoggedIn : false;
+  const isLoggedIn = data.isLoggedIn ? data.isLoggedIn : false;
   const user = data.user;
 
   const [isUserDropdown, setIsUserDropdown] = useState(false);
@@ -95,45 +95,32 @@ const Header = () => {
             <div className="line" />
           </div>
         </div>
-        {
-          (isLoggedIn) ? 
-          (
-            <div className="header__user-dropdown" id="header__user-dropdown">
-              <div className="header__user-dropdown__main" onClick={ToggleDropdown}>
-                <Avatar src={user ? user.photoURL : ''}></Avatar>
-                <p>{user.displayName}</p>
-                {(isUserDropdown) ? 
-                  (
-                    <BiChevronDown className="header__user-dropdown__arrow"/>
-                  ) :
-                  (
-                    <BiChevronRight className="header__user-dropdown__arrow"/>
-                  )
-                }
+        {isLoggedIn ? (
+          <div className="header__user-dropdown" id="header__user-dropdown">
+            <div
+              className="header__user-dropdown__main"
+              onClick={ToggleDropdown}
+            >
+              <Avatar src={user ? user.photoURL : ""}></Avatar>
+              <p>{user.displayName}</p>
+              {isUserDropdown ? (
+                <BiChevronDown className="header__user-dropdown__arrow" />
+              ) : (
+                <BiChevronRight className="header__user-dropdown__arrow" />
+              )}
+            </div>
+
+            <div
+              className="header__user-dropdown__content"
+              id="header-user-dropdown-items"
+            >
+              <div className="header__user-dropdown__content__item">
+                <BiBookBookmark className="header__user-dropdown__content__item__icon" />
+                <p>Phòng đã đặt</p>
               </div>
-              
-              <div className="header__user-dropdown__content" id="header-user-dropdown-items">
-                <div className="header__user-dropdown__content__item">
-                  <BiBookBookmark className="header__user-dropdown__content__item__icon"/>
-                  <p>Phòng đã đặt</p>
-                </div>
-                <div className="header__user-dropdown__content__item">
-                  <BiUser className="header__user-dropdown__content__item__icon"/>
-                  <p>Tài khoản</p>
-                </div>
-                <Popconfirm
-                  title="Thông báo"
-                  description="Bạn có muốn đăng xuất?"
-                  onConfirm={LogOut}
-                  okText="Có"
-                  cancelText="Không"
-                >
-                  <div className="header__user-dropdown__content__item log-out">
-                    <BiLogOut className="header__user-dropdown__content__item__icon"/>
-                    <p>Đăng xuất</p>
-                  </div>
-                </Popconfirm>
-                
+              <div className="header__user-dropdown__content__item">
+                <BiUser className="header__user-dropdown__content__item__icon" />
+                <p>Tài khoản</p>
               </div>
               <Popconfirm
                 title="Thông báo"
@@ -148,6 +135,18 @@ const Header = () => {
                 </div>
               </Popconfirm>
             </div>
+            <Popconfirm
+              title="Thông báo"
+              description="Bạn có muốn đăng xuất?"
+              onConfirm={LogOut}
+              okText="Có"
+              cancelText="Không"
+            >
+              <div className="header__user-dropdown__content__item log-out">
+                <BiLogOut className="header__user-dropdown__content__item__icon" />
+                <p>Đăng xuất</p>
+              </div>
+            </Popconfirm>
           </div>
         ) : (
           <div className="header__login-signup" id="header__login-signup">
