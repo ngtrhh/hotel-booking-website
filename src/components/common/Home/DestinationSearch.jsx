@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import { BsGeoAlt, BsXLg } from "react-icons/bs";
+import { AppContext } from "../../../Context/AppProvider";
 
 const DestinationSearch = () => {
   const data = [
@@ -8,7 +9,7 @@ const DestinationSearch = () => {
     { name: "Banana" },
     { name: "Cherry" },
   ];
-  const [value, setValue] = useState("");
+  const {searchPlaceValue, setSearchPlaceValue} = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
   const [canDelete, setCanDelete] = useState(false);
   const [reccently, setRecently] = useState(data);
@@ -31,7 +32,7 @@ const DestinationSearch = () => {
     updatedList = updatedList.filter((item) => {
       return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
     });
-    setValue(e.target.value);
+    setSearchPlaceValue(e.target.value);
     setRecently(updatedList);
     if (e.target.value != "") setCanDelete(true);
     else setCanDelete(false);
@@ -39,7 +40,7 @@ const DestinationSearch = () => {
 
   const handleClear = () => {
     setCanDelete(false);
-    setValue("");
+    setSearchPlaceValue("");
     setRecently(data);
     inputRef.current && inputRef.current.focus();
   };
@@ -60,7 +61,7 @@ const DestinationSearch = () => {
         <div className="label">Địa điểm</div>
         <input
           placeholder="Nhập tên thành phố hoặc tên khách sạn"
-          value={value}
+          value={searchPlaceValue}
           style={{ width: "312px" }}
           onChange={handleFilter}
           ref={inputRef}
@@ -81,7 +82,7 @@ const DestinationSearch = () => {
                 key={index}
                 className="item"
                 onClick={() => {
-                  setValue(item.name);
+                  setSearchPlaceValue(item.name);
                   setIsOpen(false);
                   setCanDelete(true);
                 }}

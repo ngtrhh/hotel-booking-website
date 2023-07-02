@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { AppContext } from '../../../../Context/AppProvider';
 import FilterCheckbox from './FilterCheckbox'
 
 
 const PaymentFilter = () => {
-  
-	const [checkboxValues, setCheckboxValues] = useState([
-		{ name: 'freeCancellation', label: 'Hủy phòng miễn phí', checked: false },
-		{ name: 'payLater', label: 'Đặt trước, trả tiền sau', checked: false },
-		{ name: 'payAtProperty', label: 'Thanh toán tại nơi ở', checked: false },
-		{ name: 'payNow', label: 'Trả tiền ngay', checked: false },
-		{ name: 'creditCardNotRequired', label: 'Đặt không cần thẻ tín dụng', checked: false },
-		{ name: 'noDepositRequired', label: 'Đặt phòng không cần đặt cọc', checked: false },
-		{ name: 'ewalletPayment', label: 'Thanh toán bằng ví điện tử', checked: false },
-	  ]);
+	const dataProvided = useContext(AppContext);
+	const [checkboxValues, setCheckboxValues] = [dataProvided.paymentFilter, dataProvided.setPaymentFilter];
 
   const handleCheckboxChange = (name) => {
     setCheckboxValues(prevValues => {

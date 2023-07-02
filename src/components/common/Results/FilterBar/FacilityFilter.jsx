@@ -1,32 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { AppContext } from '../../../../Context/AppProvider';
 import FilterCheckbox from './FilterCheckbox'
 
 
 const FacilityFilter = () => {
-  
-	const [checkboxValues, setCheckboxValues] = useState([
-		{ name: 'wifi', label: 'Wifi', checked: false },
-		{ name: 'freeBreakfast', label: 'Bữa sáng miễn phí', checked: false },
-		{ name: 'pool', label: 'Hồ bơi', checked: false },
-		{ name: 'parking', label: 'Chỗ đậu xe', checked: false },
-		{ name: 'restaurant', label: 'Nhà hàng', checked: false },
-		{ name: '24hReception', label: 'Lễ tân 24h', checked: false },
-		{ name: 'elevator', label: 'Thang máy', checked: false },
-		{ name: 'airportShuttle', label: 'Đưa đón sân bay', checked: false },
-		{ name: 'gym', label: 'Trung tâm thể dục', checked: false },
-		{ name: 'dailyCleaning', label: 'Dọn phòng hằng ngày', checked: false },
-		{ name: 'meetingRoom', label: 'Phòng họp', checked: false },
-		{ name: 'petFriendly', label: 'Cho phép thú cưng', checked: false },
-		{ name: 'wheelchairAccessible', label: 'Lối đi cho xe lăn', checked: false },
-		{ name: 'bar', label: 'Quầy bar', checked: false },
-		{ name: 'gymFacilities', label: 'Phòng tập gym', checked: false },
-		{ name: 'bbqFacilities', label: 'Tiệc BBQ', checked: false },
-		{ name: 'babysittingServices', label: 'Dịch vụ trông trẻ', checked: false },
-		{ name: 'familyFriendly', label: 'Thích hợp cho gia đình/trẻ em', checked: false },
-		{ name: 'golfCourse', label: 'Sân golf', checked: false },
-		{ name: 'smokingArea', label: 'Khu vực hút thuốc', checked: false },
-		{ name: 'massageSpa', label: 'Massage & Spa', checked: false }
-	]);
+	const dataProvided = useContext(AppContext);
+	const [checkboxValues, setCheckboxValues] = [dataProvided.facilityFilter, dataProvided.setFacilityFilter];
 
 	const [isContentExpanded, setIsContentExpanded] = useState(true);
 	  

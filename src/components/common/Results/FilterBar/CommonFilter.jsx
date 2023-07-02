@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { AppContext } from '../../../../Context/AppProvider';
 import FilterCheckbox from './FilterCheckbox'
 
 
 const CommonFilter = () => {
-  
-  const [checkboxValues, setCheckboxValues] = useState([
-    { name: 'includeBreakfast', label: 'Bao gồm bữa sáng', checked: false },
-    { name: 'freeCancellation', label: 'Hủy phòng miễn phí', checked: false },
-    { name: 'payLater', label: 'Đặt trước, trả tiền sau', checked: false },
-    { name: 'singleBed', label: 'Giường đơn', checked: false }
-  ]);
+  const dataProvided = useContext(AppContext);
+  const [checkboxValues, setCheckboxValues] = [dataProvided.commonFilter ,dataProvided.setCommonFilter];
 
   const handleCheckboxChange = (name) => {
     setCheckboxValues(prevValues => {

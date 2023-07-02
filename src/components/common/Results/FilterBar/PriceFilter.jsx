@@ -14,10 +14,13 @@ import {
 } from "react-icons/bs";
 import { Input, Slider } from "antd";
 import { useState } from "react";
+import { useContext } from "react";
+import { AppContext } from "../../../../Context/AppProvider";
 
 const PriceFilter = () => {
-	//Nhớ chỗ này mốt lấy dữ liệu
-	const [priceInput, setPriceInput] = useState([0, 3000000])
+	const dataProvided = useContext(AppContext)
+	const [priceInput, setPriceInput] = [dataProvided.priceInput, dataProvided.setPriceInput];
+	
 	const handleSliderOnChange = (value) => {
 		setPriceInput(value);
 	}
@@ -41,9 +44,9 @@ const PriceFilter = () => {
 				className="results__filter__price-filter__slider"
 				range
 				min={0} 
-				max={3000000}
-				step={100000}
-				defaultValue={[0, 3000000]}
+				max={20000000}
+				step={200000}
+				defaultValue={[0, 20000000]}
 				onChange={(value) => handleSliderOnChange(value)}
 			/>
 		</div>

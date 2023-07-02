@@ -1,21 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { BsCalendar2 } from "react-icons/bs";
 import { DateRange } from "react-date-range";
 import { format, addDays, differenceInDays } from "date-fns";
 import vi from "date-fns/locale/vi";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
+import { AppContext } from "../../../Context/AppProvider";
 
 const Calendar = (props) => {
+  const dataProvided = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
-  const [range, setRange] = useState([
-    {
-      startDate: new Date(),
-      endDate: addDays(new Date(), 1),
-      key: "selection",
-      showDateDisplay: false,
-    },
-  ]);
+  const range = dataProvided.searchDateRange;
+  const setRange = dataProvided.setSearchDateRange;
 
   const ref = useRef(null);
 
@@ -49,11 +45,9 @@ const Calendar = (props) => {
             readOnly
             placeholder="Chọn ngày"
             value={
-              isOpen
-                ? `${format(range[0].startDate, "eee, dd-MM-yyyy", {
+              `${format(range[0].startDate, "eee, dd-MM-yyyy", {
                     locale: vi,
                   })}`
-                : null
             }
             style={{ width: "160px" }}
           />
@@ -74,11 +68,9 @@ const Calendar = (props) => {
             readOnly
             placeholder="Chọn ngày"
             value={
-              isOpen
-                ? `${format(range[0].endDate, "eee, dd-MM-yyyy", {
+              `${format(range[0].endDate, "eee, dd-MM-yyyy", {
                     locale: vi,
                   })}`
-                : null
             }
             style={{ width: "160px" }}
             onClick={() => {

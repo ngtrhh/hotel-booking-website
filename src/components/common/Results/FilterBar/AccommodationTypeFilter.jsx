@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { AppContext } from '../../../../Context/AppProvider';
 import FilterCheckbox from './FilterCheckbox'
 
 
 const AccommodationTypeFilter = () => {
-  
-	const [checkboxValues, setCheckboxValues] = useState([
-		{ name: 'hotel', label: 'Khách sạn', checked: false },
-		{ name: 'apartment', label: 'Căn hộ', checked: false },
-		{ name: 'homestay', label: 'Homestay', checked: false },
-		{ name: 'resort', label: 'Resort', checked: false },
-		{ name: 'guesthouse', label: 'Nhà nghỉ', checked: false },
-		{ name: 'villa', label: 'Biệt thự', checked: false }
-	]);
+  const dataProvided = useContext(AppContext);
+	const [checkboxValues, setCheckboxValues] = [dataProvided.accommodationTypeFilter, dataProvided.setAccommodationTypeFilter];
 
   const handleCheckboxChange = (name) => {
     setCheckboxValues(prevValues => {

@@ -60,7 +60,7 @@ export const LoginWithGgFb = (methodType, setIsSuccess) => {
 }
 
 export const addDocument = async (collectionName, data) => {
-	const docRef = await addDoc(collection(db, collectionName), {
+	await setDoc(doc(db, "users", data.uid), {
 		...data
 	});
 }

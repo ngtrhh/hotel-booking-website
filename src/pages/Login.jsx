@@ -75,7 +75,8 @@ export const Login = () => {
           photoURL: user.photoURL,
           providerId: user.providerId,
           createdAt: user.metadata.createdAt,
-          keywords: generateKeywords(user.displayName)
+          keywords: generateKeywords(user.displayName),
+          lovedRoomsId: []
         }
         addDocument("users", data);
       }

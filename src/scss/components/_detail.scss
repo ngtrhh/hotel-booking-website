@@ -74,6 +74,7 @@
         &__title {
           @include flex(flex-start, flex-start);
           flex-direction: row;
+          gap: 20px;
 
           &__content {
             @include flex(center, flex-start);
