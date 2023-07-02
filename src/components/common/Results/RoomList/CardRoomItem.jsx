@@ -70,13 +70,12 @@ export const CardRoomItem = (props) => {
         setSelectedAccomId(roomData.accomId);
         setAccomData(roomData);
         window.scrollTo(0, 0);
-        navigate('/detail');
-
+        navigate('/detail/' + roomData.accomId.toString());
     }
 
 
     return(
-        <div className="results-card-roomitem" onClick={ViewAccomDetail}>
+        <div className="results-card-roomitem">
             <div className="results-card-roomitem__room-img" style={{ 
                 backgroundImage: `url("${roomData.images[0]}")` 
             }}>
@@ -128,7 +127,7 @@ export const CardRoomItem = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="results-card-roomitem__detail">
+            <div  onClick={ViewAccomDetail} className="results-card-roomitem__detail">
                 <div className="results-card-roomitem__detail__info">
                     <div className="results-card-roomitem__detail__info__basic-info">
                         <div className="results-card-roomitem__detail__info__basic-info__name-address">

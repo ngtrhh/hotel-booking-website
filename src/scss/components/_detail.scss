@@ -75,6 +75,7 @@
           @include flex(flex-start, flex-start);
           flex-direction: row;
           gap: 20px;
+          align-items: center;
 
           &__content {
             @include flex(center, flex-start);
@@ -92,6 +93,7 @@
               background: $dark-blue;
               color: $white;
               border-radius: 50px;
+              min-width: 120px;
             }
 
             &__stars {

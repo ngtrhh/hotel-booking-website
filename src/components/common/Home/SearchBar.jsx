@@ -11,7 +11,7 @@ const SearchBar = (props) => {
   const navigate = useNavigate();
   const type = props.type ? props.type : "home";
   return (
-    <div className="search-bar">
+    <div className="search-bar" style={{zIndex : 999}}>
       <div className="container">
         {type !== "detail" ? (
           <>
@@ -24,7 +24,7 @@ const SearchBar = (props) => {
         {type !== "detail" && <SearchButton onClick={navigate('/results')} />}
       </div>
       {type === "detail" && (
-        <Button onClick={navigate('/results')} className="cyan" preIcon={() => <BsSearch size={20} />}>
+        <Button className="cyan" preIcon={() => <BsSearch size={20} />}>
           Cập nhật
         </Button>
       )}

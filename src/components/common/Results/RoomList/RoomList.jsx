@@ -408,11 +408,28 @@ export const RoomList = (roomsData) => {
                 bedTypes: ['Giường đơn', 'Hai giường đơn', 'Giường đôi', 'Giường đôi lớn']
             }
         ];
-        let randomIndex = (Math.floor(Math.random() * 9) + 1) -1;
-        for(let i = 1; i <= 360; i++){
-            randomIndex = (Math.floor(Math.random() * 9) + 1) -1;
-            addDocument('accoms', {...data[randomIndex], accomId : 'accom' + randomIndex.toString()})
-        }
+        const rulesData = [
+            {
+                accomId: 'accom1',
+                checkInTime: 'Từ ' + ((Math.floor(Math.random() * 24) + 1) -1).toString() + ':00h',
+                checkOutTime: 'Trước ' + ((Math.floor(Math.random() * 24) + 1) -1).toString() + ':00h',
+                checkInRule: 'Khách hàng được yêu cầu xuất trình giấy tờ tùy thân trước khi nhận phòng',
+                childRule: 'Trẻ em dưới 12 tuổi được lưu trú miễn phí nếu sử dụng giường có sẵn trong phòng',
+                bedRule: 'Nôi cũi và giường phụ có sẵn và có thể yêu cầu trước. Phụ phí có thể áp dụng.',
+                petRule: 'Không cho phép vật nuôi',
+                acceptedCard: 'Thẻ ngân hàng, thẻ tín dụng, thẻ ghi nợ'
+            },
+        ]
+        const roomsData = [
+            {
+                name: 'Phòng đôi '
+            }
+        ]
+        // let randomIndex = (Math.floor(Math.random() * 9) + 1) -1;
+        // for(let i = 1; i <= 360; i++){
+        //     randomIndex = (Math.floor(Math.random() * 9) + 1) -1;
+        //     addDocument('accoms', {...data[randomIndex], accomId : 'accom' + randomIndex.toString()})
+        // }
     }
 
     return(

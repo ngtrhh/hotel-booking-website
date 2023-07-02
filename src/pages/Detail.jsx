@@ -26,6 +26,10 @@ import {
   MdOutlineBedroomChild,
   MdAttribution,
   MdPets,
+  MdLocalBar,
+  MdSportsGymnastics,
+  MdSportsFootball,
+  MdFastfood
 } from "react-icons/md";
 import SearchBar from "../components/common/Home/SearchBar";
 import AvailableRoom from "../components/common/Detail/AvailableRoom";
@@ -36,8 +40,28 @@ import { AppContext } from "../Context/AppProvider";
 export const Detail = (props) => {
   const ref = useRef(null);
   const dataProvided = useContext(AppContext);
+  const {user} = dataProvided;
   const {accomData} = props;
+  const facilitiesList = ['Hồ bơi', 'Chỗ đậu xe', 'Quầy bar',
+  'Wifi', 'Phòng gym', 'Trung tâm thể dục', 'Thích hợp cho gia đình/trẻ em',
+  'Bữa sáng miễn phí'];
+  const facilityIcon = [MdPool, MdTimeToLeave, MdLocalBar,
+    MdWifi, MdSportsGymnastics, MdSportsFootball, MdChildCare,
+    MdFastfood];
+  
+  const goBookRoomRef = useRef(null)
+  const ScrollToBookRoom = () => {
+    goBookRoomRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });    
+  }
 
+  let loved = false;
+  try{
+      loved = (user) ? (((user.lovedRoomsId).includes(accomData.accomId)) ? true : false) : false;
+  }
+  catch{
+      loved = false;
+  }
+  
   return (
     <div className="detail">
       <Back />
@@ -78,20 +102,26 @@ export const Detail = (props) => {
                 <div className="infor__title__content__name">{accomData.name}</div>
                 <div className="infor__title__content__type">{accomData.type}</div>
                 <div className="infor__title__content__stars">
-                  <BsStarFill size={28} />
-                  <BsStarFill size={28} />
-                  <BsStarFill size={28} />
-                  <BsStarFill size={28} />
+                  {Array.from({ length: accomData.star }, (_, index) => (
+                    <BsStarFill key={index} size={28} />
+                  ))}
                 </div>
               </div>
               <div className="infor__title__heart">
-                <BsHeart size={36} />
+                {
+                  (loved) ? (
+                    <BsHeartFill size={36} color='red'/>
+                  ) : (
+                    <BsHeart size={36} />
+                  )
+                }
+                
               </div>
             </div>
             <div className="infor__address">
               <BsGeoAltFill size={24} />
               <div className="infor__address__content">
-                Bãi Dài, Cửa Cạn, Phú Quốc, Việt Nam
+                {accomData.address}
               </div>
             </div>
             <hr className="line" />
@@ -99,16 +129,7 @@ export const Detail = (props) => {
               <div className="section__title">Tổng quan</div>
               <div className="section__content">
                 <div className="description">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  {accomData.summary}
                 </div>
                 <div className="more">Xem thêm</div>
               </div>
@@ -117,24 +138,19 @@ export const Detail = (props) => {
             <div className="section">
               <div className="section__title">Tiện nghi</div>
               <div className="section__content" id="facilities">
-                <Facility
-                  content="Hồ bơi ngoài trời"
-                  icon={<MdPool size={24} />}
-                />
-                <Facility
-                  content="Xe đưa đón sân bay"
-                  icon={<MdTimeToLeave size={24} />}
-                />
-                <Facility
-                  content="Phòng không hút thuốc"
-                  icon={<MdSmokeFree size={24} />}
-                />
-
-                <Facility
-                  content="Giáp biển"
-                  icon={<MdOutlineBeachAccess size={24} />}
-                />
-                <Facility content="Wifi miễn phí" icon={<MdWifi size={24} />} />
+                {accomData.facilities.map((facility, index) => {
+                  if(facilitiesList.includes(facility)){
+                    const IconComponent = facilityIcon[facilitiesList.indexOf(facility)];
+                    console.log(facilitiesList.indexOf(facility));
+                    return (
+                      <Facility
+                        key={index}
+                        content={facility}
+                        icon={<IconComponent size={24} />}
+                      />
+                    );
+                  }
+                })}
                 <Facility
                   content="Dịch vụ phòng"
                   icon={<MdOutlineRoomService size={24} />}
@@ -149,12 +165,12 @@ export const Detail = (props) => {
               <div className="rating-price__rating">
                 <div className="rating-price__rating__number">10.0</div>
                 <div className="rating-price__rating__number-2">
-                  (<u>231 đánh giá</u>)
+                  (<u>{accomData.ratingCount + ' đánh giá'}</u>)
                 </div>
               </div>
-              <div className="rating-price__price">844.000 đ</div>
+              <div className="rating-price__price">{accomData.price + ' đ'}</div>
             </div>
-            <Button className="fill cyan">Chọn phòng</Button>
+            <Button onClick={ScrollToBookRoom} className="fill cyan">Chọn phòng</Button>
             <div className="line" style={{ margin: "32px 0" }} />
             <div className="map">
               <BsGeoAltFill size={48} />
@@ -188,9 +204,9 @@ export const Detail = (props) => {
         </div>
 
         <div className="section">
-          <div className="section__title">Phòng còn trống</div>
+          <div ref={goBookRoomRef} className="section__title">Phòng còn trống</div>
           <div className="section__content" id="rooms">
-            <SearchBar type="detail" />
+            <SearchBar type="detail"/>
             <div className="four-cols wrap">
               <AvailableRoom />
               <AvailableRoom />

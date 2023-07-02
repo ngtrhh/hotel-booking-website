@@ -55,7 +55,7 @@ const PublicRoutes = () => {
       { path: "/results", element: Results},
       { path: "/booking", element: Booking },
       ...accomsData.map((accom, index) => ({
-        path: `/detail/accom${index}`,
+        path: `/detail/${accom.accomId}`,
         element: () => <Detail accomData={accom} />
       })),
       { path: "/login", element: Login, layout: null },
