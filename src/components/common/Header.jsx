@@ -135,18 +135,6 @@ const Header = () => {
                 </div>
               </Popconfirm>
             </div>
-            <Popconfirm
-              title="Thông báo"
-              description="Bạn có muốn đăng xuất?"
-              onConfirm={LogOut}
-              okText="Có"
-              cancelText="Không"
-            >
-              <div className="header__user-dropdown__content__item log-out">
-                <BiLogOut className="header__user-dropdown__content__item__icon" />
-                <p>Đăng xuất</p>
-              </div>
-            </Popconfirm>
           </div>
         ) : (
           <div className="header__login-signup" id="header__login-signup">

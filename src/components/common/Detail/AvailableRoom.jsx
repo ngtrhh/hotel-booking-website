@@ -1,56 +1,72 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../Button";
 import { BsImages, BsPersonFill } from "react-icons/bs";
 import { MdKingBed, MdZoomOutMap } from "react-icons/md";
+import { AppContext } from "../../../Context/AppProvider";
+import { useNavigate } from "react-router-dom";
 
-const AvailableRoom = () => {
+const AvailableRoom = (props) => {
+  const dataProvided = useContext(AppContext);
+  const {accomData, selectedRoom, setSelectedRoom} = dataProvided;
+  const {roomData, image} = props;
+  const navigation = useNavigate();
+  const BookNow = () => {
+    setSelectedRoom({...roomData, image: image});
+    window.scrollTo(0, 0);
+    navigation('/booking')
+  }
   return (
     <div className="available-room">
       <img
         className="image"
-        src={require("../../../assets/images/ImageBanner.png")}
+        src={image}
       />
       <div className="more-images">
         +5 <BsImages size={20} />
       </div>
       <div className="wrapper">
-        <div className="title">Tên phòng</div>
+        <div className="title">{roomData.name}</div>
 
         <div className="infor-room">
           <div className="infor-room__item">
-            <MdKingBed size={20} />1 giường đôi lớn
+            <MdKingBed size={20} />{roomData.bed}
           </div>
           <div className="infor-room__item">
-            <BsPersonFill size={20} />2 người
+            <BsPersonFill size={20} />{roomData.capacity}
           </div>
           <div className="infor-room__item">
             <MdZoomOutMap size={20} />
-            28m2
+            {roomData.area}
           </div>
         </div>
 
         <div className="facilities">
-          <span>Ban công</span>
-          <span>Nhìn ra vườn</span>
-          <span>Điều hòa không khí</span>
+          {(roomData.facility).map((faci) => {
+            return (
+              <span>{faci}</span>
+            )
+          })}
           <span>Xem tất cả tiện ích</span>
         </div>
 
         <div className="offer">
-          <span>Miễn phí hủy phòng</span>
-          <span>Bao bữa sáng</span>
+          {(roomData.servive).map((sv) => {
+              return (
+                <span>{sv}</span>
+              )
+            })}
         </div>
 
         <Button className="outline">Xem chi tiết phòng</Button>
         <div className="price-wrapper">
           <div className="price-wrapper__column">
-            <div className="price-old">1.110.000 đ</div>
-            <div className="price-new">844.000 đ</div>
+            <div className="price-old">{roomData.originalPrice + " đ"}</div>
+            <div className="price-new">{roomData.price}</div>
             <div className="price-detail">Đã bao gồm thuế và phí</div>
           </div>
           <div className="price-wrapper__column">
-            <div className="percent-sale">Tiết kiệm 60%</div>
-            <Button className="cyan glow">Đặt ngay</Button>
+            <div className="percent-sale">{'Tiết kiệm ' + roomData.saleoff}</div>
+            <Button onClick={BookNow} className="cyan glow">Đặt ngay</Button>
           </div>
         </div>
       </div>

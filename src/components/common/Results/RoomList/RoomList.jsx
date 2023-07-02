@@ -8,6 +8,8 @@ import Pagination from "./Pagination ";
 import { useContext } from "react";
 import { AppContext } from "../../../../Context/AppProvider";
 import { addDocument } from "../../../../firebase/services";
+import firebase, { db } from "../../../../firebase/config";
+import { doc, setDoc, addDoc, collection  } from "firebase/firestore";
 
 export const RoomList = (roomsData) => {
     const dataProvided = useContext(AppContext);
@@ -420,16 +422,93 @@ export const RoomList = (roomsData) => {
                 acceptedCard: 'Thẻ ngân hàng, thẻ tín dụng, thẻ ghi nợ'
             },
         ]
-        const roomsData = [
+        const rooms = [
             {
-                name: 'Phòng đôi '
+                roomId: 'room1',
+                name: 'Phòng đôi nhìn ra biển',
+                bed: '1 Giường đôi lớn',
+                capacity: '2 người',
+                area: '50m2',
+                facility: [
+                    'Ban công',
+                    'View biển',
+                    'Điều hòa không khí'
+                ],
+                servive: [
+                    'Miễn phí hủy phòng',
+                    'Bao bữa sáng'
+                ],
+                originalPrice: '7.000.000',
+                price: '4.300.000 đ',
+                saleoff: '40%'
+            },
+            {
+                roomId: 'room2',
+                name: 'Phòng cho gia đình',
+                bed: '1 Giường đôi lớn',
+                capacity: '4 người',
+                area: '60m2',
+                facility: [
+                    'Ban công',
+                    'View biển',
+                    'Điều hòa không khí'
+                ],
+                servive: [
+                    'Dịch vụ dọn phòng',
+                    'Bữa sáng miễn phí'
+                ],
+                originalPrice: '10.000.000',
+                price: '5.000.000 đ',
+                saleoff: '50%'
+            },
+            {
+                roomId: 'room3',
+                name: 'Phòng đơn',
+                bed: '1 Giường đơn',
+                capacity: '1 người',
+                area: '40m2',
+                facility: [
+                    'Ban công',
+                    'View biển',
+                    'Điều hòa không khí'
+                ],
+                servive: [
+                    'Dịch vụ dọn phòng',
+                    'Bữa sáng miễn phí'
+                ],
+                originalPrice: '5.000.000',
+                price: '2.000.000 đ',
+                saleoff: '60%'
+            },
+            {
+                roomId: 'room4',
+                name: 'Phòng hạng thương gia',
+                bed: '1 Giường đơn',
+                capacity: '1 người',
+                area: '50m2',
+                facility: [
+                    'Ban công',
+                    'View biển',
+                    'Điều hòa không khí'
+                ],
+                servive: [
+                    'Dịch vụ dọn phòng',
+                    'Bữa sáng miễn phí'
+                ],
+                originalPrice: '8.000.000',
+                price: '4.000.000 đ',
+                saleoff: '50%'
             }
-        ]
+        ];
         // let randomIndex = (Math.floor(Math.random() * 9) + 1) -1;
         // for(let i = 1; i <= 360; i++){
         //     randomIndex = (Math.floor(Math.random() * 9) + 1) -1;
         //     addDocument('accoms', {...data[randomIndex], accomId : 'accom' + randomIndex.toString()})
         // }
+        // for(let i = 0; i < 4; i++){
+        //     addDocument('rooms', rooms[i]);
+        // }
+        setDoc(doc(db, "rooms", 'room4'), {...rooms[3]});
     }
 
     return(

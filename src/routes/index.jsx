@@ -11,19 +11,19 @@ import { connectFirestoreEmulator, limit } from 'firebase/firestore';
 import { doc, onSnapshot } from "firebase/firestore";
 import { collection, getDocs, query } from "firebase/firestore";
 
-let publicRoutes = [
-  { path: "/", element: Home, layout: HomeLayout },
-  { path: "/results", element: Results },
-  { path: "/detail", element: Detail },
-  { path: "/booking", element: Booking },
-  { path: "/booking-history", element: BookingHistory },
-  { path: "/favourite", element: Favourite },
-  { path: "/profile", element: Profile },
-  { path: "/edit-profile", element: EditProfile },
-  { path: "/login", element: Login, layout: null },
-  { path: "/register", element: Register, layout: null },
-  { path: "/forgot", element: ForgotPassword, layout: null },
-];
+// let publicRoutes = [
+//   { path: "/", element: Home, layout: HomeLayout },
+//   { path: "/results", element: Results },
+//   { path: "/detail", element: Detail },
+//   { path: "/booking", element: Booking },
+//   { path: "/booking-history", element: BookingHistory },
+//   { path: "/favourite", element: Favourite },
+//   { path: "/profile", element: Profile },
+//   { path: "/edit-profile", element: EditProfile },
+//   { path: "/login", element: Login, layout: null },
+//   { path: "/register", element: Register, layout: null },
+//   { path: "/forgot", element: ForgotPassword, layout: null },
+// ];
 
 const GetAccomsData = (setAccomsData) => {
   useEffect(() => {
@@ -60,18 +60,17 @@ const PublicRoutes = () => {
       })),
       { path: "/login", element: Login, layout: null },
       { path: "/register", element: Register, layout: null },
-      { path: "/forgot", element: ForgotPassword, layout: null }
+      { path: "/forgot", element: ForgotPassword, layout: null },
+      { path: "/booking-history", element: BookingHistory},
+      { path: "/favourite", element: Favourite },
+      { path: "/profile", element: Profile },
+      { path: "/edit-profile", element: EditProfile }
     ]);
   }, [accomsData]);
-
-  useEffect(() => {
-    console.log(data);
-    console.log(publicRoutes);
-  }, [data])
   
   return data;
 };
 
 export default PublicRoutes;
 
-export { publicRoutes };
+// export { publicRoutes };

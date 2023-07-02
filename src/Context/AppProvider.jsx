@@ -36,6 +36,27 @@ export const GetAcooms = (setAccoms) => {
 	}, []);
 }
 
+const GetRoomsData = (setRooms) => {
+	React.useEffect(() => {
+
+		const collectionRef = collection(db, 'rooms');
+
+		const q = query(collectionRef, limit(40));
+
+		const unsubscribe = onSnapshot(q, (querySnapshot) => {
+			const roomsData = [];
+			querySnapshot.forEach((doc) => {
+				roomsData.push({
+					...doc.data()
+				});
+			});
+			setRooms(roomsData);
+		});
+
+		return unsubscribe;
+	}, []);
+}
+
 export default function AppProvider ({children}) {
 
 	//Data User
@@ -143,11 +164,14 @@ export default function AppProvider ({children}) {
 
 	//Details
 	const [selectedAccomId, setSelectedAccomId] = useState('');
+	const [selectedRoom, setSelectedRoom] = useState('');
 	const [accomData, setAccomData] = useState({});
+	const [rooms, setRooms] = useState([]);
+	GetRoomsData(setRooms);
 	
-	// useEffect(() =>{
-	// 	console.log(accoms);
-	// }, [accoms]);
+	useEffect(() =>{
+		console.log(selectedRoom);
+	}, [selectedRoom]);
 	
 	// const [isAddRoomVisible, setIsAddRoomVisible] = useState(false);
 	// const [isInviteVisible, setIsInviteVisible] = useState(false);
@@ -187,7 +211,9 @@ export default function AppProvider ({children}) {
 			bedTypeFilter, setBedTypeFilter,
 			//Detail
 			selectedAccomId, setSelectedAccomId,
-			accomData, setAccomData
+			selectedRoom, setSelectedRoom,
+			accomData, setAccomData,
+			rooms, setRooms
 		}}>
 			{children}
 		</AppContext.Provider>

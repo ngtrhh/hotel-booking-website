@@ -10,12 +10,16 @@ import {
 import { MdPool } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Button from "../components/common/Button";
+import { useContext } from "react";
+import { AppContext } from "../Context/AppProvider";
 
-export const Booking = () => {
+export const Booking = (props) => {
+  const dataProvided = useContext(AppContext);
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState("type 1");
   const [bankSelected, setBankSelected] = useState(1);
 
+  const {accomData, setAccomData, selectedRoom, setSelectedRoom} = dataProvided;
   const steps = [
     {
       title: "Thông tin đặt phòng của bạn",
@@ -24,12 +28,12 @@ export const Booking = () => {
           <div className="wrapper">
             <div className="wrapper__title">Thông tin đặt phòng</div>
             <div className="infor">
-              <img className="infor__image" src={image} />
+              <img className="infor__image" src={selectedRoom.image} />
               <div className="infor__content">
                 <div className="infor__content__accomodation-name">
-                  Tên phòng thật dài
+                  {selectedRoom.name}
                 </div>
-                <div className="infor__content__room-name">Tên chỗ nghỉ</div>
+                <div className="infor__content__room-name">{accomData.name}</div>
                 <div className="infor__content__address">
                   <BsGeoAltFill size={18} />
                   <span>Địa chỉ Phường, TP</span>

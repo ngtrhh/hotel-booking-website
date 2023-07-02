@@ -40,7 +40,7 @@ import { AppContext } from "../Context/AppProvider";
 export const Detail = (props) => {
   const ref = useRef(null);
   const dataProvided = useContext(AppContext);
-  const {user} = dataProvided;
+  const {user, rooms, setRooms, accoms} = dataProvided;
   const {accomData} = props;
   const facilitiesList = ['Hồ bơi', 'Chỗ đậu xe', 'Quầy bar',
   'Wifi', 'Phòng gym', 'Trung tâm thể dục', 'Thích hợp cho gia đình/trẻ em',
@@ -208,10 +208,15 @@ export const Detail = (props) => {
           <div className="section__content" id="rooms">
             <SearchBar type="detail"/>
             <div className="four-cols wrap">
-              <AvailableRoom />
-              <AvailableRoom />
-              <AvailableRoom />
-              <AvailableRoom />
+              {
+                rooms.map((room, index) => {
+                  return (
+                    <AvailableRoom key={index} 
+                    roomData={room} 
+                    image={accomData.images[index]}/>
+                  )
+                })
+              }
             </div>
           </div>
           <hr className="line" />
@@ -396,9 +401,9 @@ export const Detail = (props) => {
           <div className="section__title">Đánh giá</div>
           <div className="section__content" id="rating">
             <div className="score">
-              <div className="total-score">8,4</div>
+              <div className="total-score">{accomData.rating}</div>
               <div className="total-reviews">
-                <b>231</b> đánh giá
+                <b>{accomData.ratingCount}</b> đánh giá
               </div>
             </div>
             <hr className="line" style={{ margin: "40px 0px" }} />
@@ -538,34 +543,19 @@ export const Detail = (props) => {
           Khách sạn <span> xung quanh</span>
         </div>
         <div className="accommodation-around__content four-cols">
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
+          {
+            accoms.slice(0,4).map((accom) => {
+              return(
+                <RecommendedStay
+                  name={accom.name}
+                  adrress={accom.address}
+                  rating={accom.rating}
+                  reviews={'(' + accom.ratingCount + ' lượt đánh giá)'}
+                  price={accom.price}
+                />
+              )
+            })
+          }
         </div>
       </div>
     </div>
