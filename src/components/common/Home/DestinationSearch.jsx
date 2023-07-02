@@ -73,7 +73,7 @@ const DestinationSearch = () => {
         style={{ visibility: canDelete ? "visible" : "hidden" }}
       />
       {isOpen && (
-        <div id="destination-dropdown">
+        <div id="dropdown">
           <div className="title">Tìm kiếm gần đây</div>
           {reccently.map((item, index) => {
             return (

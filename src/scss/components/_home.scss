@@ -311,7 +311,7 @@
   }
 }
 
-#destination-dropdown {
+#dropdown {
   position: absolute;
   left: 0;
   top: 0;
@@ -324,6 +324,7 @@
   border-radius: 12px;
   box-shadow: 0px 1px 3px 1px rgba(60, 64, 67, 0.3),
     0px 1px 4px 0px rgba(60, 64, 67, 0.15);
+  padding: 4px;
 
   .title {
     align-self: stretch;
@@ -336,11 +337,22 @@
 
   .item {
     flex: 1;
-    margin: 4px;
     padding: 12px 20px;
     color: $dark-grey;
     align-self: stretch;
-    border-radius: 12px;
+
+    &.selected {
+      background-color: $light-blue-2;
+      color: $dark-blue;
+    }
+
+    &:last-of-type {
+      border-radius: 0px 0px 12px 12px;
+    }
+
+    &:first-of-type {
+      border-radius: 12px 12px 0px 0px;
+    }
 
     &:hover {
       color: $dark-blue;
