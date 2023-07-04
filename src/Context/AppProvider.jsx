@@ -15,48 +15,6 @@ import { db } from '../firebase/config';
 
 export const AppContext = React.createContext();
 
-export const GetAcooms = (setAccoms) => {
-	React.useEffect(() => {
-
-		const collectionRef = collection(db, 'accoms');
-
-		const q = query(collectionRef, limit(40));
-
-		const unsubscribe = onSnapshot(q, (querySnapshot) => {
-			const accomsData = [];
-			querySnapshot.forEach((doc) => {
-				accomsData.push({
-					...doc.data()
-				});
-			});
-			setAccoms(accomsData);
-		});
-
-		return unsubscribe;
-	}, []);
-}
-
-const GetRoomsData = (setRooms) => {
-	React.useEffect(() => {
-
-		const collectionRef = collection(db, 'rooms');
-
-		const q = query(collectionRef, limit(40));
-
-		const unsubscribe = onSnapshot(q, (querySnapshot) => {
-			const roomsData = [];
-			querySnapshot.forEach((doc) => {
-				roomsData.push({
-					...doc.data()
-				});
-			});
-			setRooms(roomsData);
-		});
-
-		return unsubscribe;
-	}, []);
-}
-
 export default function AppProvider ({children}) {
 
 	//Data User
@@ -85,7 +43,7 @@ export default function AppProvider ({children}) {
 
 	//Data Acccomodation
 	const [accoms, setAccoms] = useState([]);
-	GetAcooms(setAccoms);
+	useFireStore('accoms', setAccoms);
 
 	//Result Filterbar
 	const [priceInput, setPriceInput] = useState([0, 20000000]);
@@ -167,7 +125,7 @@ export default function AppProvider ({children}) {
 	const [selectedRoom, setSelectedRoom] = useState('');
 	const [accomData, setAccomData] = useState({});
 	const [rooms, setRooms] = useState([]);
-	GetRoomsData(setRooms);
+	useFireStore('rooms', setRooms);
 	
 	useEffect(() =>{
 		console.log(selectedRoom);

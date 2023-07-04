@@ -10,6 +10,7 @@ import {db} from '../firebase/config'
 import { connectFirestoreEmulator, limit } from 'firebase/firestore';
 import { doc, onSnapshot } from "firebase/firestore";
 import { collection, getDocs, query } from "firebase/firestore";
+import useFireStore from "../Hooks/useFireStored";
 
 // let publicRoutes = [
 //   { path: "/", element: Home, layout: HomeLayout },
@@ -26,28 +27,28 @@ import { collection, getDocs, query } from "firebase/firestore";
 // ];
 
 const GetAccomsData = (setAccomsData) => {
-  useEffect(() => {
-    const collectionRef = collection(db, 'accoms');
-    const q = query(collectionRef, limit(40));
+  // useEffect(() => {
+  //   const collectionRef = collection(db, 'accoms');
+  //   const q = query(collectionRef, limit(40));
 
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      const data = [];
-      querySnapshot.forEach((doc) => {
-        data.push({
-          ...doc.data()
-        });
-      });
-      setAccomsData(data);
-    });
+  //   const unsubscribe = onSnapshot(q, (querySnapshot) => {
+  //     const data = [];
+  //     querySnapshot.forEach((doc) => {
+  //       data.push({
+  //         ...doc.data()
+  //       });
+  //     });
+  //     setAccomsData(data);
+  //   });
 
-    return unsubscribe;
-  }, []);
+  //   return unsubscribe;
+  // }, []);
 }
 
 const PublicRoutes = () => {
   const [accomsData, setAccomsData] = useState([]);
   const [data, setData] = useState([]);
-  GetAccomsData(setAccomsData);
+  useFireStore('accoms', setAccomsData);
 
   useEffect(() => {
     setData([

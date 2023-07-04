@@ -24,13 +24,13 @@ export const BookingHistory = () => {
           </div>
           <div className="search-bar__input-wrapper__item">
             <div className="search-bar__input-wrapper__item__label">
-              NGÀY Nhận phòng
+              Ngày Nhận phòng
             </div>
             <input placeholder="Chọn ngày" readOnly />
           </div>
           <div className="search-bar__input-wrapper__item">
             <div className="search-bar__input-wrapper__item__label">
-              Ngày Trả phòng
+              Ngày Trả Phòng
             </div>
             <input placeholder="Chọn ngày" readOnly />
           </div>

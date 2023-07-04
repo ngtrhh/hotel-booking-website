@@ -9,7 +9,7 @@ const ggProvider = new GoogleAuthProvider();
 
 
 
-export const LoginWithGgFb = (methodType, setIsSuccess) => {
+export const LoginWithGgFb = (methodType) => {
 	auth.signOut();
 	let provider = '';
 	if(methodType == 'Google'){
@@ -18,7 +18,6 @@ export const LoginWithGgFb = (methodType, setIsSuccess) => {
 	if(methodType == 'Facebook'){
 		provider = fbProvider;
 	}
-	let isSuccess = false;
 
 	signInWithPopup(auth, provider)
 	.then((result) => {
@@ -43,7 +42,6 @@ export const LoginWithGgFb = (methodType, setIsSuccess) => {
 			}
 			addDocument("users", data);
 		}
-		isSuccess = true;
 	})
 	.catch((error) => {
 		// Handle Errors here.
@@ -56,13 +54,16 @@ export const LoginWithGgFb = (methodType, setIsSuccess) => {
 
 		// ...
 	});
-	setIsSuccess(isSuccess);
 }
 
 export const addDocument = async (collectionName, data) => {
-	await setDoc(doc(db, "users", data.uid), {
+	await setDoc(doc(db, collectionName, data.uid), {
 		...data
 	});
+}
+
+export const getDataFromFirebase = () => {
+	
 }
 
 // tao keywords cho displayName, su dung cho search
