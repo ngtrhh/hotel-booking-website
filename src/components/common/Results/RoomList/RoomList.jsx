@@ -22,15 +22,9 @@ export const RoomList = (roomsData) => {
         seacrchNumOfChild, setSeacrchNumOfChild,
         priceInput, commonFilter, starFilterChoices,
         ratingFilterChoices, accommodationTypeFilter, facilityFilter,
-        paymentFilter, bedTypeFilter
+        paymentFilter, bedTypeFilter,
+        sortOpitons, setSortOpitons
     } = dataProvided
-
-    const [sortOpitons, setSortOpitons] = useState([
-		{ name: 'mostPopular', label: 'Phổ biến nhất', selected: false },
-		{ name: 'highestRating', label: 'Đánh giá cao nhất', selected: false },
-		{ name: 'highestPrice', label: 'Giá cao nhất', selected: false },
-		{ name: 'lowestPrice', label: 'Giá thấp nhất', selected: false }
-	]);
 
     //Nhớ thêm roomId
     const [roomListRawData, setRoomListRawData] = [dataProvided.accoms, dataProvided.setAccoms];

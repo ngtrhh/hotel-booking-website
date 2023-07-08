@@ -120,6 +120,13 @@ export default function AppProvider ({children}) {
 		{ name: 'kingBed', label: 'Giường đôi lớn', checked: false }
 	]);
 
+	const [sortOpitons, setSortOpitons] = useState([
+		{ name: 'mostPopular', label: 'Phổ biến nhất', selected: false },
+		{ name: 'highestRating', label: 'Đánh giá cao nhất', selected: false },
+		{ name: 'highestPrice', label: 'Giá cao nhất', selected: false },
+		{ name: 'lowestPrice', label: 'Giá thấp nhất', selected: false }
+	]);
+
 	//Details
 	const [selectedAccomId, setSelectedAccomId] = useState('');
 	const [selectedRoom, setSelectedRoom] = useState('');
@@ -167,6 +174,7 @@ export default function AppProvider ({children}) {
 			facilityFilter, setFacilityFilter,
 			paymentFilter, setPaymentFilter,
 			bedTypeFilter, setBedTypeFilter,
+			sortOpitons, setSortOpitons,
 			//Detail
 			selectedAccomId, setSelectedAccomId,
 			selectedRoom, setSelectedRoom,
