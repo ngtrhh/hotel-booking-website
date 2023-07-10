@@ -40,7 +40,7 @@ import { AppContext } from "../Context/AppProvider";
 export const Detail = (props) => {
   const ref = useRef(null);
   const dataProvided = useContext(AppContext);
-  const {user, rooms, setRooms, accoms} = dataProvided;
+  const {user, roomTypes, setRoomTypes, accoms} = dataProvided;
   const {accomData} = props;
   const facilitiesList = ['Hồ bơi', 'Chỗ đậu xe', 'Quầy bar',
   'Wifi', 'Phòng gym', 'Trung tâm thể dục', 'Thích hợp cho gia đình/trẻ em',
@@ -49,7 +49,11 @@ export const Detail = (props) => {
     MdWifi, MdSportsGymnastics, MdSportsFootball, MdChildCare,
     MdFastfood];
   
-  const goBookRoomRef = useRef(null)
+  const goBookRoomRef = useRef(null);
+
+  const currentURL = window.location.href;
+  const parts = currentURL.split('/');
+  const accomId = parts[parts.length - 1];
   const ScrollToBookRoom = () => {
     goBookRoomRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });    
   }
@@ -209,12 +213,14 @@ export const Detail = (props) => {
             <SearchBar type="detail"/>
             <div className="four-cols wrap">
               {
-                rooms.map((room, index) => {
-                  return (
-                    <AvailableRoom key={index} 
-                    roomData={room} 
-                    image={accomData.images[index]}/>
-                  )
+                roomTypes.map((roomType, index) => {
+                  if(roomType.accomId === accomId){
+                    return (
+                      <AvailableRoom key={index} 
+                      roomData={roomType}
+                      image={accomData.images[(Math.floor(Math.random() * 4) + 1) - 1]}/>
+                    )
+                  }
                 })
               }
             </div>

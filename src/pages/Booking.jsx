@@ -1,25 +1,85 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Breadcrumb, message, Steps } from "antd";
+import { format, addDays, differenceInDays } from "date-fns";
+import vi from "date-fns/locale/vi";
 import image from "../assets/images/ImageBanner.png";
+import Facility from "../components/common/Facility";
 import {
+  BsImages,
   BsStarFill,
+  BsHeart,
   BsGeoAltFill,
+  BsHeartFill,
+  BsChevronDown,
+  BsBoxArrowInRight,
+  BsBoxArrowInLeft,
+  BsJournalText,
+  BsCreditCard,
+  BsPersonFill,
   BsCircle,
-  BsRecordCircle,
+  BsRecordCircle
 } from "react-icons/bs";
-import { MdPool } from "react-icons/md";
-import { Link } from "react-router-dom";
+
+import {
+  MdPool,
+  MdOutlineBeachAccess,
+  MdTimeToLeave,
+  MdWifi,
+  MdSmokeFree,
+  MdOutlineRoomService,
+  MdChildCare,
+  MdOutlineBedroomChild,
+  MdAttribution,
+  MdPets,
+  MdLocalBar,
+  MdSportsGymnastics,
+  MdSportsFootball,
+  MdFastfood,
+  MdKingBed, 
+  MdZoomOutMap
+} from "react-icons/md";  
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
 import { useContext } from "react";
 import { AppContext } from "../Context/AppProvider";
 
 export const Booking = (props) => {
+  const navigate = useNavigate();
   const dataProvided = useContext(AppContext);
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState("type 1");
   const [bankSelected, setBankSelected] = useState(1);
+  const facilitiesList = ['Hồ bơi', 'Chỗ đậu xe', 'Quầy bar',
+  'Wifi', 'Phòng gym', 'Trung tâm thể dục', 'Thích hợp cho gia đình/trẻ em',
+  'Bữa sáng miễn phí'];
+  const facilityIcon = [MdPool, MdTimeToLeave, MdLocalBar,
+    MdWifi, MdSportsGymnastics, MdSportsFootball, MdChildCare,
+    MdFastfood];
 
-  const {accomData, setAccomData, selectedRoom, setSelectedRoom} = dataProvided;
+  const {accoms, accomData, setAccomData, 
+          selectedRoomType, setSelectedRoomType,
+          searchDateRange
+        } = dataProvided;
+  useEffect(() => {
+    if(selectedRoomType !== ''){
+      setAccomData(accoms.find(accom => accom.accomId === selectedRoomType.accomId));
+    }
+  }, [selectedRoomType]);
+
+  useEffect(() => {
+    const handleUnload = (event) => {
+      event.preventDefault();
+      event.returnValue = 'Dữ liệu đặt phòng sẽ mất khi bạn rời khỏi!'; // Thông báo xác nhận tùy chỉnh
+    };
+
+    window.addEventListener('beforeunload', handleUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleUnload);
+    };
+  }, []);
+
+
   const steps = [
     {
       title: "Thông tin đặt phòng của bạn",
@@ -28,76 +88,69 @@ export const Booking = (props) => {
           <div className="wrapper">
             <div className="wrapper__title">Thông tin đặt phòng</div>
             <div className="infor">
-              <img className="infor__image" src={selectedRoom.image} />
+              <img className="infor__image" src={selectedRoomType.image} />
               <div className="infor__content">
                 <div className="infor__content__accomodation-name">
-                  {selectedRoom.name}
+                  {accomData.name}
                 </div>
-                <div className="infor__content__room-name">{accomData.name}</div>
+                <div className="infor__content__room-name">{selectedRoomType.name}</div>
                 <div className="infor__content__address">
                   <BsGeoAltFill size={18} />
-                  <span>Địa chỉ Phường, TP</span>
+                  <span>{accomData.address}</span>
                 </div>
                 <div className="infor__content__tag-rating">
                   <div className="infor__content__tag-rating__tag">
                     <div className="infor__content__tag-rating__tag__item">
-                      Khách sạn
+                      {accomData.type}
                     </div>
                     <div className="infor__content__tag-rating__tag__item">
-                      4 <BsStarFill size={12} />
+                      {accomData.star} <BsStarFill size={12} />
                     </div>
                   </div>
                   <div className="infor__content__tag-rating__rating">
                     <div className="infor__content__tag-rating__rating__score">
-                      8,4
+                      {accomData.rating}
                     </div>
                     <div className="infor__content__tag-rating__rating__reviews">
-                      (231)
+                      ({accomData.ratingCount} lượt đánh giá)
                     </div>
                   </div>
                 </div>
                 <div className="infor__content__facilities">
-                  <div className="infor__content__facilities__item">
-                    <MdPool size={16}></MdPool>
-                    <span>Hồ bơi ngoài trời</span>
-                  </div>
-                  <div className="infor__content__facilities__item">
-                    <MdPool size={16}></MdPool>
-                    <span>Hồ bơi ngoài trời</span>
-                  </div>
-                  <div className="infor__content__facilities__item">
-                    <MdPool size={16}></MdPool>
-                    <span>Hồ bơi ngoài trời</span>
-                  </div>
-                  <div className="infor__content__facilities__item">
-                    <MdPool size={16}></MdPool>
-                    <span>Hồ bơi ngoài trời</span>
-                  </div>
-                  <div className="infor__content__facilities__item">
-                    <MdPool size={16}></MdPool>
-                    <span>Hồ bơi ngoài trời</span>
-                  </div>
-                  <div className="infor__content__facilities__item">
-                    <MdPool size={16}></MdPool>
-                    <span>Hồ bơi ngoài trời</span>
-                  </div>
-                  <div className="infor__content__facilities__item">
-                    <MdPool size={16}></MdPool>
-                    <span>Hồ bơi ngoài trời</span>
-                  </div>
+                  {(accomData==true) ?? accomData.facilities.map((facility, index) => {
+                    if(facilitiesList.includes(facility)){
+                      const IconComponent = facilityIcon[facilitiesList.indexOf(facility)];
+                      console.log(facilitiesList.indexOf(facility));
+                      return (
+                        <Facility
+                          key={index}
+                          content={facility}
+                          icon={<IconComponent size={24} />}
+                        />
+                      );
+                    }
+                  })}
                 </div>
               </div>
             </div>
             <div className="detail-room">
               <div className="detail-room__item">
                 <div className="detail-room__item__label">Nhận phòng</div>
-                <div className="detail-room__item__input">T7, 8 tháng 4</div>
+                <div className="detail-room__item__input">
+                  {`${format(searchDateRange[0].startDate, "eee, dd-MM-yyyy", {
+                      locale: vi,
+                  })}`}
+                </div>
                 <div className="detail-room__item__description">Từ 14:00</div>
               </div>
               <hr className="line" />
               <div className="detail-room__item">
                 <div className="detail-room__item__label">Trả phòng</div>
-                <div className="detail-room__item__input">CN, 9 tháng 4</div>
+                <div className="detail-room__item__input">
+                  {`${format(searchDateRange[0].endDate, "eee, dd-MM-yyyy", {
+                      locale: vi,
+                  })}`}
+                </div>
                 <div className="detail-room__item__description">
                   Cho đến 12:00
                 </div>

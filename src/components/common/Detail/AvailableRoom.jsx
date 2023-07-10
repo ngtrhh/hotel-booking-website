@@ -7,11 +7,12 @@ import { useNavigate } from "react-router-dom";
 
 const AvailableRoom = (props) => {
   const dataProvided = useContext(AppContext);
-  const {accomData, selectedRoom, setSelectedRoom} = dataProvided;
+  const {accomData, selectedRoom, setSelectedRoomType} = dataProvided;
   const {roomData, image} = props;
   const navigation = useNavigate();
+  
   const BookNow = () => {
-    setSelectedRoom({...roomData, image: image});
+    setSelectedRoomType({...roomData, image: image});
     window.scrollTo(0, 0);
     navigation('/booking')
   }

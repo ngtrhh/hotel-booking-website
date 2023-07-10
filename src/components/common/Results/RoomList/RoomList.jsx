@@ -416,9 +416,9 @@ export const RoomList = (roomsData) => {
                 acceptedCard: 'Thẻ ngân hàng, thẻ tín dụng, thẻ ghi nợ'
             },
         ]
-        const rooms = [
+        const roomTypes = [
             {
-                roomId: 'room1',
+                roomTypeId: 'roomType1',
                 name: 'Phòng đôi nhìn ra biển',
                 bed: '1 Giường đôi lớn',
                 capacity: '2 người',
@@ -437,7 +437,7 @@ export const RoomList = (roomsData) => {
                 saleoff: '40%'
             },
             {
-                roomId: 'room2',
+                roomTypeId: 'roomType2',
                 name: 'Phòng cho gia đình',
                 bed: '1 Giường đôi lớn',
                 capacity: '4 người',
@@ -456,7 +456,7 @@ export const RoomList = (roomsData) => {
                 saleoff: '50%'
             },
             {
-                roomId: 'room3',
+                roomTypeId: 'roomType3',
                 name: 'Phòng đơn',
                 bed: '1 Giường đơn',
                 capacity: '1 người',
@@ -475,7 +475,7 @@ export const RoomList = (roomsData) => {
                 saleoff: '60%'
             },
             {
-                roomId: 'room4',
+                roomTypeId: 'roomType4',
                 name: 'Phòng hạng thương gia',
                 bed: '1 Giường đơn',
                 capacity: '1 người',
@@ -494,15 +494,37 @@ export const RoomList = (roomsData) => {
                 saleoff: '50%'
             }
         ];
+        // Roomstate: Good, ...
+        const rooms = [
+            {
+                state: 'Good'
+            },
+
+        ];
         // let randomIndex = (Math.floor(Math.random() * 9) + 1) -1;
         // for(let i = 1; i <= 360; i++){
         //     randomIndex = (Math.floor(Math.random() * 9) + 1) -1;
         //     addDocument('accoms', {...data[randomIndex], accomId : 'accom' + randomIndex.toString()})
         // }
-        // for(let i = 0; i < 4; i++){
-        //     addDocument('rooms', rooms[i]);
-        // }
-        setDoc(doc(db, "rooms", 'room4'), {...rooms[3]});
+        for(let i = 1; i <= 200; i++){
+            addDoc(collection(db, "rooms"), 
+            {
+                roomId: 'room' + i.toString(),
+                roomTypeId: 'roomType' + ((Math.floor(Math.random() * 4) + 1)).toString(),
+                roomNumber: ((Math.floor(Math.random() * 9) + 1)).toString() + '.' + ((Math.floor(Math.random() * 20) + 1)).toString(),
+                state: 'Free',
+                condition: 'Good'
+            });
+        }
+        for(let i = 0; i < 9; i++){
+            for(let j = 0; j < 4; j++){
+                addDoc(collection(db, "roomtypes"), 
+                {
+                    ...roomTypes[j], 
+                    accomId: 'accom' + i.toString()
+                });
+            }
+        }
     }
 
     return(
@@ -549,7 +571,7 @@ export const RoomList = (roomsData) => {
                 </div>
                 
             </div>
-            {/* <input type="button" value="Add accoms" onClick={AddAccoms}/> */}
+            <input type="button" value="Add accoms" onClick={AddAccoms}/>
         </div>
     );
     

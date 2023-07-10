@@ -129,14 +129,14 @@ export default function AppProvider ({children}) {
 
 	//Details
 	const [selectedAccomId, setSelectedAccomId] = useState('');
-	const [selectedRoom, setSelectedRoom] = useState('');
+	const [selectedRoomType, setSelectedRoomType] = useState('');
 	const [accomData, setAccomData] = useState({});
+	const [roomTypes, setRoomTypes] = useState([]);
 	const [rooms, setRooms] = useState([]);
-	useFireStore('rooms', setRooms);
 	
-	useEffect(() =>{
-		console.log(selectedRoom);
-	}, [selectedRoom]);
+	useFireStore('roomtypes', setRoomTypes);
+	
+		
 	
 	// const [isAddRoomVisible, setIsAddRoomVisible] = useState(false);
 	// const [isInviteVisible, setIsInviteVisible] = useState(false);
@@ -177,8 +177,9 @@ export default function AppProvider ({children}) {
 			sortOpitons, setSortOpitons,
 			//Detail
 			selectedAccomId, setSelectedAccomId,
-			selectedRoom, setSelectedRoom,
+			selectedRoomType, setSelectedRoomType,
 			accomData, setAccomData,
+			roomTypes, setRoomTypes,
 			rooms, setRooms
 		}}>
 			{children}
