@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Breadcrumb, message, Steps } from "antd";
-import { format, addDays, differenceInDays } from "date-fns";
+import { Breadcrumb, message, Steps, Alert } from "antd";
+import { format, addDays, differenceInDays, formatDistance } from "date-fns";
 import vi from "date-fns/locale/vi";
 import image from "../assets/images/ImageBanner.png";
 import Facility from "../components/common/Facility";
@@ -55,14 +55,39 @@ export const Booking = (props) => {
   const facilityIcon = [MdPool, MdTimeToLeave, MdLocalBar,
     MdWifi, MdSportsGymnastics, MdSportsFootball, MdChildCare,
     MdFastfood];
+  
+  const [discount, setDiscount] = useState(0);
 
   const {accoms, accomData, setAccomData, 
           selectedRoomType, setSelectedRoomType,
-          searchDateRange
+          searchDateRange,
+          seacrchNumOfRooms, setSeacrchNumOfRooms,
+          seacrchNumOfGuest, setSeacrchNumOfGuest,
+          seacrchNumOfChild, setSeacrchNumOfChild,
+
+          bookingName, setBookingName,
+          bookingEmail, setBookingEmail,
+          bookingPhone, setBookingPhone,
+          bookingTax, setBookingTax,
+          bookingDiscount, setBookingDiscount,
+          totalBookingPrice, setTotalBookingPrice,
+
+          cardNumber, setCardNumber,
+          cardValidDate, setCardValidDate,
+          cardSecret, setCardSecret,
+          cardOwnerName, setCardOwnerName
         } = dataProvided;
+  const [alertMsg, setAlertMsg] = useState('');
+
   useEffect(() => {
     if(selectedRoomType !== ''){
       setAccomData(accoms.find(accom => accom.accomId === selectedRoomType.accomId));
+      setDiscount((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) / parseFloat(selectedRoomType.originalPrice.split(' ')[0].replace(/\./g, '')) * 100).toFixed(0));
+      setTotalBookingPrice(((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) * parseFloat(formatDistance(
+            searchDateRange[0].startDate,
+            searchDateRange[0].endDate
+          ).split(' ')[0]) + bookingTax - bookingDiscount)
+      ).toLocaleString('vi-VN'));
     }
   }, [selectedRoomType]);
 
@@ -79,6 +104,28 @@ export const Booking = (props) => {
     };
   }, []);
 
+  const HandleBookingNameOnChange = (event) => {
+    let bookingNameInput = event.target.value.split(' ');
+    const formattedBookingName = bookingNameInput.map((input) =>{
+      const firstChar = input.charAt(0).toUpperCase();
+      const restOfString = input.slice(1).toLowerCase();
+      return firstChar + restOfString;
+    });
+    event.target.value = formattedBookingName.join(' ');
+  }
+
+  const HandleBookingPhoneOnChange = (event) => {
+    const numberPattern = /^[0-9\b]+$/;
+    let newValue = event.target.value;
+    if(!numberPattern.test(newValue)){
+      newValue = newValue.slice(0,-1);
+    }
+    if(newValue.length > 11){
+      newValue = newValue.slice(0,11);
+    }
+    event.target.value = newValue;
+    
+   }
 
   const steps = [
     {
@@ -158,19 +205,32 @@ export const Booking = (props) => {
               <hr className="line" />
               <div className="detail-room__item">
                 <div className="detail-room__item__label">ĐÊM</div>
-                <div className="detail-room__item__input">1</div>
+                <div className="detail-room__item__input">
+                  {
+                    formatDistance(
+                      searchDateRange[0].startDate,
+                      searchDateRange[0].endDate
+                    ).split(' ')[0] + ' ĐÊM'
+                  }
+                </div>
                 <div className="detail-room__item__description"></div>
               </div>
               <hr className="line" />
               <div className="detail-room__item">
                 <div className="detail-room__item__label">SỐ KHÁCH</div>
-                <div className="detail-room__item__input">2</div>
+                <div className="detail-room__item__input">
+                {
+                  seacrchNumOfChild > 0
+                    ? `${seacrchNumOfGuest} người lớn - ${seacrchNumOfChild} trẻ em - ${seacrchNumOfRooms} phòng`
+                    : `${seacrchNumOfGuest} người lớn - ${seacrchNumOfRooms} phòng`
+                }   
+                </div>
                 <div className="detail-room__item__description"></div>
               </div>
               <hr className="line" />
               <div className="detail-room__item">
-                <div className="detail-room__item__label">kIỂU GIƯỜNG</div>
-                <div className="detail-room__item__input">GIƯỜNG ĐÔI</div>
+                <div className="detail-room__item__label">KIỂU GIƯỜNG</div>
+                <div className="detail-room__item__input">{selectedRoomType.bed}</div>
                 <div className="detail-room__item__description"></div>
               </div>
             </div>
@@ -184,7 +244,7 @@ export const Booking = (props) => {
                   <span>Họ và tên</span>
                   <div className="input__label__require">*</div>
                 </div>
-                <input />
+                <input id='bookingName' onChange={HandleBookingNameOnChange}/>
                 <div className="input__description">
                   Nhập tên như trên CMND/CCCD/Hộ chiếu
                 </div>
@@ -195,7 +255,7 @@ export const Booking = (props) => {
                     <span>Địa chỉ Email</span>
                     <div className="input__label__require">*</div>
                   </div>
-                  <input />
+                  <input id="bookingEmail"/>
                   <div className="input__description">
                     Email xác nhận đặt phòng sẽ được gửi đến địa chỉ này
                   </div>
@@ -205,10 +265,13 @@ export const Booking = (props) => {
                     <span>Số điện thoại</span>
                     <div className="input__label__require">*</div>
                   </div>
-                  <input />
+                  <input id="bookingPhone" onChange={HandleBookingPhoneOnChange}/>
                   <div className="input__description"></div>
                 </div>
               </div>
+              <Alert message={alertMsg} type="warning" banner id='missingInfoAlert'
+                style={{display: 'none'}}
+              />
             </div>
           </div>
           <div className="policy-before-submit">
@@ -221,12 +284,12 @@ export const Booking = (props) => {
       rightContent: (
         <div className="wrapper">
           <div className="wrapper__title">Giá chi tiết</div>
-          <div className="sale-label">Giảm 40%</div>
+          <div className="sale-label">{'Giảm ' + discount + '%'}</div>
           <div className="wrapper__row">
             <span>Tên phòng x 1 đêm </span>
             <div className="wrapper__row__price-room">
-              <div className="wrapper__row__price-room__old">1.100.0000 đ</div>
-              <div className="wrapper__row__price-room">840.000 đ</div>
+              <div className="wrapper__row__price-room__old">{selectedRoomType.originalPrice + ' đ'}</div>
+              <div className="wrapper__row__price-room">{selectedRoomType.price}</div>
             </div>
           </div>
           <div className="wrapper__row">
@@ -240,7 +303,7 @@ export const Booking = (props) => {
           <div className="total-price">
             <div className="total-price__title">Tổng cộng</div>
             <div className="total-price__column">
-              <div className="total-price__column__price">840.000 đ</div>
+              <div className="total-price__column__price">{totalBookingPrice + ' đ'}</div>
               <div className="total-price__column__sub">
                 Đã bao gồm thuế và phí
               </div>
@@ -276,7 +339,7 @@ export const Booking = (props) => {
                       <span>Số thẻ tín dụng</span>
                       <div className="input__label__require">*</div>
                     </div>
-                    <input />
+                    <input id="cardNumber"/>
                   </div>
                   <div className="input-row">
                     <div className="input">
@@ -284,14 +347,14 @@ export const Booking = (props) => {
                         <span>Hợp lệ đến</span>
                         <div className="input__label__require">*</div>
                       </div>
-                      <input placeholder="MM/YY" />
+                      <input placeholder="MM/YY" id="cardValidDate"/>
                     </div>
                     <div className="input">
                       <div className="input__label">
                         <span>CVV/CVN</span>
                         <div className="input__label__require">*</div>
                       </div>
-                      <input placeholder="Mã 3-4 chữ số" />
+                      <input placeholder="Mã 3-4 chữ số" id="cardSecret"/>
                       <div className="input__description"></div>
                     </div>
                   </div>
@@ -300,8 +363,11 @@ export const Booking = (props) => {
                       <span>Tên trên thẻ</span>
                       <div className="input__label__require">*</div>
                     </div>
-                    <input placeholder="Tên ghi trên thẻ" />
+                    <input placeholder="Tên ghi trên thẻ" id="cardOwnerName"/>
                   </div>
+                  <Alert message={alertMsg} type="warning" banner id='missingInfoAlert'
+                    style={{display: 'none'}}
+                  />
                 </div>
               )}
             </div>
@@ -358,9 +424,9 @@ export const Booking = (props) => {
           <div className="wrapper__title">Thông tin đặt chỗ</div>
           <div className="wrapper__small-row">
             <div className="wrapper__small-row__column">
-              <div className="wrapper__small-row__column__name">Tên phòng</div>
+              <div className="wrapper__small-row__column__name">{selectedRoomType.name}</div>
               <div className="wrapper__small-row__column__accomodation">
-                Tên khách sạn
+                {accomData.name}
               </div>
             </div>
             <div className="wrapper__small-row__grid">
@@ -370,7 +436,9 @@ export const Booking = (props) => {
                     Nhận phòng
                   </div>
                   <div className="wrapper__small-row__grid__row__item__content">
-                    T7, 8 tháng 4
+                    {`${format(searchDateRange[0].startDate, "eee, dd-MM-yyyy", {
+                        locale: vi,
+                    })}`}
                   </div>
                 </div>
                 <div className="wrapper__small-row__grid__row__item top-right">
@@ -378,7 +446,9 @@ export const Booking = (props) => {
                     Trả phòng
                   </div>
                   <div className="wrapper__small-row__grid__row__item__content">
-                    CN, 9 tháng 4
+                    {`${format(searchDateRange[0].endDate, "eee, dd-MM-yyyy", {
+                        locale: vi,
+                    })}`}
                   </div>
                 </div>
               </div>
@@ -388,7 +458,7 @@ export const Booking = (props) => {
                     Nhận phòng
                   </div>
                   <div className="wrapper__small-row__grid__row__item__content">
-                    1
+                    {seacrchNumOfRooms}
                   </div>
                 </div>
                 <div className="wrapper__small-row__grid__row__item bottom-right">
@@ -396,7 +466,11 @@ export const Booking = (props) => {
                     Khách
                   </div>
                   <div className="wrapper__small-row__grid__row__item__content">
-                    2
+                    {
+                    seacrchNumOfChild > 0
+                      ? `${seacrchNumOfGuest} người lớn - ${seacrchNumOfChild} trẻ em`
+                      : `${seacrchNumOfGuest} người lớn`
+                    } 
                   </div>
                 </div>
               </div>
@@ -409,26 +483,26 @@ export const Booking = (props) => {
               <span>Tên phòng x 1 đêm</span>
               <div className="wrapper__small-row__detail__price-room">
                 <div className="wrapper__small-row__detail__price-room__old">
-                  1.100.0000 đ
+                  {selectedRoomType.originalPrice + ' đ'}
                 </div>
                 <div className="wrapper__small-row__detail__price-room__new">
-                  840.000 đ
-                </div>
+                {selectedRoomType.price}
+                </div>  
               </div>
             </div>
             <div className="wrapper__small-row__detail">
               <span>Thuế và phí dịch vụ khách sạn</span>
-              <span>99.000 đ</span>
+              <span>{bookingTax.toLocaleString('vi-VN') + ' đ'}</span>
             </div>
             <div className="wrapper__small-row__detail">
               <span>Ưu đãi</span>
-              <span>-99.000 đ</span>
+              <span>{'- ' + bookingDiscount.toLocaleString('vi-VN') + ' đ'}</span>
             </div>
           </div>
           <div className="total-price">
             <div className="total-price__title">Tổng cộng</div>
             <div className="total-price__column">
-              <div className="total-price__column__price">840.000 đ</div>
+              <div className="total-price__column__price">{totalBookingPrice + ' đ'}</div>
             </div>
           </div>
         </div>
@@ -437,11 +511,74 @@ export const Booking = (props) => {
   ];
 
   const next = () => {
-    setCurrent(current + 1);
+    if(IsValidInput()){
+      setBookingName(document.querySelector('#bookingName').value);
+      setBookingEmail(document.querySelector('#bookingEmail').value);
+      setBookingPhone(document.querySelector('#bookingPhone').value);
+      document.querySelector('.ant-alert').style.display = 'none';
+      setCurrent(current + 1);
+    }
+    else{
+      document.querySelector('.ant-alert').style.display = 'flex';
+    }
   };
+
   const prev = () => {
     setCurrent(current - 1);
   };
+
+  const IsValidInput = () => {
+    if(current === 0){
+      setAlertMsg('Vui lòng nhập đầy đủ thông tin');
+      if(document.querySelector('#bookingName').value === ''){
+        return false;
+      }
+      if(document.querySelector('#bookingEmail').value === ''){
+        return false;
+      }
+      if(document.querySelector('#bookingPhone').value === ''){
+        return false;
+      }
+      
+      setAlertMsg('Email không hợp lệ')
+      const gmailRegex = /@gmail\.com$/i;
+
+      return gmailRegex.test(document.querySelector('#bookingEmail').value);
+    }
+    else if (selected === "type 1"){
+      setAlertMsg('Vui lòng nhập đầy đủ thông tin');
+      if(document.querySelector('#cardNumber').value === ''){
+        return false;
+      }
+      if(document.querySelector('#cardValidDate').value === ''){
+        return false;
+      }
+      if(document.querySelector('#cardSecret').value === ''){
+        return false;
+      }
+      if(document.querySelector('#cardOwnerName').value === ''){
+        return false;
+      }
+    }
+    return true;
+  }
+
+  const ConfirmBooking = () => {
+    if(IsValidInput()){
+      setCardNumber(document.querySelector('#cardNumber').value);
+      setCardValidDate(document.querySelector('#cardValidDate').value);
+      setCardSecret(document.querySelector('#cardSecret').value);
+      setCardOwnerName(document.querySelector('#cardOwnerName').value);
+
+      document.querySelector('.ant-alert').style.display = 'none';
+
+      //Tiến hành đặt phòng
+    }
+    else{
+      document.querySelector('.ant-alert').style.display = 'flex';
+    }
+  }
+
   const items = steps.map((item) => ({
     key: item.title,
     title: item.title,
@@ -473,7 +610,7 @@ export const Booking = (props) => {
           {current === steps.length - 1 && (
             <Button
               className="cyan fill"
-              onClick={() => message.success("Bạn đã đặt phòng thành công!")}
+              onClick={ConfirmBooking}
             >
               Hoàn tất đặt phòng
             </Button>

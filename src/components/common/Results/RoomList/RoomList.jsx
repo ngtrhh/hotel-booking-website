@@ -439,7 +439,7 @@ export const RoomList = (roomsData) => {
             {
                 roomTypeId: 'roomType2',
                 name: 'Phòng cho gia đình',
-                bed: '1 Giường đôi lớn',
+                bed: '2 Giường đôi lớn',
                 capacity: '4 người',
                 area: '60m2',
                 facility: [
@@ -506,16 +506,16 @@ export const RoomList = (roomsData) => {
         //     randomIndex = (Math.floor(Math.random() * 9) + 1) -1;
         //     addDocument('accoms', {...data[randomIndex], accomId : 'accom' + randomIndex.toString()})
         // }
-        for(let i = 1; i <= 200; i++){
-            addDoc(collection(db, "rooms"), 
-            {
-                roomId: 'room' + i.toString(),
-                roomTypeId: 'roomType' + ((Math.floor(Math.random() * 4) + 1)).toString(),
-                roomNumber: ((Math.floor(Math.random() * 9) + 1)).toString() + '.' + ((Math.floor(Math.random() * 20) + 1)).toString(),
-                state: 'Free',
-                condition: 'Good'
-            });
-        }
+        // for(let i = 1; i <= 200; i++){
+        //     addDoc(collection(db, "rooms"), 
+        //     {
+        //         roomId: 'room' + i.toString(),
+        //         roomTypeId: 'roomType' + ((Math.floor(Math.random() * 4) + 1)).toString(),
+        //         roomNumber: ((Math.floor(Math.random() * 9) + 1)).toString() + '.' + ((Math.floor(Math.random() * 20) + 1)).toString(),
+        //         state: 'Free',
+        //         condition: 'Good'
+        //     });
+        // }
         for(let i = 0; i < 9; i++){
             for(let j = 0; j < 4; j++){
                 addDoc(collection(db, "roomtypes"), 
@@ -571,7 +571,7 @@ export const RoomList = (roomsData) => {
                 </div>
                 
             </div>
-            <input type="button" value="Add accoms" onClick={AddAccoms}/>
+            {/* <input type="button" value="Add accoms" onClick={AddAccoms}/> */}
         </div>
     );
     

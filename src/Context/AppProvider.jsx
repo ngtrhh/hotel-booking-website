@@ -135,8 +135,19 @@ export default function AppProvider ({children}) {
 	const [rooms, setRooms] = useState([]);
 	
 	useFireStore('roomtypes', setRoomTypes);
-	
-		
+
+	//Booking
+	const [bookingName, setBookingName] = useState('');
+	const [bookingEmail, setBookingEmail] = useState('');
+	const [bookingPhone, setBookingPhone] = useState('');
+	const [bookingTax, setBookingTax] = useState(99000);
+	const [bookingDiscount, setBookingDiscount] = useState(99000);
+	const [totalBookingPrice, setTotalBookingPrice] = useState(0);
+
+	const [cardNumber, setCardNumber] = useState('');
+	const [cardValidDate, setCardValidDate] = useState('');
+	const [cardSecret, setCardSecret] = useState('');
+	const [cardOwnerName, setCardOwnerName] = useState('');
 	
 	// const [isAddRoomVisible, setIsAddRoomVisible] = useState(false);
 	// const [isInviteVisible, setIsInviteVisible] = useState(false);
@@ -180,7 +191,18 @@ export default function AppProvider ({children}) {
 			selectedRoomType, setSelectedRoomType,
 			accomData, setAccomData,
 			roomTypes, setRoomTypes,
-			rooms, setRooms
+			rooms, setRooms,
+			//Booking
+			bookingName, setBookingName,
+			bookingEmail, setBookingEmail,
+			bookingPhone, setBookingPhone,
+			bookingTax, setBookingTax,
+			bookingDiscount, setBookingDiscount,
+			totalBookingPrice, setTotalBookingPrice,
+			cardNumber, setCardNumber,
+			cardValidDate, setCardValidDate,
+			cardSecret, setCardSecret,
+			cardOwnerName, setCardOwnerName
 		}}>
 			{children}
 		</AppContext.Provider>
