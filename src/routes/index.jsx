@@ -1,9 +1,6 @@
 import { HomeLayout } from "../components/layout";
 import { Home, Results, Detail, Login, Register, ForgotPassword, Booking,
-  BookingHistory,
-  Favourite,
-  Profile,
-  EditProfile, } from "../pages/";
+  BookingHistory, Favourite, Profile, EditProfile, AccountInformation} from "../pages/";
 import { GetAcooms } from "../Context/AppProvider";
 import { React, useState, useEffect } from "react";
 import {db} from '../firebase/config'
@@ -20,9 +17,11 @@ let publicRoutes = [
   { path: "/favourite", element: Favourite },
   { path: "/profile", element: Profile },
   { path: "/edit-profile", element: EditProfile },
+  { path: "/account", element: AccountInformation},
   { path: "/login", element: Login, layout: null },
   { path: "/register", element: Register, layout: null },
   { path: "/forgot", element: ForgotPassword, layout: null },
+  { path: "/account", element: AccountInformation},
 ];
 
 const GetAccomsData = (setAccomsData) => {
@@ -60,7 +59,8 @@ const PublicRoutes = () => {
       })),
       { path: "/login", element: Login, layout: null },
       { path: "/register", element: Register, layout: null },
-      { path: "/forgot", element: ForgotPassword, layout: null }
+      { path: "/forgot", element: ForgotPassword, layout: null },
+      { path: "/account", element: AccountInformation},
     ]);
   }, [accomsData]);
 

@@ -74,7 +74,7 @@ export const EditProfile = () => {
   };
 
   return (
-    <div className="profile">
+    <div className="account">
       <Breadcrumb className="breadcrumb">
         <Breadcrumb.Item>
           <Link to="/">Trang chủ</Link>

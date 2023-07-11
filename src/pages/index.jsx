@@ -9,3 +9,4 @@ export { ForgotPassword } from "./ForgotPassword";
 export { Favourite } from "./Favourite";
 export { Profile } from "./Profile";
 export { EditProfile } from "./EditProfile";
+export { AccountInformation } from "./AccountInformation";
