@@ -8,11 +8,11 @@ const useFireStore = (_collection, setData, limitData = 40, condition = '') => {
 	React.useEffect(() => {
 
 		const collectionRef = collection(db, _collection);
-
+		const limitRange = (limitData === -1) ? null : limit(limitData);
 		const q = (condition != '') ?
-			query(collectionRef, where(condition.fieldName, condition.operator, condition.comparedValue), limit(limitData))
+			query(collectionRef, where(condition.fieldName, condition.operator, condition.comparedValue), limitRange)
 		:
-			query(collectionRef, limit(limitData));
+			query(collectionRef, limitRange);
 
 		const unsubscribe = onSnapshot(q, (querySnapshot) => {
 			const documents = [];

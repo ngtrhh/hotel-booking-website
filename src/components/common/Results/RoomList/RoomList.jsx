@@ -418,7 +418,7 @@ export const RoomList = (roomsData) => {
         ]
         const roomTypes = [
             {
-                roomTypeId: 'roomType1',
+                
                 name: 'Phòng đôi nhìn ra biển',
                 bed: '1 Giường đôi lớn',
                 capacity: '2 người',
@@ -437,7 +437,7 @@ export const RoomList = (roomsData) => {
                 saleoff: '40%'
             },
             {
-                roomTypeId: 'roomType2',
+                
                 name: 'Phòng cho gia đình',
                 bed: '2 Giường đôi lớn',
                 capacity: '4 người',
@@ -456,7 +456,7 @@ export const RoomList = (roomsData) => {
                 saleoff: '50%'
             },
             {
-                roomTypeId: 'roomType3',
+                
                 name: 'Phòng đơn',
                 bed: '1 Giường đơn',
                 capacity: '1 người',
@@ -475,7 +475,7 @@ export const RoomList = (roomsData) => {
                 saleoff: '60%'
             },
             {
-                roomTypeId: 'roomType4',
+                
                 name: 'Phòng hạng thương gia',
                 bed: '1 Giường đơn',
                 capacity: '1 người',
@@ -516,12 +516,34 @@ export const RoomList = (roomsData) => {
         //         condition: 'Good'
         //     });
         // }
-        for(let i = 0; i < 9; i++){
+        let count = 0;
+        let countRoomTypeId = 0;
+        for(let i = 1; i <= 9; i++){
             for(let j = 0; j < 4; j++){
+                countRoomTypeId++;
+                for(let g = 0; g < 4; g++){
+                    count++;
+                    addDoc(collection(db, "rooms"), 
+                    {
+                        roomId: 'room' + count.toString(),
+                        roomTypeId: 'roomType' + countRoomTypeId.toString(),
+                        roomNumber: ((Math.floor(Math.random() * 12) + 1)).toString() + '.' + ((Math.floor(Math.random() * 20) + 1)).toString(),
+                        state: 'Free',
+                        condition: 'Good'
+                    });
+                }
+            }
+        }
+        
+        count = 0;
+        for(let i = 1; i <= 9; i++){
+            for(let j = 0; j < 4; j++){
+                count++;
                 addDoc(collection(db, "roomtypes"), 
                 {
                     ...roomTypes[j], 
-                    accomId: 'accom' + i.toString()
+                    accomId: 'accom' + i.toString(),
+                    roomTypeId: 'roomType' + count.toString()
                 });
             }
         }

@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Breadcrumb, message, Steps, Alert } from "antd";
+import { Breadcrumb, message, Steps, Alert, Modal, Button as AntButton } from "antd";
+import {BiSolidInfoCircle} from "react-icons/bi";
 import { format, addDays, differenceInDays, formatDistance } from "date-fns";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../firebase/config";
 import vi from "date-fns/locale/vi";
 import image from "../assets/images/ImageBanner.png";
 import Facility from "../components/common/Facility";
+import { CardElement, Elements, useElements, useStripe } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import {
   BsImages,
   BsStarFill,
@@ -42,6 +47,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
 import { useContext } from "react";
 import { AppContext } from "../Context/AppProvider";
+const stripePromise = loadStripe("pk_test_51MwSGfItrzk46JwuUcMyEF34q9bXGZTsKJuUSwiWDdvEdtX4ORkDoNxvr1KjqMGbRlMccRoIrmJFuDnfcwHzlCV100YJDhC5Tm");
 
 export const Booking = (props) => {
   const navigate = useNavigate();
@@ -54,11 +60,31 @@ export const Booking = (props) => {
   'Bữa sáng miễn phí'];
   const facilityIcon = [MdPool, MdTimeToLeave, MdLocalBar,
     MdWifi, MdSportsGymnastics, MdSportsFootball, MdChildCare,
-    MdFastfood];
-  
+    MdFastfood];  
   const [discount, setDiscount] = useState(0);
+  
+  const CARD_ELEMENT_OPTIONS = {
+    style: {
+      base: {
+        color: "#32325d",
+        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontSmoothing: "antialiased",
+        fontSize: "16px",
+        "::placeholder": {
+          color: "#aab7c4",
+        },
+      },
+      invalid: {
+        color: "#fa755a",
+        iconColor: "#fa755a",
+      },
+    },
+  };
 
-  const {accoms, accomData, setAccomData, 
+
+  const { user,
+          accoms, accomData, setAccomData,
+          rooms, setRooms,
           selectedRoomType, setSelectedRoomType,
           searchDateRange,
           seacrchNumOfRooms, setSeacrchNumOfRooms,
@@ -71,25 +97,43 @@ export const Booking = (props) => {
           bookingTax, setBookingTax,
           bookingDiscount, setBookingDiscount,
           totalBookingPrice, setTotalBookingPrice,
+          roomsToBook, setRoomsToBook,
 
           cardNumber, setCardNumber,
           cardValidDate, setCardValidDate,
           cardSecret, setCardSecret,
           cardOwnerName, setCardOwnerName
         } = dataProvided;
+  const [totalPriceString, setTotalPriceString] = useState('');
   const [alertMsg, setAlertMsg] = useState('');
 
+  const [loadingAcceptBooking, setLoadingAcceptBooking] = useState(false);
+  const [openConfirmBooking, setOpenConfirmBooking] = useState(false);
+
+  const elements = useElements();
+  const stripe = useStripe();
   useEffect(() => {
     if(selectedRoomType !== ''){
       setAccomData(accoms.find(accom => accom.accomId === selectedRoomType.accomId));
+      
       setDiscount((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) / parseFloat(selectedRoomType.originalPrice.split(' ')[0].replace(/\./g, '')) * 100).toFixed(0));
       setTotalBookingPrice(((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) * parseFloat(formatDistance(
             searchDateRange[0].startDate,
             searchDateRange[0].endDate
           ).split(' ')[0]) + bookingTax - bookingDiscount)
-      ).toLocaleString('vi-VN'));
+      ));
     }
   }, [selectedRoomType]);
+
+  useEffect(() => {
+    const foundRooms = rooms.filter(room => ((room.roomTypeId === selectedRoomType.roomTypeId))).slice(0, seacrchNumOfRooms);
+    console.log(foundRooms);
+    setRoomsToBook(foundRooms);
+  }, [accomData]);
+
+  useEffect(() => {
+    setTotalPriceString(totalBookingPrice.toLocaleString('vi-VN'));
+  }, [totalBookingPrice]);
 
   useEffect(() => {
     const handleUnload = (event) => {
@@ -303,7 +347,7 @@ export const Booking = (props) => {
           <div className="total-price">
             <div className="total-price__title">Tổng cộng</div>
             <div className="total-price__column">
-              <div className="total-price__column__price">{totalBookingPrice + ' đ'}</div>
+              <div className="total-price__column__price">{totalPriceString + ' đ'}</div>
               <div className="total-price__column__sub">
                 Đã bao gồm thuế và phí
               </div>
@@ -333,43 +377,20 @@ export const Booking = (props) => {
                 )}
               </div>
               {selected === "type 1" && (
-                <div className="input-column">
-                  <div className="input">
-                    <div className="input__label">
-                      <span>Số thẻ tín dụng</span>
-                      <div className="input__label__require">*</div>
-                    </div>
-                    <input id="cardNumber"/>
-                  </div>
-                  <div className="input-row">
-                    <div className="input">
-                      <div className="input__label">
-                        <span>Hợp lệ đến</span>
-                        <div className="input__label__require">*</div>
-                      </div>
-                      <input placeholder="MM/YY" id="cardValidDate"/>
-                    </div>
-                    <div className="input">
-                      <div className="input__label">
-                        <span>CVV/CVN</span>
-                        <div className="input__label__require">*</div>
-                      </div>
-                      <input placeholder="Mã 3-4 chữ số" id="cardSecret"/>
-                      <div className="input__description"></div>
-                    </div>
-                  </div>
-                  <div className="input">
-                    <div className="input__label">
-                      <span>Tên trên thẻ</span>
-                      <div className="input__label__require">*</div>
-                    </div>
-                    <input placeholder="Tên ghi trên thẻ" id="cardOwnerName"/>
-                  </div>
-                  <Alert message={alertMsg} type="warning" banner id='missingInfoAlert'
-                    style={{display: 'none'}}
-                  />
+                <>
+                <div style={{width: '100%'}}>
+                  <label>
+                    Thông tin thẻ
+                    <CardElement options={CARD_ELEMENT_OPTIONS} />
+                  </label>
                 </div>
+                
+                <Alert message={alertMsg} type="warning" banner id='cardInputWarning'
+                  style={{display: 'none'}}
+                />
+                </>
               )}
+              
             </div>
             <div className="payment-wrapper__item">
               <div
@@ -502,7 +523,7 @@ export const Booking = (props) => {
           <div className="total-price">
             <div className="total-price__title">Tổng cộng</div>
             <div className="total-price__column">
-              <div className="total-price__column__price">{totalBookingPrice + ' đ'}</div>
+              <div className="total-price__column__price">{totalBookingPrice.toLocaleString('vi-VN') + ' đ'}</div>
             </div>
           </div>
         </div>
@@ -545,37 +566,37 @@ export const Booking = (props) => {
 
       return gmailRegex.test(document.querySelector('#bookingEmail').value);
     }
-    else if (selected === "type 1"){
-      setAlertMsg('Vui lòng nhập đầy đủ thông tin');
-      if(document.querySelector('#cardNumber').value === ''){
-        return false;
-      }
-      if(document.querySelector('#cardValidDate').value === ''){
-        return false;
-      }
-      if(document.querySelector('#cardSecret').value === ''){
-        return false;
-      }
-      if(document.querySelector('#cardOwnerName').value === ''){
-        return false;
-      }
-    }
+    // else if (selected === "type 1"){
+    //   setAlertMsg('Vui lòng nhập đầy đủ thông tin');
+    //   if(document.querySelector('#cardNumber').value === ''){
+    //     return false;
+    //   }
+    //   if(document.querySelector('#cardValidDate').value === ''){
+    //     return false;
+    //   }
+    //   if(document.querySelector('#cardSecret').value === ''){
+    //     return false;
+    //   }
+    //   if(document.querySelector('#cardOwnerName').value === ''){
+    //     return false;
+    //   }
+    // }
     return true;
   }
 
-  const ConfirmBooking = () => {
+  const Booking =  () => {
     if(IsValidInput()){
-      setCardNumber(document.querySelector('#cardNumber').value);
-      setCardValidDate(document.querySelector('#cardValidDate').value);
-      setCardSecret(document.querySelector('#cardSecret').value);
-      setCardOwnerName(document.querySelector('#cardOwnerName').value);
+      // setCardNumber(document.querySelector('#cardNumber').value);
+      // setCardValidDate(document.querySelector('#cardValidDate').value);
+      // setCardSecret(document.querySelector('#cardSecret').value);
+      // setCardOwnerName(document.querySelector('#cardOwnerName').value);
 
-      document.querySelector('.ant-alert').style.display = 'none';
+      // document.querySelector('.ant-alert').style.display = 'none';
 
-      //Tiến hành đặt phòng
+      OpenConfirmBooking();
     }
     else{
-      document.querySelector('.ant-alert').style.display = 'flex';
+      // document.querySelector('.ant-alert').style.display = 'flex';
     }
   }
 
@@ -583,6 +604,72 @@ export const Booking = (props) => {
     key: item.title,
     title: item.title,
   }));
+
+  const OpenConfirmBooking = () => {
+    setOpenConfirmBooking(true);
+  };
+
+  const HandleOk = async () => {
+    setLoadingAcceptBooking(true);
+    setTimeout(() => {
+      setLoadingAcceptBooking(false);
+      setOpenConfirmBooking(false);
+    }, 1000);
+
+    const stripeItent = require('stripe')('sk_test_51MwSGfItrzk46JwuS9zUmW3MgdDEbZHzUxftRVUBOoW1G4AsT4Im2CWy5UnRCEHDV5jw7wXTOwJHDZCOuqP3cOEA00uu4Jm4V9');
+
+    const {client_secret} = await stripeItent.paymentIntents.create({
+      amount: totalBookingPrice,
+      currency: 'vnd',
+      payment_method_types: ['card'],
+      metadata: {
+        order_id: '6735',
+      },
+    });
+
+    const result = await stripe.confirmCardPayment(client_secret, {
+      payment_method: {
+        card: elements.getElement(CardElement),
+        billing_details: {
+          name: bookingName,
+          email: bookingEmail,
+          phone: bookingPhone
+        },
+      }
+    });
+
+    if (result.error) {
+      // Show error to your customer (for example, insufficient funds)
+      console.log(result.error.message);
+      
+      setTimeout(() => {
+        setAlertMsg(result.error.message);
+        document.querySelector('.ant-alert').style.display = 'flex';
+      }, 1000);
+      
+    } else {
+      // The payment has been processed!
+      if (result.paymentIntent.status === 'succeeded') {
+        // Show a success message to your customer
+        // There's a risk of the customer closing the window before callback
+        // execution. Set up a webhook or plugin to listen for the
+        // payment_intent.succeeded event that handles any business critical
+        // post-payment actions.
+        document.querySelector('.ant-alert').style.display = 'none';
+
+        //Thêm hóa đơn đặt phòng lên database
+        const result = await addDoc(collection(db, "orders"), 
+        {
+            uid: user.uid,
+            
+        });
+      }
+    }
+  };
+
+  const handleCancel = () => {
+    setOpenConfirmBooking (false);
+  };
 
   return (
     <div className="booking">
@@ -610,7 +697,7 @@ export const Booking = (props) => {
           {current === steps.length - 1 && (
             <Button
               className="cyan fill"
-              onClick={ConfirmBooking}
+              onClick={Booking}
             >
               Hoàn tất đặt phòng
             </Button>
@@ -621,7 +708,23 @@ export const Booking = (props) => {
             </Button>
           )}
         </div>
-
+          <Modal
+          open={openConfirmBooking}
+          title="Xác nhận đặt phòng"
+          icon = {<BiSolidInfoCircle/>}
+          onOk={HandleOk}
+          onCancel={handleCancel}
+          footer={[
+            <AntButton key="back" onClick={handleCancel}>
+              Trở về
+            </AntButton>,
+            <AntButton key="submit" type="primary" loading={loadingAcceptBooking} onClick={HandleOk}>
+              Xác nhận
+            </AntButton>
+          ]}
+        >
+          <p style={{fontSize: '20px'}}>Bạn có xác nhận muốn đặt phòng?</p>
+        </Modal>
         <div className="booking__content__right">
           {steps[current].rightContent}
         </div>

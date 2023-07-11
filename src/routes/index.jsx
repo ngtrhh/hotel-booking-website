@@ -1,4 +1,4 @@
-import { HomeLayout } from "../components/layout";
+import { HomeLayout, BookingLayout } from "../components/layout";
 import { Home, Results, Detail, Login, Register, ForgotPassword, Booking,
   BookingHistory,
   Favourite,
@@ -54,7 +54,7 @@ const PublicRoutes = () => {
     setData([
       { path: "/", element: Home, layout: HomeLayout },
       { path: "/results", element: Results},
-      { path: "/booking", element: Booking },
+      { path: "/booking", element: Booking, layout: BookingLayout },
       ...accomsData.map((accom, index) => ({
         path: `/detail/${accom.accomId}`,
         element: () => <Detail accomData={accom} />

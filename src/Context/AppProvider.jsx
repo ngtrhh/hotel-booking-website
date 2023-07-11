@@ -135,6 +135,9 @@ export default function AppProvider ({children}) {
 	const [rooms, setRooms] = useState([]);
 	
 	useFireStore('roomtypes', setRoomTypes);
+	useFireStore('rooms', setRooms, -1);
+
+	
 
 	//Booking
 	const [bookingName, setBookingName] = useState('');
@@ -143,11 +146,16 @@ export default function AppProvider ({children}) {
 	const [bookingTax, setBookingTax] = useState(99000);
 	const [bookingDiscount, setBookingDiscount] = useState(99000);
 	const [totalBookingPrice, setTotalBookingPrice] = useState(0);
+	const [roomsToBook, setRoomsToBook] = useState({});
 
 	const [cardNumber, setCardNumber] = useState('');
 	const [cardValidDate, setCardValidDate] = useState('');
 	const [cardSecret, setCardSecret] = useState('');
 	const [cardOwnerName, setCardOwnerName] = useState('');
+
+	// useEffect(() => {
+	// 	console.log(roomsToBook);
+	// }, [roomsToBook]);
 	
 	// const [isAddRoomVisible, setIsAddRoomVisible] = useState(false);
 	// const [isInviteVisible, setIsInviteVisible] = useState(false);
@@ -199,6 +207,7 @@ export default function AppProvider ({children}) {
 			bookingTax, setBookingTax,
 			bookingDiscount, setBookingDiscount,
 			totalBookingPrice, setTotalBookingPrice,
+			roomsToBook, setRoomsToBook,
 			cardNumber, setCardNumber,
 			cardValidDate, setCardValidDate,
 			cardSecret, setCardSecret,
