@@ -3,6 +3,7 @@ import { Breadcrumb, message, Steps, Alert, Modal, Button as AntButton } from "a
 import {BiSolidInfoCircle} from "react-icons/bi";
 import { format, addDays, differenceInDays, formatDistance } from "date-fns";
 import { addDoc, collection } from "firebase/firestore";
+import { serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase/config";
 import vi from "date-fns/locale/vi";
 import image from "../assets/images/ImageBanner.png";
@@ -69,7 +70,7 @@ export const Booking = (props) => {
         color: "#32325d",
         fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
         fontSmoothing: "antialiased",
-        fontSize: "16px",
+        fontSize: "18px",
         "::placeholder": {
           color: "#aab7c4",
         },
@@ -78,6 +79,7 @@ export const Booking = (props) => {
         color: "#fa755a",
         iconColor: "#fa755a",
       },
+      
     },
   };
 
@@ -117,11 +119,10 @@ export const Booking = (props) => {
       setAccomData(accoms.find(accom => accom.accomId === selectedRoomType.accomId));
       
       setDiscount((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) / parseFloat(selectedRoomType.originalPrice.split(' ')[0].replace(/\./g, '')) * 100).toFixed(0));
-      setTotalBookingPrice(((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) * parseFloat(formatDistance(
+      setTotalBookingPrice((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) * parseFloat(formatDistance(
             searchDateRange[0].startDate,
             searchDateRange[0].endDate
-          ).split(' ')[0]) + bookingTax - bookingDiscount)
-      ));
+          ).split(' ')[0]) * seacrchNumOfRooms)+ bookingTax - bookingDiscount);
     }
   }, [selectedRoomType]);
 
@@ -636,7 +637,7 @@ export const Booking = (props) => {
           phone: bookingPhone
         },
       }
-    });
+    })
 
     if (result.error) {
       // Show error to your customer (for example, insufficient funds)
@@ -658,10 +659,32 @@ export const Booking = (props) => {
         document.querySelector('.ant-alert').style.display = 'none';
 
         //Thêm hóa đơn đặt phòng lên database
-        const result = await addDoc(collection(db, "orders"), 
+        await addDoc(collection(db, "orders"), 
         {
             uid: user.uid,
-            
+            accomId: accomData.accomId,
+            roomTypeId: selectedRoomType.roomTypeId,
+            orderDate: serverTimestamp(),
+            recvDate: searchDateRange[0].startDate,
+            endDate: searchDateRange[0].endDate,
+            price: totalBookingPrice,
+            guest: seacrchNumOfGuest,
+            children: seacrchNumOfChild
+        }).then(result =>{
+          roomsToBook.map((room) =>{
+            addDoc(collection(db, "booking"), 
+            {
+                uid: user.uid,
+                accomId: accomData.accomId,
+                roomTypeId: selectedRoomType.roomTypeId,
+                orderDate: serverTimestamp(),
+                recvDate: searchDateRange[0].startDate,
+                endDate: searchDateRange[0].endDate,
+                orderId: result.id,
+                roomId: room.roomId,
+                roomNumber: room.roomNumber
+            })
+          })
         });
       }
     }
