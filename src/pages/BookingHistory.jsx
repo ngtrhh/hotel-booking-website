@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
 import Button from "../components/common/Button";
 import { BsSearch } from "react-icons/bs";
 import { HorizontalCard } from "../components/common/BookingHistory/HorizontalCard";
+import { AppContext } from "../Context/AppProvider";
 
 export const BookingHistory = () => {
+  const data = useContext(AppContext);
+  const {accoms, orders, user} = data;
+  const [dataToShow, setDataToShow] = useState([]);
+
+  useEffect(() =>{
+    const newDataToShow = orders.map((order) => {
+      const correspondingAccom = accoms.find((accom) => accom.accomId === order.accomId);
+      if (correspondingAccom) {
+        return { ...order, ...correspondingAccom, 
+          accomsName: correspondingAccom.name};
+      }
+      return order;
+    });
+    setDataToShow(newDataToShow);
+  }, [accoms, orders, user]);
+  
   return (
     <div className="booking-history">
       <Breadcrumb className="breadcrumb">
@@ -58,9 +75,9 @@ export const BookingHistory = () => {
             </div>
           </div>
           <div className="list">
-            <HorizontalCard type="history" state="passed" />
-            <HorizontalCard type="history" state="coming" />
-            <HorizontalCard type="history" state="canceled" />
+            {dataToShow.map((bookingHistory) => {
+              return (<HorizontalCard DataToShow={bookingHistory} type="history" state="passed" />)
+            })}
           </div>
         </div>
       </div>

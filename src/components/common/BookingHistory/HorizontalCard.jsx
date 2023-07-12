@@ -2,22 +2,29 @@ import React from "react";
 import Button from "../Button";
 import { BsStarFill, BsHeart, BsGeoAltFill } from "react-icons/bs";
 import image from "../../../assets/images/ImageBanner.png";
+import { format, addDays, differenceInDays, formatDistance, differenceInMilliseconds } from "date-fns";
 
 const state = ["passed", "coming", "canceled"];
 
 export const HorizontalCard = (props) => {
+  const data = props.DataToShow;
+  // let state = parseFloat(formatDistance(
+  //   data.recvDate,
+  //   data.endDate
+  // ).split(' ')[0]);
   return (
     <div className="horizontal-card">
       <div className="image">
-        <img src={image} />
+        <img src={data.images[0]} />
         <div className="tag">
-          <div className="tag__item">Khách sạn</div>
+          <div className="tag__item">{data.type}</div>
           <div className="tag__item">
-            4 <BsStarFill size={12} />
+            {data.star}
+            <BsStarFill size={12} />
           </div>
         </div>
         {props.type === "history" && props.state === state[0] && (
-          <div className="date">Đã đặt ngày 09/02/2023</div>
+          <div className="date">{'Đã đặt ngày ' + data.orderDate.toDate().toLocaleDateString()}</div>
         )}
         {props.type === "history" && props.state === state[1] && (
           <div className="remind">Còn 2 ngày nữa nhận phòng!</div>
@@ -29,16 +36,16 @@ export const HorizontalCard = (props) => {
       <div className="description">
         <div className="wrapper">
           <div className="name">
-            Mai Phương Resort Phú Quốc
+            {data.accomsName}
             <BsHeart size={40} />
           </div>
           <div className="address">
             <BsGeoAltFill size={18} />
-            <span>Địa chỉ Phường, TP</span>
+            <span>{data.address}</span>
           </div>
           <div className="rating">
-            <div className="rating__score">8,4</div>
-            <div className="rating__reviews">231 lượt đánh giá</div>
+            <div className="rating__score">{data.rating}</div>
+            <div className="rating__reviews">{data.ratingCount + ' lượt đánh giá'}</div>
           </div>
           {props.type === "favourite" && (
             <>
@@ -59,31 +66,35 @@ export const HorizontalCard = (props) => {
                 <div className="wrapper__row__item__title">
                   Ngày nhận phòng:
                 </div>
-                <span>12/02/2023</span>
+                <span>{data.recvDate.toDate().toLocaleDateString()}</span>
               </div>
               <div className="wrapper__row__item">
                 <div className="wrapper__row__item__title">Ngày trả phòng:</div>
-                <span>14/02/2023</span>
+                <span>{data.endDate.toDate().toLocaleDateString()}</span>
               </div>
             </div>
             <div className="wrapper__row">
               <div className="wrapper__row__item">
                 <div className="wrapper__row__item__title">Số đêm:</div>
-                <span>2</span>
+                <span>{data.nights}</span>
               </div>
               <div className="wrapper__row__item">
                 <div className="wrapper__row__item__title">Số người:</div>
-                <span>2</span>
+                <span>{
+            data.children > 0
+              ? `${data.guest} người - ${data.children} trẻ em - ${data.numOfRooms} phòng`
+              : `${data.guest} người - ${data.numOfRooms} phòng`
+          }</span>
               </div>
             </div>
             <div className="wrapper__room">
               <div className="wrapper__room__name">
-                Phòng 2 giường đơn nhìn ra vườn
+                {data.roomTypeName}
               </div>
-              <span> 936.000 đ</span>
+              <span>{data.oneRoomPrice}</span>
             </div>
             <div className="wrapper__total">
-              Tổng cộng: <span>1.872.000đ</span>
+              Tổng cộng: <span>{data.orderPrice.toLocaleString('vi-VN') + ' đ'}</span>
             </div>
           </div>
         )}

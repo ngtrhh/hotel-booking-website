@@ -10,7 +10,7 @@ import { AuthContext } from './AuthProvider';
 import { HomeContext } from './HomeContext';
 import { connectFirestoreEmulator, limit } from 'firebase/firestore';
 import { doc, onSnapshot } from "firebase/firestore";
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from '../firebase/config';
 
 export const AppContext = React.createContext();
@@ -25,6 +25,9 @@ export default function AppProvider ({children}) {
 			setIsLoggedIn(!(Object.keys(user).length === 0));
 		}
 	}, [user]);
+
+	//Header
+	const [isUserDropdown, setIsUserDropdown] = useState(false);
 	
 
 	//Data Home
@@ -152,10 +155,40 @@ export default function AppProvider ({children}) {
 	const [cardValidDate, setCardValidDate] = useState('');
 	const [cardSecret, setCardSecret] = useState('');
 	const [cardOwnerName, setCardOwnerName] = useState('');
+	const [orderId, setOrderId] = useState('');
+	const [bookingSuccess, setBookingSuccess] = useState(false);
+
+	//Booking History
+	const[orders, setOrders] = useState([]);
+	const ordersQueryCondition = {
+		fieldName: 'uid', 
+		operator: '==', 
+		comparedValue: user.uid
+	}
+	// useFireStore('orders', setOrders, -1, ordersQueryCondition);
+	React.useEffect(() => {
+		if(user.uid){
+			const collectionRef = collection(db, 'orders');
+		
+			const q = query(collectionRef, where('uid', '==', user.uid));
+	
+			const unsubscribe = onSnapshot(q, (querySnapshot) => {
+				const documents = [];
+				querySnapshot.forEach((doc) => {
+					documents.push({
+						...doc.data(),
+						'id': doc.id
+					});
+				});
+				setOrders(documents);
+			});
+			return unsubscribe;
+		}
+	}, [bookingSuccess, user]);
 
 	// useEffect(() => {
-	// 	console.log(roomsToBook);
-	// }, [roomsToBook]);
+	// 	console.log(orders);
+	// }, [orders]);
 	
 	// const [isAddRoomVisible, setIsAddRoomVisible] = useState(false);
 	// const [isInviteVisible, setIsInviteVisible] = useState(false);
@@ -211,7 +244,11 @@ export default function AppProvider ({children}) {
 			cardNumber, setCardNumber,
 			cardValidDate, setCardValidDate,
 			cardSecret, setCardSecret,
-			cardOwnerName, setCardOwnerName
+			cardOwnerName, setCardOwnerName,
+			orderId, setOrderId,
+			bookingSuccess, setBookingSuccess,
+			isUserDropdown, setIsUserDropdown,
+			orders, setOrders
 		}}>
 			{children}
 		</AppContext.Provider>

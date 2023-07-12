@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
 import Button from "./Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { AppContext } from "../../Context/AppProvider";
 import { auth } from "../../firebase/config";
@@ -20,8 +20,9 @@ const Header = () => {
   const data = useContext(AppContext);
   const isLoggedIn = data.isLoggedIn ? data.isLoggedIn : false;
   const user = data.user;
+  const navigate = useNavigate();
 
-  const [isUserDropdown, setIsUserDropdown] = useState(false);
+  const {isUserDropdown, setIsUserDropdown} = data;
 
   const LogOut = () => {
     auth.signOut();
@@ -52,6 +53,16 @@ const Header = () => {
       dropdownMenu.style.backgroundColor = "transparent";
     }
   }, [isLoggedIn]);
+
+  const goBookingHistory = () => { 
+    ToggleDropdown();
+    navigate('/booking-history');
+  }
+
+  const goProfile = () => { 
+    ToggleDropdown();
+    navigate('/profile');
+  }
 
   // useEffect(() => {
   //   window.addEventListener("scroll", () => {
@@ -114,11 +125,11 @@ const Header = () => {
               className="header__user-dropdown__content"
               id="header-user-dropdown-items"
             >
-              <div className="header__user-dropdown__content__item">
+              <div className="header__user-dropdown__content__item" onClick={goBookingHistory}>
                 <BiBookBookmark className="header__user-dropdown__content__item__icon" />
                 <p>Phòng đã đặt</p>
               </div>
-              <div className="header__user-dropdown__content__item">
+              <div className="header__user-dropdown__content__item" onClick={goProfile}>
                 <BiUser className="header__user-dropdown__content__item__icon" />
                 <p>Tài khoản</p>
               </div>

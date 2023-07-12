@@ -524,3 +524,16 @@
 .pointer {
   cursor: pointer;
 }
+
+.card-element-container{
+  color: var(--dark-blue, #272B4E);
+  font-family: Quicksand;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  }
+
+.StripeElement{
+  padding-top: 10px;
+}

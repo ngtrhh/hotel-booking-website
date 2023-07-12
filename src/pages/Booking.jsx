@@ -48,6 +48,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
 import { useContext } from "react";
 import { AppContext } from "../Context/AppProvider";
+import ResultBooking from "../components/common/Booking/ResultBooking";
 const stripePromise = loadStripe("pk_test_51MwSGfItrzk46JwuUcMyEF34q9bXGZTsKJuUSwiWDdvEdtX4ORkDoNxvr1KjqMGbRlMccRoIrmJFuDnfcwHzlCV100YJDhC5Tm");
 
 export const Booking = (props) => {
@@ -56,6 +57,7 @@ export const Booking = (props) => {
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState("type 1");
   const [bankSelected, setBankSelected] = useState(1);
+  
   const facilitiesList = ['Hồ bơi', 'Chỗ đậu xe', 'Quầy bar',
   'Wifi', 'Phòng gym', 'Trung tâm thể dục', 'Thích hợp cho gia đình/trẻ em',
   'Bữa sáng miễn phí'];
@@ -68,12 +70,13 @@ export const Booking = (props) => {
     style: {
       base: {
         color: "#32325d",
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontFamily: '"Quicksand", Helvetica, sans-serif',
         fontSmoothing: "antialiased",
-        fontSize: "18px",
+        fontSize: "22px",
         "::placeholder": {
           color: "#aab7c4",
         },
+        fontWeight: 500
       },
       invalid: {
         color: "#fa755a",
@@ -104,7 +107,9 @@ export const Booking = (props) => {
           cardNumber, setCardNumber,
           cardValidDate, setCardValidDate,
           cardSecret, setCardSecret,
-          cardOwnerName, setCardOwnerName
+          cardOwnerName, setCardOwnerName,
+          orderId, setOrderId,
+          bookingSuccess, setBookingSuccess
         } = dataProvided;
   const [totalPriceString, setTotalPriceString] = useState('');
   const [alertMsg, setAlertMsg] = useState('');
@@ -114,17 +119,18 @@ export const Booking = (props) => {
 
   const elements = useElements();
   const stripe = useStripe();
+  const [nights, setNights] = useState(0);
   useEffect(() => {
     if(selectedRoomType !== ''){
       setAccomData(accoms.find(accom => accom.accomId === selectedRoomType.accomId));
-      
+      setNights(parseFloat(formatDistance(
+        searchDateRange[0].startDate,
+        searchDateRange[0].endDate
+      ).split(' ')[0]));
       setDiscount((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) / parseFloat(selectedRoomType.originalPrice.split(' ')[0].replace(/\./g, '')) * 100).toFixed(0));
-      setTotalBookingPrice((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) * parseFloat(formatDistance(
-            searchDateRange[0].startDate,
-            searchDateRange[0].endDate
-          ).split(' ')[0]) * seacrchNumOfRooms)+ bookingTax - bookingDiscount);
+      setTotalBookingPrice((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) * nights * seacrchNumOfRooms)+ bookingTax - bookingDiscount);
     }
-  }, [selectedRoomType]);
+  }, [selectedRoomType, nights]);
 
   useEffect(() => {
     const foundRooms = rooms.filter(room => ((room.roomTypeId === selectedRoomType.roomTypeId))).slice(0, seacrchNumOfRooms);
@@ -379,11 +385,9 @@ export const Booking = (props) => {
               </div>
               {selected === "type 1" && (
                 <>
-                <div style={{width: '100%'}}>
-                  <label>
+                <div className="card-element-container" style={{width: '100%'}}>
                     Thông tin thẻ
                     <CardElement options={CARD_ELEMENT_OPTIONS} />
-                  </label>
                 </div>
                 
                 <Alert message={alertMsg} type="warning" banner id='cardInputWarning'
@@ -667,10 +671,16 @@ export const Booking = (props) => {
             orderDate: serverTimestamp(),
             recvDate: searchDateRange[0].startDate,
             endDate: searchDateRange[0].endDate,
-            price: totalBookingPrice,
+            nights: nights,
+            orderPrice: totalBookingPrice,
+            oneRoomPrice: selectedRoomType.price,
+            roomTypeName: selectedRoomType.name,
             guest: seacrchNumOfGuest,
-            children: seacrchNumOfChild
+            children: seacrchNumOfChild,
+            numOfRooms: seacrchNumOfRooms,
+            state: 'coming'
         }).then(result =>{
+          setOrderId(result.id);
           roomsToBook.map((room) =>{
             addDoc(collection(db, "booking"), 
             {
@@ -686,6 +696,8 @@ export const Booking = (props) => {
             })
           })
         });
+        setBookingSuccess(true);
+        navigate('/booking/result');
       }
     }
   };

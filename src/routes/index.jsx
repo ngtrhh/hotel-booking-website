@@ -4,6 +4,7 @@ import { Home, Results, Detail, Login, Register, ForgotPassword, Booking,
   Favourite,
   Profile,
   EditProfile, } from "../pages/";
+import ResultBooking from "../components/common/Booking/ResultBooking";
 import { GetAcooms } from "../Context/AppProvider";
 import { React, useState, useEffect } from "react";
 import {db} from '../firebase/config'
@@ -65,7 +66,8 @@ const PublicRoutes = () => {
       { path: "/booking-history", element: BookingHistory},
       { path: "/favourite", element: Favourite },
       { path: "/profile", element: Profile },
-      { path: "/edit-profile", element: EditProfile }
+      { path: "/edit-profile", element: EditProfile },
+      { path: "/booking/result", element: ResultBooking}
     ]);
   }, [accomsData]);
   

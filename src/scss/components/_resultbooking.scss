@@ -1,0 +1,40 @@
+@use "../asbtract/" as *;
+
+.countdown-container{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.ant-result{
+    padding: 0 32px;
+    padding-top: 48px;
+
+    .ant-result-title{
+        color: $dark-blue;
+
+        /* Heading 4 */
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .ant-result-subtitle{
+        color: $dark-grey;
+
+        /* Heading 4 */
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .ant-btn{
+        font-size: 20px;
+        width: fit-content;
+        height: 40px;
+    }
+}
