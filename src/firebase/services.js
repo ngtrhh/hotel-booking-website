@@ -38,7 +38,12 @@ export const LoginWithGgFb = (methodType) => {
 				photoURL: user.photoURL,
 				providerId: user.providerId,
 				createdAt: user.metadata.createdAt,
-				keywords: generateKeywords(user.displayName)
+				keywords: generateKeywords(user.displayName),
+				lovedRoomsId: [],
+				phoneNumber: user.phoneNumber,
+				dob: null,
+				sex: null,
+				address: null
 			}
 			addDocument("users", data);
 		}

@@ -52,8 +52,8 @@ export const Login = () => {
   const LoginWithOtherMethod = (methodType) => {
     auth.signOut();
     LoginWithGgFb(methodType);
-    
   }
+  
   React.useEffect(() => {
     if(isLoggedIn){
       setTimeout(() => {

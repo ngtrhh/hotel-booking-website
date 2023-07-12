@@ -47,7 +47,6 @@ const NumberOfGuestSearch = (props) => {
         <div className="label">Khách và phòng</div>
         <input
           readOnly
-          placeholder="2 người - 1 phòng"
           style={{ width: "220px" }}
           value={
             child > 0

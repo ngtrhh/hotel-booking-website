@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Breadcrumb, message, Steps, Alert, Modal, Button as AntButton } from "antd";
 import {BiSolidInfoCircle} from "react-icons/bi";
 import { format, addDays, differenceInDays, formatDistance } from "date-fns";
@@ -57,7 +57,8 @@ export const Booking = (props) => {
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState("type 1");
   const [bankSelected, setBankSelected] = useState(1);
-  
+  const [vcbQrImg, setVcbQrImg] = useState();
+  const [vtbQrImg, setVtbQrImg] = useState();
   const facilitiesList = ['Hồ bơi', 'Chỗ đậu xe', 'Quầy bar',
   'Wifi', 'Phòng gym', 'Trung tâm thể dục', 'Thích hợp cho gia đình/trẻ em',
   'Bữa sáng miễn phí'];
@@ -85,7 +86,18 @@ export const Booking = (props) => {
       
     },
   };
-
+  const goTopRef = useRef(null);
+  const vcbRef = useRef(null);
+  const vtbRef = useRef(null);
+  const ScrollToTop = () => {
+    goTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });    
+  }
+  const ScrollVCB = () => {
+    vcbRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });    
+  }
+  const ScrollVTB = () => {
+    vtbRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });    
+  }
 
   const { user,
           accoms, accomData, setAccomData,
@@ -154,6 +166,56 @@ export const Booking = (props) => {
       window.removeEventListener('beforeunload', handleUnload);
     };
   }, []);
+
+  const requestDataVCB = {
+    accountNo: 9948184179,
+    accountName: "NGUYEN THANH TRUNG",
+    acqId: 970436,
+    amount: totalBookingPrice,
+    addInfo: "DAT PHONG " + accomData.name?.toUpperCase(),
+    format: "text",
+    template: "compact2"
+  };
+  const requestDataVTB = {
+    accountNo: 9948184179,
+    accountName: "NGUYEN THANH TRUNG",
+    acqId: 970415,
+    amount: totalBookingPrice,
+    addInfo: "DAT PHONG " + accomData.name?.toUpperCase(),
+    format: "text",
+    template: "compact2"
+  };
+  useEffect(() =>{
+    fetch("https://api.vietqr.io/v2/generate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(requestDataVCB)
+    }).then(response => response.json()).then(data => {
+        // Xử lý dữ liệu nhận được từ API
+        console.log(data);
+        setVcbQrImg(data.data.qrDataURL);
+    }).catch(error => {
+        // Xử lý lỗi nếu có
+        console.error(error);
+    });
+    fetch("https://api.vietqr.io/v2/generate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(requestDataVTB)
+    }).then(response => response.json()).then(data => {
+        // Xử lý dữ liệu nhận được từ API
+        console.log(data);
+        setVtbQrImg(data.data.qrDataURL);
+    }).catch(error => {
+        // Xử lý lỗi nếu có
+        console.error(error);
+    });
+  }, [requestDataVCB, requestDataVTB])
+  
 
   const HandleBookingNameOnChange = (event) => {
     let bookingNameInput = event.target.value.split(' ');
@@ -415,8 +477,10 @@ export const Booking = (props) => {
                 <div className="bank-wrapper">
                   <div
                     className="bank-wrapper__item pointer"
+                    ref={vcbRef}
                     onClick={() => {
                       setBankSelected(1);
+                      ScrollVCB();
                     }}
                   >
                     <img src="https://upload.wikimedia.org/wikipedia/vi/8/85/Vietcombank_Logo.png" />
@@ -426,19 +490,23 @@ export const Booking = (props) => {
                       <BsCircle size={20} />
                     )}
                   </div>
+                  {bankSelected === 1 && <img src={vcbQrImg} alt="loading..." />}
+                  
                   <div
                     className="bank-wrapper__item pointer"
+                    ref={vtbRef}
                     onClick={() => {
                       setBankSelected(2);
                     }}
                   >
-                    <img src="https://upload.wikimedia.org/wikipedia/vi/3/3d/Argibank_logo.svg" />
+                    <img src="https://api.vietqr.io/img/ICB.png" />
                     {bankSelected === 2 ? (
                       <BsRecordCircle size={20} />
                     ) : (
                       <BsCircle size={20} />
                     )}
                   </div>
+                  {bankSelected === 2 && <img src={vtbQrImg} alt="loading..." />}
                 </div>
               )}
             </div>
@@ -481,7 +549,7 @@ export const Booking = (props) => {
               <div className="wrapper__small-row__grid__row">
                 <div className="wrapper__small-row__grid__row__item bottom-left">
                   <div className="wrapper__small-row__grid__row__item__label">
-                    Nhận phòng
+                    Số phòng
                   </div>
                   <div className="wrapper__small-row__grid__row__item__content">
                     {seacrchNumOfRooms}
@@ -543,6 +611,7 @@ export const Booking = (props) => {
       setBookingPhone(document.querySelector('#bookingPhone').value);
       document.querySelector('.ant-alert').style.display = 'none';
       setCurrent(current + 1);
+      ScrollToTop();
     }
     else{
       document.querySelector('.ant-alert').style.display = 'flex';
@@ -707,7 +776,7 @@ export const Booking = (props) => {
   };
 
   return (
-    <div className="booking">
+    <div className="booking" ref={goTopRef}>
       <Breadcrumb className="breadcrumb">
         <Breadcrumb.Item>
           <Link to="/">Trang chủ</Link>

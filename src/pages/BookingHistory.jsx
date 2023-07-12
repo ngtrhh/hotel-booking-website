@@ -10,6 +10,24 @@ export const BookingHistory = () => {
   const data = useContext(AppContext);
   const {accoms, orders, user} = data;
   const [dataToShow, setDataToShow] = useState([]);
+  const [sortOption, setSortOption] = useState([
+    {
+      name: 'nearest',
+      selected: true,
+    },
+    {
+      name: 'oldest',
+      selected: false,
+    },
+    {
+      name: 'highestPrice',
+      selected: false,
+    },
+    {
+      name: 'lowestPrice',
+      selected: false,
+    }
+  ]);
 
   useEffect(() =>{
     const newDataToShow = orders.map((order) => {
@@ -22,6 +40,14 @@ export const BookingHistory = () => {
     });
     setDataToShow(newDataToShow);
   }, [accoms, orders, user]);
+  const handleSortOptionClick = (index) => {
+    const updatedSortOption = [...sortOption];
+    updatedSortOption.forEach((option, i) => {
+      option.selected = i === index;
+    });
+    setSortOption(updatedSortOption);
+  };
+  
   
   return (
     <div className="booking-history">
@@ -68,10 +94,31 @@ export const BookingHistory = () => {
           <div className="sort">
             <div className="sort__title">Sắp xếp theo</div>
             <div className="sort__wrapper">
-              <div className="sort__wrapper__item selected">Gần nhất</div>
-              <div className="sort__wrapper__item">Cũ nhất</div>
-              <div className="sort__wrapper__item">Giá cao nhất</div>
-              <div className="sort__wrapper__item">Giá thấp nhất</div>
+            <div
+              className={`sort__wrapper__item ${sortOption[0].selected ? 'selected' : ''}`}
+              onClick={() => handleSortOptionClick(0)}
+            >
+              Gần nhất
+            </div>
+            <div
+              className={`sort__wrapper__item ${sortOption[1].selected ? 'selected' : ''}`}
+              onClick={() => handleSortOptionClick(1)}
+            >
+              Cũ nhất
+            </div>
+            <div
+              className={`sort__wrapper__item ${sortOption[2].selected ? 'selected' : ''}`}
+              onClick={() => handleSortOptionClick(2)}
+            >
+              Giá cao nhất
+            </div>
+            <div
+              className={`sort__wrapper__item ${sortOption[3].selected ? 'selected' : ''}`}
+              onClick={() => handleSortOptionClick(3)}
+            >
+              Giá thấp nhất
+            </div>
+
             </div>
           </div>
           <div className="list">

@@ -163,11 +163,12 @@ export default function AppProvider ({children}) {
 	const ordersQueryCondition = {
 		fieldName: 'uid', 
 		operator: '==', 
-		comparedValue: user.uid
+		comparedValue: user?.uid || ''
 	}
+	
 	// useFireStore('orders', setOrders, -1, ordersQueryCondition);
 	React.useEffect(() => {
-		if(user.uid){
+		if(user?.uid || false){
 			const collectionRef = collection(db, 'orders');
 		
 			const q = query(collectionRef, where('uid', '==', user.uid));

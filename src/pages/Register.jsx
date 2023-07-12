@@ -44,7 +44,11 @@ export const Register = () => {
 						providerId: user.providerId,
 						createdAt: user.metadata.createdAt,
 						keywords: generateKeywords(user.displayName),
-            lovedRoomsId: []
+            lovedRoomsId: [],
+            phoneNumber: user.phoneNumber,
+            dob: null,
+            sex: null,
+            address: null
 					}
 					addDocument("users", data);
 				}
