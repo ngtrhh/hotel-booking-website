@@ -2,6 +2,8 @@ export { Home } from "./Home";
 export { Results } from "./Results";
 export { Detail } from "./Detail";
 export { Booking } from "./Booking";
+export { EditBooking } from "./EditBooking";
+export { DetailBooking } from "./DetailBooking";
 export { BookingHistory } from "./BookingHistory";
 export { Login } from "./Login";
 export { Register } from "./Register";

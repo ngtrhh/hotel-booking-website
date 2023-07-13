@@ -135,6 +135,11 @@
             @include flex(center, center);
             gap: 20px;
             flex-direction: column;
+
+            &.disable {
+              color: $dark-grey;
+              cursor: context-menu;
+            }
           }
         }
 

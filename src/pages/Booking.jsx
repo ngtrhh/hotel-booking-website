@@ -169,7 +169,7 @@ export const Booking = () => {
             <span>Tên phòng x 1 đêm </span>
             <div className="wrapper__row__price-room">
               <div className="wrapper__row__price-room__old">1.100.0000 đ</div>
-              <div className="wrapper__row__price-room">840.000 đ</div>
+              <div className="wrapper__row__price-room__new">840.000 đ</div>
             </div>
           </div>
           <div className="wrapper__row">

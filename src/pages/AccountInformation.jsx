@@ -147,7 +147,7 @@ export const AccountInformation = () => {
                     readOnly
                   />
                   <div
-                    className="text"
+                    className={update ? "text disable" : "text"}
                     onClick={() => {
                       if (!update) setUpdate("password");
                     }}
@@ -199,7 +199,7 @@ export const AccountInformation = () => {
                 <div className="row__content two-texts">
                   <input readOnly value="Xóa tài khoản Destivance vĩnh viễn" />
                   <div
-                    className="text"
+                    className={update ? "text disable" : "text"}
                     onClick={() => {
                       if (!update) setUpdate("delete");
                     }}

@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import PublicRoutes, {publicRoutes} from "./routes";
+import PublicRoutes, { publicRoutes } from "./routes";
 import { MainLayout } from "./components/layout";
 import { Fragment } from "react";
 import AuthProvider from "./Context/AuthProvider";
 import AppProvider from "./Context/AppProvider";
-import { FloatButton } from 'antd';
+import { FloatButton } from "antd";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 function App() {
   const meow = PublicRoutes();
@@ -12,6 +13,7 @@ function App() {
     <Router>
       <AuthProvider>
         <AppProvider>
+          <ScrollToTop />
           <Routes>
             {meow.map((route, index) => {
               const Page = route.element;

@@ -15,8 +15,16 @@
   }
 
   &.cyan {
-    background-color: $cyan;
-    color: $white;
+    $primary-color: $cyan;
+    $second-color: $white;
+    background-color: $primary-color;
+    color: $second-color;
+
+    &.outline {
+      border: 1px solid $primary-color;
+      color: $primary-color;
+      background-color: $second-color;
+    }
   }
 
   &.no-background {
@@ -51,5 +59,18 @@
 
   &.glow {
     box-shadow: 0px 0px 6px 0px rgba(63, 114, 175, 0.4);
+  }
+
+  &.red {
+    $primary-color: $red;
+    $second-color: $white;
+    background-color: $primary-color;
+    color: $second-color;
+
+    &.outline {
+      border: 1px solid $primary-color;
+      color: $primary-color;
+      background-color: $second-color;
+    }
   }
 }
