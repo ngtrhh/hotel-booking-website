@@ -36,7 +36,7 @@ export const HorizontalCard = (props) => {
       <div className="description">
         <div className="wrapper">
           <div className="name">
-            {data.accomsName}
+            {data.accomsName || data.name}
             <BsHeart size={40} />
           </div>
           <div className="address">

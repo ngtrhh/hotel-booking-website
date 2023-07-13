@@ -17,6 +17,7 @@ import {
 import { useState } from "react";
 
 const Header = () => {
+  const pathname = window.location.pathname;
   const data = useContext(AppContext);
   const isLoggedIn = data.isLoggedIn ? data.isLoggedIn : false;
   const user = data.user;
@@ -88,15 +89,17 @@ const Header = () => {
         </div>
         <div className="header__menu">
           <Link to="/">
-            <div className="header__menu__item active">
+            <div className={`header__menu__item ${pathname === '/' ? 'active' : ''}`}>
               <span>Trang chủ</span>
               <div className="line" />
             </div>
           </Link>
-          <div className="header__menu__item">
-            <span>Yêu thích</span>
-            <div className="line" />
-          </div>
+          <Link to={'/favourite'}>
+            <div className={`header__menu__item ${pathname === '/favourite' ? 'active' : ''}`}>
+              <span>Yêu thích</span>
+              <div className="line" />
+            </div>
+          </Link>
           <div className="header__menu__item">
             <span>Về Lokastay</span>
             <div className="line" />
