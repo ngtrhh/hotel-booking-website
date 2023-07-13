@@ -40,6 +40,7 @@ export const BookingHistory = () => {
     });
     setDataToShow(newDataToShow);
   }, [accoms, orders, user]);
+
   const handleSortOptionClick = (index) => {
     const updatedSortOption = [...sortOption];
     updatedSortOption.forEach((option, i) => {
@@ -47,6 +48,31 @@ export const BookingHistory = () => {
     });
     setSortOption(updatedSortOption);
   };
+
+  useEffect(() =>{
+    handleSortOptionClick(0);
+  }, [dataToShow]);
+
+  useEffect(() =>{
+    const option = sortOption.find(opt => opt.selected == true);
+    
+    if(option.name == 'nearest'){
+      handleSortOptionClick(0);
+      dataToShow.sort((a, b) => b.orderDate - a.orderDate);
+    }
+    else if(option.name == 'oldest'){
+      handleSortOptionClick(1);
+      dataToShow.sort((a, b) => a.orderDate - b.orderDate);
+    }
+    else if(option.name == 'highestPrice'){
+      handleSortOptionClick(2);
+      dataToShow.sort((a, b) => b.orderPrice - a.orderPrice);
+    }
+    else if(option.name == 'lowestPrice'){
+      handleSortOptionClick(3);
+      dataToShow.sort((a, b) => a.orderPrice - b.orderPrice);
+    }
+  }, [sortOption, dataToShow, accoms]);
   
   
   return (

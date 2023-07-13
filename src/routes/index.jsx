@@ -69,7 +69,9 @@ const PublicRoutes = () => {
       { path: "/favourite", element: Favourite },
       { path: "/profile", element: Profile },
       { path: "/edit-profile", element: EditProfile },
-      { path: "/booking/result", element: ResultBooking}
+      { path: "/booking/result", element: ResultBooking},
+      {path: "/booking-history/detail", element: DetailBooking},
+      {path: "/booking-history/edit", element: EditBooking}
     ]);
   }, [accomsData]);
   
