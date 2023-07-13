@@ -3,12 +3,14 @@ import { Home, Results, Detail, Login, Register, ForgotPassword, Booking,
   BookingHistory,
   Favourite,
   Profile,
-  EditProfile, } from "../pages/";
+  EditProfile, AccountInformation,
+  DetailBooking,
+  EditBooking,} from "../pages/";
 import ResultBooking from "../components/common/Booking/ResultBooking";
 import { GetAcooms } from "../Context/AppProvider";
 import { React, useState, useEffect } from "react";
-import {db} from '../firebase/config'
-import { connectFirestoreEmulator, limit } from 'firebase/firestore';
+import { db } from "../firebase/config";
+import { connectFirestoreEmulator, limit } from "firebase/firestore";
 import { doc, onSnapshot } from "firebase/firestore";
 import { collection, getDocs, query } from "firebase/firestore";
 import useFireStore from "../Hooks/useFireStored";
@@ -58,7 +60,7 @@ const PublicRoutes = () => {
       { path: "/booking", element: Booking, layout: BookingLayout },
       ...accomsData.map((accom, index) => ({
         path: `/detail/${accom.accomId}`,
-        element: () => <Detail accomData={accom} />
+        element: () => <Detail accomData={accom} />,
       })),
       { path: "/login", element: Login, layout: null },
       { path: "/register", element: Register, layout: null },

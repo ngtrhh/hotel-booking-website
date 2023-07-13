@@ -402,7 +402,7 @@ export const Booking = (props) => {
             <span>Tên phòng x 1 đêm </span>
             <div className="wrapper__row__price-room">
               <div className="wrapper__row__price-room__old">{selectedRoomType.originalPrice + ' đ'}</div>
-              <div className="wrapper__row__price-room">{selectedRoomType.price}</div>
+              <div className="wrapper__row__price-room__new">{selectedRoomType.price}</div>
             </div>
           </div>
           <div className="wrapper__row">

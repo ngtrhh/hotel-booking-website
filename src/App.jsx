@@ -4,7 +4,8 @@ import { MainLayout } from "./components/layout";
 import { Fragment } from "react";
 import AuthProvider from "./Context/AuthProvider";
 import AppProvider from "./Context/AppProvider";
-import { FloatButton } from 'antd';
+import { FloatButton } from "antd";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 function App() {
   const routesToMap = PublicRoutes();
@@ -12,6 +13,7 @@ function App() {
     <Router>
       <AuthProvider>
         <AppProvider>
+          <ScrollToTop />
           <Routes>
             {routesToMap.map((route, index) => {
               const Page = route.element;

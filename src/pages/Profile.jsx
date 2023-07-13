@@ -13,12 +13,12 @@ export const Profile = () => {
     console.log(user);
   }, [user]);
   return (
-    <div className="profile">
+    <div className="account">
       <Breadcrumb className="breadcrumb">
         <Breadcrumb.Item>
           <Link to="/">Trang chủ</Link>
         </Breadcrumb.Item>
-        <Breadcrumb.Item>Thông tin cá nhân</Breadcrumb.Item>
+        <Breadcrumb.Item>Thông tin tài khoản</Breadcrumb.Item>
       </Breadcrumb>
 
       <div className="two-contents">
