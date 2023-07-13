@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
 import Button from "./Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { AppContext } from "../../Context/AppProvider";
 import { auth } from "../../firebase/config";
@@ -17,11 +17,13 @@ import {
 import { useState } from "react";
 
 const Header = () => {
+  const pathname = window.location.pathname;
   const data = useContext(AppContext);
   const isLoggedIn = data.isLoggedIn ? data.isLoggedIn : false;
   const user = data.user;
+  const navigate = useNavigate();
 
-  const [isUserDropdown, setIsUserDropdown] = useState(false);
+  const {isUserDropdown, setIsUserDropdown} = data;
 
   const LogOut = () => {
     auth.signOut();
@@ -53,6 +55,16 @@ const Header = () => {
     }
   }, [isLoggedIn]);
 
+  const goBookingHistory = () => { 
+    ToggleDropdown();
+    navigate('/booking-history');
+  }
+
+  const goProfile = () => { 
+    ToggleDropdown();
+    navigate('/profile');
+  }
+
   // useEffect(() => {
   //   window.addEventListener("scroll", () => {
   //     if (
@@ -77,15 +89,17 @@ const Header = () => {
         </div>
         <div className="header__menu">
           <Link to="/">
-            <div className="header__menu__item active">
+            <div className={`header__menu__item ${pathname === '/' ? 'active' : ''}`}>
               <span>Trang chủ</span>
               <div className="line" />
             </div>
           </Link>
-          <div className="header__menu__item">
-            <span>Yêu thích</span>
-            <div className="line" />
-          </div>
+          <Link to={'/favourite'}>
+            <div className={`header__menu__item ${pathname === '/favourite' ? 'active' : ''}`}>
+              <span>Yêu thích</span>
+              <div className="line" />
+            </div>
+          </Link>
           <div className="header__menu__item">
             <span>Về Lokastay</span>
             <div className="line" />
@@ -114,11 +128,11 @@ const Header = () => {
               className="header__user-dropdown__content"
               id="header-user-dropdown-items"
             >
-              <div className="header__user-dropdown__content__item">
+              <div className="header__user-dropdown__content__item" onClick={goBookingHistory}>
                 <BiBookBookmark className="header__user-dropdown__content__item__icon" />
                 <p>Phòng đã đặt</p>
               </div>
-              <div className="header__user-dropdown__content__item">
+              <div className="header__user-dropdown__content__item" onClick={goProfile}>
                 <BiUser className="header__user-dropdown__content__item__icon" />
                 <p>Tài khoản</p>
               </div>
@@ -135,18 +149,6 @@ const Header = () => {
                 </div>
               </Popconfirm>
             </div>
-            <Popconfirm
-              title="Thông báo"
-              description="Bạn có muốn đăng xuất?"
-              onConfirm={LogOut}
-              okText="Có"
-              cancelText="Không"
-            >
-              <div className="header__user-dropdown__content__item log-out">
-                <BiLogOut className="header__user-dropdown__content__item__icon" />
-                <p>Đăng xuất</p>
-              </div>
-            </Popconfirm>
           </div>
         ) : (
           <div className="header__login-signup" id="header__login-signup">

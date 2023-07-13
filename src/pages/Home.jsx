@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../components/common/Button";
 import SearchBar from "../components/common/Home/SearchBar";
 import DestinationItem from "../components/common/Home/DestinationItem";
@@ -9,9 +9,50 @@ import AdvantageItem from "../components/common/Home/AdvantageItem";
 import image1 from "../../src/assets/images/advantage-01.png";
 import image2 from "../../src/assets/images/advantage-02.png";
 import image3 from "../../src/assets/images/advantage-03.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AppContext } from "../Context/AppProvider";
+import { notification } from "antd";
 
 export const Home = () => {
+  const dataProvided = useContext(AppContext);
+  const {setSortOpitons} = dataProvided;
+  const navigate = useNavigate();
+  const [api, contextHolder] = notification.useNotification(
+    {maxCount : '3'}
+  );
+
+  const ViewMore = (opt) => {
+    let optToSort = ''
+    if(opt == 'popular'){
+      optToSort = 'mostPopular';
+    }
+    else if (opt == 'highRating'){
+      optToSort = 'highestRating';
+    }
+    else{
+      return;
+    }
+    setSortOpitons((prevOptions) => {
+      return prevOptions.map((option) => {
+        if (option.name === optToSort) {
+          return { ...option, selected: true };
+        } else {
+          return { ...option, selected: false };
+        }
+      });
+    });
+    window.scrollTo(0, 0);
+    navigate('/results')
+  };
+
+  const openNotification = (placement) => {
+    api.success({
+      message: 'Thông báo',
+      description: 'Đăng ký nhận thông tin thành công!',
+      placement,
+    });
+  };
+
   return (
     <div className="home">
       <div className="home__top-banner">
@@ -24,7 +65,8 @@ export const Home = () => {
           </div>
           <Button
             className="no-background"
-            postIcon={() => <BsArrowRight size={20} />}
+            postIcon={() => <BsArrowRight size={20}/>}
+            onClick={() => {ViewMore('popular')}}
           >
             Nhiều hơn
           </Button>
@@ -43,7 +85,7 @@ export const Home = () => {
         <div className="home__banner__logo">
           <Logo />
         </div>
-        <Button className="cyan shadow">Đăng ký ngay!</Button>
+        <Button className="cyan shadow" onClick={() => {navigate('/register');}}>Đăng ký ngay!</Button>
       </div>
       <div className="home__section">
         <div className="home__section__header">
@@ -54,6 +96,7 @@ export const Home = () => {
             <Button
               className="no-background"
               postIcon={() => <BsArrowRight size={20} />}
+              onClick={() => {ViewMore('highRating')}}
             >
               Nhiều hơn
             </Button>
@@ -148,8 +191,11 @@ export const Home = () => {
         </div>
         <div className="home__banner__content subcribe">
           <input className="input" placeholder="Nhập địa chỉ email của bạn" />
-
-          <Button className="button">Đăng ký</Button>
+          {contextHolder}
+          <Button className="button"
+          onClick={() => openNotification('bottomRight')}>
+            Đăng ký
+            </Button>
         </div>
       </div>
     </div>

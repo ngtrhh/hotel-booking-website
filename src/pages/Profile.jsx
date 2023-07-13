@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
 import image from "../assets/images/ImageBanner.png";
 import { BsCamera } from "react-icons/bs";
 import Button from "../components/common/Button";
+import {AppContext} from "../Context/AppProvider"
 
 export const Profile = () => {
+  const data = useContext(AppContext);
+  const {user} = data;
+  useEffect(() =>{
+    console.log(user);
+  }, [user]);
   return (
     <div className="account">
       <Breadcrumb className="breadcrumb">
@@ -26,7 +32,7 @@ export const Profile = () => {
           <div className="title">
             <span>Thông tin cá nhân</span>
             <div className="avatar">
-              <img src={image} />
+              <img src={user.photoURL} />
               <div className="blur">
                 <BsCamera size={24} />
               </div>
@@ -35,28 +41,28 @@ export const Profile = () => {
           <div className="wrapper">
             <div className="row">
               <div className="row__title">Họ tên</div>
-              <div className="row__content">Nguyễn Văn A</div>
+              <div className="row__content">{user.lastName + ' ' + user.firstName}</div>
             </div>
             <div className="row">
               <div className="row__title">Email</div>
-              <div className="row__content">nguyenvana123@gmail.com</div>
+              <div className="row__content">{user.email}</div>
             </div>
             <div className="row">
               <div className="row__title">Số điện thoại</div>
-              <div className="row__content">0123456789</div>
+              <div className="row__content">{user.phoneNumber || 'Không có'}</div>
             </div>
             <div className="row">
               <div className="row__title">Ngày sinh</div>
-              <div className="row__content">21/09/2002</div>
+              <div className="row__content">{user.dob || "Không có"}</div>
             </div>
             <div className="row">
               <div className="row__title">Giới tính</div>
-              <div className="row__content">Nam</div>
+              <div className="row__content">{user.sex || "Không có"}</div>
             </div>
             <div className="row">
               <div className="row__title">Địa chỉ</div>
               <div className="row__content">
-                90 đường 9, phường B, TP.HCM, Việt Nam
+                {user.address || 'Không có'}
               </div>
             </div>
           </div>

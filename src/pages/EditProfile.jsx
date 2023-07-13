@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import { Breadcrumb, message } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import image from "../assets/images/ImageBanner.png";
@@ -9,6 +9,10 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateField } from "@mui/x-date-pickers/DateField";
 import dayjs from "dayjs";
 import { addYears } from "date-fns";
+import { doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
+import { db } from "../firebase/config";
+import { AppContext } from "../Context/AppProvider";
+
 
 const genderList = [
   { id: 1, value: "Nam" },
@@ -17,6 +21,8 @@ const genderList = [
 const maxDate = new Date();
 const minDate = addYears(new Date(), -100);
 export const EditProfile = () => {
+  const dataProvided = useContext(AppContext);
+  const {user} = dataProvided;
   const [lastName, setLastName] = useState("Nguyễn");
   const [firstName, setFirstName] = useState("Văn A");
   const [gender, setGender] = useState(genderList[0].value);
@@ -32,8 +38,14 @@ export const EditProfile = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setIsOpen(false);
-  }, [gender]);
+    setLastName(user.lastName);
+    setFirstName(user.firstName);
+    setEmail(user.email);
+    setPhoneNumber(user.phoneNumber);
+    setBirthDate(dayjs(dayjs(user.dob, 'DD/MM/YYYY').format('YYYY-MM-DD')));
+    setGender(user.sex);
+    setAddress(user.address)
+  }, [user]);
 
   //   const errorMessage = React.useMemo(() => {
   //     switch (error) {
@@ -69,9 +81,23 @@ export const EditProfile = () => {
       message.error("Vui lòng nhập đầy đủ thông tin!");
     } else {
       message.success("Bạn đã cập nhật thông tin thành công!");
+      const userInfoRef = doc(db, "users", user.uid);
+      updateDoc(userInfoRef, {
+          lastName: document.querySelector('#lastName').value,
+          firstName: document.querySelector('#firstName').value,
+          email: document.querySelector('#email').value,
+          phoneNumber: document.querySelector('#phoneNumber').value,
+          dob: birthDate.format("DD/MM/YYYY"),
+          sex: gender,
+          address: address
+        });
+      
       navigate("/profile");
     }
   };
+  useEffect(() =>{
+    console.log(birthDate);
+  }, [birthDate]);
 
   return (
     <div className="account">
@@ -117,6 +143,7 @@ export const EditProfile = () => {
                     onChange={(e) => {
                       setLastName(e.target.value);
                     }}
+                    id='lastName'
                   />
                 </div>
                 <div className="item">
@@ -126,10 +153,12 @@ export const EditProfile = () => {
                   </div>
                   <input
                     value={firstName}
+                    id='firstName'
                     placeholder="Tên"
                     onChange={(e) => {
                       setFirstName(e.target.value);
                     }}
+                    
                   />
                 </div>
               </div>
@@ -144,6 +173,7 @@ export const EditProfile = () => {
                   </div>
                   <input
                     value={email}
+                    id='email'
                     placeholder="Email"
                     onChange={(e) => {
                       setEmail(e.target.value);
@@ -164,6 +194,7 @@ export const EditProfile = () => {
                     <div className="require">*</div>
                   </div>
                   <input
+                    id="phoneNumber"
                     value={phoneNumber}
                     placeholder="Số điện thoại"
                     onKeyPress={(event) => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { auth } from "../firebase/config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ReactComponentElement as BackBtn } from "../assets/images/back-btn.svg";
@@ -14,11 +14,14 @@ import { LoginWithGgFb } from "../firebase/services";
 import { useState, useEffect } from "react";
 import { signInWithPopup, FacebookAuthProvider, GoogleAuthProvider, getAdditionalUserInfo } from "firebase/auth";
 import { addDocument, generateKeywords } from "../firebase/services";
+import { AppContext } from "../Context/AppProvider";
 
 const fbProvider = new FacebookAuthProvider();
 const ggProvider = new GoogleAuthProvider();
 
 export const Login = () => {
+  const dataProvided = useContext(AppContext);
+  const {isLoggedIn} = dataProvided;
   let navigate = useNavigate();
   const [messageApi, contextHolder] = message.useMessage();
   const key = 'updatable';
@@ -48,55 +51,17 @@ export const Login = () => {
 
   const LoginWithOtherMethod = (methodType) => {
     auth.signOut();
-    let provider = '';
-    if(methodType == 'Google'){
-      provider = ggProvider;
-    }
-    if(methodType == 'Facebook'){
-      provider = fbProvider;
-    }
+    LoginWithGgFb(methodType);
+  }
   
-    signInWithPopup(auth, provider)
-    .then((result) => {
-      // The signed-in user info.
-      const user = result.user;
-      console.log(user);
-      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-      const credential = FacebookAuthProvider.credentialFromResult(result);
-      const accessToken = credential.accessToken;
-  
-      // IdP data available using getAdditionalUserInfo(result)
-      // ...
-      if(getAdditionalUserInfo(result).isNewUser){
-        const data = {
-          uid: user.uid,
-          displayName: user.displayName,
-          email: user.email,
-          photoURL: user.photoURL,
-          providerId: user.providerId,
-          createdAt: user.metadata.createdAt,
-          keywords: generateKeywords(user.displayName),
-          lovedRoomsId: []
-        }
-        addDocument("users", data);
-      }
+  React.useEffect(() => {
+    if(isLoggedIn){
       setTimeout(() => {
         navigate('/');
       }, 3500);
       ShowMessage('Success');
-    })
-    .catch((error) => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // The email of the user's account used.
-      const email = error.customData.email;
-      // The AuthCredential type that was used.
-      const credential = FacebookAuthProvider.credentialFromError(error);
-  
-      // ...
-    });
-  }
+    }
+  }, [isLoggedIn]);
   
 
   const CheckInput = (email, password) => {

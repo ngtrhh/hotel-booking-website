@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Back from "../components/common/Back";
 import image from "../assets/images/ImageBanner.png";
 import Facility from "../components/common/Facility";
@@ -36,11 +36,13 @@ import AvailableRoom from "../components/common/Detail/AvailableRoom";
 import RecommendedStay from "../components/common/Home/RecommendedStay";
 import { useContext } from "react";
 import { AppContext } from "../Context/AppProvider";
+import { useNavigate } from "react-router-dom";
 
 export const Detail = (props) => {
+  const navigate = useNavigate();
   const ref = useRef(null);
   const dataProvided = useContext(AppContext);
-  const {user} = dataProvided;
+  const {user, roomTypes, setRoomTypes, accoms} = dataProvided;
   const {accomData} = props;
   const facilitiesList = ['Hồ bơi', 'Chỗ đậu xe', 'Quầy bar',
   'Wifi', 'Phòng gym', 'Trung tâm thể dục', 'Thích hợp cho gia đình/trẻ em',
@@ -49,7 +51,12 @@ export const Detail = (props) => {
     MdWifi, MdSportsGymnastics, MdSportsFootball, MdChildCare,
     MdFastfood];
   
-  const goBookRoomRef = useRef(null)
+  const goBookRoomRef = useRef(null);
+  
+
+  const currentURL = window.location.href;
+  const parts = currentURL.split('/');
+  const accomId = parts[parts.length - 1];
   const ScrollToBookRoom = () => {
     goBookRoomRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });    
   }
@@ -61,6 +68,23 @@ export const Detail = (props) => {
   catch{
       loved = false;
   }
+  const [anotherAccoms, setAnotherAccoms] = useState([]);
+  useEffect(() =>{
+    let randomItems = []
+    while (randomItems.length < 3) {
+      const randomIndex = Math.floor(Math.random() * accoms.length);
+      const randomItem = accoms[randomIndex];
+      
+      if (!randomItems.some(item => item.accomId === randomItem.accomId)) {
+        randomItems.push(randomItem);
+      }
+    }
+    setAnotherAccoms(randomItems);
+  }, [accoms]);
+
+  useEffect(() =>{
+    console.log(anotherAccoms);
+  }, [anotherAccoms]);
   
   return (
     <div className="detail">
@@ -208,10 +232,17 @@ export const Detail = (props) => {
           <div className="section__content" id="rooms">
             <SearchBar type="detail"/>
             <div className="four-cols wrap">
-              <AvailableRoom />
-              <AvailableRoom />
-              <AvailableRoom />
-              <AvailableRoom />
+              {
+                roomTypes.map((roomType, index) => {
+                  if(roomType.accomId === accomId){
+                    return (
+                      <AvailableRoom key={index} 
+                      roomData={roomType}
+                      image={accomData.images[(Math.floor(Math.random() * 4) + 1) - 1]}/>
+                    )
+                  }
+                })
+              }
             </div>
           </div>
           <hr className="line" />
@@ -229,165 +260,68 @@ export const Detail = (props) => {
               <div className="col-1__item">Đánh giá của khách hàng</div>
               <hr className="line" />
             </div>
-            <div className="col-2">
-              <div className="image margin">
-                <img src={require("../assets/images/ImageBanner.png")} />
-                <div className="tag">
-                  <span>Resort</span>
-                  <span>
-                    4 <BsStarFill size={12} />
-                  </span>
+            {anotherAccoms.map((accom) =>{
+              return(
+                <div className="col-2">
+                  <div className="image margin">
+                    <img src={accom.images[0]} style={{maxHeight: '200px'}}/>
+                    <div className="tag">
+                      <span>{accom.type}</span>
+                      <span>
+                        {accom.star} <BsStarFill size={12} />
+                      </span>
+                    </div>
+                    <div className="heart">
+                      <BsHeartFill size={28} color="rgba(39, 43, 78, 0.32)" />
+                      <BsHeart size={28} />
+                    </div>
+                  </div>
+                  <div className="title margin" style={{minHeight: '48px'}}>{accom.name}</div>
+                  <hr className="line" />
+                  <div className="price-infor margin">
+                    <div className="price-infor__percent-sale">60%</div>
+                    <div className="price-infor__price">
+                      <div className="price-infor__price__old">{accom.originalPrice + ' đ'}</div>
+                      <div className="price-infor__price__new">{accom.price + ' đ'}</div>
+                    </div>
+                  </div>
+                  <hr className="line" />
+                  <div className="facilities margin">
+                    <div className="facilities__item">
+                      <MdPool size={24} />
+                      Hồ bơi ngoài trời
+                    </div>
+                    <div className="facilities__item">
+                      <MdOutlineBeachAccess size={24} />
+                      Đưa đón sân bay
+                    </div>
+                    <div className="facilities__item">
+                      <MdTimeToLeave size={24} />
+                      Phòng không hút thuốc
+                    </div>
+                    <div className="facilities__item">
+                      <MdSmokeFree size={24} />
+                      Giáp biển
+                    </div>
+                    <div className="facilities__more">(Nhiều tiện nghi khác)</div>
+                  </div>
+                  <hr className="line" />
+                  <div className="rating margin">
+                    <div className="rating__score">{accom.rating}</div>
+                    <div className="rating__reviews">{accom.ratingCount + ' lượt đánh giá'}</div>
+                  </div>
+                  <hr className="line" />
+                  <div className="button-wrapper">
+                    <Button className="cyan glow"
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        navigate('/detail/' + accom.accomId);
+                      }}
+                    >Chọn phòng</Button>
+                  </div>
                 </div>
-                <div className="heart">
-                  <BsHeartFill size={28} color="rgba(39, 43, 78, 0.32)" />
-                  <BsHeart size={28} />
-                </div>
-              </div>
-              <div className="title margin">Tên chỗ nghỉ</div>
-              <hr className="line" />
-              <div className="price-infor margin">
-                <div className="price-infor__percent-sale">60%</div>
-                <div className="price-infor__price">
-                  <div className="price-infor__price__old">1.110.000 đ</div>
-                  <div className="price-infor__price__new">844.000 đ</div>
-                </div>
-              </div>
-              <hr className="line" />
-              <div className="facilities margin">
-                <div className="facilities__item">
-                  <MdPool size={24} />
-                  Hồ bơi ngoài trời
-                </div>
-                <div className="facilities__item">
-                  <MdOutlineBeachAccess size={24} />
-                  Đưa đón sân bay
-                </div>
-                <div className="facilities__item">
-                  <MdTimeToLeave size={24} />
-                  Phòng không hút thuốc
-                </div>
-                <div className="facilities__item">
-                  <MdSmokeFree size={24} />
-                  Giáp biển
-                </div>
-                <div className="facilities__more">(Nhiều tiện nghi khác)</div>
-              </div>
-              <hr className="line" />
-              <div className="rating margin">
-                <div className="rating__score">8,4</div>
-                <div className="rating__reviews">231 lượt đánh giá</div>
-              </div>
-              <hr className="line" />
-              <div className="button-wrapper">
-                <Button className="cyan glow">Chọn phòng</Button>
-              </div>
-            </div>
-            <div className="col-2">
-              <div className="image margin">
-                <img src={require("../assets/images/ImageBanner.png")} />
-                <div className="tag">
-                  <span>Resort</span>
-                  <span>
-                    4 <BsStarFill size={12} />
-                  </span>
-                </div>
-                <div className="heart">
-                  <BsHeartFill size={28} color="rgba(39, 43, 78, 0.32)" />
-                  <BsHeart size={28} />
-                </div>
-              </div>
-              <div className="title margin">Tên chỗ nghỉ</div>
-              <hr className="line" />
-              <div className="price-infor margin">
-                <div className="price-infor__percent-sale">60%</div>
-                <div className="price-infor__price">
-                  <div className="price-infor__price__old">1.110.000 đ</div>
-                  <div className="price-infor__price__new">844.000 đ</div>
-                </div>
-              </div>
-              <hr className="line" />
-              <div className="facilities margin">
-                <div className="facilities__item">
-                  <MdPool size={24} />
-                  Hồ bơi ngoài trời
-                </div>
-                <div className="facilities__item">
-                  <MdOutlineBeachAccess size={24} />
-                  Đưa đón sân bay
-                </div>
-                <div className="facilities__item">
-                  <MdTimeToLeave size={24} />
-                  Phòng không hút thuốc
-                </div>
-                <div className="facilities__item">
-                  <MdSmokeFree size={24} />
-                  Giáp biển
-                </div>
-                <div className="facilities__more">(Nhiều tiện nghi khác)</div>
-              </div>
-              <hr className="line" />
-              <div className="rating margin">
-                <div className="rating__score">8,4</div>
-                <div className="rating__reviews">231 lượt đánh giá</div>
-              </div>
-              <hr className="line" />
-              <div className="button-wrapper">
-                <Button className="cyan glow">Chọn phòng</Button>
-              </div>
-            </div>
-            <div className="col-2">
-              <div className="image margin">
-                <img src={require("../assets/images/ImageBanner.png")} />
-                <div className="tag">
-                  <span>Resort</span>
-                  <span>
-                    4 <BsStarFill size={12} />
-                  </span>
-                </div>
-                <div className="heart">
-                  <BsHeartFill size={28} color="rgba(39, 43, 78, 0.32)" />
-                  <BsHeart size={28} />
-                </div>
-              </div>
-              <div className="title margin">Tên chỗ nghỉ</div>
-              <hr className="line" />
-              <div className="price-infor margin">
-                <div className="price-infor__percent-sale">60%</div>
-                <div className="price-infor__price">
-                  <div className="price-infor__price__old">1.110.000 đ</div>
-                  <div className="price-infor__price__new">844.000 đ</div>
-                </div>
-              </div>
-              <hr className="line" />
-              <div className="facilities margin">
-                <div className="facilities__item">
-                  <MdPool size={24} />
-                  Hồ bơi ngoài trời
-                </div>
-                <div className="facilities__item">
-                  <MdOutlineBeachAccess size={24} />
-                  Đưa đón sân bay
-                </div>
-                <div className="facilities__item">
-                  <MdTimeToLeave size={24} />
-                  Phòng không hút thuốc
-                </div>
-                <div className="facilities__item">
-                  <MdSmokeFree size={24} />
-                  Giáp biển
-                </div>
-                <div className="facilities__more">(Nhiều tiện nghi khác)</div>
-              </div>
-              <hr className="line" />
-              <div className="rating margin">
-                <div className="rating__score">8,4</div>
-                <div className="rating__reviews">231 lượt đánh giá</div>
-              </div>
-              <hr className="line" />
-              <div className="button-wrapper">
-                <Button className="cyan glow">Chọn phòng</Button>
-              </div>
-            </div>
+              );
+            })}
           </div>
           <hr className="line" />
         </div>
@@ -396,9 +330,9 @@ export const Detail = (props) => {
           <div className="section__title">Đánh giá</div>
           <div className="section__content" id="rating">
             <div className="score">
-              <div className="total-score">8,4</div>
+              <div className="total-score">{accomData.rating}</div>
               <div className="total-reviews">
-                <b>231</b> đánh giá
+                <b>{accomData.ratingCount}</b> đánh giá
               </div>
             </div>
             <hr className="line" style={{ margin: "40px 0px" }} />
@@ -538,34 +472,19 @@ export const Detail = (props) => {
           Khách sạn <span> xung quanh</span>
         </div>
         <div className="accommodation-around__content four-cols">
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
+          {
+            accoms.slice(0,4).map((accom) => {
+              return(
+                <RecommendedStay
+                  name={accom.name}
+                  adrress={accom.address}
+                  rating={accom.rating}
+                  reviews={'(' + accom.ratingCount + ' lượt đánh giá)'}
+                  price={accom.price}
+                />
+              )
+            })
+          }
         </div>
       </div>
     </div>

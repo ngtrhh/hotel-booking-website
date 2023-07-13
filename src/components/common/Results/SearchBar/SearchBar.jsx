@@ -42,11 +42,11 @@ const SearchBar = () => {
             <BsCalendar2MinusFill size={24} className="icon"/>
             <div className="content">
               <div className="field">Nhận phòng</div>
-              <div className="value">{
-              `${format(searchDateRange[0].startDate, "eee, dd-MM-yyyy", {
+              <div className="value">
+                {`${format(searchDateRange[0].startDate, "eee, dd-MM-yyyy", {
                     locale: vi,
-                  })}`
-            }</div>
+                })}`}
+              </div>
             </div>
           </div>
 

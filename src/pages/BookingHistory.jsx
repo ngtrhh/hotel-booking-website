@@ -1,11 +1,54 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
 import Button from "../components/common/Button";
 import { BsSearch } from "react-icons/bs";
 import { HorizontalCard } from "../components/common/BookingHistory/HorizontalCard";
+import { AppContext } from "../Context/AppProvider";
 
 export const BookingHistory = () => {
+  const data = useContext(AppContext);
+  const {accoms, orders, user} = data;
+  const [dataToShow, setDataToShow] = useState([]);
+  const [sortOption, setSortOption] = useState([
+    {
+      name: 'nearest',
+      selected: true,
+    },
+    {
+      name: 'oldest',
+      selected: false,
+    },
+    {
+      name: 'highestPrice',
+      selected: false,
+    },
+    {
+      name: 'lowestPrice',
+      selected: false,
+    }
+  ]);
+
+  useEffect(() =>{
+    const newDataToShow = orders.map((order) => {
+      const correspondingAccom = accoms.find((accom) => accom.accomId === order.accomId);
+      if (correspondingAccom) {
+        return { ...order, ...correspondingAccom, 
+          accomsName: correspondingAccom.name};
+      }
+      return order;
+    });
+    setDataToShow(newDataToShow);
+  }, [accoms, orders, user]);
+  const handleSortOptionClick = (index) => {
+    const updatedSortOption = [...sortOption];
+    updatedSortOption.forEach((option, i) => {
+      option.selected = i === index;
+    });
+    setSortOption(updatedSortOption);
+  };
+  
+  
   return (
     <div className="booking-history">
       <Breadcrumb className="breadcrumb">
@@ -24,13 +67,13 @@ export const BookingHistory = () => {
           </div>
           <div className="search-bar__input-wrapper__item">
             <div className="search-bar__input-wrapper__item__label">
-              NGÀY Nhận phòng
+              Ngày Nhận phòng
             </div>
             <input placeholder="Chọn ngày" readOnly />
           </div>
           <div className="search-bar__input-wrapper__item">
             <div className="search-bar__input-wrapper__item__label">
-              Ngày Trả phòng
+              Ngày Trả Phòng
             </div>
             <input placeholder="Chọn ngày" readOnly />
           </div>
@@ -51,16 +94,37 @@ export const BookingHistory = () => {
           <div className="sort">
             <div className="sort__title">Sắp xếp theo</div>
             <div className="sort__wrapper">
-              <div className="sort__wrapper__item selected">Gần nhất</div>
-              <div className="sort__wrapper__item">Cũ nhất</div>
-              <div className="sort__wrapper__item">Giá cao nhất</div>
-              <div className="sort__wrapper__item">Giá thấp nhất</div>
+            <div
+              className={`sort__wrapper__item ${sortOption[0].selected ? 'selected' : ''}`}
+              onClick={() => handleSortOptionClick(0)}
+            >
+              Gần nhất
+            </div>
+            <div
+              className={`sort__wrapper__item ${sortOption[1].selected ? 'selected' : ''}`}
+              onClick={() => handleSortOptionClick(1)}
+            >
+              Cũ nhất
+            </div>
+            <div
+              className={`sort__wrapper__item ${sortOption[2].selected ? 'selected' : ''}`}
+              onClick={() => handleSortOptionClick(2)}
+            >
+              Giá cao nhất
+            </div>
+            <div
+              className={`sort__wrapper__item ${sortOption[3].selected ? 'selected' : ''}`}
+              onClick={() => handleSortOptionClick(3)}
+            >
+              Giá thấp nhất
+            </div>
+
             </div>
           </div>
           <div className="list">
-            <HorizontalCard type="history" state="passed" />
-            <HorizontalCard type="history" state="coming" />
-            <HorizontalCard type="history" state="canceled" />
+            {dataToShow.map((bookingHistory) => {
+              return (<HorizontalCard DataToShow={bookingHistory} type="history" state="passed" />)
+            })}
           </div>
         </div>
       </div>

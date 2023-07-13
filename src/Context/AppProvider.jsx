@@ -10,31 +10,10 @@ import { AuthContext } from './AuthProvider';
 import { HomeContext } from './HomeContext';
 import { connectFirestoreEmulator, limit } from 'firebase/firestore';
 import { doc, onSnapshot } from "firebase/firestore";
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from '../firebase/config';
 
 export const AppContext = React.createContext();
-
-export const GetAcooms = (setAccoms) => {
-	React.useEffect(() => {
-
-		const collectionRef = collection(db, 'accoms');
-
-		const q = query(collectionRef, limit(40));
-
-		const unsubscribe = onSnapshot(q, (querySnapshot) => {
-			const accomsData = [];
-			querySnapshot.forEach((doc) => {
-				accomsData.push({
-					...doc.data()
-				});
-			});
-			setAccoms(accomsData);
-		});
-
-		return unsubscribe;
-	}, []);
-}
 
 export default function AppProvider ({children}) {
 
@@ -46,6 +25,9 @@ export default function AppProvider ({children}) {
 			setIsLoggedIn(!(Object.keys(user).length === 0));
 		}
 	}, [user]);
+
+	//Header
+	const [isUserDropdown, setIsUserDropdown] = useState(false);
 	
 
 	//Data Home
@@ -64,7 +46,7 @@ export default function AppProvider ({children}) {
 
 	//Data Acccomodation
 	const [accoms, setAccoms] = useState([]);
-	GetAcooms(setAccoms);
+	useFireStore('accoms', setAccoms);
 
 	//Result Filterbar
 	const [priceInput, setPriceInput] = useState([0, 20000000]);
@@ -141,13 +123,73 @@ export default function AppProvider ({children}) {
 		{ name: 'kingBed', label: 'Giường đôi lớn', checked: false }
 	]);
 
+	const [sortOpitons, setSortOpitons] = useState([
+		{ name: 'mostPopular', label: 'Phổ biến nhất', selected: false },
+		{ name: 'highestRating', label: 'Đánh giá cao nhất', selected: false },
+		{ name: 'highestPrice', label: 'Giá cao nhất', selected: false },
+		{ name: 'lowestPrice', label: 'Giá thấp nhất', selected: false }
+	]);
+
 	//Details
 	const [selectedAccomId, setSelectedAccomId] = useState('');
+	const [selectedRoomType, setSelectedRoomType] = useState('');
 	const [accomData, setAccomData] = useState({});
+	const [roomTypes, setRoomTypes] = useState([]);
+	const [rooms, setRooms] = useState([]);
 	
-	// useEffect(() =>{
-	// 	console.log(accoms);
-	// }, [accoms]);
+	useFireStore('roomtypes', setRoomTypes);
+	useFireStore('rooms', setRooms, -1);
+
+	
+
+	//Booking
+	const [bookingName, setBookingName] = useState('');
+	const [bookingEmail, setBookingEmail] = useState('');
+	const [bookingPhone, setBookingPhone] = useState('');
+	const [bookingTax, setBookingTax] = useState(99000);
+	const [bookingDiscount, setBookingDiscount] = useState(99000);
+	const [totalBookingPrice, setTotalBookingPrice] = useState(0);
+	const [roomsToBook, setRoomsToBook] = useState({});
+
+	const [cardNumber, setCardNumber] = useState('');
+	const [cardValidDate, setCardValidDate] = useState('');
+	const [cardSecret, setCardSecret] = useState('');
+	const [cardOwnerName, setCardOwnerName] = useState('');
+	const [orderId, setOrderId] = useState('');
+	const [bookingSuccess, setBookingSuccess] = useState(false);
+
+	//Booking History
+	const[orders, setOrders] = useState([]);
+	const ordersQueryCondition = {
+		fieldName: 'uid', 
+		operator: '==', 
+		comparedValue: user?.uid || ''
+	}
+	
+	// useFireStore('orders', setOrders, -1, ordersQueryCondition);
+	React.useEffect(() => {
+		if(user?.uid || false){
+			const collectionRef = collection(db, 'orders');
+		
+			const q = query(collectionRef, where('uid', '==', user.uid));
+	
+			const unsubscribe = onSnapshot(q, (querySnapshot) => {
+				const documents = [];
+				querySnapshot.forEach((doc) => {
+					documents.push({
+						...doc.data(),
+						'id': doc.id
+					});
+				});
+				setOrders(documents);
+			});
+			return unsubscribe;
+		}
+	}, [bookingSuccess, user]);
+
+	// useEffect(() => {
+	// 	console.log(orders);
+	// }, [orders]);
 	
 	// const [isAddRoomVisible, setIsAddRoomVisible] = useState(false);
 	// const [isInviteVisible, setIsInviteVisible] = useState(false);
@@ -185,9 +227,29 @@ export default function AppProvider ({children}) {
 			facilityFilter, setFacilityFilter,
 			paymentFilter, setPaymentFilter,
 			bedTypeFilter, setBedTypeFilter,
+			sortOpitons, setSortOpitons,
 			//Detail
 			selectedAccomId, setSelectedAccomId,
-			accomData, setAccomData
+			selectedRoomType, setSelectedRoomType,
+			accomData, setAccomData,
+			roomTypes, setRoomTypes,
+			rooms, setRooms,
+			//Booking
+			bookingName, setBookingName,
+			bookingEmail, setBookingEmail,
+			bookingPhone, setBookingPhone,
+			bookingTax, setBookingTax,
+			bookingDiscount, setBookingDiscount,
+			totalBookingPrice, setTotalBookingPrice,
+			roomsToBook, setRoomsToBook,
+			cardNumber, setCardNumber,
+			cardValidDate, setCardValidDate,
+			cardSecret, setCardSecret,
+			cardOwnerName, setCardOwnerName,
+			orderId, setOrderId,
+			bookingSuccess, setBookingSuccess,
+			isUserDropdown, setIsUserDropdown,
+			orders, setOrders
 		}}>
 			{children}
 		</AppContext.Provider>

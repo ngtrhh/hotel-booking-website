@@ -21,7 +21,7 @@ const SearchBar = (props) => {
         <Calendar type={type} />
         <hr className="line" />
         <NumberOfGuestSearch type={type} />
-        {type !== "detail" && <SearchButton onClick={navigate('/results')} />}
+        {type !== "detail" && <SearchButton/>}
       </div>
       {type === "detail" && (
         <Button className="cyan" preIcon={() => <BsSearch size={20} />}>
