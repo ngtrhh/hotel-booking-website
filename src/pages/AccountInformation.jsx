@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Breadcrumb, message } from "antd";
 import { Link } from "react-router-dom";
 import PasswordInput from "../components/common/Account/PasswordInput";
 import Button from "../components/common/Button";
+import { db, auth } from "../firebase/config"
+import { updatePassword } from "firebase/auth";
+
 
 export const AccountInformation = () => {
   const [update, setUpdate] = useState(null);
@@ -26,6 +29,10 @@ export const AccountInformation = () => {
       [name]: value,
     }));
   };
+
+  useEffect(() =>{
+    console.log(input);
+  }, [input])
 
   const validateInput = (e) => {
     console.log(input);
@@ -73,7 +80,7 @@ export const AccountInformation = () => {
           break;
 
         default:
-          break;
+        break;
       }
 
       return stateObj;
@@ -81,20 +88,40 @@ export const AccountInformation = () => {
   };
 
   const handleChangePassword = () => {
-    setInput((prev) => ({
-      ...prev,
-      oldPassword: input.password,
-      password: input.newPassword,
-      newPassword: "",
-      confirmPassword: "",
-    }));
-    setUpdate(null);
-    setError({
-      oldPassword: "",
-      newPassword: "",
-      confirmPassword: "",
+    // setInput((prev) => ({
+    //   ...prev,
+    //   oldPassword: input.password,
+    //   password: input.newPassword,
+    //   newPassword: "",
+    //   confirmPassword: "",
+    // }));
+    // setUpdate(null);
+    // setError({
+    //   oldPassword: "",
+    //   newPassword: "",
+    //   confirmPassword: "",
+    // });
+    
+    // if(error.oldPassword !== ""){
+    //   message.warning("Mật khẩu cũ không hợp lệ!");
+    // }
+    // else if (error.newPassword !== ""){
+    //   message.warning("Mật khẩu mới không hợp lệ!")
+    // }
+    // else if (error.confirmPassword !== ""){
+    //   message.warning("Mật khẩu mới không khợp!")
+    // }
+      
+    const user = auth.currentUser;
+    console.log(input.newPassword);
+    updatePassword(user, input.newPassword).then(() => {
+      message.success("Đổi mật khẩu thành công!")
+      
+    }).catch((error) => {
+      // An error ocurred
+      // ...
     });
-  };
+};
 
   const clearChangePassword = () => {
     setUpdate(null);

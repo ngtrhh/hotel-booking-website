@@ -10,6 +10,8 @@ import { useNavigate } from "react-router-dom";
 const SearchBar = (props) => {
   const navigate = useNavigate();
   const type = props.type ? props.type : "home";
+  
+  
   return (
     <div className="search-bar" style={{zIndex : 999}}>
       <div className="container">

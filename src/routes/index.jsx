@@ -71,7 +71,8 @@ const PublicRoutes = () => {
       { path: "/edit-profile", element: EditProfile },
       { path: "/booking/result", element: ResultBooking},
       {path: "/booking-history/detail", element: DetailBooking},
-      {path: "/booking-history/edit", element: EditBooking}
+      {path: "/booking-history/edit", element: EditBooking},
+      {path: "/account-info", element: AccountInformation}
     ]);
   }, [accomsData]);
   

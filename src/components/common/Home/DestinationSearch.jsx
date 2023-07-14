@@ -3,6 +3,27 @@ import { BsGeoAlt, BsXLg } from "react-icons/bs";
 import { AppContext } from "../../../Context/AppProvider";
 
 const DestinationSearch = () => {
+  const [provinces, setProvinces] = useState([]);
+
+  useEffect(() => {
+    const fetchProvinces = async () => {
+      try {
+        const response = await fetch("https://provinces.open-api.vn/api/");
+        const data = await response.json();
+        setProvinces(data);
+      } catch (error) {
+        console.error("Error fetching provinces:", error);
+      }
+    };
+
+    fetchProvinces();
+  }, []);
+
+  // useEffect(() => {
+  //   if(provinces.length){
+  //     provinces
+  //   }
+  // }, [provinces]);
   const data = [
     { name: "Apple" },
     { name: "Orange" },
@@ -74,12 +95,12 @@ const DestinationSearch = () => {
         style={{ visibility: canDelete ? "visible" : "hidden" }}
       />
       {isOpen && (
-        <div id="dropdown">
-          <div className="title">Tìm kiếm gần đây</div>
-          {reccently.map((item, index) => {
+        <div id="dropdown" style={{overflowY: 'auto'}}>
+          <div className="title">Danh sách tỉnh thành</div>
+          {provinces.map((item, index) => {
             return (
               <div
-                key={index}
+                key={index} 
                 className="item"
                 onClick={() => {
                   setSearchPlaceValue(item.name);

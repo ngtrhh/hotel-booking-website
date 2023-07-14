@@ -24,7 +24,10 @@ export const Profile = () => {
       <div className="two-contents">
         <div className="side-menu">
           <div className="item selected">Thông tin cá nhân</div>
-          <div className="item">Thông tin tài khoản</div>
+          <Link to={'/account-info'}>
+            <div className="item">Thông tin tài khoản</div>
+          </Link>
+          
           <div className="item">Thông tin thanh toán</div>
         </div>
 
@@ -41,7 +44,7 @@ export const Profile = () => {
           <div className="wrapper">
             <div className="row">
               <div className="row__title">Họ tên</div>
-              <div className="row__content">{user.lastName + ' ' + user.firstName}</div>
+                  <div className="row__content">{(user.lastName || 'Chưa') + ' ' + (user.firstName || 'đặt')}</div>
             </div>
             <div className="row">
               <div className="row__title">Email</div>
