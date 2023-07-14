@@ -11,12 +11,12 @@ import { AppContext } from "../Context/AppProvider";
 import { format } from 'date-fns';
 import { useNavigate } from "react-router";
 import { db } from "../firebase/config";
-import { doc, updateDoc } from "firebase/firestore";
+import { doc, updateDoc, setDoc } from "firebase/firestore";
 import { message } from "antd";
 
 export const DetailBooking = (props) => {
   const dataProvided = useContext(AppContext);
-  const {bookingHistoryData, setBookingHistoryData, roomTypes} = dataProvided; 
+  const {bookingHistoryData, setBookingHistoryData, roomTypes, orders} = dataProvided; 
   const [bookingTime, setBookingTime] = useState("8:05:34 AM, ngày 01/04/2023");
   const [paymentTime, setPaymentTime] = useState("8:05:34 AM, ngày 01/04/2023");
   const [input, setInput] = useState({
@@ -41,6 +41,14 @@ export const DetailBooking = (props) => {
   const ScrollToCustomerInfo = () => {
     customerInfoRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });    
   }
+
+  useEffect(() => {
+    // Kiểm tra nếu bookingHistoryData rỗng thì trở về trang lịch sử đặt phòng
+    if (bookingHistoryData === null) {
+      navigate('/booking-history');
+    }
+  }, [bookingHistoryData]);
+
   const HandleEditAndUpdate = () => {
     if(!isCanEdit){
       setIsCanEdit(true); 
@@ -56,6 +64,7 @@ export const DetailBooking = (props) => {
           customerPhone: bookingHistoryData.customerPhone,
         });
         message.success("Cập nhật thông tin thành công!");
+        setIsCanEdit(false);
       }
       else{
 
@@ -124,10 +133,23 @@ export const DetailBooking = (props) => {
   //   });
   // };
 
-  const handleSubmit = () => {
+  // const handleSubmit = () => {
     
-  };
+  // };
   
+  const CancelBooking = async () => {
+    //Tìm order
+    const foundOrder = orders.find((order) => order.orderId === bookingHistoryData.orderId);
+    console.log(foundOrder);
+    await setDoc(doc(db, "orders", bookingHistoryData.orderId), {
+      ...foundOrder,
+      canceled: true
+    }).then(result =>{
+      message.success("Hủy phòng thành công!");
+      navigate('/booking-history');
+    });
+
+  };
 
   return (
     <div className="detail-booking">
@@ -225,13 +247,13 @@ export const DetailBooking = (props) => {
             error={error.name} 
             onChange={handleCustomerNameChange} 
             focus={editFocusInput} 
-            label="Họ tên" disable={!isCanEdit} value={bookingHistoryData.customerName} />
+            label="Họ tên" disable={!isCanEdit} value={bookingHistoryData?.customerName} />
           <Input 
             error={error.email}
-            onChange={handleCustomerMailChange} label="Email" disable={!isCanEdit} value={bookingHistoryData.customerMail} />
+            onChange={handleCustomerMailChange} label="Email" disable={!isCanEdit} value={bookingHistoryData?.customerMail} />
           <Input
             error={error.phoneNumber}
-            onChange={handleCustomerPhoneChange} label="Số điện thoại" disable={!isCanEdit} value={bookingHistoryData.customerPhone} />
+            onChange={handleCustomerPhoneChange} label="Số điện thoại" disable={!isCanEdit} value={bookingHistoryData?.customerPhone} />
         </div>
         <div className="section" id="right">
           <div className="title">Giá chi tiết</div>
@@ -276,7 +298,7 @@ export const DetailBooking = (props) => {
       </div>
 
       <div className="button-wrapper">
-        {!isCanEdit &&
+        {(!isCanEdit && !bookingHistoryData.canceled && bookingHistoryData.state === 'coming')&&
           <Popup
           trigger={<Button className="red">Hủy đặt phòng</Button>}
           modal
@@ -289,6 +311,7 @@ export const DetailBooking = (props) => {
                 <Button
                   className="red"
                   onClick={() => {
+                    CancelBooking();
                     close();
                   }}
                 >
@@ -307,4 +330,6 @@ export const DetailBooking = (props) => {
       </div>
     </div>
   );
+
+  
 };

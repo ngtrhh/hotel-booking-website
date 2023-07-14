@@ -67,10 +67,10 @@ export const HorizontalCard = (props) => {
           </div>
           {props.type === "favourite" && (
             <>
-              <div className="flex-end old-price">2.110.000 đ</div>
+              <div className="flex-end old-price">{data.originalPrice + ' đ'}</div>
               <div className="flex-end">
                 <div className="new-price">
-                  Từ: <span>844.000 đ</span>
+                  Từ: <span>{data.price + ' đ'}</span>
                 </div>
                 <div className="sub">/đêm</div>
               </div>

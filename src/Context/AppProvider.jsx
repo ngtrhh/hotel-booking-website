@@ -165,7 +165,7 @@ export default function AppProvider ({children}) {
 		operator: '==', 
 		comparedValue: user?.uid || ''
 	}
-	const [bookingHistoryData, setBookingHistoryData] = useState();
+	const [bookingHistoryData, setBookingHistoryData] = useState(null);
 	
 	// useFireStore('orders', setOrders, -1, ordersQueryCondition);
 	React.useEffect(() => {
