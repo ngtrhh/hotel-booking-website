@@ -12,6 +12,18 @@ export const HorizontalCard = (props) => {
   //   data.recvDate,
   //   data.endDate
   // ).split(' ')[0]);
+
+  //Nhập bookingHistoryData, setBookingHistoryData từ AppContent
+
+  const HandleViewDetail = () => {
+    if(props.type === "favourite"){
+      
+    }
+    else{
+      //setBookingHistoryData ở đây rồi nav to view booking history detail
+    }
+  };
+
   return (
     <div className="horizontal-card">
       <div className="image">
@@ -24,10 +36,10 @@ export const HorizontalCard = (props) => {
           </div>
         </div>
         {props.type === "history" && props.state === state[0] && (
-          <div className="date">{'Đã đặt ngày ' + data.orderDate.toDate().toLocaleDateString()}</div>
+          <div className="date">{'Đã đặt ngày: ' + data.orderDate.toDate().toLocaleDateString('vi-VN')}</div>
         )}
         {props.type === "history" && props.state === state[1] && (
-          <div className="remind">Còn 2 ngày nữa nhận phòng!</div>
+          <div className="remind">{'Còn ' + Math.ceil((data.recvDate.toDate() - Date.now()) / 86400000) + ' ngày nữa nhận phòng!'}</div>
         )}
         {props.type === "history" && props.state === state[2] && (
           <div className="date canceled">Đã hủy ngày 09/02/2023</div>
@@ -66,11 +78,11 @@ export const HorizontalCard = (props) => {
                 <div className="wrapper__row__item__title">
                   Ngày nhận phòng:
                 </div>
-                <span>{data.recvDate.toDate().toLocaleDateString()}</span>
+                <span>{data.recvDate.toDate().toLocaleDateString('vi-VN')}</span>
               </div>
               <div className="wrapper__row__item">
                 <div className="wrapper__row__item__title">Ngày trả phòng:</div>
-                <span>{data.endDate.toDate().toLocaleDateString()}</span>
+                <span>{data.endDate.toDate().toLocaleDateString('vi-VN')}</span>
               </div>
             </div>
             <div className="wrapper__row">
@@ -100,7 +112,7 @@ export const HorizontalCard = (props) => {
         )}
 
         <div className="button-wrapper">
-          <Button className="outline">Xem chi tiết</Button>
+          <Button onClick={HandleViewDetail} className="outline">Xem chi tiết</Button>
         </div>
       </div>
     </div>

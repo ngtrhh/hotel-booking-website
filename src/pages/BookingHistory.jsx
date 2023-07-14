@@ -10,6 +10,7 @@ export const BookingHistory = () => {
   const data = useContext(AppContext);
   const {accoms, orders, user} = data;
   const [dataToShow, setDataToShow] = useState([]);
+  const [sortedData, setSortedData] = useState(dataToShow);
   const [sortOption, setSortOption] = useState([
     {
       name: 'nearest',
@@ -28,9 +29,10 @@ export const BookingHistory = () => {
       selected: false,
     }
   ]);
+  const [roomStateShow, setRoomStateShow] = useState('coming');
 
   useEffect(() =>{
-    const newDataToShow = orders.map((order) => {
+    let newDataToShow = orders.map((order) => {
       const correspondingAccom = accoms.find((accom) => accom.accomId === order.accomId);
       if (correspondingAccom) {
         return { ...order, ...correspondingAccom, 
@@ -38,8 +40,34 @@ export const BookingHistory = () => {
       }
       return order;
     });
+    newDataToShow = newDataToShow.map(data =>{
+      if(!data.canceled){
+        if(Date.now() < data.recvDate.toDate()){
+          return {
+            ...data,
+            state: 'coming'
+          }
+        }
+        else{
+          return {
+            ...data,
+            state: 'passed'
+          }
+        }
+      }
+      else{
+        return {
+          ...data,
+          state: 'canceled'
+        }
+      }
+    });
     setDataToShow(newDataToShow);
   }, [accoms, orders, user]);
+
+  useEffect(() =>{
+    console.log(dataToShow);
+  }, [dataToShow]);
 
   const handleSortOptionClick = (index) => {
     const updatedSortOption = [...sortOption];
@@ -49,32 +77,30 @@ export const BookingHistory = () => {
     setSortOption(updatedSortOption);
   };
 
-  useEffect(() =>{
-    handleSortOptionClick(0);
-  }, [dataToShow]);
+  const HandleChangeStateView = (newState) => {
+    setRoomStateShow(newState);
+  };
 
   useEffect(() =>{
     const option = sortOption.find(opt => opt.selected == true);
-    
-    if(option.name == 'nearest'){
-      handleSortOptionClick(0);
-      dataToShow.sort((a, b) => b.orderDate - a.orderDate);
+    if(dataToShow.length){
+      let tempData = [...dataToShow];
+      if(option.name === 'nearest'){
+        tempData.sort((a, b) => b.orderDate - a.orderDate);
+      }
+      else if(option.name === 'oldest'){
+        tempData.sort((a, b) => a.orderDate - b.orderDate);
+      }
+      else if(option.name === 'highestPrice'){
+        tempData.sort((a, b) => b.orderPrice - a.orderPrice);
+      }
+      else if(option.name === 'lowestPrice'){
+        tempData.sort((a, b) => a.orderPrice - b.orderPrice);
+      }
+      setSortedData(tempData);
     }
-    else if(option.name == 'oldest'){
-      handleSortOptionClick(1);
-      dataToShow.sort((a, b) => a.orderDate - b.orderDate);
-    }
-    else if(option.name == 'highestPrice'){
-      handleSortOptionClick(2);
-      dataToShow.sort((a, b) => b.orderPrice - a.orderPrice);
-    }
-    else if(option.name == 'lowestPrice'){
-      handleSortOptionClick(3);
-      dataToShow.sort((a, b) => a.orderPrice - b.orderPrice);
-    }
-  }, [sortOption, dataToShow, accoms]);
-  
-  
+  }, [sortOption, dataToShow]);
+
   return (
     <div className="booking-history">
       <Breadcrumb className="breadcrumb">
@@ -93,7 +119,7 @@ export const BookingHistory = () => {
           </div>
           <div className="search-bar__input-wrapper__item">
             <div className="search-bar__input-wrapper__item__label">
-              Ngày Nhận phòng
+              Ngày Nhận Phòng
             </div>
             <input placeholder="Chọn ngày" readOnly />
           </div>
@@ -111,9 +137,9 @@ export const BookingHistory = () => {
 
       <div className="two-contents">
         <div className="side-menu">
-          <div className="item selected">Đặt phòng sắp đến</div>
-          <div className="item">Đặt phòng đã qua</div>
-          <div className="item">Đặt phòng đã hủy</div>
+          <div onClick={() => {HandleChangeStateView('coming')}} className={`item ${(roomStateShow === 'coming') ? 'selected' : ''}`}>Đặt phòng sắp đến</div>
+          <div onClick={() => {HandleChangeStateView('passed')}} className={`item ${roomStateShow === 'passed' ? 'selected' : ''}`}>Đặt phòng đã qua</div>
+          <div onClick={() => {HandleChangeStateView('canceled')}} className={`item ${roomStateShow === 'canceled' ? 'selected' : ''}`}>Đặt phòng đã hủy</div>
         </div>
 
         <div className="side-main">
@@ -122,19 +148,19 @@ export const BookingHistory = () => {
             <div className="sort__wrapper">
             <div
               className={`sort__wrapper__item ${sortOption[0].selected ? 'selected' : ''}`}
-              onClick={() => handleSortOptionClick(0)}
+              onClick={() => {handleSortOptionClick(0)}}
             >
               Gần nhất
             </div>
             <div
               className={`sort__wrapper__item ${sortOption[1].selected ? 'selected' : ''}`}
-              onClick={() => handleSortOptionClick(1)}
+              onClick={() => {handleSortOptionClick(1)}}
             >
               Cũ nhất
             </div>
             <div
               className={`sort__wrapper__item ${sortOption[2].selected ? 'selected' : ''}`}
-              onClick={() => handleSortOptionClick(2)}
+              onClick={() => {handleSortOptionClick(2)}}
             >
               Giá cao nhất
             </div>
@@ -148,8 +174,16 @@ export const BookingHistory = () => {
             </div>
           </div>
           <div className="list">
-            {dataToShow.map((bookingHistory) => {
-              return (<HorizontalCard DataToShow={bookingHistory} type="history" state="passed" />)
+            {sortedData.map((bookingHistory) => {
+              if(roomStateShow === 'coming' && bookingHistory.state === 'coming'){
+                return (<HorizontalCard DataToShow={bookingHistory} type="history" state="coming" />);
+              }
+              else if(roomStateShow === 'passed' && bookingHistory.state === 'passed'){
+                return (<HorizontalCard DataToShow={bookingHistory} type="history" state="passed" />);
+              }
+              else if(roomStateShow === 'canceled' && bookingHistory.state === 'canceled'){
+                return (<HorizontalCard DataToShow={bookingHistory} type="history" state="canceled" />);
+              }
             })}
           </div>
         </div>

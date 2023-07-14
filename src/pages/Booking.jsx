@@ -747,7 +747,7 @@ export const Booking = (props) => {
             guest: seacrchNumOfGuest,
             children: seacrchNumOfChild,
             numOfRooms: seacrchNumOfRooms,
-            state: 'coming'
+            canceled: false
         }).then(result =>{
           setOrderId(result.id);
           roomsToBook.map((room) =>{
