@@ -36,7 +36,8 @@ export const BookingHistory = () => {
       const correspondingAccom = accoms.find((accom) => accom.accomId === order.accomId);
       if (correspondingAccom) {
         return { ...order, ...correspondingAccom, 
-          accomsName: correspondingAccom.name};
+          accomsName: correspondingAccom.name
+        };
       }
       return order;
     });

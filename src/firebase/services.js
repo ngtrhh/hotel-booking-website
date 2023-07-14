@@ -9,7 +9,7 @@ const ggProvider = new GoogleAuthProvider();
 
 
 
-export const LoginWithGgFb = (methodType) => {
+export const LoginWithGgFb = async (methodType) => {
 	auth.signOut();
 	let provider = '';
 	if(methodType == 'Google'){
@@ -47,6 +47,7 @@ export const LoginWithGgFb = (methodType) => {
 			}
 			addDocument("users", data);
 		}
+		window.location.reload();
 	})
 	.catch((error) => {
 		// Handle Errors here.

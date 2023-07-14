@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import Button from "../Button";
 import { BsStarFill, BsHeart, BsGeoAltFill } from "react-icons/bs";
 import image from "../../../assets/images/ImageBanner.png";
 import { format, addDays, differenceInDays, formatDistance, differenceInMilliseconds } from "date-fns";
+import { AppContext } from "../../../Context/AppProvider";
+import { useNavigate } from "react-router";
 
 const state = ["passed", "coming", "canceled"];
 
 export const HorizontalCard = (props) => {
+  const dataProvided = useContext(AppContext);
+  const {bookingHistoryData, setBookingHistoryData} = dataProvided;
+  const navigate = useNavigate();
   const data = props.DataToShow;
   // let state = parseFloat(formatDistance(
   //   data.recvDate,
@@ -17,10 +22,11 @@ export const HorizontalCard = (props) => {
 
   const HandleViewDetail = () => {
     if(props.type === "favourite"){
-      
+      navigate('/detail/' + data.accomId);
     }
     else{
-      //setBookingHistoryData ở đây rồi nav to view booking history detail
+      setBookingHistoryData(data);
+      navigate('/booking-history/detail');
     }
   };
 

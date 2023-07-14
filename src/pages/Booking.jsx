@@ -747,7 +747,11 @@ export const Booking = (props) => {
             guest: seacrchNumOfGuest,
             children: seacrchNumOfChild,
             numOfRooms: seacrchNumOfRooms,
-            canceled: false
+            canceled: false,
+            customerName: bookingName,
+            customerMail: bookingEmail,
+            customerPhone: bookingPhone,
+            orderOriginalPrice: selectedRoomType.originalPrice
         }).then(result =>{
           setOrderId(result.id);
           roomsToBook.map((room) =>{

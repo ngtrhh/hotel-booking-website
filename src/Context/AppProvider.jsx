@@ -179,7 +179,7 @@ export default function AppProvider ({children}) {
 				querySnapshot.forEach((doc) => {
 					documents.push({
 						...doc.data(),
-						'id': doc.id
+						'orderId': doc.id
 					});
 				});
 				setOrders(documents);
