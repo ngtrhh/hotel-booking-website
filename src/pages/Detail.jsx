@@ -409,7 +409,7 @@ export const Detail = (props) => {
             <hr className="line" />
           </div>
 
-          <div className="section">
+          {/* <div className="section">
             <div className="section__title">Đánh giá</div>
             <div className="section__content" id="rating">
               <div className="score">
@@ -464,7 +464,7 @@ export const Detail = (props) => {
               <div className="page"></div>
               <hr className="line" />
             </div>
-          </div>
+          </div> */}
 
           <div className="section">
             <div className="section__title">Quy định và chính sách</div>

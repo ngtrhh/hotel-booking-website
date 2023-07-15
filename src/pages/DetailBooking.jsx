@@ -12,7 +12,7 @@ import { format } from "date-fns";
 import { useNavigate } from "react-router";
 import { db } from "../firebase/config";
 import { doc, updateDoc, setDoc } from "firebase/firestore";
-import { message } from "antd";
+import { Modal, message } from "antd";
 import Helmet from "../components/common/Helmet";
 
 export const DetailBooking = (props) => {
@@ -370,7 +370,7 @@ export const DetailBooking = (props) => {
           {!isCanEdit &&
             !bookingHistoryData.canceled &&
             bookingHistoryData.state === "coming" && (
-              <Popup
+              <Modal
                 trigger={<Button className="red">Hủy đặt phòng</Button>}
                 modal
                 nested
@@ -396,7 +396,7 @@ export const DetailBooking = (props) => {
                     </div>
                   </div>
                 )}
-              </Popup>
+              </Modal>
             )}
 
           <Button
