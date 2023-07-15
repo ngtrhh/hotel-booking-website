@@ -23,7 +23,7 @@ const Header = () => {
   const user = data.user;
   const navigate = useNavigate();
 
-  const {isUserDropdown, setIsUserDropdown} = data;
+  const { isUserDropdown, setIsUserDropdown } = data;
 
   const LogOut = () => {
     auth.signOut();
@@ -55,15 +55,15 @@ const Header = () => {
     }
   }, [isLoggedIn]);
 
-  const goBookingHistory = () => { 
+  const goBookingHistory = () => {
     ToggleDropdown();
-    navigate('/booking-history');
-  }
+    navigate("/booking-history");
+  };
 
-  const goProfile = () => { 
+  const goProfile = () => {
     ToggleDropdown();
-    navigate('/profile');
-  }
+    navigate("/profile");
+  };
 
   // useEffect(() => {
   //   window.addEventListener("scroll", () => {
@@ -89,24 +89,32 @@ const Header = () => {
         </div>
         <div className="header__menu">
           <Link to="/">
-            <div className={`header__menu__item ${pathname === '/' ? 'active' : ''}`}>
+            <div
+              className={`header__menu__item ${
+                pathname === "/" ? "active" : ""
+              }`}
+            >
               <span>Trang chủ</span>
-              <div className="line" />
+              <hr className="line" />
             </div>
           </Link>
-          <Link to={'/favourite'}>
-            <div className={`header__menu__item ${pathname === '/favourite' ? 'active' : ''}`}>
+          <Link to={"/favourite"}>
+            <div
+              className={`header__menu__item ${
+                pathname === "/favourite" ? "active" : ""
+              }`}
+            >
               <span>Yêu thích</span>
-              <div className="line" />
+              <hr className="line" />
             </div>
           </Link>
           <div className="header__menu__item">
             <span>Về Lokastay</span>
-            <div className="line" />
+            <hr className="line" />
           </div>
           <div className="header__menu__item">
             <span>Liên hệ</span>
-            <div className="line" />
+            <hr className="line" />
           </div>
         </div>
         {isLoggedIn ? (
@@ -128,11 +136,17 @@ const Header = () => {
               className="header__user-dropdown__content"
               id="header-user-dropdown-items"
             >
-              <div className="header__user-dropdown__content__item" onClick={goBookingHistory}>
+              <div
+                className="header__user-dropdown__content__item"
+                onClick={goBookingHistory}
+              >
                 <BiBookBookmark className="header__user-dropdown__content__item__icon" />
                 <p>Phòng đã đặt</p>
               </div>
-              <div className="header__user-dropdown__content__item" onClick={goProfile}>
+              <div
+                className="header__user-dropdown__content__item"
+                onClick={goProfile}
+              >
                 <BiUser className="header__user-dropdown__content__item__icon" />
                 <p>Tài khoản</p>
               </div>
