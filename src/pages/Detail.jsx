@@ -474,7 +474,7 @@ export const Detail = (props) => {
         </div>
         <div className="accommodation-around__content four-cols">
           {
-            accoms.slice(0,4).map((accom) => {
+            accoms.slice(0,4).map((accom, index) => {
               return(
                 <RecommendedStay
                   name={accom.name}
@@ -482,6 +482,7 @@ export const Detail = (props) => {
                   rating={accom.rating}
                   reviews={'(' + accom.ratingCount + ' lượt đánh giá)'}
                   price={accom.price}
+                  image = {accom.images[index]}
                 />
               )
             })

@@ -6,7 +6,7 @@ const RecommendedStay = (props) => {
     <div className="recommended-stay">
       <img
         className="recommended-stay__image"
-        src={require("../../../assets/images/ImageBanner.png")}
+        src={props.image}
       />
       <div className="recommended-stay__content">
         <div className="recommended-stay__content__name">{props.name}</div>

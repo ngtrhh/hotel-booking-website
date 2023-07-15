@@ -19,11 +19,38 @@ const DestinationSearch = () => {
     fetchProvinces();
   }, []);
 
-  // useEffect(() => {
-  //   if(provinces.length){
-  //     provinces
-  //   }
-  // }, [provinces]);
+  useEffect(() => {
+    if(provinces.length){
+      console.log(provinces);
+      const updatedProvinces = provinces.map(province =>{
+        const fields = "photo";
+        const input = province?.name || '';
+        const inputType = "textquery";
+        const apiKey = "AIzaSyDxz1hTaL3_1jqgbWWiZA_kJG0c9mLZWY0";
+
+        const url = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=${fields}&input=${input}&inputtype=${inputType}&key=${apiKey}`;
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            // Xử lý dữ liệu trả về
+            console.log(data);
+            const photoReference = data.candidates[0].photos[0].photo_reference;
+            const imageURL = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${apiKey}`;
+
+            // Trả về object mới với thuộc tính imageURL
+            return {
+              ...province,
+              imageURL: imageURL,
+            };
+          })
+          .catch(error => {
+            // Xử lý lỗi
+            console.error(error);
+          });
+      });
+      setProvince(updatedProvinces);
+    }
+  }, [provinces]);
   // const data = [
   //   { name: "Apple" },
   //   { name: "Orange" },
@@ -71,7 +98,9 @@ const DestinationSearch = () => {
       className="input"
       ref={ref}
       onClick={(e) => {
-        setIsOpen(true);
+        if(!isOpen){
+          setIsOpen(true);
+        }
         inputRef.current && inputRef.current.focus();
       }}
     >
