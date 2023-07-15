@@ -12,10 +12,8 @@ import firebase, { db } from "../../../../firebase/config";
 import { doc, setDoc, addDoc, collection } from "firebase/firestore";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import Filter from "../FilterBar/Filter";
 import Map, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { MapContext } from "react-map-gl/dist/esm/components/map";
 
 export const RoomList = (roomsData) => {
   const dataProvided = useContext(AppContext);
@@ -742,6 +740,7 @@ export const RoomList = (roomsData) => {
     <div className="results-roomlist">
       <div className="results-roomlist__map">
         <Popup
+          style={{ width: "80%", height: "90vh" }}
           trigger={
             <Button
               iconSize={24}
@@ -755,7 +754,7 @@ export const RoomList = (roomsData) => {
           nested
         >
           {(close) => (
-            <div className="modal row " style={{ position: "relative" }}>
+            <div className="modal row" style={{ position: "relative" }}>
               <div id="room-list">
                 {currentRooms.map((roomData, index) => (
                   <CardRoomItem key={index} roomData={roomData} />
@@ -766,9 +765,9 @@ export const RoomList = (roomsData) => {
                 <Map
                   mapboxAccessToken="pk.eyJ1IjoiMTYwM25nb2N0cmluaCIsImEiOiJjbGszYWIzdHQwbGV6M25sc3JlMXl2N2I5In0.SWaxHyfB8VPYvvwCd2YF8w"
                   initialViewState={{
-                    longitude: 108.277199,
-                    latitude: 14.058324,
-                    zoom: 5,
+                    longitude: 104.770551,
+                    latitude: 16.572246,
+                    zoom: 5.25,
                   }}
                   mapStyle="mapbox://styles/mapbox/streets-v9"
                 >

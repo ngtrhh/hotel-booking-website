@@ -126,12 +126,12 @@
               &__love {
                 cursor: pointer;
 
-                &.loved {
-                  color: $red;
-                }
-
                 .background {
                   color: rgba(39, 43, 78, 0.32);
+
+                  &.loved {
+                    color: $dark-blue;
+                  }
                 }
               }
             }
