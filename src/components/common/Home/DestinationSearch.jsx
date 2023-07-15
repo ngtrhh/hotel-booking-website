@@ -24,16 +24,16 @@ const DestinationSearch = () => {
   //     provinces
   //   }
   // }, [provinces]);
-  const data = [
-    { name: "Apple" },
-    { name: "Orange" },
-    { name: "Banana" },
-    { name: "Cherry" },
-  ];
+  // const data = [
+  //   { name: "Apple" },
+  //   { name: "Orange" },
+  //   { name: "Banana" },
+  //   { name: "Cherry" },
+  // ];
   const {searchPlaceValue, setSearchPlaceValue} = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
   const [canDelete, setCanDelete] = useState(false);
-  const [reccently, setRecently] = useState(data);
+  // const [reccently, setRecently] = useState(data);
 
   const ref = useRef();
   const inputRef = useRef(null);
@@ -48,21 +48,21 @@ const DestinationSearch = () => {
   }, [ref]);
 
   const handleFilter = (e) => {
-    const query = e.target.value;
-    var updatedList = [...reccently];
-    updatedList = updatedList.filter((item) => {
-      return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
-    });
+    // const query = e.target.value;
+    // var updatedList = [...reccently];
+    // updatedList = updatedList.filter((item) => {
+    //   return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+    // });
     setSearchPlaceValue(e.target.value);
-    setRecently(updatedList);
-    if (e.target.value != "") setCanDelete(true);
-    else setCanDelete(false);
+    // setRecently(updatedList);
+    // if (e.target.value != "") setCanDelete(true);
+    // else setCanDelete(false);
   };
 
   const handleClear = () => {
     setCanDelete(false);
     setSearchPlaceValue("");
-    setRecently(data);
+    //setRecently(data);
     inputRef.current && inputRef.current.focus();
   };
 

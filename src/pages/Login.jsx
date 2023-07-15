@@ -35,10 +35,7 @@ export const Login = () => {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        setTimeout(() => {
-          navigate('/');
-        }, 3500);
-        ShowMessage('Success');
+        window.location.reload();
         // ...
       })
       .catch((error) => {
