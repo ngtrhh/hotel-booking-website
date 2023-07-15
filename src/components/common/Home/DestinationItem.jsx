@@ -6,12 +6,12 @@ const DestinationItem = (props) => {
     <div className="destination">
       <img
         className="destination__image"
-        src={require("../../../assets/images/ImageBanner.png")}
+        src={props.imageURL || require("../../../assets/images/ImageBanner.png")}
       ></img>
       <div className="destination__title">{props.title}</div>
       <div className="destination__number">
         <BsGeoAlt size={20} />
-        <div className="destination__number__text">{props.number} chỗ nghỉ</div>
+        <div className="destination__number__text">{props.number || 900} chỗ nghỉ</div>
       </div>
     </div>
   );

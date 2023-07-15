@@ -20,7 +20,7 @@ export const Favourite = () => {
     accoms.map((accom) => {
       if(user.lovedRoomsId.includes(accom.accomId)){
         newDataToShow.map((accomToShow) =>{
-          if(accomToShow.accomId == accom.accomId){
+          if(accomToShow.accomId === accom.accomId){
             isNew = false;
           }
         });
@@ -28,6 +28,7 @@ export const Favourite = () => {
           newDataToShow.push(accom);
         }
       }
+      isNew = true
     });
     console.log(newDataToShow);
     setDataToShow(newDataToShow);

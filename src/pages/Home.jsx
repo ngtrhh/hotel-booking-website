@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Button from "../components/common/Button";
 import SearchBar from "../components/common/Home/SearchBar";
 import DestinationItem from "../components/common/Home/DestinationItem";
@@ -12,14 +12,38 @@ import image3 from "../../src/assets/images/advantage-03.png";
 import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../Context/AppProvider";
 import { notification } from "antd";
+import _ from "lodash";
 
 export const Home = () => {
   const dataProvided = useContext(AppContext);
-  const {setSortOpitons} = dataProvided;
+  const {setSortOpitons, accoms, provinces, setProvinces} = dataProvided;
   const navigate = useNavigate();
   const [api, contextHolder] = notification.useNotification(
     {maxCount : '3'}
   );
+  const [randomAccoms, setRandomAccoms] = useState([]);
+  const [randomProvinces, setRandomProvinces] = useState([])
+
+  useEffect(() => {
+    // Shuffle the accoms array
+    const shuffledAccoms = _.shuffle(accoms);
+
+    // Get the first 8 unique values from the shuffled array
+    const selectedAccoms = shuffledAccoms.slice(0, 8);
+
+    setRandomAccoms(selectedAccoms);
+  }, [accoms]);
+
+  useEffect(() => {
+    // Shuffle the accoms array
+    console.log(provinces);
+    const shuffledProvinces = _.shuffle(provinces);
+
+    // Get the first 8 unique values from the shuffled array
+    const selectedProvinces = shuffledProvinces.slice(0, 4);
+
+    setRandomProvinces(selectedProvinces);
+  }, [provinces]);
 
   const ViewMore = (opt) => {
     let optToSort = ''
@@ -72,10 +96,13 @@ export const Home = () => {
           </Button>
         </div>
         <div className="four-cols">
-          <DestinationItem title="Ninh Bình" number="900" />
-          <DestinationItem title="Ninh Bình" number="900" />
-          <DestinationItem title="Ninh Bình" number="900" />
-          <DestinationItem title="Ninh Bình" number="900" />
+          {
+            randomProvinces.map(province =>{
+              return(
+                <DestinationItem title={province.name} number={province.accomsCount} imageURL={province.imageURL}/>
+              );
+            })
+          }
         </div>
       </div>
       <div className="home__banner background1">
@@ -104,62 +131,18 @@ export const Home = () => {
           
         </div>
         <div className="four-cols wrap">
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="9.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="9.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="10.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
-          <RecommendedStay
-            name="Tên chỗ nghỉ"
-            adrress="Địa chỉ Phường, TP"
-            rating="9.0"
-            reviews="(120 đánh giá)"
-            price="9.999.999 đ"
-          />
+          {randomAccoms.slice(0,8).map((accom, index) => {
+              return(
+                <RecommendedStay
+                  name={accom.name}
+                  adrress={accom.address}
+                  rating={accom.rating}
+                  reviews={'(' + accom.ratingCount + ' lượt đánh giá)'}
+                  price={accom.price}
+                  image = {accom.images[0]}
+                />
+              )
+            })}
         </div>
       </div>
       <div className="home__banner">

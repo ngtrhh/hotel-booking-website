@@ -28,6 +28,7 @@ export default function AppProvider ({children}) {
 
 	//Header
 	const [isUserDropdown, setIsUserDropdown] = useState(false);
+	const [provinces, setProvinces] = useState([]);
 	
 
 	//Data Home
@@ -217,6 +218,7 @@ export default function AppProvider ({children}) {
 			seacrchNumOfRooms, setSeacrchNumOfRooms,
 			seacrchNumOfGuest, setSeacrchNumOfGuest,
 			seacrchNumOfChild, setSeacrchNumOfChild,
+			provinces, setProvinces,
 			//Accoms
 			accoms,
 			//Result Filterbar

@@ -566,17 +566,20 @@ export const Detail = (props) => {
           Khách sạn <span> xung quanh</span>
         </div>
         <div className="accommodation-around__content four-cols">
-          {accoms.slice(0, 4).map((accom) => {
-            return (
-              <RecommendedStay
-                name={accom.name}
-                adrress={accom.address}
-                rating={accom.rating}
-                reviews={"(" + accom.ratingCount + " lượt đánh giá)"}
-                price={accom.price}
-              />
-            );
-          })}
+          {
+            accoms.slice(0,4).map((accom, index) => {
+              return(
+                <RecommendedStay
+                  name={accom.name}
+                  adrress={accom.address}
+                  rating={accom.rating}
+                  reviews={'(' + accom.ratingCount + ' lượt đánh giá)'}
+                  price={accom.price}
+                  image = {accom.images[index]}
+                />
+              )
+            })
+          }
         </div>
       </div>
     </div>
