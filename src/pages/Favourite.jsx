@@ -5,7 +5,7 @@ import Helmet from "../components/common/Helmet";
 
 export const Favourite = () => {
   const data = useContext(AppContext);
-  const { accoms, orders, user } = data;
+  const { accoms, orders, user, isLoggedIn} = data;
   const [dataToShow, setDataToShow] = useState([]);
   useEffect(() => {
     // const newDataToShow = orders.map((order) => {
@@ -53,9 +53,9 @@ export const Favourite = () => {
       <div className="favourite">
         <div className="title">Yêu thích của tôi</div>
         <div className="content">
-          {dataToShow ? (
+          {dataToShow.length == 0 ? (
             <div className="unlogged">
-              {user
+              {!isLoggedIn
                 ? "Đăng nhập để lưu các chỗ nghỉ mà bạn quan tâm!"
                 : "Danh sách yêu thích của bạn đang trống."}
               <img
@@ -64,10 +64,10 @@ export const Favourite = () => {
               />
             </div>
           ) : (
-            dataToShow.map((bookingHistory) => {
+            dataToShow.map((data) => {
               return (
                 <HorizontalCard
-                  DataToShow={bookingHistory}
+                  DataToShow={data}
                   type="favourite"
                   state="passed"
                 />

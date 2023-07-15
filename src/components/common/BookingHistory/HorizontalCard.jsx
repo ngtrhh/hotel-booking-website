@@ -11,14 +11,16 @@ import {
 } from "date-fns";
 import { AppContext } from "../../../Context/AppProvider";
 import { useNavigate } from "react-router";
-
+import { doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
+import { db } from "../../../firebase/config";
 const state = ["passed", "coming", "canceled"];
 
 export const HorizontalCard = (props) => {
   const dataProvided = useContext(AppContext);
-  const { bookingHistoryData, setBookingHistoryData } = dataProvided;
+  const { bookingHistoryData, setBookingHistoryData, user,  } = dataProvided;
   const navigate = useNavigate();
   const data = props.DataToShow;
+  console.log(data);
   // let state = parseFloat(formatDistance(
   //   data.recvDate,
   //   data.endDate
@@ -32,6 +34,14 @@ export const HorizontalCard = (props) => {
     } else {
       setBookingHistoryData(data);
       navigate("/booking-history/detail");
+    }
+  };
+  const HandleChangeLovedState = () => {
+    if (user) {
+      const lovedRoomsRef = doc(db, "users", user.uid);
+      updateDoc(lovedRoomsRef, {
+        lovedRoomsId: arrayRemove(data.accomId),
+      });
     }
   };
 
@@ -68,7 +78,7 @@ export const HorizontalCard = (props) => {
           <div className="name">
             {data.accomsName || data.name}
             {props.type === "favourite" ? (
-              <BsHeartFill size={40} />
+              <BsHeartFill size={40} onClick={HandleChangeLovedState}/>
             ) : (
               <BsHeart size={40} />
             )}
