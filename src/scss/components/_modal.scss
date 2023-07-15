@@ -3,8 +3,6 @@
 .popup-content {
   border-radius: 20px;
   padding: 40px 32px;
-  width: 80%;
-  height: 90vh;
 
   .modal {
     @include flex(flex-start, flex-start);
