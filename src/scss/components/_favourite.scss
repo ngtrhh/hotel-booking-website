@@ -13,5 +13,17 @@
     @include flex(flex-start, flex-start);
     flex-direction: column;
     gap: 20px;
+
+    .unlogged {
+      margin-top: 40px;
+      @include flex(center, space-between);
+      gap: 20px;
+      color: $cyan;
+      font: $heading-2;
+      text-align: center;
+      padding: 20px;
+      border-radius: 20px;
+      background-color: $light-blue-1;
+    }
   }
 }
