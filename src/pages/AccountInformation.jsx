@@ -3,14 +3,14 @@ import { Breadcrumb, message } from "antd";
 import { Link } from "react-router-dom";
 import PasswordInput from "../components/common/Account/PasswordInput";
 import Button from "../components/common/Button";
-import { db, auth } from "../firebase/config"
+import { db, auth } from "../firebase/config";
 import { updatePassword, signInWithEmailAndPassword } from "firebase/auth";
 import { AppContext } from "../Context/AppProvider";
-
+import Helmet from "../components/common/Helmet";
 
 export const AccountInformation = () => {
   const dataProvided = useContext(AppContext);
-  const {user} = dataProvided;
+  const { user } = dataProvided;
   const [update, setUpdate] = useState(null);
   const [input, setInput] = useState({
     password: "password",
@@ -33,9 +33,9 @@ export const AccountInformation = () => {
     }));
   };
 
-  useEffect(() =>{
+  useEffect(() => {
     console.log(input);
-  }, [input])
+  }, [input]);
 
   const validateInput = (e) => {
     console.log(input);
@@ -81,7 +81,7 @@ export const AccountInformation = () => {
           break;
 
         default:
-        break;
+          break;
       }
 
       return stateObj;
@@ -102,7 +102,7 @@ export const AccountInformation = () => {
     //   newPassword: "",
     //   confirmPassword: "",
     // });
-    
+
     // if(error.oldPassword !== ""){
     //   message.warning("Mật khẩu cũ không hợp lệ!");
     // }
@@ -112,25 +112,23 @@ export const AccountInformation = () => {
     // else if (error.confirmPassword !== ""){
     //   message.warning("Mật khẩu mới không khợp!")
     // }
-      
+
     const user = auth.currentUser;
     //Đăng nhập thử bằng mật khẩu cũ xem có đúng không
     signInWithEmailAndPassword(auth, user.email, input.oldPassword)
       .then((userCredential) => {
         //Đăng nhập thử thành công thì tiến hành update password
-        updatePassword(user, input.newPassword).then(() => {
-          message.success("Đổi mật khẩu thành công!")
-          clearChangePassword();
-        }).catch((error) => {
-          
-        });
+        updatePassword(user, input.newPassword)
+          .then(() => {
+            message.success("Đổi mật khẩu thành công!");
+            clearChangePassword();
+          })
+          .catch((error) => {});
       })
       .catch((error) => {
-        message.error("Mật khẩu cũ không hợp lệ!")
+        message.error("Mật khẩu cũ không hợp lệ!");
       });
-    }
-    
-
+  };
 
   const clearChangePassword = () => {
     setUpdate(null);
@@ -148,134 +146,139 @@ export const AccountInformation = () => {
   };
 
   return (
-    <div className="account">
-      <Breadcrumb className="breadcrumb">
-        <Breadcrumb.Item>
-          <Link to="/">Trang chủ</Link>
-        </Breadcrumb.Item>
-        <Breadcrumb.Item>Thông tin tài khoản</Breadcrumb.Item>
-      </Breadcrumb>
+    <Helmet title="Thông tin tài khoản">
+      <div className="account">
+        <Breadcrumb className="breadcrumb">
+          <Breadcrumb.Item>
+            <Link to="/">Trang chủ</Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>Thông tin tài khoản</Breadcrumb.Item>
+        </Breadcrumb>
 
-      <div className="two-contents">
-        <div className="side-menu">
-          <Link to="/profile">
-            <div className="item">Thông tin cá nhân</div>
-          </Link>
-          <Link to="/account">
-            <div className="item selected">Thông tin tài khoản</div>
-          </Link>
-          <div className="item">Thông tin thanh toán</div>
-        </div>
-
-        <div className="side-main">
-          <div className="title">
-            <span>Thông tin tài khoản</span>
+        <div className="two-contents">
+          <div className="side-menu">
+            <Link to="/profile">
+              <div className="item">Thông tin cá nhân</div>
+            </Link>
+            <Link to="/account">
+              <div className="item selected">Thông tin tài khoản</div>
+            </Link>
+            <div className="item">Thông tin thanh toán</div>
           </div>
-          <div className="wrapper">
-            <div className="row">
-              <div className="row__title">Mật khẩu</div>
-              {update !== "password" ? (
-                <div className="row__content two-texts">
-                  <input
-                    type="password"
-                    name="password"
-                    value={input.password}
-                    readOnly
-                  />
-                  <div
-                    className={update ? "text disable" : "text"}
-                    onClick={() => {
-                      if (!update) setUpdate("password");
-                    }}
-                  >
-                    Đổi mật khẩu mới
-                  </div>
-                </div>
-              ) : (
-                <div className="row__content two-texts">
-                  <div className="column">
-                    <PasswordInput
-                      name="oldPassword"
-                      type="password"
-                      placeholder="Nhập mật khẩu cũ"
-                      onChange={handleInputChange}
-                      onBlur={validateInput}
-                      error={error.oldPassword}
-                    />
-                    <PasswordInput
-                      name="newPassword"
-                      type="password"
-                      placeholder="Nhập mật khẩu mới"
-                      onChange={handleInputChange}
-                      onBlur={validateInput}
-                      error={error.newPassword}
-                    />
-                    <PasswordInput
-                      name="confirmPassword"
-                      type="password"
-                      placeholder="Xác nhận mật khẩu mới"
-                      onChange={handleInputChange}
-                      onBlur={validateInput}
-                      error={error.confirmPassword}
-                    />
-                  </div>
-                  <div className="text">
-                    <span onClick={clearChangePassword}>Hủy</span>
-                    <Button className="cyan" onClick={handleChangePassword}>
-                      Cập nhật
-                    </Button>
-                  </div>
-                </div>
-              )}
-            </div>
 
-            <div className="row">
-              <div className="row__title">Xóa tài khoản</div>
-              {update !== "delete" ? (
-                <div className="row__content two-texts">
-                  <input readOnly value="Xóa tài khoản Destivance vĩnh viễn" />
-                  <div
-                    className={update ? "text disable" : "text"}
-                    onClick={() => {
-                      if (!update) setUpdate("delete");
-                    }}
-                  >
-                    Xóa tài khoản
-                  </div>
-                </div>
-              ) : (
-                <div className="row__content two-texts">
-                  <div className="warning">
-                    Bạn có chắc chắn muốn xóa tài khoản?
-                    <span>
-                      Nếu bạn vẫn muốn xóa tài khoản, vui lòng đảm bảo tất cả
-                      yêu cầu đặt chỗ đều đã hoàn thành và bạn không có vấn
-                      đề/thắc mắc nào.
-                    </span>
-                  </div>
-                  <div className="text">
-                    <span
+          <div className="side-main">
+            <div className="title">
+              <span>Thông tin tài khoản</span>
+            </div>
+            <div className="wrapper">
+              <div className="row">
+                <div className="row__title">Mật khẩu</div>
+                {update !== "password" ? (
+                  <div className="row__content two-texts">
+                    <input
+                      type="password"
+                      name="password"
+                      value={input.password}
+                      readOnly
+                    />
+                    <div
+                      className={update ? "text disable" : "text"}
                       onClick={() => {
-                        setUpdate(null);
+                        if (!update) setUpdate("password");
                       }}
                     >
-                      Hủy
-                    </span>
-                    <Button
-                      className="cyan"
+                      Đổi mật khẩu mới
+                    </div>
+                  </div>
+                ) : (
+                  <div className="row__content two-texts">
+                    <div className="column">
+                      <PasswordInput
+                        name="oldPassword"
+                        type="password"
+                        placeholder="Nhập mật khẩu cũ"
+                        onChange={handleInputChange}
+                        onBlur={validateInput}
+                        error={error.oldPassword}
+                      />
+                      <PasswordInput
+                        name="newPassword"
+                        type="password"
+                        placeholder="Nhập mật khẩu mới"
+                        onChange={handleInputChange}
+                        onBlur={validateInput}
+                        error={error.newPassword}
+                      />
+                      <PasswordInput
+                        name="confirmPassword"
+                        type="password"
+                        placeholder="Xác nhận mật khẩu mới"
+                        onChange={handleInputChange}
+                        onBlur={validateInput}
+                        error={error.confirmPassword}
+                      />
+                    </div>
+                    <div className="text">
+                      <span onClick={clearChangePassword}>Hủy</span>
+                      <Button className="cyan" onClick={handleChangePassword}>
+                        Cập nhật
+                      </Button>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div className="row">
+                <div className="row__title">Xóa tài khoản</div>
+                {update !== "delete" ? (
+                  <div className="row__content two-texts">
+                    <input
+                      readOnly
+                      value="Xóa tài khoản Destivance vĩnh viễn"
+                    />
+                    <div
+                      className={update ? "text disable" : "text"}
                       onClick={() => {
-                        message.success("Update status account");
+                        if (!update) setUpdate("delete");
                       }}
                     >
                       Xóa tài khoản
-                    </Button>
+                    </div>
                   </div>
-                </div>
-              )}
+                ) : (
+                  <div className="row__content two-texts">
+                    <div className="warning">
+                      Bạn có chắc chắn muốn xóa tài khoản?
+                      <span>
+                        Nếu bạn vẫn muốn xóa tài khoản, vui lòng đảm bảo tất cả
+                        yêu cầu đặt chỗ đều đã hoàn thành và bạn không có vấn
+                        đề/thắc mắc nào.
+                      </span>
+                    </div>
+                    <div className="text">
+                      <span
+                        onClick={() => {
+                          setUpdate(null);
+                        }}
+                      >
+                        Hủy
+                      </span>
+                      <Button
+                        className="cyan"
+                        onClick={() => {
+                          message.success("Update status account");
+                        }}
+                      >
+                        Xóa tài khoản
+                      </Button>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Helmet>
   );
 };

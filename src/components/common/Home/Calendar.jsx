@@ -44,11 +44,9 @@ const Calendar = (props) => {
           <input
             readOnly
             placeholder="Chọn ngày"
-            value={
-              `${format(range[0].startDate, "eee, dd-MM-yyyy", {
-                    locale: vi,
-                  })}`
-            }
+            value={`${format(range[0].startDate, "eee, dd-MM-yyyy", {
+              locale: vi,
+            })}`}
             style={{ width: "160px" }}
           />
         </div>
@@ -67,11 +65,9 @@ const Calendar = (props) => {
           <input
             readOnly
             placeholder="Chọn ngày"
-            value={
-              `${format(range[0].endDate, "eee, dd-MM-yyyy", {
-                    locale: vi,
-                  })}`
-            }
+            value={`${format(range[0].endDate, "eee, dd-MM-yyyy", {
+              locale: vi,
+            })}`}
             style={{ width: "160px" }}
             onClick={() => {
               setIsOpen(true);
@@ -87,13 +83,7 @@ const Calendar = (props) => {
             ranges={range}
             rangeColors={["#272b4e"]}
             onChange={(item) => {
-              if (
-                differenceInDays(
-                  item.selection.endDate,
-                  item.selection.startDate
-                ) > 1
-              )
-                setRange([item.selection]);
+              setRange([item.selection]);
             }}
             moveRangeOnFirstSelection={false}
             months={2}

@@ -1,6 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Breadcrumb, message, Steps, Alert, Modal, Button as AntButton } from "antd";
-import {BiSolidInfoCircle} from "react-icons/bi";
+import {
+  Breadcrumb,
+  message,
+  Steps,
+  Alert,
+  Modal,
+  Button as AntButton,
+} from "antd";
+import { BiSolidInfoCircle } from "react-icons/bi";
 import { format, addDays, differenceInDays, formatDistance } from "date-fns";
 import { addDoc, collection } from "firebase/firestore";
 import { serverTimestamp } from "firebase/firestore";
@@ -8,7 +15,12 @@ import { db } from "../firebase/config";
 import vi from "date-fns/locale/vi";
 import image from "../assets/images/ImageBanner.png";
 import Facility from "../components/common/Facility";
-import { CardElement, Elements, useElements, useStripe } from "@stripe/react-stripe-js";
+import {
+  CardElement,
+  Elements,
+  useElements,
+  useStripe,
+} from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import {
   BsImages,
@@ -23,7 +35,7 @@ import {
   BsCreditCard,
   BsPersonFill,
   BsCircle,
-  BsRecordCircle
+  BsRecordCircle,
 } from "react-icons/bs";
 
 import {
@@ -41,15 +53,18 @@ import {
   MdSportsGymnastics,
   MdSportsFootball,
   MdFastfood,
-  MdKingBed, 
-  MdZoomOutMap
-} from "react-icons/md";  
+  MdKingBed,
+  MdZoomOutMap,
+} from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
 import { useContext } from "react";
 import { AppContext } from "../Context/AppProvider";
 import ResultBooking from "../components/common/Booking/ResultBooking";
-const stripePromise = loadStripe("pk_test_51MwSGfItrzk46JwuUcMyEF34q9bXGZTsKJuUSwiWDdvEdtX4ORkDoNxvr1KjqMGbRlMccRoIrmJFuDnfcwHzlCV100YJDhC5Tm");
+import Helmet from "../components/common/Helmet";
+const stripePromise = loadStripe(
+  "pk_test_51MwSGfItrzk46JwuUcMyEF34q9bXGZTsKJuUSwiWDdvEdtX4ORkDoNxvr1KjqMGbRlMccRoIrmJFuDnfcwHzlCV100YJDhC5Tm"
+);
 
 export const Booking = (props) => {
   const navigate = useNavigate();
@@ -59,14 +74,28 @@ export const Booking = (props) => {
   const [bankSelected, setBankSelected] = useState(1);
   const [vcbQrImg, setVcbQrImg] = useState();
   const [vtbQrImg, setVtbQrImg] = useState();
-  const facilitiesList = ['Hồ bơi', 'Chỗ đậu xe', 'Quầy bar',
-  'Wifi', 'Phòng gym', 'Trung tâm thể dục', 'Thích hợp cho gia đình/trẻ em',
-  'Bữa sáng miễn phí'];
-  const facilityIcon = [MdPool, MdTimeToLeave, MdLocalBar,
-    MdWifi, MdSportsGymnastics, MdSportsFootball, MdChildCare,
-    MdFastfood];  
+  const facilitiesList = [
+    "Hồ bơi",
+    "Chỗ đậu xe",
+    "Quầy bar",
+    "Wifi",
+    "Phòng gym",
+    "Trung tâm thể dục",
+    "Thích hợp cho gia đình/trẻ em",
+    "Bữa sáng miễn phí",
+  ];
+  const facilityIcon = [
+    MdPool,
+    MdTimeToLeave,
+    MdLocalBar,
+    MdWifi,
+    MdSportsGymnastics,
+    MdSportsFootball,
+    MdChildCare,
+    MdFastfood,
+  ];
   const [discount, setDiscount] = useState(0);
-  
+
   const CARD_ELEMENT_OPTIONS = {
     style: {
       base: {
@@ -77,54 +106,74 @@ export const Booking = (props) => {
         "::placeholder": {
           color: "#aab7c4",
         },
-        fontWeight: 500
+        fontWeight: 500,
       },
       invalid: {
         color: "#fa755a",
         iconColor: "#fa755a",
       },
-      
     },
   };
   const goTopRef = useRef(null);
   const vcbRef = useRef(null);
   const vtbRef = useRef(null);
   const ScrollToTop = () => {
-    goTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });    
-  }
+    goTopRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   const ScrollVCB = () => {
-    vcbRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });    
-  }
+    vcbRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   const ScrollVTB = () => {
-    vtbRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });    
-  }
+    vtbRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
-  const { user,
-          accoms, accomData, setAccomData,
-          rooms, setRooms,
-          selectedRoomType, setSelectedRoomType,
-          searchDateRange,
-          seacrchNumOfRooms, setSeacrchNumOfRooms,
-          seacrchNumOfGuest, setSeacrchNumOfGuest,
-          seacrchNumOfChild, setSeacrchNumOfChild,
+  const {
+    user,
+    accoms,
+    accomData,
+    setAccomData,
+    rooms,
+    setRooms,
+    selectedRoomType,
+    setSelectedRoomType,
+    searchDateRange,
+    seacrchNumOfRooms,
+    setSeacrchNumOfRooms,
+    seacrchNumOfGuest,
+    setSeacrchNumOfGuest,
+    seacrchNumOfChild,
+    setSeacrchNumOfChild,
 
-          bookingName, setBookingName,
-          bookingEmail, setBookingEmail,
-          bookingPhone, setBookingPhone,
-          bookingTax, setBookingTax,
-          bookingDiscount, setBookingDiscount,
-          totalBookingPrice, setTotalBookingPrice,
-          roomsToBook, setRoomsToBook,
+    bookingName,
+    setBookingName,
+    bookingEmail,
+    setBookingEmail,
+    bookingPhone,
+    setBookingPhone,
+    bookingTax,
+    setBookingTax,
+    bookingDiscount,
+    setBookingDiscount,
+    totalBookingPrice,
+    setTotalBookingPrice,
+    roomsToBook,
+    setRoomsToBook,
 
-          cardNumber, setCardNumber,
-          cardValidDate, setCardValidDate,
-          cardSecret, setCardSecret,
-          cardOwnerName, setCardOwnerName,
-          orderId, setOrderId,
-          bookingSuccess, setBookingSuccess
-        } = dataProvided;
-  const [totalPriceString, setTotalPriceString] = useState('');
-  const [alertMsg, setAlertMsg] = useState('');
+    cardNumber,
+    setCardNumber,
+    cardValidDate,
+    setCardValidDate,
+    cardSecret,
+    setCardSecret,
+    cardOwnerName,
+    setCardOwnerName,
+    orderId,
+    setOrderId,
+    bookingSuccess,
+    setBookingSuccess,
+  } = dataProvided;
+  const [totalPriceString, setTotalPriceString] = useState("");
+  const [alertMsg, setAlertMsg] = useState("");
 
   const [loadingAcceptBooking, setLoadingAcceptBooking] = useState(false);
   const [openConfirmBooking, setOpenConfirmBooking] = useState(false);
@@ -133,37 +182,59 @@ export const Booking = (props) => {
   const stripe = useStripe();
   const [nights, setNights] = useState(0);
   useEffect(() => {
-    if(selectedRoomType !== ''){
-      setAccomData(accoms.find(accom => accom.accomId === selectedRoomType.accomId));
-      setNights(parseFloat(formatDistance(
-        searchDateRange[0].startDate,
-        searchDateRange[0].endDate
-      ).split(' ')[0]));
-      setDiscount((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) / parseFloat(selectedRoomType.originalPrice.split(' ')[0].replace(/\./g, '')) * 100).toFixed(0));
-      setTotalBookingPrice((parseFloat(selectedRoomType.price.split(' ')[0].replace(/\./g, '')) * nights * seacrchNumOfRooms)+ bookingTax - bookingDiscount);
+    if (selectedRoomType !== "") {
+      setAccomData(
+        accoms.find((accom) => accom.accomId === selectedRoomType.accomId)
+      );
+      setNights(
+        parseFloat(
+          formatDistance(
+            searchDateRange[0].startDate,
+            searchDateRange[0].endDate
+          ).split(" ")[0]
+        )
+      );
+      setDiscount(
+        (
+          (parseFloat(selectedRoomType.price.split(" ")[0].replace(/\./g, "")) /
+            parseFloat(
+              selectedRoomType.originalPrice.split(" ")[0].replace(/\./g, "")
+            )) *
+          100
+        ).toFixed(0)
+      );
+      setTotalBookingPrice(
+        parseFloat(selectedRoomType.price.split(" ")[0].replace(/\./g, "")) *
+          nights *
+          seacrchNumOfRooms +
+          bookingTax -
+          bookingDiscount
+      );
     }
   }, [selectedRoomType, nights]);
 
   useEffect(() => {
-    const foundRooms = rooms.filter(room => ((room.roomTypeId === selectedRoomType.roomTypeId))).slice(0, seacrchNumOfRooms);
+    const foundRooms = rooms
+      .filter((room) => room.roomTypeId === selectedRoomType.roomTypeId)
+      .slice(0, seacrchNumOfRooms);
     console.log(foundRooms);
     setRoomsToBook(foundRooms);
   }, [accomData]);
 
   useEffect(() => {
-    setTotalPriceString(totalBookingPrice.toLocaleString('vi-VN'));
+    setTotalPriceString(totalBookingPrice.toLocaleString("vi-VN"));
   }, [totalBookingPrice]);
 
   useEffect(() => {
     const handleUnload = (event) => {
       event.preventDefault();
-      event.returnValue = 'Dữ liệu đặt phòng sẽ mất khi bạn rời khỏi!'; // Thông báo xác nhận tùy chỉnh
+      event.returnValue = "Dữ liệu đặt phòng sẽ mất khi bạn rời khỏi!"; // Thông báo xác nhận tùy chỉnh
     };
 
-    window.addEventListener('beforeunload', handleUnload);
+    window.addEventListener("beforeunload", handleUnload);
 
     return () => {
-      window.removeEventListener('beforeunload', handleUnload);
+      window.removeEventListener("beforeunload", handleUnload);
     };
   }, []);
 
@@ -174,7 +245,7 @@ export const Booking = (props) => {
     amount: totalBookingPrice,
     addInfo: "DAT PHONG " + accomData.name?.toUpperCase(),
     format: "text",
-    template: "compact2"
+    template: "compact2",
   };
   const requestDataVTB = {
     accountNo: 9948184179,
@@ -183,62 +254,66 @@ export const Booking = (props) => {
     amount: totalBookingPrice,
     addInfo: "DAT PHONG " + accomData.name?.toUpperCase(),
     format: "text",
-    template: "compact2"
+    template: "compact2",
   };
-  useEffect(() =>{
+  useEffect(() => {
     fetch("https://api.vietqr.io/v2/generate", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(requestDataVCB)
-    }).then(response => response.json()).then(data => {
+      body: JSON.stringify(requestDataVCB),
+    })
+      .then((response) => response.json())
+      .then((data) => {
         // Xử lý dữ liệu nhận được từ API
         console.log(data);
         setVcbQrImg(data.data.qrDataURL);
-    }).catch(error => {
+      })
+      .catch((error) => {
         // Xử lý lỗi nếu có
         console.error(error);
-    });
+      });
     fetch("https://api.vietqr.io/v2/generate", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(requestDataVTB)
-    }).then(response => response.json()).then(data => {
+      body: JSON.stringify(requestDataVTB),
+    })
+      .then((response) => response.json())
+      .then((data) => {
         // Xử lý dữ liệu nhận được từ API
         console.log(data);
         setVtbQrImg(data.data.qrDataURL);
-    }).catch(error => {
+      })
+      .catch((error) => {
         // Xử lý lỗi nếu có
         console.error(error);
-    });
-  }, [requestDataVCB, requestDataVTB])
-  
+      });
+  }, [requestDataVCB, requestDataVTB]);
 
   const HandleBookingNameOnChange = (event) => {
-    let bookingNameInput = event.target.value.split(' ');
-    const formattedBookingName = bookingNameInput.map((input) =>{
+    let bookingNameInput = event.target.value.split(" ");
+    const formattedBookingName = bookingNameInput.map((input) => {
       const firstChar = input.charAt(0).toUpperCase();
       const restOfString = input.slice(1).toLowerCase();
       return firstChar + restOfString;
     });
-    event.target.value = formattedBookingName.join(' ');
-  }
+    event.target.value = formattedBookingName.join(" ");
+  };
 
   const HandleBookingPhoneOnChange = (event) => {
     const numberPattern = /^[0-9\b]+$/;
     let newValue = event.target.value;
-    if(!numberPattern.test(newValue)){
-      newValue = newValue.slice(0,-1);
+    if (!numberPattern.test(newValue)) {
+      newValue = newValue.slice(0, -1);
     }
-    if(newValue.length > 11){
-      newValue = newValue.slice(0,11);
+    if (newValue.length > 11) {
+      newValue = newValue.slice(0, 11);
     }
     event.target.value = newValue;
-    
-   }
+  };
 
   const steps = [
     {
@@ -253,7 +328,9 @@ export const Booking = (props) => {
                 <div className="infor__content__accomodation-name">
                   {accomData.name}
                 </div>
-                <div className="infor__content__room-name">{selectedRoomType.name}</div>
+                <div className="infor__content__room-name">
+                  {selectedRoomType.name}
+                </div>
                 <div className="infor__content__address">
                   <BsGeoAltFill size={18} />
                   <span>{accomData.address}</span>
@@ -277,19 +354,21 @@ export const Booking = (props) => {
                   </div>
                 </div>
                 <div className="infor__content__facilities">
-                  {(accomData==true) ?? accomData.facilities.map((facility, index) => {
-                    if(facilitiesList.includes(facility)){
-                      const IconComponent = facilityIcon[facilitiesList.indexOf(facility)];
-                      console.log(facilitiesList.indexOf(facility));
-                      return (
-                        <Facility
-                          key={index}
-                          content={facility}
-                          icon={<IconComponent size={24} />}
-                        />
-                      );
-                    }
-                  })}
+                  {accomData == true ??
+                    accomData.facilities.map((facility, index) => {
+                      if (facilitiesList.includes(facility)) {
+                        const IconComponent =
+                          facilityIcon[facilitiesList.indexOf(facility)];
+                        console.log(facilitiesList.indexOf(facility));
+                        return (
+                          <Facility
+                            key={index}
+                            content={facility}
+                            icon={<IconComponent size={24} />}
+                          />
+                        );
+                      }
+                    })}
                 </div>
               </div>
             </div>
@@ -298,7 +377,7 @@ export const Booking = (props) => {
                 <div className="detail-room__item__label">Nhận phòng</div>
                 <div className="detail-room__item__input">
                   {`${format(searchDateRange[0].startDate, "eee, dd-MM-yyyy", {
-                      locale: vi,
+                    locale: vi,
                   })}`}
                 </div>
                 <div className="detail-room__item__description">Từ 14:00</div>
@@ -308,7 +387,7 @@ export const Booking = (props) => {
                 <div className="detail-room__item__label">Trả phòng</div>
                 <div className="detail-room__item__input">
                   {`${format(searchDateRange[0].endDate, "eee, dd-MM-yyyy", {
-                      locale: vi,
+                    locale: vi,
                   })}`}
                 </div>
                 <div className="detail-room__item__description">
@@ -319,12 +398,10 @@ export const Booking = (props) => {
               <div className="detail-room__item">
                 <div className="detail-room__item__label">ĐÊM</div>
                 <div className="detail-room__item__input">
-                  {
-                    formatDistance(
-                      searchDateRange[0].startDate,
-                      searchDateRange[0].endDate
-                    ).split(' ')[0] + ' ĐÊM'
-                  }
+                  {formatDistance(
+                    searchDateRange[0].startDate,
+                    searchDateRange[0].endDate
+                  ).split(" ")[0] + " ĐÊM"}
                 </div>
                 <div className="detail-room__item__description"></div>
               </div>
@@ -332,18 +409,18 @@ export const Booking = (props) => {
               <div className="detail-room__item">
                 <div className="detail-room__item__label">SỐ KHÁCH</div>
                 <div className="detail-room__item__input">
-                {
-                  seacrchNumOfChild > 0
+                  {seacrchNumOfChild > 0
                     ? `${seacrchNumOfGuest} người lớn - ${seacrchNumOfChild} trẻ em - ${seacrchNumOfRooms} phòng`
-                    : `${seacrchNumOfGuest} người lớn - ${seacrchNumOfRooms} phòng`
-                }   
+                    : `${seacrchNumOfGuest} người lớn - ${seacrchNumOfRooms} phòng`}
                 </div>
                 <div className="detail-room__item__description"></div>
               </div>
               <hr className="line" />
               <div className="detail-room__item">
                 <div className="detail-room__item__label">KIỂU GIƯỜNG</div>
-                <div className="detail-room__item__input">{selectedRoomType.bed}</div>
+                <div className="detail-room__item__input">
+                  {selectedRoomType.bed}
+                </div>
                 <div className="detail-room__item__description"></div>
               </div>
             </div>
@@ -357,7 +434,7 @@ export const Booking = (props) => {
                   <span>Họ và tên</span>
                   <div className="input__label__require">*</div>
                 </div>
-                <input id='bookingName' onChange={HandleBookingNameOnChange}/>
+                <input id="bookingName" onChange={HandleBookingNameOnChange} />
                 <div className="input__description">
                   Nhập tên như trên CMND/CCCD/Hộ chiếu
                 </div>
@@ -368,7 +445,7 @@ export const Booking = (props) => {
                     <span>Địa chỉ Email</span>
                     <div className="input__label__require">*</div>
                   </div>
-                  <input id="bookingEmail"/>
+                  <input id="bookingEmail" />
                   <div className="input__description">
                     Email xác nhận đặt phòng sẽ được gửi đến địa chỉ này
                   </div>
@@ -378,12 +455,19 @@ export const Booking = (props) => {
                     <span>Số điện thoại</span>
                     <div className="input__label__require">*</div>
                   </div>
-                  <input id="bookingPhone" onChange={HandleBookingPhoneOnChange}/>
+                  <input
+                    id="bookingPhone"
+                    onChange={HandleBookingPhoneOnChange}
+                  />
                   <div className="input__description"></div>
                 </div>
               </div>
-              <Alert message={alertMsg} type="warning" banner id='missingInfoAlert'
-                style={{display: 'none'}}
+              <Alert
+                message={alertMsg}
+                type="warning"
+                banner
+                id="missingInfoAlert"
+                style={{ display: "none" }}
               />
             </div>
           </div>
@@ -397,12 +481,16 @@ export const Booking = (props) => {
       rightContent: (
         <div className="wrapper">
           <div className="wrapper__title">Giá chi tiết</div>
-          <div className="sale-label">{'Giảm ' + discount + '%'}</div>
+          <div className="sale-label">{"Giảm " + discount + "%"}</div>
           <div className="wrapper__row">
             <span>Tên phòng x 1 đêm </span>
             <div className="wrapper__row__price-room">
-              <div className="wrapper__row__price-room__old">{selectedRoomType.originalPrice + ' đ'}</div>
-              <div className="wrapper__row__price-room__new">{selectedRoomType.price}</div>
+              <div className="wrapper__row__price-room__old">
+                {selectedRoomType.originalPrice + " đ"}
+              </div>
+              <div className="wrapper__row__price-room__new">
+                {selectedRoomType.price}
+              </div>
             </div>
           </div>
           <div className="wrapper__row">
@@ -416,7 +504,9 @@ export const Booking = (props) => {
           <div className="total-price">
             <div className="total-price__title">Tổng cộng</div>
             <div className="total-price__column">
-              <div className="total-price__column__price">{totalPriceString + ' đ'}</div>
+              <div className="total-price__column__price">
+                {totalPriceString + " đ"}
+              </div>
               <div className="total-price__column__sub">
                 Đã bao gồm thuế và phí
               </div>
@@ -447,17 +537,23 @@ export const Booking = (props) => {
               </div>
               {selected === "type 1" && (
                 <>
-                <div className="card-element-container" style={{width: '100%'}}>
+                  <div
+                    className="card-element-container"
+                    style={{ width: "100%" }}
+                  >
                     Thông tin thẻ
                     <CardElement options={CARD_ELEMENT_OPTIONS} />
-                </div>
-                
-                <Alert message={alertMsg} type="warning" banner id='cardInputWarning'
-                  style={{display: 'none'}}
-                />
+                  </div>
+
+                  <Alert
+                    message={alertMsg}
+                    type="warning"
+                    banner
+                    id="cardInputWarning"
+                    style={{ display: "none" }}
+                  />
                 </>
               )}
-              
             </div>
             <div className="payment-wrapper__item">
               <div
@@ -490,8 +586,10 @@ export const Booking = (props) => {
                       <BsCircle size={20} />
                     )}
                   </div>
-                  {bankSelected === 1 && <img src={vcbQrImg} alt="loading..." />}
-                  
+                  {bankSelected === 1 && (
+                    <img src={vcbQrImg} alt="loading..." />
+                  )}
+
                   <div
                     className="bank-wrapper__item pointer"
                     ref={vtbRef}
@@ -506,7 +604,9 @@ export const Booking = (props) => {
                       <BsCircle size={20} />
                     )}
                   </div>
-                  {bankSelected === 2 && <img src={vtbQrImg} alt="loading..." />}
+                  {bankSelected === 2 && (
+                    <img src={vtbQrImg} alt="loading..." />
+                  )}
                 </div>
               )}
             </div>
@@ -518,7 +618,9 @@ export const Booking = (props) => {
           <div className="wrapper__title">Thông tin đặt chỗ</div>
           <div className="wrapper__small-row">
             <div className="wrapper__small-row__column">
-              <div className="wrapper__small-row__column__name">{selectedRoomType.name}</div>
+              <div className="wrapper__small-row__column__name">
+                {selectedRoomType.name}
+              </div>
               <div className="wrapper__small-row__column__accomodation">
                 {accomData.name}
               </div>
@@ -530,9 +632,13 @@ export const Booking = (props) => {
                     Nhận phòng
                   </div>
                   <div className="wrapper__small-row__grid__row__item__content">
-                    {`${format(searchDateRange[0].startDate, "eee, dd-MM-yyyy", {
+                    {`${format(
+                      searchDateRange[0].startDate,
+                      "eee, dd-MM-yyyy",
+                      {
                         locale: vi,
-                    })}`}
+                      }
+                    )}`}
                   </div>
                 </div>
                 <div className="wrapper__small-row__grid__row__item top-right">
@@ -541,7 +647,7 @@ export const Booking = (props) => {
                   </div>
                   <div className="wrapper__small-row__grid__row__item__content">
                     {`${format(searchDateRange[0].endDate, "eee, dd-MM-yyyy", {
-                        locale: vi,
+                      locale: vi,
                     })}`}
                   </div>
                 </div>
@@ -560,11 +666,9 @@ export const Booking = (props) => {
                     Khách
                   </div>
                   <div className="wrapper__small-row__grid__row__item__content">
-                    {
-                    seacrchNumOfChild > 0
+                    {seacrchNumOfChild > 0
                       ? `${seacrchNumOfGuest} người lớn - ${seacrchNumOfChild} trẻ em`
-                      : `${seacrchNumOfGuest} người lớn`
-                    } 
+                      : `${seacrchNumOfGuest} người lớn`}
                   </div>
                 </div>
               </div>
@@ -577,26 +681,30 @@ export const Booking = (props) => {
               <span>Tên phòng x 1 đêm</span>
               <div className="wrapper__small-row__detail__price-room">
                 <div className="wrapper__small-row__detail__price-room__old">
-                  {selectedRoomType.originalPrice + ' đ'}
+                  {selectedRoomType.originalPrice + " đ"}
                 </div>
                 <div className="wrapper__small-row__detail__price-room__new">
-                {selectedRoomType.price}
-                </div>  
+                  {selectedRoomType.price}
+                </div>
               </div>
             </div>
             <div className="wrapper__small-row__detail">
               <span>Thuế và phí dịch vụ khách sạn</span>
-              <span>{bookingTax.toLocaleString('vi-VN') + ' đ'}</span>
+              <span>{bookingTax.toLocaleString("vi-VN") + " đ"}</span>
             </div>
             <div className="wrapper__small-row__detail">
               <span>Ưu đãi</span>
-              <span>{'- ' + bookingDiscount.toLocaleString('vi-VN') + ' đ'}</span>
+              <span>
+                {"- " + bookingDiscount.toLocaleString("vi-VN") + " đ"}
+              </span>
             </div>
           </div>
           <div className="total-price">
             <div className="total-price__title">Tổng cộng</div>
             <div className="total-price__column">
-              <div className="total-price__column__price">{totalBookingPrice.toLocaleString('vi-VN') + ' đ'}</div>
+              <div className="total-price__column__price">
+                {totalBookingPrice.toLocaleString("vi-VN") + " đ"}
+              </div>
             </div>
           </div>
         </div>
@@ -605,16 +713,15 @@ export const Booking = (props) => {
   ];
 
   const next = () => {
-    if(IsValidInput()){
-      setBookingName(document.querySelector('#bookingName').value);
-      setBookingEmail(document.querySelector('#bookingEmail').value);
-      setBookingPhone(document.querySelector('#bookingPhone').value);
-      document.querySelector('.ant-alert').style.display = 'none';
+    if (IsValidInput()) {
+      setBookingName(document.querySelector("#bookingName").value);
+      setBookingEmail(document.querySelector("#bookingEmail").value);
+      setBookingPhone(document.querySelector("#bookingPhone").value);
+      document.querySelector(".ant-alert").style.display = "none";
       setCurrent(current + 1);
       ScrollToTop();
-    }
-    else{
-      document.querySelector('.ant-alert').style.display = 'flex';
+    } else {
+      document.querySelector(".ant-alert").style.display = "flex";
     }
   };
 
@@ -623,22 +730,22 @@ export const Booking = (props) => {
   };
 
   const IsValidInput = () => {
-    if(current === 0){
-      setAlertMsg('Vui lòng nhập đầy đủ thông tin');
-      if(document.querySelector('#bookingName').value === ''){
+    if (current === 0) {
+      setAlertMsg("Vui lòng nhập đầy đủ thông tin");
+      if (document.querySelector("#bookingName").value === "") {
         return false;
       }
-      if(document.querySelector('#bookingEmail').value === ''){
+      if (document.querySelector("#bookingEmail").value === "") {
         return false;
       }
-      if(document.querySelector('#bookingPhone').value === ''){
+      if (document.querySelector("#bookingPhone").value === "") {
         return false;
       }
-      
-      setAlertMsg('Email không hợp lệ')
+
+      setAlertMsg("Email không hợp lệ");
       const gmailRegex = /@gmail\.com$/i;
 
-      return gmailRegex.test(document.querySelector('#bookingEmail').value);
+      return gmailRegex.test(document.querySelector("#bookingEmail").value);
     }
     // else if (selected === "type 1"){
     //   setAlertMsg('Vui lòng nhập đầy đủ thông tin');
@@ -656,10 +763,10 @@ export const Booking = (props) => {
     //   }
     // }
     return true;
-  }
+  };
 
-  const Booking =  () => {
-    if(IsValidInput()){
+  const Booking = () => {
+    if (IsValidInput()) {
       // setCardNumber(document.querySelector('#cardNumber').value);
       // setCardValidDate(document.querySelector('#cardValidDate').value);
       // setCardSecret(document.querySelector('#cardSecret').value);
@@ -668,11 +775,10 @@ export const Booking = (props) => {
       // document.querySelector('.ant-alert').style.display = 'none';
 
       OpenConfirmBooking();
-    }
-    else{
+    } else {
       // document.querySelector('.ant-alert').style.display = 'flex';
     }
-  }
+  };
 
   const items = steps.map((item) => ({
     key: item.title,
@@ -690,14 +796,16 @@ export const Booking = (props) => {
       setOpenConfirmBooking(false);
     }, 1000);
 
-    const stripeItent = require('stripe')('sk_test_51MwSGfItrzk46JwuS9zUmW3MgdDEbZHzUxftRVUBOoW1G4AsT4Im2CWy5UnRCEHDV5jw7wXTOwJHDZCOuqP3cOEA00uu4Jm4V9');
+    const stripeItent = require("stripe")(
+      "sk_test_51MwSGfItrzk46JwuS9zUmW3MgdDEbZHzUxftRVUBOoW1G4AsT4Im2CWy5UnRCEHDV5jw7wXTOwJHDZCOuqP3cOEA00uu4Jm4V9"
+    );
 
-    const {client_secret} = await stripeItent.paymentIntents.create({
+    const { client_secret } = await stripeItent.paymentIntents.create({
       amount: totalBookingPrice,
-      currency: 'vnd',
-      payment_method_types: ['card'],
+      currency: "vnd",
+      payment_method_types: ["card"],
       metadata: {
-        order_id: '6735',
+        order_id: "6735",
       },
     });
 
@@ -707,136 +815,137 @@ export const Booking = (props) => {
         billing_details: {
           name: bookingName,
           email: bookingEmail,
-          phone: bookingPhone
+          phone: bookingPhone,
         },
-      }
-    })
+      },
+    });
 
     if (result.error) {
       // Show error to your customer (for example, insufficient funds)
       console.log(result.error.message);
-      
+
       setTimeout(() => {
         setAlertMsg(result.error.message);
-        document.querySelector('.ant-alert').style.display = 'flex';
+        document.querySelector(".ant-alert").style.display = "flex";
       }, 1000);
-      
     } else {
       // The payment has been processed!
-      if (result.paymentIntent.status === 'succeeded') {
+      if (result.paymentIntent.status === "succeeded") {
         // Show a success message to your customer
         // There's a risk of the customer closing the window before callback
         // execution. Set up a webhook or plugin to listen for the
         // payment_intent.succeeded event that handles any business critical
         // post-payment actions.
-        document.querySelector('.ant-alert').style.display = 'none';
+        document.querySelector(".ant-alert").style.display = "none";
 
         //Thêm hóa đơn đặt phòng lên database
-        await addDoc(collection(db, "orders"), 
-        {
-            uid: user.uid,
-            accomId: accomData.accomId,
-            roomTypeId: selectedRoomType.roomTypeId,
-            orderDate: serverTimestamp(),
-            recvDate: searchDateRange[0].startDate,
-            endDate: searchDateRange[0].endDate,
-            nights: nights,
-            orderPrice: totalBookingPrice,
-            oneRoomPrice: selectedRoomType.price,
-            roomTypeName: selectedRoomType.name,
-            guest: seacrchNumOfGuest,
-            children: seacrchNumOfChild,
-            numOfRooms: seacrchNumOfRooms,
-            canceled: false,
-            customerName: bookingName,
-            customerMail: bookingEmail,
-            customerPhone: bookingPhone,
-            orderOriginalPrice: selectedRoomType.originalPrice
-        }).then(result =>{
+        await addDoc(collection(db, "orders"), {
+          uid: user.uid,
+          accomId: accomData.accomId,
+          roomTypeId: selectedRoomType.roomTypeId,
+          orderDate: serverTimestamp(),
+          recvDate: searchDateRange[0].startDate,
+          endDate: searchDateRange[0].endDate,
+          nights: nights,
+          orderPrice: totalBookingPrice,
+          oneRoomPrice: selectedRoomType.price,
+          roomTypeName: selectedRoomType.name,
+          guest: seacrchNumOfGuest,
+          children: seacrchNumOfChild,
+          numOfRooms: seacrchNumOfRooms,
+          canceled: false,
+          customerName: bookingName,
+          customerMail: bookingEmail,
+          customerPhone: bookingPhone,
+          orderOriginalPrice: selectedRoomType.originalPrice,
+        }).then((result) => {
           setOrderId(result.id);
-          roomsToBook.map((room) =>{
-            addDoc(collection(db, "booking"), 
-            {
-                uid: user.uid,
-                accomId: accomData.accomId,
-                roomTypeId: selectedRoomType.roomTypeId,
-                orderDate: serverTimestamp(),
-                recvDate: searchDateRange[0].startDate,
-                endDate: searchDateRange[0].endDate,
-                orderId: result.id,
-                roomId: room.roomId,
-                roomNumber: room.roomNumber
-            })
-          })
+          roomsToBook.map((room) => {
+            addDoc(collection(db, "booking"), {
+              uid: user.uid,
+              accomId: accomData.accomId,
+              roomTypeId: selectedRoomType.roomTypeId,
+              orderDate: serverTimestamp(),
+              recvDate: searchDateRange[0].startDate,
+              endDate: searchDateRange[0].endDate,
+              orderId: result.id,
+              roomId: room.roomId,
+              roomNumber: room.roomNumber,
+            });
+          });
         });
         setBookingSuccess(true);
-        navigate('/booking/result');
+        navigate("/booking/result");
       }
     }
   };
 
   const handleCancel = () => {
-    setOpenConfirmBooking (false);
+    setOpenConfirmBooking(false);
   };
 
   return (
-    <div className="booking" ref={goTopRef}>
-      <Breadcrumb className="breadcrumb">
-        <Breadcrumb.Item>
-          <Link to="/">Trang chủ</Link>
-        </Breadcrumb.Item>
-        <Breadcrumb.Item>
-          <Link to="/result">Tìm kiếm</Link>
-        </Breadcrumb.Item>
-        <Breadcrumb.Item>
-          <Link to="/detail">Chi tiết</Link>
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Steps current={current} items={items} className="steps" />
-      <div className="booking__content">
-        <div className="booking__content__left">
-          {steps[current].leftContent}
+    <Helmet title="Đặt phòng">
+      <div className="booking" ref={goTopRef}>
+        <Breadcrumb className="breadcrumb">
+          <Breadcrumb.Item>
+            <Link to="/">Trang chủ</Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
+            <Link to="/result">Tìm kiếm</Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
+            <Link to="/detail">Chi tiết</Link>
+          </Breadcrumb.Item>
+        </Breadcrumb>
+        <Steps current={current} items={items} className="steps" />
+        <div className="booking__content">
+          <div className="booking__content__left">
+            {steps[current].leftContent}
 
-          {current < steps.length - 1 && (
-            <Button className="cyan fill" onClick={() => next()}>
-              Tiếp tục
-            </Button>
-          )}
-          {current === steps.length - 1 && (
-            <Button
-              className="cyan fill"
-              onClick={Booking}
-            >
-              Hoàn tất đặt phòng
-            </Button>
-          )}
-          {current > 0 && (
-            <Button className="outline fill" onClick={() => prev()}>
-              Trở về
-            </Button>
-          )}
-        </div>
+            {current < steps.length - 1 && (
+              <Button className="cyan fill" onClick={() => next()}>
+                Tiếp tục
+              </Button>
+            )}
+            {current === steps.length - 1 && (
+              <Button className="cyan fill" onClick={Booking}>
+                Hoàn tất đặt phòng
+              </Button>
+            )}
+            {current > 0 && (
+              <Button className="outline fill" onClick={() => prev()}>
+                Trở về
+              </Button>
+            )}
+          </div>
           <Modal
-          open={openConfirmBooking}
-          title="Xác nhận đặt phòng"
-          icon = {<BiSolidInfoCircle/>}
-          onOk={HandleOk}
-          onCancel={handleCancel}
-          footer={[
-            <AntButton key="back" onClick={handleCancel}>
-              Trở về
-            </AntButton>,
-            <AntButton key="submit" type="primary" loading={loadingAcceptBooking} onClick={HandleOk}>
-              Xác nhận
-            </AntButton>
-          ]}
-        >
-          <p style={{fontSize: '20px'}}>Bạn có xác nhận muốn đặt phòng?</p>
-        </Modal>
-        <div className="booking__content__right">
-          {steps[current].rightContent}
+            open={openConfirmBooking}
+            title="Xác nhận đặt phòng"
+            icon={<BiSolidInfoCircle />}
+            onOk={HandleOk}
+            onCancel={handleCancel}
+            footer={[
+              <AntButton key="back" onClick={handleCancel}>
+                Trở về
+              </AntButton>,
+              <AntButton
+                key="submit"
+                type="primary"
+                loading={loadingAcceptBooking}
+                onClick={HandleOk}
+              >
+                Xác nhận
+              </AntButton>,
+            ]}
+          >
+            <p style={{ fontSize: "20px" }}>Bạn có xác nhận muốn đặt phòng?</p>
+          </Modal>
+          <div className="booking__content__right">
+            {steps[current].rightContent}
+          </div>
         </div>
       </div>
-    </div>
+    </Helmet>
   );
 };
