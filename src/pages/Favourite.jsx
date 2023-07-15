@@ -53,7 +53,17 @@ export const Favourite = () => {
       <div className="favourite">
         <div className="title">Yêu thích của tôi</div>
         <div className="content">
-          {user ? (
+          {dataToShow ? (
+            <div className="unlogged">
+              {user
+                ? "Đăng nhập để lưu các chỗ nghỉ mà bạn quan tâm!"
+                : "Danh sách yêu thích của bạn đang trống."}
+              <img
+                src={require("../assets/images/EmptyFavourite.png")}
+                style={{ width: "50%" }}
+              />
+            </div>
+          ) : (
             dataToShow.map((bookingHistory) => {
               return (
                 <HorizontalCard
@@ -63,14 +73,6 @@ export const Favourite = () => {
                 />
               );
             })
-          ) : (
-            <div className="unlogged">
-              Đăng nhập để lưu các chỗ nghỉ mà bạn quan tâm!
-              <img
-                src={require("../assets/images/EmptyFavourite.png")}
-                style={{ width: "50%" }}
-              />
-            </div>
           )}
         </div>
       </div>
