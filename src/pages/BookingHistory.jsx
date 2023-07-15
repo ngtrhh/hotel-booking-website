@@ -117,41 +117,40 @@ export const BookingHistory = () => {
         dayjs().set("date", dayjs(searchEndDate).get("year")).format("YYYY"),
       ];
 
-      tempData.map((searchData) => {
-        const recvDate = [
-          dayjs(searchData.recvDate.toDate()).format("DD"),
-          dayjs(searchData.recvDate.toDate()).format("MM"),
-          dayjs(searchData.recvDate.toDate()).format("YYYY"),
-        ];
-        const endDate = [
-          dayjs(searchData.endDate.toDate()).format("DD"),
-          dayjs(searchData.endDate.toDate()).format("MM"),
-          dayjs(searchData.endDate.toDate()).format("YYYY"),
-        ];
+      // tempData.map((searchData) => {
+      //   const recvDate = [
+      //     dayjs(searchData.recvDate.toDate()).format("DD"),
+      //     dayjs(searchData.recvDate.toDate()).format("MM"),
+      //     dayjs(searchData.recvDate.toDate()).format("YYYY"),
+      //   ];
+      //   const endDate = [
+      //     dayjs(searchData.endDate.toDate()).format("DD"),
+      //     dayjs(searchData.endDate.toDate()).format("MM"),
+      //     dayjs(searchData.endDate.toDate()).format("YYYY"),
+      //   ];
 
-        const isEqualRecvDate = formattedRecvDate.some((element) =>
-          recvDate.includes(element)
-        );
-        const isEqualEndDate = formattedEndDate.some((element) =>
-          endDate.includes(element)
-        );
+      //   console.log(formattedRecvDate, recvDate);
 
-        console.log({ accomsName: searchData.accomsName });
-        console.log({ searchAccomName: searchAccomName });
-        console.log(areStringsSimilar(searchData.accomsName, searchAccomName));
-        if (
-          isEqualRecvDate &&
-          isEqualEndDate &&
-          (searchAccomName.toLowerCase() ===
-            searchData.accomsName
-              .slice(0, searchAccomName.length)
-              .toLowerCase() ||
-            searchAccomName === "")
-        ) {
-          tempDataToSearch.push(searchData);
-        }
-      });
-      tempData = [...tempDataToSearch];
+      //   const isEqualRecvDate = formattedRecvDate.some((element) =>
+      //     recvDate.includes(element)
+      //   );
+      //   const isEqualEndDate = formattedEndDate.some((element) =>
+      //     endDate.includes(element)
+      //   );
+
+      //   if (
+      //     isEqualRecvDate &&
+      //     isEqualEndDate &&
+      //     (searchAccomName.toLowerCase() ===
+      //       searchData.accomsName
+      //         .slice(0, searchAccomName.length)
+      //         .toLowerCase() ||
+      //       searchAccomName === "")
+      //   ) {
+      //     tempDataToSearch.push(searchData);
+      //   }
+      // });
+      // tempData = [...tempDataToSearch];
 
       if (option.name === "nearest") {
         tempData.sort((a, b) => b.orderDate - a.orderDate);
