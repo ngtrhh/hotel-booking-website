@@ -75,7 +75,7 @@ export const Home = () => {
   };
 
   return (
-    <Helmet>
+    <Helmet title="Trang chủ">
       <div className="home">
         <div className="home__top-banner">
           <SearchBar />
