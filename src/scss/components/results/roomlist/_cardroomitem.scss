@@ -68,9 +68,8 @@
                     & *{
                         position: absolute;
                     }
-                    &__background{
-                        color: #272B4E52;
-                        z-index: 0;
+                   .background{
+                        color: rgba(39, 43, 78, 0.32);
                     }
                 }
             }
