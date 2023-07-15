@@ -4,7 +4,6 @@
   z-index: 999;
   width: 100%;
   height: $header-height;
-  border-bottom: 1px solid $dove;
   background-color: transparent;
 
   &__container {
@@ -27,30 +26,27 @@
       padding: 12px;
       color: $dark-grey;
       cursor: pointer;
+      opacity: 0.6;
 
       .line {
         width: 40px;
-        height: 1.5px;
         margin: 12px auto 0;
-        background-color: transparent;
+        border: 1px solid $dark-grey;
       }
 
       &.active {
         font-weight: 700;
         color: $dark-blue;
+        opacity: 1;
 
         .line {
-          background-color: $cyan;
+          border-color: $cyan;
         }
       }
 
       &:not(.active):hover {
         transition: transform 0.3s linear;
-
-        .line {
-          background-color: $dark-grey;
-          opacity: 0.6;
-        }
+        opacity: 1;
       }
     }
   }
