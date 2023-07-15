@@ -41,40 +41,40 @@ export const Register = () => {
 
     if (CheckPassword(email, password, rePassword)) {
       createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // Signed in
-          const user = userCredential.user;
-          if (getAdditionalUserInfo(userCredential).isNewUser) {
-            console.log(generateKeywords(user.displayName));
-            const data = {
-              uid: user.uid,
-              displayName: user.displayName,
-              email: user.email,
-              photoURL: user.photoURL,
-              providerId: user.providerId,
-              createdAt: user.metadata.createdAt,
-              keywords: generateKeywords(user.displayName),
-              lovedRoomsId: [],
-              phoneNumber: user.phoneNumber,
-              dob: null,
-              sex: null,
-              address: null,
-            };
-            addDocument("users", data);
-          }
-          setTimeout(() => {
-            navigate("/");
-          }, 3500);
-          ShowMessage("Success");
-          // ...
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          ShowMessage("AccountExisted");
-          console.log(error);
-          // ..
-        });
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        if(getAdditionalUserInfo(userCredential).isNewUser){
+          console.log(generateKeywords(user.displayName));
+					const data = {
+						uid: user.uid,
+						displayName: user.email.replace('@gmail.com', ''),
+						email: user.email,
+						photoURL: user.photoURL,
+						providerId: user.providerId,
+						createdAt: user.metadata.createdAt,
+						keywords: generateKeywords(user.displayName),
+            lovedRoomsId: [],
+            phoneNumber: user.phoneNumber,
+            dob: null,
+            sex: null,
+            address: null
+					}
+					addDocument("users", data);
+				}
+        setTimeout(() => {
+          navigate('/');
+        }, 3500);
+        ShowMessage('Success');
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        ShowMessage('AccountExisted');
+        console.log(error);
+        // ..
+      });
     }
   };
   const LoginWithOtherMethod = (methodType) => {

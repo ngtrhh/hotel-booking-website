@@ -27,6 +27,7 @@ const Header = () => {
 
   const LogOut = () => {
     auth.signOut();
+    navigate('/');
   };
   const ToggleDropdown = () => {
     setIsUserDropdown(!isUserDropdown);
