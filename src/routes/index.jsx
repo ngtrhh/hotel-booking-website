@@ -1,11 +1,20 @@
 import { HomeLayout, BookingLayout } from "../components/layout";
-import { Home, Results, Detail, Login, Register, ForgotPassword, Booking,
+import {
+  Home,
+  Results,
+  Detail,
+  Login,
+  Register,
+  ForgotPassword,
+  Booking,
   BookingHistory,
   Favourite,
   Profile,
-  EditProfile, AccountInformation,
+  EditProfile,
+  AccountInformation,
   DetailBooking,
-  EditBooking,} from "../pages/";
+  EditBooking,
+} from "../pages/";
 import ResultBooking from "../components/common/Booking/ResultBooking";
 import { GetAcooms } from "../Context/AppProvider";
 import { React, useState, useEffect } from "react";
@@ -33,7 +42,6 @@ const GetAccomsData = (setAccomsData) => {
   // useEffect(() => {
   //   const collectionRef = collection(db, 'accoms');
   //   const q = query(collectionRef, limit(40));
-
   //   const unsubscribe = onSnapshot(q, (querySnapshot) => {
   //     const data = [];
   //     querySnapshot.forEach((doc) => {
@@ -43,20 +51,19 @@ const GetAccomsData = (setAccomsData) => {
   //     });
   //     setAccomsData(data);
   //   });
-
   //   return unsubscribe;
   // }, []);
-}
+};
 
 const PublicRoutes = () => {
   const [accomsData, setAccomsData] = useState([]);
   const [data, setData] = useState([]);
-  useFireStore('accoms', setAccomsData);
+  useFireStore("accoms", setAccomsData);
 
   useEffect(() => {
     setData([
       { path: "/", element: Home, layout: HomeLayout },
-      { path: "/results", element: Results},
+      { path: "/results", element: Results },
       { path: "/booking", element: Booking, layout: BookingLayout },
       ...accomsData.map((accom, index) => ({
         path: `/detail/${accom.accomId}`,
@@ -65,7 +72,7 @@ const PublicRoutes = () => {
       { path: "/login", element: Login, layout: null },
       { path: "/register", element: Register, layout: null },
       { path: "/forgot", element: ForgotPassword, layout: null },
-      { path: "/booking-history", element: BookingHistory},
+      { path: "/booking-history", element: BookingHistory },
       { path: "/favourite", element: Favourite },
       { path: "/profile", element: Profile },
       { path: "/edit-profile", element: EditProfile },
@@ -75,7 +82,7 @@ const PublicRoutes = () => {
       {path: "/account-info", element: AccountInformation}
     ]);
   }, [accomsData]);
-  
+
   return data;
 };
 
