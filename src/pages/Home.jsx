@@ -16,12 +16,13 @@ import _ from "lodash";
 
 export const Home = () => {
   const dataProvided = useContext(AppContext);
-  const {setSortOpitons, accoms} = dataProvided;
+  const {setSortOpitons, accoms, provinces, setProvinces} = dataProvided;
   const navigate = useNavigate();
   const [api, contextHolder] = notification.useNotification(
     {maxCount : '3'}
   );
   const [randomAccoms, setRandomAccoms] = useState([]);
+  const [randomProvinces, setRandomProvinces] = useState([])
 
   useEffect(() => {
     // Shuffle the accoms array
@@ -32,6 +33,17 @@ export const Home = () => {
 
     setRandomAccoms(selectedAccoms);
   }, [accoms]);
+
+  useEffect(() => {
+    // Shuffle the accoms array
+    console.log(provinces);
+    const shuffledProvinces = _.shuffle(provinces);
+
+    // Get the first 8 unique values from the shuffled array
+    const selectedProvinces = shuffledProvinces.slice(0, 4);
+
+    setRandomProvinces(selectedProvinces);
+  }, [provinces]);
 
   const ViewMore = (opt) => {
     let optToSort = ''
@@ -84,10 +96,13 @@ export const Home = () => {
           </Button>
         </div>
         <div className="four-cols">
-          <DestinationItem title="Ninh Bình" number="900" />
-          <DestinationItem title="Ninh Bình" number="900" />
-          <DestinationItem title="Ninh Bình" number="900" />
-          <DestinationItem title="Ninh Bình" number="900" />
+          {
+            randomProvinces.map(province =>{
+              return(
+                <DestinationItem title={province.name} number={province.accomsCount} imageURL={province.imageURL}/>
+              );
+            })
+          }
         </div>
       </div>
       <div className="home__banner background1">
