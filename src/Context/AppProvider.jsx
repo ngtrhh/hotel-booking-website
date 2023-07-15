@@ -165,6 +165,7 @@ export default function AppProvider ({children}) {
 		operator: '==', 
 		comparedValue: user?.uid || ''
 	}
+	const [bookingHistoryData, setBookingHistoryData] = useState(null);
 	
 	// useFireStore('orders', setOrders, -1, ordersQueryCondition);
 	React.useEffect(() => {
@@ -178,7 +179,7 @@ export default function AppProvider ({children}) {
 				querySnapshot.forEach((doc) => {
 					documents.push({
 						...doc.data(),
-						'id': doc.id
+						'orderId': doc.id
 					});
 				});
 				setOrders(documents);
@@ -249,7 +250,10 @@ export default function AppProvider ({children}) {
 			orderId, setOrderId,
 			bookingSuccess, setBookingSuccess,
 			isUserDropdown, setIsUserDropdown,
-			orders, setOrders
+			
+			//BookingHistory
+			orders, setOrders,
+			bookingHistoryData, setBookingHistoryData
 		}}>
 			{children}
 		</AppContext.Provider>

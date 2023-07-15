@@ -1,17 +1,35 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import Button from "../Button";
 import { BsStarFill, BsHeart, BsGeoAltFill } from "react-icons/bs";
 import image from "../../../assets/images/ImageBanner.png";
 import { format, addDays, differenceInDays, formatDistance, differenceInMilliseconds } from "date-fns";
+import { AppContext } from "../../../Context/AppProvider";
+import { useNavigate } from "react-router";
 
 const state = ["passed", "coming", "canceled"];
 
 export const HorizontalCard = (props) => {
+  const dataProvided = useContext(AppContext);
+  const {bookingHistoryData, setBookingHistoryData} = dataProvided;
+  const navigate = useNavigate();
   const data = props.DataToShow;
   // let state = parseFloat(formatDistance(
   //   data.recvDate,
   //   data.endDate
   // ).split(' ')[0]);
+
+  //Nhập bookingHistoryData, setBookingHistoryData từ AppContent
+
+  const HandleViewDetail = () => {
+    if(props.type === "favourite"){
+      navigate('/detail/' + data.accomId);
+    }
+    else{
+      setBookingHistoryData(data);
+      navigate('/booking-history/detail');
+    }
+  };
+
   return (
     <div className="horizontal-card">
       <div className="image">
@@ -24,10 +42,10 @@ export const HorizontalCard = (props) => {
           </div>
         </div>
         {props.type === "history" && props.state === state[0] && (
-          <div className="date">{'Đã đặt ngày ' + data.orderDate.toDate().toLocaleDateString()}</div>
+          <div className="date">{'Đã đặt ngày: ' + data.orderDate.toDate().toLocaleDateString('vi-VN')}</div>
         )}
         {props.type === "history" && props.state === state[1] && (
-          <div className="remind">Còn 2 ngày nữa nhận phòng!</div>
+          <div className="remind">{'Còn ' + Math.ceil((data.recvDate.toDate() - Date.now()) / 86400000) + ' ngày nữa nhận phòng!'}</div>
         )}
         {props.type === "history" && props.state === state[2] && (
           <div className="date canceled">Đã hủy ngày 09/02/2023</div>
@@ -49,10 +67,10 @@ export const HorizontalCard = (props) => {
           </div>
           {props.type === "favourite" && (
             <>
-              <div className="flex-end old-price">2.110.000 đ</div>
+              <div className="flex-end old-price">{data.originalPrice + ' đ'}</div>
               <div className="flex-end">
                 <div className="new-price">
-                  Từ: <span>844.000 đ</span>
+                  Từ: <span>{data.price + ' đ'}</span>
                 </div>
                 <div className="sub">/đêm</div>
               </div>
@@ -66,11 +84,11 @@ export const HorizontalCard = (props) => {
                 <div className="wrapper__row__item__title">
                   Ngày nhận phòng:
                 </div>
-                <span>{data.recvDate.toDate().toLocaleDateString()}</span>
+                <span>{data.recvDate.toDate().toLocaleDateString('vi-VN')}</span>
               </div>
               <div className="wrapper__row__item">
                 <div className="wrapper__row__item__title">Ngày trả phòng:</div>
-                <span>{data.endDate.toDate().toLocaleDateString()}</span>
+                <span>{data.endDate.toDate().toLocaleDateString('vi-VN')}</span>
               </div>
             </div>
             <div className="wrapper__row">
@@ -100,7 +118,7 @@ export const HorizontalCard = (props) => {
         )}
 
         <div className="button-wrapper">
-          <Button className="outline">Xem chi tiết</Button>
+          <Button onClick={HandleViewDetail} className="outline">Xem chi tiết</Button>
         </div>
       </div>
     </div>

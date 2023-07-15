@@ -18,6 +18,7 @@ const genderList = [
   { id: 1, value: "Nam" },
   { id: 2, value: "Nữ" },
 ];
+
 const maxDate = new Date();
 const minDate = addYears(new Date(), -100);
 export const EditProfile = () => {
@@ -90,7 +91,7 @@ export const EditProfile = () => {
           dob: birthDate.format("DD/MM/YYYY"),
           sex: gender,
           address: address
-        });
+      });
       
       navigate("/profile");
     }

@@ -50,7 +50,7 @@ export const Detail = (props) => {
   const facilityIcon = [MdPool, MdTimeToLeave, MdLocalBar,
     MdWifi, MdSportsGymnastics, MdSportsFootball, MdChildCare,
     MdFastfood];
-  
+  let indexRoomTypeImage = 0;
   const goBookRoomRef = useRef(null);
   
 
@@ -233,12 +233,13 @@ export const Detail = (props) => {
             <SearchBar type="detail"/>
             <div className="four-cols wrap">
               {
-                roomTypes.map((roomType, index) => {
+                roomTypes.map((roomType) => {
                   if(roomType.accomId === accomId){
+                    indexRoomTypeImage++;
                     return (
-                      <AvailableRoom key={index} 
+                      <AvailableRoom key={indexRoomTypeImage}
                       roomData={roomType}
-                      image={accomData.images[(Math.floor(Math.random() * 4) + 1) - 1]}/>
+                      image={accomData.images[indexRoomTypeImage]}/>
                     )
                   }
                 })

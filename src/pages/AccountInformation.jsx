@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Breadcrumb, message } from "antd";
 import { Link } from "react-router-dom";
 import PasswordInput from "../components/common/Account/PasswordInput";
 import Button from "../components/common/Button";
+import { db, auth } from "../firebase/config"
+import { updatePassword, signInWithEmailAndPassword } from "firebase/auth";
+import { AppContext } from "../Context/AppProvider";
+
 
 export const AccountInformation = () => {
+  const dataProvided = useContext(AppContext);
+  const {user} = dataProvided;
   const [update, setUpdate] = useState(null);
   const [input, setInput] = useState({
     password: "password",
@@ -27,6 +33,10 @@ export const AccountInformation = () => {
     }));
   };
 
+  useEffect(() =>{
+    console.log(input);
+  }, [input])
+
   const validateInput = (e) => {
     console.log(input);
     let { name, value } = e.target;
@@ -37,8 +47,6 @@ export const AccountInformation = () => {
         case "oldPassword":
           if (!value) {
             stateObj[name] = "Vui lòng nhập mật khẩu!";
-          } else if (value !== input.password) {
-            stateObj[name] = "Mật khẩu cũ không phù hợp";
           }
           break;
 
@@ -73,7 +81,7 @@ export const AccountInformation = () => {
           break;
 
         default:
-          break;
+        break;
       }
 
       return stateObj;
@@ -81,20 +89,48 @@ export const AccountInformation = () => {
   };
 
   const handleChangePassword = () => {
-    setInput((prev) => ({
-      ...prev,
-      oldPassword: input.password,
-      password: input.newPassword,
-      newPassword: "",
-      confirmPassword: "",
-    }));
-    setUpdate(null);
-    setError({
-      oldPassword: "",
-      newPassword: "",
-      confirmPassword: "",
-    });
-  };
+    // setInput((prev) => ({
+    //   ...prev,
+    //   oldPassword: input.password,
+    //   password: input.newPassword,
+    //   newPassword: "",
+    //   confirmPassword: "",
+    // }));
+    // setUpdate(null);
+    // setError({
+    //   oldPassword: "",
+    //   newPassword: "",
+    //   confirmPassword: "",
+    // });
+    
+    // if(error.oldPassword !== ""){
+    //   message.warning("Mật khẩu cũ không hợp lệ!");
+    // }
+    // else if (error.newPassword !== ""){
+    //   message.warning("Mật khẩu mới không hợp lệ!")
+    // }
+    // else if (error.confirmPassword !== ""){
+    //   message.warning("Mật khẩu mới không khợp!")
+    // }
+      
+    const user = auth.currentUser;
+    //Đăng nhập thử bằng mật khẩu cũ xem có đúng không
+    signInWithEmailAndPassword(auth, user.email, input.oldPassword)
+      .then((userCredential) => {
+        //Đăng nhập thử thành công thì tiến hành update password
+        updatePassword(user, input.newPassword).then(() => {
+          message.success("Đổi mật khẩu thành công!")
+          clearChangePassword();
+        }).catch((error) => {
+          
+        });
+      })
+      .catch((error) => {
+        message.error("Mật khẩu cũ không hợp lệ!")
+      });
+    }
+    
+
 
   const clearChangePassword = () => {
     setUpdate(null);

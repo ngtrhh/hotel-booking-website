@@ -3,16 +3,37 @@ import { BsGeoAlt, BsXLg } from "react-icons/bs";
 import { AppContext } from "../../../Context/AppProvider";
 
 const DestinationSearch = () => {
-  const data = [
-    { name: "Apple" },
-    { name: "Orange" },
-    { name: "Banana" },
-    { name: "Cherry" },
-  ];
+  const [provinces, setProvinces] = useState([]);
+
+  useEffect(() => {
+    const fetchProvinces = async () => {
+      try {
+        const response = await fetch("https://provinces.open-api.vn/api/");
+        const data = await response.json();
+        setProvinces(data);
+      } catch (error) {
+        console.error("Error fetching provinces:", error);
+      }
+    };
+
+    fetchProvinces();
+  }, []);
+
+  // useEffect(() => {
+  //   if(provinces.length){
+  //     provinces
+  //   }
+  // }, [provinces]);
+  // const data = [
+  //   { name: "Apple" },
+  //   { name: "Orange" },
+  //   { name: "Banana" },
+  //   { name: "Cherry" },
+  // ];
   const {searchPlaceValue, setSearchPlaceValue} = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
   const [canDelete, setCanDelete] = useState(false);
-  const [reccently, setRecently] = useState(data);
+  // const [reccently, setRecently] = useState(data);
 
   const ref = useRef();
   const inputRef = useRef(null);
@@ -27,21 +48,21 @@ const DestinationSearch = () => {
   }, [ref]);
 
   const handleFilter = (e) => {
-    const query = e.target.value;
-    var updatedList = [...reccently];
-    updatedList = updatedList.filter((item) => {
-      return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
-    });
+    // const query = e.target.value;
+    // var updatedList = [...reccently];
+    // updatedList = updatedList.filter((item) => {
+    //   return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+    // });
     setSearchPlaceValue(e.target.value);
-    setRecently(updatedList);
-    if (e.target.value != "") setCanDelete(true);
-    else setCanDelete(false);
+    // setRecently(updatedList);
+    // if (e.target.value != "") setCanDelete(true);
+    // else setCanDelete(false);
   };
 
   const handleClear = () => {
     setCanDelete(false);
     setSearchPlaceValue("");
-    setRecently(data);
+    //setRecently(data);
     inputRef.current && inputRef.current.focus();
   };
 
@@ -74,12 +95,12 @@ const DestinationSearch = () => {
         style={{ visibility: canDelete ? "visible" : "hidden" }}
       />
       {isOpen && (
-        <div id="dropdown">
-          <div className="title">Tìm kiếm gần đây</div>
-          {reccently.map((item, index) => {
+        <div id="dropdown" style={{overflowY: 'auto'}}>
+          <div className="title">Danh sách tỉnh thành</div>
+          {provinces.map((item, index) => {
             return (
               <div
-                key={index}
+                key={index} 
                 className="item"
                 onClick={() => {
                   setSearchPlaceValue(item.name);
