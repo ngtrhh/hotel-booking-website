@@ -16,6 +16,7 @@ import Map, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 export const RoomList = (roomsData) => {
+  const stringSimilarity = require('string-similarity');
   const dataProvided = useContext(AppContext);
   const sortRef = useRef(null);
   const ScrollAfterPageChanged = () => sortRef.current.scrollIntoView();
@@ -83,6 +84,15 @@ export const RoomList = (roomsData) => {
     });
     filterRooms.push(...tempRooms);
 
+    //Search Place Filter
+    tempRooms = [];
+    filterRooms.forEach((roomsData) => {
+      console.log([roomsData.address, searchPlaceValue, stringSimilarity.compareTwoStrings(roomsData.address, searchPlaceValue)]);
+      if(stringSimilarity.compareTwoStrings(roomsData.address, searchPlaceValue)){
+        tempRooms.push(roomsData);
+      }
+    });
+    filterRooms = tempRooms;
     //CommonFilter
 
     let found = false;

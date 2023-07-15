@@ -38,7 +38,7 @@ export const Register = () => {
           console.log(generateKeywords(user.displayName));
 					const data = {
 						uid: user.uid,
-						displayName: user.displayName,
+						displayName: user.email.replace('@gmail.com', ''),
 						email: user.email,
 						photoURL: user.photoURL,
 						providerId: user.providerId,
