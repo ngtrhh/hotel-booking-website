@@ -104,8 +104,9 @@ export const CardRoomItem = (props) => {
             className="results-card-roomitem__room-img__header__right"
           >
             {loved ? (
-              <div className="results-card-roomitem__room-img__header__right__love loved">
-                <BsHeartFill size={28} />
+              <div className="results-card-roomitem__room-img__header__right__love">
+                <BsHeartFill size={28} className="background loved" />
+                <BsHeart size={28} />
               </div>
             ) : (
               <div className="results-card-roomitem__room-img__header__right__love">

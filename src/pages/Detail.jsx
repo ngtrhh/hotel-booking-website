@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import Back from "../components/common/Back";
-import image from "../assets/images/ImageBanner.png";
 import Facility from "../components/common/Facility";
 import Button from "../components/common/Button";
 import {
@@ -14,6 +13,7 @@ import {
   BsBoxArrowInLeft,
   BsJournalText,
   BsCreditCard,
+  BsXLg,
 } from "react-icons/bs";
 import {
   MdPool,
@@ -29,7 +29,7 @@ import {
   MdLocalBar,
   MdSportsGymnastics,
   MdSportsFootball,
-  MdFastfood
+  MdFastfood,
 } from "react-icons/md";
 import SearchBar from "../components/common/Home/SearchBar";
 import AvailableRoom from "../components/common/Detail/AvailableRoom";
@@ -37,55 +37,93 @@ import RecommendedStay from "../components/common/Home/RecommendedStay";
 import { useContext } from "react";
 import { AppContext } from "../Context/AppProvider";
 import { useNavigate } from "react-router-dom";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
+import Map, { Marker } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 export const Detail = (props) => {
   const navigate = useNavigate();
-  const ref = useRef(null);
   const dataProvided = useContext(AppContext);
-  const {user, roomTypes, setRoomTypes, accoms} = dataProvided;
-  const {accomData} = props;
-  const facilitiesList = ['Hồ bơi', 'Chỗ đậu xe', 'Quầy bar',
-  'Wifi', 'Phòng gym', 'Trung tâm thể dục', 'Thích hợp cho gia đình/trẻ em',
-  'Bữa sáng miễn phí'];
-  const facilityIcon = [MdPool, MdTimeToLeave, MdLocalBar,
-    MdWifi, MdSportsGymnastics, MdSportsFootball, MdChildCare,
-    MdFastfood];
+  const { user, roomTypes, setRoomTypes, accoms } = dataProvided;
+  const { accomData } = props;
+  const facilitiesList = [
+    "Hồ bơi",
+    "Chỗ đậu xe",
+    "Quầy bar",
+    "Wifi",
+    "Phòng gym",
+    "Trung tâm thể dục",
+    "Thích hợp cho gia đình/trẻ em",
+    "Bữa sáng miễn phí",
+  ];
+  const facilityIcon = [
+    MdPool,
+    MdTimeToLeave,
+    MdLocalBar,
+    MdWifi,
+    MdSportsGymnastics,
+    MdSportsFootball,
+    MdChildCare,
+    MdFastfood,
+  ];
   let indexRoomTypeImage = 0;
   const goBookRoomRef = useRef(null);
-  
+  const [marker, setMarker] = useState({});
 
   const currentURL = window.location.href;
-  const parts = currentURL.split('/');
+  const parts = currentURL.split("/");
   const accomId = parts[parts.length - 1];
   const ScrollToBookRoom = () => {
-    goBookRoomRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });    
-  }
+    goBookRoomRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   let loved = false;
-  try{
-      loved = (user) ? (((user.lovedRoomsId).includes(accomData.accomId)) ? true : false) : false;
-  }
-  catch{
-      loved = false;
+  try {
+    loved = user
+      ? user.lovedRoomsId.includes(accomData.accomId)
+        ? true
+        : false
+      : false;
+  } catch {
+    loved = false;
   }
   const [anotherAccoms, setAnotherAccoms] = useState([]);
-  useEffect(() =>{
-    let randomItems = []
+  useEffect(() => {
+    let randomItems = [];
     while (randomItems.length < 3) {
       const randomIndex = Math.floor(Math.random() * accoms.length);
       const randomItem = accoms[randomIndex];
-      
-      if (!randomItems.some(item => item.accomId === randomItem.accomId)) {
+
+      if (!randomItems.some((item) => item.accomId === randomItem.accomId)) {
         randomItems.push(randomItem);
       }
     }
     setAnotherAccoms(randomItems);
   }, [accoms]);
 
-  useEffect(() =>{
+  useEffect(() => {
     console.log(anotherAccoms);
   }, [anotherAccoms]);
-  
+
+  useEffect(() => {
+    fetch(
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/${accomData.address}.json?access_token=pk.eyJ1IjoiMTYwM25nb2N0cmluaCIsImEiOiJjbGszYWIzdHQwbGV6M25sc3JlMXl2N2I5In0.SWaxHyfB8VPYvvwCd2YF8w`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((res) => {
+        setMarker({
+          longitude: res.features[0].center[0],
+          latitude: res.features[0].center[1],
+        });
+      });
+  }, []);
+
   return (
     <div className="detail">
       <Back />
@@ -96,25 +134,23 @@ export const Detail = (props) => {
           <img className="image-list__column__item" src={accomData.images[2]} />
         </div>
         <div className="image-list__column">
-          <img className="image-list__column__item top" src={accomData.images[3]} />
+          <img
+            className="image-list__column__item top"
+            src={accomData.images[3]}
+          />
           <div className="image-list__column__item bottom">
             <img src={accomData.images[4]} />
-            {
-              (accomData.images.length - 4 > 0) ?? 
-              (
-                <>
-                  <div className="blur">
-                    <div className="number">
-                      +5
-                      <BsImages size={24} />
-                    </div>
+            {accomData.images.length - 4 > 0 ?? (
+              <>
+                <div className="blur">
+                  <div className="number">
+                    +5
+                    <BsImages size={24} />
                   </div>
-                  <Button className="view-all">Xem tất cả hình ảnh</Button>
-                </>
-              )
-            }
-            
-            
+                </div>
+                <Button className="view-all">Xem tất cả hình ảnh</Button>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -123,8 +159,12 @@ export const Detail = (props) => {
           <div className="infor">
             <div className="infor__title">
               <div className="infor__title__content">
-                <div className="infor__title__content__name">{accomData.name}</div>
-                <div className="infor__title__content__type">{accomData.type}</div>
+                <div className="infor__title__content__name">
+                  {accomData.name}
+                </div>
+                <div className="infor__title__content__type">
+                  {accomData.type}
+                </div>
                 <div className="infor__title__content__stars">
                   {Array.from({ length: accomData.star }, (_, index) => (
                     <BsStarFill key={index} size={28} />
@@ -132,29 +172,22 @@ export const Detail = (props) => {
                 </div>
               </div>
               <div className="infor__title__heart">
-                {
-                  (loved) ? (
-                    <BsHeartFill size={36} color='red'/>
-                  ) : (
-                    <BsHeart size={36} />
-                  )
-                }
-                
+                {loved ? (
+                  <BsHeartFill size={36} color="red" />
+                ) : (
+                  <BsHeart size={36} />
+                )}
               </div>
             </div>
             <div className="infor__address">
               <BsGeoAltFill size={24} />
-              <div className="infor__address__content">
-                {accomData.address}
-              </div>
+              <div className="infor__address__content">{accomData.address}</div>
             </div>
             <hr className="line" />
             <div className="section">
               <div className="section__title">Tổng quan</div>
               <div className="section__content">
-                <div className="description">
-                  {accomData.summary}
-                </div>
+                <div className="description">{accomData.summary}</div>
                 <div className="more">Xem thêm</div>
               </div>
               <hr className="line" />
@@ -163,8 +196,9 @@ export const Detail = (props) => {
               <div className="section__title">Tiện nghi</div>
               <div className="section__content" id="facilities">
                 {accomData.facilities.map((facility, index) => {
-                  if(facilitiesList.includes(facility)){
-                    const IconComponent = facilityIcon[facilitiesList.indexOf(facility)];
+                  if (facilitiesList.includes(facility)) {
+                    const IconComponent =
+                      facilityIcon[facilitiesList.indexOf(facility)];
                     console.log(facilitiesList.indexOf(facility));
                     return (
                       <Facility
@@ -189,17 +223,61 @@ export const Detail = (props) => {
               <div className="rating-price__rating">
                 <div className="rating-price__rating__number">10.0</div>
                 <div className="rating-price__rating__number-2">
-                  (<u>{accomData.ratingCount + ' đánh giá'}</u>)
+                  (<u>{accomData.ratingCount + " đánh giá"}</u>)
                 </div>
               </div>
-              <div className="rating-price__price">{accomData.price + ' đ'}</div>
+              <div className="rating-price__price">
+                {accomData.price + " đ"}
+              </div>
             </div>
-            <Button onClick={ScrollToBookRoom} className="fill cyan">Chọn phòng</Button>
+            <Button onClick={ScrollToBookRoom} className="fill cyan">
+              Chọn phòng
+            </Button>
             <div className="line" style={{ margin: "32px 0" }} />
-            <div className="map">
-              <BsGeoAltFill size={48} />
-              <div className="map__item">Mở bản đồ</div>
-            </div>
+            <Popup
+              trigger={
+                <div className="map">
+                  <BsGeoAltFill size={48} />
+                  <div className="map__item">Mở bản đồ</div>
+                </div>
+              }
+              modal
+              nested
+            >
+              {(close) => (
+                <div className="modal row" style={{ position: "relative" }}>
+                  <div id="map">
+                    <Map
+                      mapboxAccessToken="pk.eyJ1IjoiMTYwM25nb2N0cmluaCIsImEiOiJjbGszYWIzdHQwbGV6M25sc3JlMXl2N2I5In0.SWaxHyfB8VPYvvwCd2YF8w"
+                      initialViewState={{
+                        longitude: marker.longitude,
+                        latitude: marker.latitude,
+                        zoom: 15,
+                      }}
+                      mapStyle="mapbox://styles/mapbox/streets-v9"
+                    >
+                      <Marker
+                        latitude={marker.latitude}
+                        longitude={marker.longitude}
+                        offsetLeft={-20}
+                        offsetRight={-30}
+                      >
+                        <BsGeoAltFill size={40} />
+                      </Marker>
+                    </Map>
+                  </div>
+                  <Button
+                    preIcon={() => <BsXLg size={20} />}
+                    className="grey"
+                    onClick={() => {
+                      close();
+                    }}
+                  >
+                    Đóng
+                  </Button>
+                </div>
+              )}
+            </Popup>
 
             <div className="places">
               <div className="places__title">Các địa danh phổ biến</div>
@@ -228,22 +306,24 @@ export const Detail = (props) => {
         </div>
 
         <div className="section">
-          <div ref={goBookRoomRef} className="section__title">Phòng còn trống</div>
+          <div ref={goBookRoomRef} className="section__title">
+            Phòng còn trống
+          </div>
           <div className="section__content" id="rooms">
-            <SearchBar type="detail"/>
+            <SearchBar type="detail" />
             <div className="four-cols wrap">
-              {
-                roomTypes.map((roomType) => {
-                  if(roomType.accomId === accomId){
-                    indexRoomTypeImage++;
-                    return (
-                      <AvailableRoom key={indexRoomTypeImage}
+              {roomTypes.map((roomType) => {
+                if (roomType.accomId === accomId) {
+                  indexRoomTypeImage++;
+                  return (
+                    <AvailableRoom
+                      key={indexRoomTypeImage}
                       roomData={roomType}
-                      image={accomData.images[indexRoomTypeImage]}/>
-                    )
-                  }
-                })
-              }
+                      image={accomData.images[indexRoomTypeImage]}
+                    />
+                  );
+                }
+              })}
             </div>
           </div>
           <hr className="line" />
@@ -261,11 +341,11 @@ export const Detail = (props) => {
               <div className="col-1__item">Đánh giá của khách hàng</div>
               <hr className="line" />
             </div>
-            {anotherAccoms.map((accom) =>{
-              return(
+            {anotherAccoms.map((accom) => {
+              return (
                 <div className="col-2">
                   <div className="image margin">
-                    <img src={accom.images[0]} style={{maxHeight: '200px'}}/>
+                    <img src={accom.images[0]} style={{ maxHeight: "200px" }} />
                     <div className="tag">
                       <span>{accom.type}</span>
                       <span>
@@ -277,13 +357,19 @@ export const Detail = (props) => {
                       <BsHeart size={28} />
                     </div>
                   </div>
-                  <div className="title margin" style={{minHeight: '48px'}}>{accom.name}</div>
+                  <div className="title margin" style={{ minHeight: "48px" }}>
+                    {accom.name}
+                  </div>
                   <hr className="line" />
                   <div className="price-infor margin">
                     <div className="price-infor__percent-sale">60%</div>
                     <div className="price-infor__price">
-                      <div className="price-infor__price__old">{accom.originalPrice + ' đ'}</div>
-                      <div className="price-infor__price__new">{accom.price + ' đ'}</div>
+                      <div className="price-infor__price__old">
+                        {accom.originalPrice + " đ"}
+                      </div>
+                      <div className="price-infor__price__new">
+                        {accom.price + " đ"}
+                      </div>
                     </div>
                   </div>
                   <hr className="line" />
@@ -304,21 +390,28 @@ export const Detail = (props) => {
                       <MdSmokeFree size={24} />
                       Giáp biển
                     </div>
-                    <div className="facilities__more">(Nhiều tiện nghi khác)</div>
+                    <div className="facilities__more">
+                      (Nhiều tiện nghi khác)
+                    </div>
                   </div>
                   <hr className="line" />
                   <div className="rating margin">
                     <div className="rating__score">{accom.rating}</div>
-                    <div className="rating__reviews">{accom.ratingCount + ' lượt đánh giá'}</div>
+                    <div className="rating__reviews">
+                      {accom.ratingCount + " lượt đánh giá"}
+                    </div>
                   </div>
                   <hr className="line" />
                   <div className="button-wrapper">
-                    <Button className="cyan glow"
+                    <Button
+                      className="cyan glow"
                       onClick={() => {
                         window.scrollTo(0, 0);
-                        navigate('/detail/' + accom.accomId);
+                        navigate("/detail/" + accom.accomId);
                       }}
-                    >Chọn phòng</Button>
+                    >
+                      Chọn phòng
+                    </Button>
                   </div>
                 </div>
               );
