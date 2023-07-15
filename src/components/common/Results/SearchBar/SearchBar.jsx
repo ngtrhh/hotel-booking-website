@@ -15,23 +15,30 @@ import {
   BsCalendar2,
   BsSearch,
   BsCalendar2MinusFill,
-  BsPeopleFill
+  BsPeopleFill,
 } from "react-icons/bs";
 import { AppContext } from "../../../../Context/AppProvider";
 
 const SearchBar = () => {
   const dataProvided = useContext(AppContext);
-  const {searchPlaceValue, setSearchPlaceValue,
-    searchDateRange, setSearchDateRange,
-    seacrchNumOfRooms, setSeacrchNumOfRooms,
-    seacrchNumOfGuest, setSeacrchNumOfGuest,
-    seacrchNumOfChild, setSeacrchNumOfChild} = dataProvided;
+  const {
+    searchPlaceValue,
+    setSearchPlaceValue,
+    searchDateRange,
+    setSearchDateRange,
+    seacrchNumOfRooms,
+    setSeacrchNumOfRooms,
+    seacrchNumOfGuest,
+    setSeacrchNumOfGuest,
+    seacrchNumOfChild,
+    setSeacrchNumOfChild,
+  } = dataProvided;
   return (
     <div className="results__search-bar">
       <div className="container">
         <div className="items">
           <div className="item">
-            <BsGeoAltFill size={24} className="icon"/>
+            <BsGeoAltFill size={24} className="icon" />
             <div className="content">
               <div className="field">Địa điểm</div>
               <div className="value">{searchPlaceValue}</div>
@@ -39,42 +46,46 @@ const SearchBar = () => {
           </div>
 
           <div className="item">
-            <BsCalendar2MinusFill size={24} className="icon"/>
+            <BsCalendar2MinusFill size={24} className="icon" />
             <div className="content">
               <div className="field">Nhận phòng</div>
               <div className="value">
                 {`${format(searchDateRange[0].startDate, "eee, dd-MM-yyyy", {
-                    locale: vi,
+                  locale: vi,
                 })}`}
               </div>
             </div>
           </div>
 
           <div className="item">
-            <BsCalendar2MinusFill size={24} className="icon"/>
+            <BsCalendar2MinusFill size={24} className="icon" />
             <div className="content">
               <div className="field">Trả phòng</div>
-              <div className="value">{
-              `${format(searchDateRange[0].endDate, "eee, dd-MM-yyyy", {
-                    locale: vi,
-                  })}`
-            }</div>
+              <div className="value">{`${format(
+                searchDateRange[0].endDate,
+                "eee, dd-MM-yyyy",
+                {
+                  locale: vi,
+                }
+              )}`}</div>
             </div>
           </div>
 
           <div className="item">
-            <BsPeopleFill size={24} className="icon"/>
+            <BsPeopleFill size={24} className="icon" />
             <div className="content">
-              <div className="field">Khách và phòng</div>
-              <div className="value">{
-            seacrchNumOfChild > 0
-              ? `${seacrchNumOfGuest} người - ${seacrchNumOfChild} trẻ em - ${seacrchNumOfRooms} phòng`
-              : `${seacrchNumOfGuest} người - ${seacrchNumOfRooms} phòng`
-          }</div>
+              <div className="field">Khách</div>
+              <div className="value">
+                {seacrchNumOfChild > 0
+                  ? `${seacrchNumOfGuest} người - ${seacrchNumOfChild} trẻ em `
+                  : `${seacrchNumOfGuest} người`}
+              </div>
             </div>
           </div>
         </div>
-        <Button preIcon={BsSearch} className="btn-search cyan">Tìm ngay</Button>
+        <Button preIcon={BsSearch} className="btn-search cyan">
+          Tìm ngay
+        </Button>
       </div>
     </div>
   );

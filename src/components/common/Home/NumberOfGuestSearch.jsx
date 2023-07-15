@@ -7,9 +7,18 @@ import ItemOfGuest from "./ItemOfGuest";
 const NumberOfGuestSearch = (props) => {
   const dataProvided = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
-  const [rooms, setRooms] = [dataProvided.seacrchNumOfRooms, dataProvided.setSeacrchNumOfRooms];
-  const [guest, setGuest] = [dataProvided.seacrchNumOfGuest, dataProvided.setSeacrchNumOfGuest];
-  const [child, setChild] = [dataProvided.seacrchNumOfChild, dataProvided.setSeacrchNumOfChild];
+  const [rooms, setRooms] = [
+    dataProvided.seacrchNumOfRooms,
+    dataProvided.setSeacrchNumOfRooms,
+  ];
+  const [guest, setGuest] = [
+    dataProvided.seacrchNumOfGuest,
+    dataProvided.setSeacrchNumOfGuest,
+  ];
+  const [child, setChild] = [
+    dataProvided.seacrchNumOfChild,
+    dataProvided.setSeacrchNumOfChild,
+  ];
 
   const ref = useRef();
 
@@ -44,14 +53,12 @@ const NumberOfGuestSearch = (props) => {
         </>
       )}
       <div className="input__content">
-        <div className="label">Khách và phòng</div>
+        <div className="label">Khách </div>
         <input
           readOnly
           style={{ width: "220px" }}
           value={
-            child > 0
-              ? `${guest} người - ${child} trẻ em - ${rooms} phòng`
-              : `${guest} người - ${rooms} phòng`
+            child > 0 ? `${guest} người - ${child} trẻ em ` : `${guest} người `
           }
         />
       </div>
@@ -67,12 +74,6 @@ const NumberOfGuestSearch = (props) => {
             name="child"
             min={0}
             title="Trẻ em"
-            getValue={handleGetData}
-          />
-          <ItemOfGuest
-            name="rooms"
-            min={1}
-            title="Phòng"
             getValue={handleGetData}
           />
         </div>

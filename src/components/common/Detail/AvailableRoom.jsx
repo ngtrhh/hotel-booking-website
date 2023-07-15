@@ -7,21 +7,18 @@ import { useNavigate } from "react-router-dom";
 
 const AvailableRoom = (props) => {
   const dataProvided = useContext(AppContext);
-  const {accomData, selectedRoom, setSelectedRoomType} = dataProvided;
-  const {roomData, image} = props;
+  const { accomData, selectedRoom, setSelectedRoomType } = dataProvided;
+  const { roomData, image } = props;
   const navigation = useNavigate();
-  
+
   const BookNow = () => {
-    setSelectedRoomType({...roomData, image: image});
+    setSelectedRoomType({ ...roomData, image: image });
     window.scrollTo(0, 0);
-    navigation('/booking')
-  }
+    navigation("/booking");
+  };
   return (
     <div className="available-room">
-      <img
-        className="image"
-        src={image}
-      />
+      <img className="image" src={image} />
       <div className="more-images">
         +5 <BsImages size={20} />
       </div>
@@ -30,10 +27,12 @@ const AvailableRoom = (props) => {
 
         <div className="infor-room">
           <div className="infor-room__item">
-            <MdKingBed size={20} />{roomData.bed}
+            <MdKingBed size={20} />
+            {roomData.bed}
           </div>
           <div className="infor-room__item">
-            <BsPersonFill size={20} />{roomData.capacity}
+            <BsPersonFill size={20} />
+            {roomData.capacity}
           </div>
           <div className="infor-room__item">
             <MdZoomOutMap size={20} />
@@ -42,23 +41,18 @@ const AvailableRoom = (props) => {
         </div>
 
         <div className="facilities">
-          {(roomData.facility).map((faci) => {
-            return (
-              <span>{faci}</span>
-            )
+          {roomData.facility.map((faci) => {
+            return <span>{faci}</span>;
           })}
           <span>Xem tất cả tiện ích</span>
         </div>
 
         <div className="offer">
-          {(roomData.servive).map((sv) => {
-              return (
-                <span>{sv}</span>
-              )
-            })}
+          {roomData.servive.map((sv) => {
+            return <span>{sv}</span>;
+          })}
         </div>
 
-        <Button className="outline">Xem chi tiết phòng</Button>
         <div className="price-wrapper">
           <div className="price-wrapper__column">
             <div className="price-old">{roomData.originalPrice + " đ"}</div>
@@ -66,8 +60,12 @@ const AvailableRoom = (props) => {
             <div className="price-detail">Đã bao gồm thuế và phí</div>
           </div>
           <div className="price-wrapper__column">
-            <div className="percent-sale">{'Tiết kiệm ' + roomData.saleoff}</div>
-            <Button onClick={BookNow} className="cyan glow">Đặt ngay</Button>
+            <div className="percent-sale">
+              {"Tiết kiệm " + roomData.saleoff}
+            </div>
+            <Button onClick={BookNow} className="cyan glow">
+              Đặt ngay
+            </Button>
           </div>
         </div>
       </div>
