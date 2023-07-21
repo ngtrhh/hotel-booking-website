@@ -47,7 +47,7 @@ export default function AppProvider ({children}) {
 
 	//Data Acccomodation
 	const [accoms, setAccoms] = useState([]);
-	useFireStore('accoms', setAccoms);
+	useFireStore('accoms', setAccoms, -1);
 
 	//Result Filterbar
 	const [priceInput, setPriceInput] = useState([0, 20000000]);
